@@ -1,0 +1,63 @@
+.labaratory {
+  padding: 40px 0px;
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(168, 168, 168, 0.65);
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35.2px;
+    color: rgba(255, 44, 44, 1);
+    padding: 20px 0px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__card {
+    background-color: white;
+    box-shadow: 1px 1px 10px #aaa4;
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    &-info {
+      padding: 10px;
+
+      &-title {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: rgba(72, 72, 72, 1);
+      }
+
+      &-text {
+        font-family: Montserrat;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.55);
+        padding: 10px 0px;
+      }
+
+      &-date {
+        font-family: PF Encore Sans Pro;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 23px;
+        color: rgba(175, 175, 175, 1);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.filterSearch {
+  background: rgba(245, 245, 245, 1);
+
+  &-bg {
+    background-image: url(../../assets/img/filterbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 30px 0px;
+
+    &-info {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 30px;
+      &-text {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 25.3px;
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+  @media (max-width: 930px) {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 670px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      padding: 10px 0px;
+    }
+
+    .filter__top__left-title {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 380px) {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+  }
+}

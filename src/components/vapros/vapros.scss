@@ -1,0 +1,119 @@
+.vapros {
+  background: url(../../assets/img/vaprosImg-min.png) no-repeat center center;
+  background-size: cover;
+  height: 630px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__cards {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &__card {
+    background: rgba(255, 255, 255, 1);
+    padding: 50px;
+    width: 600px;
+    border-radius: 6px;
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+
+      &__left {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 33.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(0, 0, 0, 1);
+
+        span {
+          color: rgba(255, 44, 44, 1);
+        }
+      }
+    }
+
+    &__info {
+      &-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+        padding-bottom: 20px;
+      }
+    }
+
+    &__btns {
+      display: flex;
+      align-self: center;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+
+      &-white {
+        padding: 20px 51px;
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid #aaa4;
+        border-right: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+      }
+
+      &-red {
+        border-radius: 0px 4px 4px 0px;
+        padding: 21px;
+        background: rgba(255, 44, 44, 1);
+        border: 1px solid rgba(255, 44, 44, 1);
+        color: white;
+        svg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    &__btns:hover {
+      transform: scale(1.02);
+      transform: 0.5;
+    }
+
+    &__btns:hover .vapros__card__btns-white {
+      border: 1px solid rgba(255, 44, 44, 1);
+      color: rgba(255, 44, 44, 1);
+      transition: 0.5s;
+    }
+  }
+
+  &__card:hover {
+    box-shadow: 1px 1px 10px gray;
+    transform: scale(1.06);
+  }
+
+  @media (max-width: 500px) {
+    &__card {
+      padding: 20px;
+      &__top__left {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .vapros__card__btns-white {
+        padding: 10px !important;
+      }
+      .vapros__card__btns-red {
+        padding: 10px !important;
+      }
+    }
+  }
+}

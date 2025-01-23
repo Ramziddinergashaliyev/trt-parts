@@ -1,0 +1,117 @@
+.footer {
+  padding: 90px 0px;
+  background: rgba(24, 24, 24, 1);
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  &__list {
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 27.41px;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.9);
+      padding-bottom: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__information {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0px;
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          color: black;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      button:hover {
+        background-color: black;
+        transition: 0.6s;
+        svg {
+          color: white !important;
+          transition: 0.6s;
+        }
+      }
+    }
+
+    span,
+    &-link {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28.32px;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  &__bottom {
+    padding-top: 80px;
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0px;
+    }
+
+    &-info-text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 21.32px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 30px 0px;
+    &__nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    &__list-title {
+      padding-bottom: 10px;
+    }
+    &__bottom {
+      padding-top: 40px;
+
+      &-info {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    &__nav {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+  }
+}

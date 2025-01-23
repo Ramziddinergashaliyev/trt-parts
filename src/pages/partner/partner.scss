@@ -1,0 +1,101 @@
+.partner {
+  background: rgba(245, 245, 245, 1);
+
+  &__bg {
+    background: url(../../assets/img/partner-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 160px;
+  }
+
+  &__info {
+    &-text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: left;
+      color: rgba(168, 168, 168, 0.65);
+      padding: 60px 0px 10px;
+    }
+
+    &-title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 35.2px;
+      text-align: left;
+      color: rgba(255, 44, 44, 1);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 30px 0px;
+  }
+
+  &__card {
+    background-color: white;
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 10px;
+    }
+
+    &__top-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      &-title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 15.4px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 1270px) {
+    &__card {
+      &__top-left {
+        img {
+          width: 40px;
+        }
+      }
+      &__top-right {
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 420px) {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__info-title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}

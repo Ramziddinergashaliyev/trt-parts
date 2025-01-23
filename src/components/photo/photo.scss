@@ -1,0 +1,24 @@
+.photo {
+  padding-top: 30px;
+  &__imgs {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__imgs {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+      img {
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+}

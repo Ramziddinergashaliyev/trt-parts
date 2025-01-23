@@ -1,0 +1,134 @@
+.company {
+  &__bg {
+    background: url(../../assets/img/company-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 180px;
+  }
+
+  &__info {
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+
+    &__left {
+      &-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        text-align: left;
+        color: rgba(168, 168, 168, 0.65);
+      }
+
+      &-title {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35.2px;
+        text-align: left;
+        color: rgba(255, 44, 44, 1);
+        padding: 20px 0px;
+      }
+
+      &-desc {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+        padding-bottom: 20px;
+      }
+
+      &-texts {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    &__right {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      &-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .company__swiper {
+    margin: 50px 0px;
+    text-align: center;
+    background: rgba(245, 245, 245, 1);
+    padding: 20px 0px;
+
+    &-title {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    &-container {
+      width: 100%;
+      position: relative;
+      height: 500px;
+    }
+
+    &-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &-img:hover {
+      transform: scale(0.999);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #000;
+
+    &-active {
+      background-color: #000;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  @media (max-width: 1250px) {
+    &__info {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

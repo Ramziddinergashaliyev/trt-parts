@@ -1,0 +1,16 @@
+{
+    "header":{
+        "Katalog":"Katalog",
+        "Kompaniya":"Kompaniya",
+        "Hamkorlar":"Hamkorlar",
+        "Yangiliklar":"Yangiliklar",
+        "Kontaktlar":"Kontaktlar",
+        "Galereya":"Galereya",
+        "Call":"Qayta qo'ng'iroq qilish",
+        "Request":"So'rov qoldiring",
+        "Search":"Mahsulot qidirsh...."
+   },
+   "home":{
+
+   }
+}

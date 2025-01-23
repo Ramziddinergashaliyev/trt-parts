@@ -1,0 +1,26 @@
+.filterResults {
+  &__bg {
+    background: url(../../assets/img/filterResult.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+  }
+  &__top {
+    background: #f5f5f5;
+    margin-top: -40px;
+  }
+  &__title {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 25.3px;
+    color: #000000b2;
+    padding: 30px 0px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 40px;
+  }
+}

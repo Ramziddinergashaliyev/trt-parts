@@ -1,0 +1,191 @@
+.contact {
+  background: rgba(245, 245, 245, 1);
+  min-height: 100vh;
+
+  &__bg {
+    background: url(../../assets/img/contactImg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 160px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: rgba(168, 168, 168, 0.65);
+    padding: 50px 0px 10px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__left {
+    &__title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 35.2px;
+      text-align: left;
+      color: rgba(255, 44, 44, 1);
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.6);
+      padding: 40px 0px;
+      padding: 60px 0px;
+    }
+
+    &__information {
+      &-text {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18.2px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.4);
+        padding: 0px 0px 10px;
+      }
+
+      &-number {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33.6px;
+        text-align: left;
+        color: rgba(99, 115, 136, 1);
+      }
+
+      &__mail {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &-link {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.6px;
+          text-align: left;
+          color: rgba(99, 115, 136, 1);
+        }
+      }
+
+      &-adress {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.6);
+        padding: 80px 0px;
+      }
+    }
+  }
+
+  &__right {
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25.2px;
+      text-align: left;
+      color: rgba(36, 36, 36, 0.6);
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      input {
+        padding: 15px 0px;
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22.4px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      textarea {
+        background: transparent;
+        resize: none;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+        width: 100%;
+        padding: 15px 0px;
+        height: 110px;
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22.4px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &-btn {
+        width: 250px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 20px 40px;
+        background: rgba(208, 1, 1, 1);
+
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 18.7px;
+        text-align: left;
+        color: white;
+        margin: 40px 0px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.6px;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.3);
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 660px) {
+    &__info {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+    &__left__information-adress,
+    &__left__text {
+      padding: 20px 0px;
+    }
+
+    &__right__text {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__left__title {
+      font-size: 26px;
+    }
+    &__left__information-number,
+    &__left__information__mail-link {
+      font-size: 16px;
+    }
+
+    &__right__form-btn {
+      padding: 10px;
+    }
+  }
+}

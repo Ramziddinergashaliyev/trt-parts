@@ -1,0 +1,139 @@
+.swiper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: #f5f5f5;
+
+  .swiper-title__name {
+    padding: 25px 0px;
+  }
+
+  .swiper-card {
+    padding: 20px 0;
+  }
+
+  .swiper-slide-content {
+    text-align: center;
+    padding: 10px;
+    max-height: 300px;
+  }
+
+  .swiper-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .swiper-info {
+    margin-top: 15px;
+
+    .swiper-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      text-align: start;
+      margin-bottom: 5px;
+    }
+
+    .swiper-subtitle {
+      text-align: start;
+      font-size: 14px;
+      color: #777;
+    }
+  }
+
+  .swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.prev-button {
+      left: 0;
+    }
+
+    &.next-button {
+      right: 0;
+    }
+
+    &:hover {
+      background: red;
+      color: white;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      border: solid #333;
+      border-width: 0 2px 2px 0;
+      padding: 6px;
+    }
+
+    &.prev-button::before {
+      transform: rotate(135deg);
+    }
+
+    &.next-button::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .swiper-slide-content {
+      padding: 10px;
+    }
+
+    .swiper-image {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swiper-image {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .swiper-image {
+      height: 180px;
+      border-radius: 6px;
+    }
+
+    .swiper-button {
+      top: 9%;
+      width: 30px;
+      height: 30px;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 30px;
+
+      &.prev-button {
+        right: 60px;
+      }
+    }
+
+    .swiper-title {
+      font-size: 14px;
+    }
+
+    .swiper-subtitle {
+      font-size: 12px;
+    }
+  }
+}

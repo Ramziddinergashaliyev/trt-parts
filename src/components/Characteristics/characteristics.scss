@@ -1,0 +1,44 @@
+.characteristic {
+    padding: 15px 0;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 10px;
+        width: 100%;
+    }
+
+    .characteristic__table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .characteristic__row h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 0 5px;
+        color: #333;
+    }
+
+    .characteristic__row span {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .characteristic__table tr:nth-child(even) {
+        background-color: #f1f1f1;
+    }
+
+
+
+    .characteristic__table td:first-child {
+        border-left: 0;
+    }
+
+    .characteristic__table td:last-child {
+        border-right: 0;
+    }
+}

@@ -1,0 +1,26 @@
+.catalogPage {
+  background: rgba(245, 245, 245, 1);
+  padding: 30px 0px;
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(134, 40, 40, 0.65);
+    padding-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35.2px;
+    color: rgba(255, 44, 44, 1);
+    padding-bottom: 10px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 30px 0px;
+  }
+}
