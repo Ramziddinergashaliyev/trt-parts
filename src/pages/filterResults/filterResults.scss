@@ -1,4 +1,5 @@
 .filterResults {
+  background-color: #f5f5f5;
   &__bg {
     background: url(../../assets/img/filterResult.png);
     background-position: center;
@@ -16,11 +17,12 @@
     line-height: 25.3px;
     color: #000000b2;
     padding: 30px 0px;
+    border-bottom: 1px solid gray;
   }
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    padding-bottom: 40px;
+    grid-gap: 30px;
+    padding: 40px 0px;
   }
 }

@@ -182,9 +182,9 @@ const Header = () => {
             <div onClick={handleSearchClick} className="header__nav__search">
               <FiSearch />
             </div>
-            <NavLink to={"/login"} className="header__nav__search">
+            {/* <NavLink to={"/login"} className="header__nav__search">
               <FiUser />
-            </NavLink>
+            </NavLink> */}
             <div className="header__nav__btn">
               <button>Оставить заявку</button>
             </div>
