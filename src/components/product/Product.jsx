@@ -25,7 +25,7 @@ const Product = ({ product, isTrue }) => {
 
       <div className="result__card__info">
         <p className="result__card__info-text">{product?.name}</p>
-        <p className="result__card__info-title">R{product?.trtCode}</p>
+        <p className="result__card__info-title">{product?.trtCode}</p>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ import Loading from "../../components/loading/Loading";
 const CatalogPage = () => {
   const { id } = useParams();
   const { data } = useGetCategoriesByIdQuery(id);
-  console.log(data);
+  console.log(data?.parts);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -20,12 +20,14 @@ const CatalogPage = () => {
   return (
     <div className="catalogPage">
       <div className="container">
-        <p className="catalogPage__text">РАЗДЕЛ</p>
-        <h3 className="catalogPage__title">Рычаги подвески</h3>
         {data ? (
-          <div className="catalogPage__cards">
-            <ProductItem data={data} />
-          </div>
+          <>
+            <p className="catalogPage__text">РАЗДЕЛ</p>
+            <h3 className="catalogPage__title">{data?.category?.name}</h3>
+            <div className="catalogPage__cards">
+              <ProductItem data={data?.parts} />
+            </div>
+          </>
         ) : (
           <Loading />
         )}
