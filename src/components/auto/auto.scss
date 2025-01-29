@@ -1,6 +1,6 @@
 .auto {
   width: 100%;
-  height: 210px;
+  height: 300px;
 
   img {
     width: 100%;
@@ -9,8 +9,9 @@
   }
 
   @media (max-width: 800px) {
-    height: auto; // Height avtomatik o‘lchamlanadi
-    background: url("../../assets//img/home-img-min.png") no-repeat center center/cover;
+    height: auto;
+    background: url("../../assets//img/home-img-min.png") no-repeat center
+      center/cover;
     height: 210px;
 
     img {

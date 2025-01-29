@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import icon from "../../assets/icons/headerIcon.svg";
+import { NavLink, useLocation } from "react-router-dom";
+import icon from "../../../assets/icons/headerIcon.svg";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -8,6 +8,11 @@ import { FaFacebookF } from "react-icons/fa";
 import "./footer.scss";
 
 const Footer = () => {
+  // let { pathname } = useLocation();
+
+  // if (pathname.includes("admin") || pathname.includes("login")) {
+  //   return <></>;
+  // }
   return (
     <footer className="footer">
       <div className="container">

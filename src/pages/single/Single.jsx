@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./single.scss";
-import { NavLink, useParams } from "react-router-dom";
-import { GoStarFill } from "react-icons/go";
-import Characteristics from "../../components/Characteristics/Characteristics";
+import { useParams } from "react-router-dom";
 import LoadingSingle from "../../components/loadingSingle/LoadingSingle";
 import Tabs from "../../components/Tab/Tab";
 import Application from "../../components/Application/Application";
 import Information from "../../components/Information/Information";
+import Characteristics from "../../components/Characteristics/Characteristics";
 import HandleSwiper from "../../components/handleSwiper/HandleSwiper";
 import { useGetProductByIdQuery } from "../../context/api/productApi";
 
@@ -14,11 +13,19 @@ const Single = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetProductByIdQuery(id);
 
+  const [activeTab, setActiveTab] = useState("reviews");
+  const [selectedImage, setSelectedImage] = useState("");
+
   useEffect(() => {
     window.scroll(0, 0);
-  });
+  }, []);
 
-  const [activeTab, setActiveTab] = useState("reviews");
+  useEffect(() => {
+    if (data?.images?.length > 0) {
+      setSelectedImage(data.images[0]); // Birinchi rasmni default qilib olish
+    }
+  }, [data]);
+
   return (
     <div className="detail">
       <div className="container">
@@ -28,19 +35,23 @@ const Single = () => {
           <div className="detail__cards">
             <div className="detail__card__img">
               <div className="detail__card__imgs">
-                <div>
-                  <img src={data?.imageUrl} alt="" />
-                </div>
-                {/* {data?.imageUrl?.map((el, inx) => (
-                  <div key={inx}>
-                    <img src={el} alt="" onClick={() => setIndex(inx)} />
+                {data?.images?.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`thumbnail ${
+                      selectedImage === img ? "active" : ""
+                    }`}
+                    onClick={() => setSelectedImage(img)}
+                  >
+                    <img src={img} alt={`thumb-${index}`} />
                   </div>
-                ))} */}
+                ))}
               </div>
               <div className="detail__img">
-                <img src={data?.imageUrl} alt="detail-img" />
+                <img src={selectedImage} alt="detail-img" />
               </div>
             </div>
+
             <div className="detail__card__info">
               <h3 className="detail__title">{data?.name}</h3>
               <ul className="detail__card__info-list">
@@ -51,7 +62,7 @@ const Single = () => {
                   Марка: <span>{data?.carName}</span>
                 </li>
                 <li className="detail__card__info-item">
-                  Модель: <span>{data?.brand}</span>
+                  Модель: <span>{data?.model}</span>
                 </li>
                 <li className="detail__card__info-item">
                   ОЕМ номер: <span>{data?.oem}</span>
@@ -73,10 +84,7 @@ const Single = () => {
           {activeTab === "Information" && <Information />}
         </div>
       </div>
-      {/* <h3 className="detail__like__title">You might also like</h3> */}
-      <div className="top__products">
-        {/* <Products data={dataProducts?.payload} /> */}
-      </div>
+
       <div className="container">
         <HandleSwiper />
       </div>

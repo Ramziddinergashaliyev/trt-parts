@@ -1,7 +1,7 @@
 import React from "react";
 import "./auto.scss";
 
-import img from "../../assets/img/home-img.png";
+import img from "../../assets/img/bgimg.jpg";
 
 const Auto = () => {
   return (

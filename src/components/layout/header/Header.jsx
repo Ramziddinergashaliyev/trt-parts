@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
-import icon from "../../assets/icons/headerIcon.svg";
+import { NavLink, useLocation } from "react-router-dom";
+import icon from "../../../assets/icons/headerIcon.svg";
 import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
-import uzb from "../../assets/icons/uzb.webp";
-import rus from "../../assets/icons/rus.png";
+import uzb from "../../../assets/icons/uzb.webp";
+import rus from "../../../assets/icons/rus.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
+import { FiUser } from "react-icons/fi";
 
 import "./header.scss";
 
@@ -17,6 +18,12 @@ const Header = () => {
   const dropdownRef = useRef(null);
   const [hide, setHide] = useState(false);
   const [hideSearch, setHideSearch] = useState(null);
+
+  // let { pathname } = useLocation();
+
+  // if (pathname.includes("admin") || pathname.includes("login")) {
+  //   return <></>;
+  // }
 
   const handleLanguageChange = (lang) => {
     setSelectedLang(lang);
@@ -175,6 +182,9 @@ const Header = () => {
             <div onClick={handleSearchClick} className="header__nav__search">
               <FiSearch />
             </div>
+            <NavLink to={"/login"} className="header__nav__search">
+              <FiUser />
+            </NavLink>
             <div className="header__nav__btn">
               <button>Оставить заявку</button>
             </div>

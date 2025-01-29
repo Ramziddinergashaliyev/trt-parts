@@ -12,7 +12,6 @@ import Loading from "../../components/loading/Loading";
 const SearchProduct = () => {
   const [value, setValue] = useState("");
   const { data } = useSearchProductsQuery({ value: value.trim() });
-  // console.log(search);
   const { data: card } = useGetProductsQuery();
   console.log(card);
 

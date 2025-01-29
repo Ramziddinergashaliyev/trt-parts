@@ -9,7 +9,7 @@ import icon from "../../assets/img/hero.png";
 import { FaAngleRight } from "react-icons/fa6";
 import img from "../../assets/img/RedCar.jpg";
 import img1 from "../../assets/img/hero1.jpg";
-import img2 from "../../assets/img/hero2.jpg";
+import img2 from "../../assets/img/2.png";
 import { NavLink } from "react-router-dom";
 
 const Hero = () => {
