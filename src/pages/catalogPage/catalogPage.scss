@@ -1,6 +1,6 @@
 .catalogPage {
   background: rgba(245, 245, 245, 1);
-  padding: 30px 0px;
+  padding: 50px 0px;
   &__text {
     font-size: 14px;
     font-weight: 400;
@@ -22,5 +22,21 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     padding: 30px 0px;
+  }
+
+  @media (max-width: 980px) {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 680px) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 440px) {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

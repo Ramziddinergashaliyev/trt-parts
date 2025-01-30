@@ -68,7 +68,9 @@ const Hero = () => {
           modules={[Navigation, Pagination, Autoplay]}
           navigation
           pagination={{ clickable: true }}
+          style={{ transition: "ease-in-out 0.5s" }}
           autoplay={{ delay: 3000 }}
+          speed={1500}
           loop
         >
           {slides.map((slide, index) => (
