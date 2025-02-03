@@ -6,6 +6,7 @@ const Partner = () => {
   useEffect(() => {
     window.scroll(0, 0);
   });
+
   const PartnerData = PARTNER?.map((el) => (
     <div key={el?.id} className="partner__card">
       <div className="partner__card__top">

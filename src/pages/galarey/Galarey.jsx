@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -9,6 +9,10 @@ import img2 from "../../assets/img/compony2.png";
 import img3 from "../../assets/img/compony3.png";
 
 const Galarey = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
+
   const items = [
     {
       id: 1,
