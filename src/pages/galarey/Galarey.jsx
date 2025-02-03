@@ -61,7 +61,7 @@ const Galarey = () => {
   ];
 
   return (
-    <div className="swiper">
+    <div className="swiper-photos">
       <div className="container swiper-card">
         <h2 className="swiper-title__name">Галарея</h2>
         <Swiper

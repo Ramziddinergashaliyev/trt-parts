@@ -15,6 +15,7 @@ import "swiper/css/autoplay"; // Autoplay style
 import "./company.scss";
 import Service from "../../components/service/Service";
 import Photo from "../../components/photo/Photo";
+import Partner from "../partner/Partner";
 
 const Company = () => {
   useEffect(() => {
@@ -82,6 +83,7 @@ const Company = () => {
 
         <Service />
         <Photo />
+        <Partner />
       </div>
       <div className="company__swiper">
         <div className="container">

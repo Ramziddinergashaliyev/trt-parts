@@ -1,8 +1,11 @@
-.swiper {
+.swiper-photos {
   overflow: hidden;
   width: 100%;
-  position: relative;
   background-color: #f5f5f5;
+  position: relative;
+
+  // .swiper-card {
+  // }
 
   .swiper-title__name {
     padding: 25px 0px;
@@ -15,7 +18,7 @@
   .swiper-slide-content {
     text-align: center;
     padding: 10px;
-    max-height: 300px;
+    // max-height: 300px;
   }
 
   .swiper-image {
@@ -27,7 +30,7 @@
   }
 
   .swiper-info {
-    margin-top: 15px;
+    // margin-top: 15px;
 
     .swiper-title {
       font-size: 16px;

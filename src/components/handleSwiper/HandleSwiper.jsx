@@ -37,25 +37,25 @@ const HandleSwiper = () => {
     {
       id: 1,
       img: img1,
-      title: "Опора шаровая TRT SPARK R8004",
+      title: "Опора TRT SPARK R8004",
       subtitle: "Шаровые опоры",
     },
     {
       id: 2,
       img: img2,
-      title: "Рулевой наконечник TRT 7172",
+      title: "Рулевой TRT 7172",
       subtitle: "Рулевые наконечники",
     },
     {
       id: 3,
       img: img3,
-      title: "Рычаг подвески TRT SPARK 1424",
+      title: "Рычаг TRT SPARK 1424",
       subtitle: "Рычаги подвески",
     },
     {
       id: 4,
       img: img3,
-      title: "Рулевой наконечник TRT 7172",
+      title: "Рулевой наконечник 7172",
       subtitle: "Рулевые наконечники",
     },
   ];

@@ -3,9 +3,13 @@
   width: 100%;
   position: relative;
   padding: 20px 0;
+  height: 500px;
 
   .swiper-title__name {
     margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    color: gray;
   }
 
   .swiper-slide-content {
@@ -25,7 +29,7 @@
     margin-top: 15px;
 
     .swiper-title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
       color: #333;
       text-align: start;

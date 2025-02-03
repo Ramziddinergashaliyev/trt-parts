@@ -45,20 +45,20 @@ export const PARTNER = [
     icon: icon3,
     name: "Южная Корея",
   },
-  {
-    id: 4,
-    flag: flag4,
-    img: img4,
-    icon: icon4,
-    name: "Россия",
-  },
-  {
-    id: 5,
-    flag: flag1,
-    img: img5,
-    icon: icon5,
-    name: "Южная Корея",
-  },
+  // {
+  //   id: 4,
+  //   flag: flag4,
+  //   img: img4,
+  //   icon: icon4,
+  //   name: "Россия",
+  // },
+  // {
+  //   id: 5,
+  //   flag: flag1,
+  //   img: img5,
+  //   icon: icon5,
+  //   name: "Южная Корея",
+  // },
   {
     id: 6,
     flag: flag6,
@@ -66,20 +66,20 @@ export const PARTNER = [
     icon: icon6,
     name: "Китай",
   },
-  {
-    id: 7,
-    flag: flag4,
-    img: img7,
-    icon: icon7,
-    name: "Россия",
-  },
-  {
-    id: 8,
-    flag: flag4,
-    img: img8,
-    icon: icon8,
-    name: "Россия",
-  },
+  // {
+  //   id: 7,
+  //   flag: flag4,
+  //   img: img7,
+  //   icon: icon7,
+  //   name: "Россия",
+  // },
+  // {
+  //   id: 8,
+  //   flag: flag4,
+  //   img: img8,
+  //   icon: icon8,
+  //   name: "Россия",
+  // },
 ];
 
 export const NEWS = [
