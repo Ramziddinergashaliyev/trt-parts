@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import "./characteristics.scss";
 
-const Characteristics = () => {
+const Characteristics = ({ data }) => {
   const product = {
     marka: "LADA RIVA LAIKA SW",
     model: "2101-2107",
@@ -15,6 +15,8 @@ const Characteristics = () => {
     crossCodesOEM: ["2101-2904101"],
   };
 
+  console.log(data);
+
   console.log(product);
 
   return (
@@ -22,35 +24,35 @@ const Characteristics = () => {
       <table className="characteristic__table">
         <tr className="characteristic__row">
           <h3>Marka</h3>
-          <span>{product.marka}</span>
+          <span>{data?.carName}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Model</h3>
-          <span>{product.model}</span>
+          <h3>Модель</h3>
+          <span>{data?.model}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Country</h3>
-          <span>{product.country}</span>
+          <h3>Страна</h3>
+          <span>{data?.country} Узбекистан</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Brand</h3>
-          <span>{product.brand}</span>
+          <h3>Бренд</h3>
+          <span>{data?.brand}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>ArticleNumber</h3>
-          <span>{product.articleNumber}</span>
+          <h3>Артикул бренда</h3>
+          <span>{data?.trtCode}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Unit</h3>
-          <span>{product.unit}</span>
+          <h3>Базовая единица</h3>
+          <span>{data?.unit}шт</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Category</h3>
-          <span>{product.category}</span>
+          <h3>Категория на сайте</h3>
+          <span>{data?.categories?.[0].name}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>CrossCodesOEM</h3>
-          <span>{product.crossCodesOEM}</span>
+          <h3>Кросс коды OEM</h3>
+          <span>{data?.oem}</span>
         </tr>
       </table>
     </div>

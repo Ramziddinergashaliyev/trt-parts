@@ -22,7 +22,7 @@ const Single = () => {
 
   useEffect(() => {
     if (data?.images?.length > 0) {
-      setSelectedImage(data.images[0]); // Birinchi rasmni default qilib olish
+      setSelectedImage(data.images[0]);
     }
   }, [data]);
 
@@ -79,7 +79,7 @@ const Single = () => {
       <Tabs activeTab={activeTab} onTabClick={setActiveTab} />
       <div className="tab-content">
         <div className="tab-content-text container">
-          {activeTab === "reviews" && <Characteristics />}
+          {activeTab === "reviews" && <Characteristics data={data} />}
           {activeTab === "Application" && <Application />}
           {activeTab === "Information" && <Information />}
         </div>
