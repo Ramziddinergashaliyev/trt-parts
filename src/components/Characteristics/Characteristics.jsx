@@ -32,7 +32,7 @@ const Characteristics = ({ data }) => {
         </tr>
         <tr className="characteristic__row">
           <h3>Страна</h3>
-          <span>{data?.country} Узбекистан</span>
+          <span>Узбекистан</span>
         </tr>
         <tr className="characteristic__row">
           <h3>Бренд</h3>

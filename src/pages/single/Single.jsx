@@ -80,8 +80,8 @@ const Single = () => {
       <div className="tab-content">
         <div className="tab-content-text container">
           {activeTab === "reviews" && <Characteristics data={data} />}
-          {activeTab === "Application" && <Application />}
-          {activeTab === "Information" && <Information />}
+          {activeTab === "Application" && <Application data={data} />}
+          {activeTab === "Information" && <Information data={data} />}
         </div>
       </div>
 

@@ -1,0 +1,28 @@
+.information {
+  padding: 10px 0px 40px;
+  &__card {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    border: 1px solid #aaa3;
+
+    &-text {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: calc(0.6666666667 * (1vw + 1vh));
+      font-weight: 300;
+      line-height: 160%;
+      word-wrap: break-word;
+      text-align: start;
+    }
+
+    &-title {
+      font-size: calc(0.6666666667 * (1vw + 1vh));
+      font-weight: 400;
+      line-height: 160%;
+      word-wrap: break-word;
+      text-align: start;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.tabs {
+  padding: 20px 0 10px;
+  margin: 30px 0px 0px;
+  background-color: white;
+
+  &__card {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #797979;
+  }
+}
+
+.tab {
+  padding: 10px 5px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+  background: transparent;
+}
+
+.tab.active {
+  border-bottom: 2px solid#FF2C2C;
+  color: #ff2c2c;
+}
+
+.tab-content {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: white;
+
+  &-text {
+    font-size: 20px;
+  }
+}
