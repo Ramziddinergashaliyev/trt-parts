@@ -26,7 +26,6 @@ const Partner = () => {
 
   return (
     <div className="partner">
-      {/* <div className="partner__bg"></div> */}
       <div>
         <div className="partner__info">
           <p className="partner__info-text">НАШИ ПАРТНЕРЫ</p>

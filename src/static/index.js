@@ -1,25 +1,15 @@
 import flag1 from "../assets/partner/flag1.png";
 import flag2 from "../assets/partner/flag2.png";
-import flag4 from "../assets/partner/flag4.png";
 import flag6 from "../assets/partner/flag6.png";
 import icon1 from "../assets/partner/icon1.png";
 import icon2 from "../assets/partner/icon2.png";
 import icon3 from "../assets/partner/icon3.png";
-import icon4 from "../assets/partner/icon4.png";
-import icon5 from "../assets/partner/icon5.png";
 import icon6 from "../assets/partner/icon6.png";
-import icon7 from "../assets/partner/icon7.png";
-import icon8 from "../assets/partner/icon8.png";
 import img1 from "../assets/partner/img1.png";
 import img2 from "../assets/partner/img2.png";
 import img3 from "../assets/partner/img3.png";
-import img4 from "../assets/partner/img4.png";
-import img5 from "../assets/partner/img5.png";
 import img6 from "../assets/partner/img6.png";
-import img7 from "../assets/partner/img7.png";
-import img8 from "../assets/partner/img8.png";
-
-import navost from "../assets/img/navost.png";
+import navost from "../assets/img/new.jpg";
 import result from "../assets/img/filter.jpg";
 
 export const PARTNER = [
@@ -86,7 +76,7 @@ export const NEWS = [
   {
     id: 1,
     img: navost,
-    title: "Тестовая новость бренда TRT",
+    title: "Технология",
     desc: "Нашими партнерами являются компании зарекомендовавшие себя на мировой арене как производители высококачественного сырья с многолетним опытом.",
     date: "24.07.2023",
   },

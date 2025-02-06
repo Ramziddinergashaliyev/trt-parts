@@ -7,52 +7,6 @@
     grid-gap: 20px;
   }
 
-  // &__card {
-  //   background: rgba(246, 246, 246, 1);
-  //   padding: 30px;
-
-  //   &-top {
-  //     display: flex;
-  //     align-items: flex-start;
-  //     justify-content: space-between;
-  //     padding-bottom: 30px;
-
-  //     &-img {
-  //       background-color: black;
-  //       width: 60px;
-  //       height: 60px;
-  //       border-radius: 50%;
-  //       display: flex;
-  //       align-items: center;
-  //       justify-content: center;
-  //     }
-  //   }
-
-  //   &-top-info {
-  //     &-title {
-  //       font-size: 18px;
-  //       font-weight: 400;
-  //       line-height: 23.4px;
-  //       text-align: left;
-  //       text-underline-position: from-font;
-  //       text-decoration-skip-ink: none;
-  //       border-bottom: 1px solid gray;
-  //       padding-bottom: 10px;
-  //     }
-
-  //     &-text {
-  //       font-size: 13px;
-  //       font-weight: 300;
-  //       line-height: 19.5px;
-  //       text-align: left;
-  //       text-underline-position: from-font;
-  //       text-decoration-skip-ink: none;
-  //       padding-top: 10px;
-  //       color: rgba(104, 104, 104, 1);
-  //     }
-  //   }
-  // }
-
   &__card {
     background: linear-gradient(135deg, #f6f6f6, #eaeaea);
     padding: 30px;

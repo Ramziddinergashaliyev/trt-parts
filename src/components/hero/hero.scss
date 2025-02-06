@@ -425,14 +425,6 @@
   }
 
   @media (max-width: 450px) {
-    // &__overlay {
-    //   padding: calc(100vh - 80vh) 0 20px 0;
-    //   flex-direction: column;
-    //   gap: 25px;
-    //   align-items: start;
-    //   border: none;
-    // }
-
     &__bottom__left {
       position: absolute;
       top: calc(100vh - 57vh);

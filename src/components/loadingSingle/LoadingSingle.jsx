@@ -22,12 +22,6 @@ const LoadingSingle = () => {
             <div class="loadingSin__text bg__animation"></div>
             <div class="loadingSin__text bg__animation"></div>
           </div>
-          {/* <hr />
-          <div class="loadingSin__title bg__animation"></div>
-          <div class="loadingSin__title bg__animation"></div>
-          <hr />
-          <div class="loadingSin__title bg__animation"></div>
-          <div class="loadingSin__title bg__animation"></div> */}
         </div>
       </div>
     </div>

@@ -1,17 +1,21 @@
 import React, { lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Labaratory from "./pages/labaratory/Labaratory";
-import Galarey from "./pages/galarey/Galarey";
-import CatalogPage from "./pages/catalogPage/CatalogPage";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import FilterResults from "./pages/filterResults/FilterResults";
-import Auth from "./pages/auth/Auth";
-// import Admin from "./pages/admin/Admin";
-import ManageProduct from "./pages/admin/manageProduct/ManageProduct";
-import CreateProduct from "./pages/admin/createProduct/CreateProduct";
-import Login from "./pages/login/Login";
-import Layout from "./components/layout/Layout";
+
+const Galarey = lazy(() => import("./pages/galarey/Galarey"));
+const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
+const Auth = lazy(() => import("./pages/auth/Auth"));
+const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
+const ManageProduct = lazy(() =>
+  import("./pages/admin/manageProduct/ManageProduct")
+);
+const CreateProduct = lazy(() =>
+  import("./pages/admin/createProduct/CreateProduct")
+);
+const Login = lazy(() => import("./pages/login/Login"));
+const Layout = lazy(() => import("./components/layout/Layout"));
 const Home = lazy(() => import("./pages/home/Home"));
 const Company = lazy(() => import("./pages/Company/Company"));
 const Partner = lazy(() => import("./pages/partner/Partner"));
@@ -20,7 +24,6 @@ const Contact = lazy(() => import("./pages/Contact/Contact"));
 const Razdel = lazy(() => import("./pages/razdel/Razdel"));
 const Admin = lazy(() => import("./pages/admin/Admin"));
 const Single = lazy(() => import("./pages/single/Single"));
-// const Footer = lazy(() => import("./components/footer/Footer"));
 const Result = lazy(() => import("./pages/result/Result"));
 const FilterSearch = lazy(() => import("./pages/filterSearch/FilterSearch"));
 const SearchProduct = lazy(() => import("./pages/searchProduct/SearchProduct"));

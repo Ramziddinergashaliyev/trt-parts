@@ -4,9 +4,9 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./handleSwiper.scss";
-import img1 from "../../assets/img/compony1.png";
-import img2 from "../../assets/img/compony2.png";
-import img3 from "../../assets/img/compony3.png";
+import img1 from "../../assets/img/img1.png";
+import img2 from "../../assets/img/img2.png";
+import img3 from "../../assets/img/img3.png";
 
 const HandleSwiper = () => {
   const items = [

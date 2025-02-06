@@ -19,12 +19,6 @@ const Header = () => {
   const [hide, setHide] = useState(false);
   const [hideSearch, setHideSearch] = useState(null);
 
-  // let { pathname } = useLocation();
-
-  // if (pathname.includes("admin") || pathname.includes("login")) {
-  //   return <></>;
-  // }
-
   const handleLanguageChange = (lang) => {
     setSelectedLang(lang);
     i18n.changeLanguage(lang);
