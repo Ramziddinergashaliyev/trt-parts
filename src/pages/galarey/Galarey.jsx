@@ -4,9 +4,17 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./galarey.scss";
-import img1 from "../../assets/img/compony1.png";
-import img2 from "../../assets/img/compony2.png";
-import img3 from "../../assets/img/compony3.png";
+// import img1 from "../../assets/img/compony1.png";
+// import img2 from "../../assets/img/compony2.png";
+// import img3 from "../../assets/img/compony3.png";
+
+import img1 from "../../assets/galery/g1.png";
+import img2 from "../../assets/galery/g2.png";
+import img3 from "../../assets/galery/g3.png";
+import img4 from "../../assets/galery/g4.png";
+import img5 from "../../assets/galery/g5.png";
+import img6 from "../../assets/galery/g6.jpg";
+import img7 from "../../assets/galery/g7.png";
 
 const Galarey = () => {
   useEffect(() => {
@@ -22,7 +30,7 @@ const Galarey = () => {
     },
     {
       id: 2,
-      img: img2,
+      img: img6,
       title: "Рулевой наконечник TRT 7172",
       subtitle: "Рулевые наконечники",
     },
@@ -34,31 +42,25 @@ const Galarey = () => {
     },
     {
       id: 4,
-      img: img3,
+      img: img4,
       title: "Рулевой наконечник TRT 7172",
       subtitle: "Рулевые наконечники",
     },
     {
-      id: 1,
-      img: img1,
-      title: "Опора шаровая TRT SPARK R8004",
-      subtitle: "Шаровые опоры",
+      id: 5,
+      img: img5,
+      title: "Рулевой наконечник TRT 7172",
+      subtitle: "Рулевые наконечники",
     },
     {
-      id: 2,
+      id: 6,
       img: img2,
       title: "Рулевой наконечник TRT 7172",
       subtitle: "Рулевые наконечники",
     },
     {
-      id: 3,
-      img: img3,
-      title: "Рычаг подвески TRT SPARK 1424",
-      subtitle: "Рычаги подвески",
-    },
-    {
-      id: 4,
-      img: img3,
+      id: 7,
+      img: img7,
       title: "Рулевой наконечник TRT 7172",
       subtitle: "Рулевые наконечники",
     },

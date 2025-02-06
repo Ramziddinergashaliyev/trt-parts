@@ -16,6 +16,10 @@ const Loading = () => {
         {lodingCard}
         {lodingCard}
         {lodingCard}
+        {lodingCard}
+        {lodingCard}
+        {lodingCard}
+        {lodingCard}
       </div>
     </div>
   );

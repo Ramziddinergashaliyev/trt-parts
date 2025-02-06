@@ -8,11 +8,6 @@ import { FaFacebookF } from "react-icons/fa";
 import "./footer.scss";
 
 const Footer = () => {
-  // let { pathname } = useLocation();
-
-  // if (pathname.includes("admin") || pathname.includes("login")) {
-  //   return <></>;
-  // }
   return (
     <footer className="footer">
       <div className="container">
@@ -97,15 +92,33 @@ const Footer = () => {
               </NavLink>
             </li>
             <li className="footer__item__information">
-              <button>
-                <FaTelegramPlane />
-              </button>
-              <button>
-                <FaInstagram />
-              </button>
-              <button>
-                <FaFacebookF />
-              </button>
+              <a
+                href="https://t.me/YOUR_TELEGRAM_USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>
+                  <FaTelegramPlane />
+                </button>
+              </a>
+              <a
+                href="https://www.instagram.com/trt_official_global"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>
+                  <FaInstagram />
+                </button>
+              </a>
+              <a
+                href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>
+                  <FaFacebookF />
+                </button>
+              </a>
             </li>
           </ul>
         </nav>
@@ -118,7 +131,6 @@ const Footer = () => {
               TECHNOLOGIES OF REAL TIME — Полный цикл производства <br />{" "}
               современных высококачественных автозапчастей
             </p>
-            {/* <p className="footer__bottom-info-text">Разработано iCORP</p> */}
             <p className="footer__bottom-info-text">
               © 2024 | Все права защищены
             </p>

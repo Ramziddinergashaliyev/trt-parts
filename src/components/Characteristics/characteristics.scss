@@ -9,7 +9,7 @@
     width: 100%;
   }
 
-  .characteristic__table {
+  &__table {
     width: 100%;
     border-collapse: collapse;
     margin: 8px 0;
@@ -17,7 +17,7 @@
     border: 1px solid #aaa4;
   }
 
-  .characteristic__row h3 {
+  &__row__text {
     color: rgba(0, 0, 0, 0.6);
     font-size: calc(0.666667vh + 0.666667vw);
     font-weight: 300;
@@ -26,24 +26,24 @@
     text-align: start;
   }
 
-  .characteristic__row span {
+  &__row__desc {
     font-size: 16px;
     font-weight: 300;
     line-height: 25.6px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    // text-underline-position: from-font;
+    // text-decoration-skip-ink: none;
   }
 
-  .characteristic__table tr:nth-child(odd) {
+  &__table tr:nth-child(odd) {
     background: #f5f5f5;
   }
 
-  .characteristic__table td:first-child {
+  &__table td:first-child {
     border-left: 0;
   }
 
-  .characteristic__table td:last-child {
+  &__table td:last-child {
     border-right: 0;
   }
 }

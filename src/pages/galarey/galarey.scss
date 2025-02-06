@@ -8,7 +8,12 @@
   // }
 
   .swiper-title__name {
-    padding: 25px 0px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35.2px;
+    text-align: left;
+    color: rgba(255, 44, 44, 1);
+    padding: 20px 0px;
   }
 
   .swiper-card {
@@ -19,7 +24,6 @@
   .swiper-slide-content {
     text-align: center;
     padding: 10px;
-    // max-height: 300px;
   }
 
   .swiper-image {
@@ -31,8 +35,6 @@
   }
 
   .swiper-info {
-    // margin-top: 15px;
-
     .swiper-title {
       font-size: 16px;
       font-weight: bold;
@@ -52,24 +54,25 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #fff;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px #aaa8;
     cursor: pointer;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.6s;
 
     &.prev-button {
-      left: 0;
+      left: 40px;
     }
 
     &.next-button {
-      right: 0;
+      right: 40px;
     }
 
     &:hover {
@@ -104,33 +107,45 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
+    .swiper-button {
+      &.prev-button {
+        left: 0;
+      }
+
+      &.next-button {
+        right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
     .swiper-image {
-      height: 200px;
+      height: 300px;
     }
   }
 
   @media (max-width: 500px) {
     .swiper-image {
-      height: 180px;
+      height: 280px;
       border-radius: 6px;
     }
 
-    .swiper-button {
-      top: 9%;
-      width: 30px;
-      height: 30px;
-      font-size: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      line-height: 30px;
+    // .swiper-button {
+    //   top: 9%;
+    //   width: 30px;
+    //   height: 30px;
+    //   font-size: 22px;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   text-align: center;
+    //   line-height: 30px;
 
-      &.prev-button {
-        right: 60px;
-      }
-    }
+    //   &.prev-button {
+    //     right: 60px;
+    //   }
+    // }
 
     .swiper-title {
       font-size: 14px;

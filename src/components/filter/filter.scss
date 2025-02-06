@@ -56,14 +56,10 @@
       input {
         display: flex;
         flex: 1;
-        padding: 18px;
+        padding: 22px;
         outline: none;
-        border: 1px solid #aaa4;
-        border-radius: 6px;
+        border: 1px solid #aaa3;
         color: gray;
-        &:focus {
-          box-shadow: inset 1px 1px 10px #aaa4;
-        }
       }
     }
 
@@ -95,11 +91,10 @@
     // }
 
     .filter__form-btn {
-      padding: 18px;
+      padding: 22px;
       background: linear-gradient(0deg, #ff2c2c, #ff2c2c);
       color: #fff;
       border: 1px solid transparent;
-      border-radius: 6px;
       position: relative;
       overflow: hidden;
     }

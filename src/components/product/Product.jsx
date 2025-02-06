@@ -8,7 +8,7 @@ const Product = ({ product, isTrue }) => {
   return (
     <div className="result__card">
       <NavLink to={`/single/${product?.id}`} className="result__card__img">
-        <img src={product?.imageUrl} alt="" />
+        <img src={product?.images[0]} alt="" />
       </NavLink>
       {isTrue ? (
         <div className="result__card__img__btn">

@@ -13,13 +13,13 @@
     font-weight: 400;
     line-height: 35.2px;
     color: rgba(255, 44, 44, 1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: white;
     width: 360px;
     padding: 20px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   &__list-info {
@@ -33,7 +33,7 @@
       font-weight: 300;
       line-height: 14px;
       text-align: start;
-      width: 35%;
+      width: 40%;
       color: rgba(0, 0, 0, 0.5);
       padding-bottom: 25px;
     }
@@ -44,8 +44,9 @@
     border: 1px solid #aaa2;
     border-radius: 8px;
     overflow: hidden;
-    width: 35%;
+    width: 40%;
     background-color: white !important;
+    padding: 10px;
   }
 
   &__header {
@@ -87,10 +88,10 @@
 
   @media (max-width: 900px) {
     &__list-info {
-      // background: red;
       justify-content: center;
     }
 
+    &-text,
     &__item {
       width: 60%;
     }
@@ -102,6 +103,7 @@
       font-size: 20px;
     }
 
+    &-text,
     &__item {
       width: 100%;
     }
@@ -111,7 +113,6 @@
       font-weight: 300;
       line-height: 14px;
       text-align: start;
-      width: 50%;
       color: rgba(0, 0, 0, 0.5);
       padding-bottom: 15px;
     }

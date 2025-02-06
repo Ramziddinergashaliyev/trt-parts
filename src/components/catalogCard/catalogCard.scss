@@ -7,7 +7,7 @@
     grid-gap: 20px;
 
     &-item {
-      height: 300px;
+      height: 320px;
       background-color: #fff !important;
       padding: 20px;
       border-radius: 4px;
@@ -98,14 +98,14 @@
 
     &-info {
       position: absolute;
-      top: 200px;
+      top: 220px;
       left: 0;
       &-title {
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 1.2;
         color: #333;
-        padding-bottom: 3px;
+        padding-bottom: 10px;
       }
 
       &-text {

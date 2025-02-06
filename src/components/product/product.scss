@@ -1,7 +1,5 @@
 .result {
   &__card {
-    // padding: 10px;
-    // box-shadow: 1px 1px 10px #aaa7;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -52,7 +50,7 @@
 
     &:hover {
       transform: scale(1.03);
-      box-shadow: 1px 1px 10px #aaa9;
+      box-shadow: 1px 1px 10px #aaa3;
 
       .result__card__img__btn {
         opacity: 1;
@@ -65,15 +63,15 @@
       padding: 10px;
 
       &-text {
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 400;
-        line-height: 22.5px;
+        line-height: 24.5px;
         color: rgba(0, 0, 0, 0.7);
         padding: 12px 0px;
       }
 
       &-title {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 16.5px;
         color: rgba(0, 0, 0, 0.3);

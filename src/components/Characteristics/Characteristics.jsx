@@ -4,55 +4,42 @@ import { FaCheck } from "react-icons/fa";
 import "./characteristics.scss";
 
 const Characteristics = ({ data }) => {
-  const product = {
-    marka: "LADA RIVA LAIKA SW",
-    model: "2101-2107",
-    country: "Узбекистан",
-    brand: "TRT",
-    articleNumber: "RS9021L",
-    unit: "шт",
-    category: "Рычаги подвески",
-    crossCodesOEM: ["2101-2904101"],
-  };
-
-  console.log(data);
-
-  console.log(product);
-
   return (
     <div className="characteristic">
       <table className="characteristic__table">
         <tr className="characteristic__row">
-          <h3>Marka</h3>
-          <span>{data?.carName}</span>
+          <h3 className="characteristic__row__text">Marka</h3>
+          <span className="characteristic__row__desc">{data?.carName}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Модель</h3>
-          <span>{data?.model}</span>
+          <h3 className="characteristic__row__text">Модель</h3>
+          <span className="characteristic__row__desc">{data?.model}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Страна</h3>
-          <span>Узбекистан</span>
+          <h3 className="characteristic__row__text">Страна</h3>
+          <span className="characteristic__row__desc">Узбекистан</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Бренд</h3>
-          <span>{data?.brand}</span>
+          <h3 className="characteristic__row__text">Бренд</h3>
+          <span className="characteristic__row__desc">{data?.brand}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Артикул бренда</h3>
-          <span>{data?.trtCode}</span>
+          <h3 className="characteristic__row__text">Артикул бренда</h3>
+          <span className="characteristic__row__desc">{data?.trtCode}</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Базовая единица</h3>
-          <span>{data?.unit}шт</span>
+          <h3 className="characteristic__row__text">Базовая единица</h3>
+          <span className="characteristic__row__desc">{data?.unit}шт</span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Категория на сайте</h3>
-          <span>{data?.categories?.[0].name}</span>
+          <h3 className="characteristic__row__text">Категория на сайте</h3>
+          <span className="characteristic__row__desc">
+            {data?.categories?.[0].name}
+          </span>
         </tr>
         <tr className="characteristic__row">
-          <h3>Кросс коды OEM</h3>
-          <span>{data?.oem}</span>
+          <h3 className="characteristic__row__text">Кросс коды OEM</h3>
+          <span className="characteristic__row__desc">{data?.oem}</span>
         </tr>
       </table>
     </div>

@@ -12,7 +12,7 @@ const CatalogCard = () => {
   return (
     <div className="catalogCard">
       <div className="catalogCard__box" data-aos="zoom-in-down">
-        {data?.map((item) => (
+        {data?.slice(0, 6)?.map((item) => (
           <div
             key={item.id}
             style={{
