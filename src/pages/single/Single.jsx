@@ -65,7 +65,7 @@ const Single = () => {
                   Модель: <span>{data?.model}</span>
                 </li>
                 <li className="detail__card__info-item">
-                  ОЕМ номер: <span>{data?.oem}</span>
+                  ОЕМ номер: <span>{data?.oem[0]}</span>
                 </li>
                 <li className="detail__card__info-item">
                   Год: <span>{data?.years}</span>

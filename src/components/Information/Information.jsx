@@ -4,10 +4,12 @@ import "./information.scss";
 const Information = ({ data }) => {
   return (
     <div className="information">
-      <div className="information__card">
-        <p className="information__card-text">OEM</p>
-        <p className="information__card-title">{data?.oem}</p>
-      </div>
+      {data?.oem?.map((el) => (
+        <div className="information__card">
+          <p className="information__card-text">OEM</p>
+          <p className="information__card-title">{el}</p>
+        </div>
+      ))}
     </div>
   );
 };

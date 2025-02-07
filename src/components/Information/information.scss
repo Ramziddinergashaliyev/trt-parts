@@ -8,6 +8,10 @@
     padding: 14px;
     border: 1px solid #aaa3;
 
+    &:nth-child(even) {
+      background-color: white;
+    }
+
     &-text {
       color: rgba(0, 0, 0, 0.6);
       font-size: calc(0.6666666667 * (1vw + 1vh));
