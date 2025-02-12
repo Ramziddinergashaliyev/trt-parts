@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import icon from "../../../assets/icons/headerIcon.svg";
+// import icon from "../../../assets/icons/headerIcon.svg";
+import icon from "../../../assets/img/logo.png";
 import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import uzb from "../../../assets/icons/uzb.webp";
