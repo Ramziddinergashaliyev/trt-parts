@@ -5,11 +5,34 @@
   background-size: cover;
   padding: 90px 0px;
 
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid gray;
+  }
+
+  .download-button {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #d00101;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+  }
+
+  .download-button:hover {
+    background-color: #d00406;
+  }
+
+
   &__info {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-bottom: 1px solid gray;
     padding-bottom: 20px;
 
     &-title {

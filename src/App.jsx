@@ -8,12 +8,8 @@ const Galarey = lazy(() => import("./pages/galarey/Galarey"));
 const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
 const Auth = lazy(() => import("./pages/auth/Auth"));
 const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
-const ManageProduct = lazy(() =>
-  import("./pages/admin/manageProduct/ManageProduct")
-);
-const CreateProduct = lazy(() =>
-  import("./pages/admin/createProduct/CreateProduct")
-);
+const ManageProduct = lazy(() => import("./pages/admin/manageProduct/ManageProduct"));
+const CreateProduct = lazy(() => import("./pages/admin/createProduct/CreateProduct"));
 const Login = lazy(() => import("./pages/login/Login"));
 const Layout = lazy(() => import("./components/layout/Layout"));
 const Home = lazy(() => import("./pages/home/Home"));
@@ -51,7 +47,7 @@ const App = () => {
           <Route path="/filter" element={<FilterSearch />} />
           <Route path="/newost" element={<Newost />} />
           <Route path="/result" element={<Result />} />
-          <Route path="/galarey" element={<Galarey />} />
+          <Route path="/galary" element={<Galarey />} />
           <Route path="/accardion" element={<Accardion />} />
           <Route path="/search" element={<SearchProduct />} />
           <Route path="/filterResults" element={<FilterResults />} />

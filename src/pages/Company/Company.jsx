@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import img from "../../assets/img/trt.png";
+import img from "../../assets/img/trt.jpg";
 import img1 from "../../assets/sertifikat/IQNET.png";
 import img2 from "../../assets/sertifikat/SICQ.png";
 import img3 from "../../assets/sertifikat/TRT.png";
 import img4 from "../../assets/sertifikat/UZAUTO.png";
+
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -51,7 +52,7 @@ const Company = () => {
                 MOTORS по внедрению стандартов качества и контроля в
                 производстве. Производственный процесс начинается с отдела
                 конструирования, где опытные специалисты разрабатывают детали.
-              </span>
+              </span>              
             </p>
           </div>
           <div className="company__info__right">
@@ -80,7 +81,6 @@ const Company = () => {
             расширить свое присутствие на новые международные рынки в будущем.
           </p>
         </div>
-
         <Service />
         <Photo />
         <Partner />

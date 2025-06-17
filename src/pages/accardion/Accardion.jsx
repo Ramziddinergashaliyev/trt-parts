@@ -1,50 +1,101 @@
-import React, { useEffect, useState } from "react";
+// import React, { useState,useEffect } from "react";
+// import "./accardion.scss";
+// import { ACCARDION } from "../../static";
+// import { FiPlus } from "react-icons/fi";
+// import { RiCloseFill } from "react-icons/ri";
+
+// const Accardion = () => {
+//   useEffect(() => {
+//     window.scroll(0, 0);
+//   });
+
+//   const [activeIndex, setActiveIndex] = useState(null);
+
+//   const toggleAccordion = (index) => {
+//     setActiveIndex(activeIndex === index ? null : index);
+//   };
+
+//   return (
+//     <div className="accardion">
+//       <div className="accardion__list">
+//         <h3 className="accardion__title">Дистрибьюторы</h3>
+//         <ul className="accardion__list-info container">
+//           <p className="accardion__list-info-text">Список стран</p>
+//           {ACCARDION?.map((el, index) => (
+//             <li key={el?.id} className="accardion__item">
+//               <div className="accardion__header" onClick={() => toggleAccordion(index)}>
+//                 <p className="accardion__header__country">{el?.country}</p>
+//                 <span className={`accardion__icon ${activeIndex === index ? 'accardion__icon--rotated' : ''}`}>
+//                   {activeIndex === index ? <RiCloseFill /> : <FiPlus />}
+//                 </span>
+//               </div>
+//               <div className={`accardion__content ${activeIndex === index ? 'accardion__content--open' : ''}`}>
+//                 <div className="accardion__content-inner">
+//                   <p className="accardion__content__name">{el?.name}</p>
+//                   <p className="accardion__content__title">{el?.title}</p>
+//                   <a className="accardion__content__number" href={`tel:${el?.number}`}>{el?.number}</a>
+//                 </div>
+//               </div>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Accardion;
+
+import React, { useState, useEffect } from "react";
 import "./accardion.scss";
+import { ACCARDION } from "../../static";
+import { FiPlus } from "react-icons/fi";
+import { RiCloseFill } from "react-icons/ri";
+import bgVideo from "../../assets/video/partner-bg.mp4"; 
 
 const Accardion = () => {
   useEffect(() => {
     window.scroll(0, 0);
-  });
+  }, []);
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const countries = [
-    "Азербайджан",
-    "Казахстан",
-    "Киргизстан",
-    "Таджикистан",
-    "ФАЗ",
-  ];
-
   return (
     <div className="accardion">
+
+      <video className="accardion__video-bg" autoPlay loop muted>
+        <source src={bgVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <div className="accardion__list">
         <h3 className="accardion__title">Дистрибьюторы</h3>
         <ul className="accardion__list-info container">
           <p className="accardion__list-info-text">Список стран</p>
-          {countries.map((country, index) => (
-            <li key={index} className="accardion__item">
-              <div
-                className="accardion__header"
-                onClick={() => toggleAccordion(index)}
-              >
-                <span>{country}</span>
-                <span className="accardion__icon">
-                  {activeIndex === index ? "-" : "+"}
+          {ACCARDION?.map((el, index) => (
+            <li key={el?.id} className="accardion__item">
+              <div className="accardion__header" onClick={() => toggleAccordion(index)}>
+                <p className="accardion__header__country">{el?.country}</p>
+                <span className={`accardion__icon ${activeIndex === index ? 'accardion__icon--rotated' : ''}`}>
+                  {activeIndex === index ? <RiCloseFill /> : <FiPlus />}
                 </span>
               </div>
-              {activeIndex === index && (
-                <div className="accardion__content">
-                  <p>Контактная информация для {country}.</p>
+              <div className={`accardion__content ${activeIndex === index ? 'accardion__content--open' : ''}`}>
+                <div className="accardion__content-inner">
+                  <p className="accardion__content__name">{el?.name}</p>
+                  <p className="accardion__content__title">{el?.title}</p>
+                  <a className="accardion__content__number" href={`tel:${el?.number}`}>{el?.number}</a>
                 </div>
-              )}
+              </div>
             </li>
           ))}
         </ul>
       </div>
+
     </div>
   );
 };

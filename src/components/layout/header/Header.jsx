@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-// import icon from "../../../assets/icons/headerIcon.svg";
 import icon from "../../../assets/img/logo.png";
 import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
@@ -67,7 +66,6 @@ const Header = () => {
                 className={"header__nav__item-link"}
                 to={"/razdel"}
               >
-                {/* {t("header.Katalog")} */}
                 Каталог
               </NavLink>
             </li>
@@ -77,7 +75,6 @@ const Header = () => {
                 className={"header__nav__item-link"}
                 to={"/company"}
               >
-                {/* {t("header.Kompaniya")} */}
                 Компании
               </NavLink>
             </li>
@@ -91,23 +88,21 @@ const Header = () => {
                 Партнеры
               </NavLink>
             </li>
-            <li className="header__nav__item">
+            {/* <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
                 className={"header__nav__item-link"}
                 to={"/newost"}
               >
-                {/* {t("header.Yangiliklar")} */}
                 Новости
               </NavLink>
-            </li>
+            </li> */}
             <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
                 className={"header__nav__item-link"}
                 to={"/contact"}
               >
-                {/* {t("header.Kontaktlar")} */}
                 Контакты
               </NavLink>
             </li>
@@ -115,9 +110,8 @@ const Header = () => {
               <NavLink
                 onClick={() => setHide(false)}
                 className={"header__nav__item-link"}
-                to={"/galarey"}
+                to={"/galary"}
               >
-                {/* {t("header.Galereya")} */}
                 Галарея
               </NavLink>
             </li>
@@ -144,7 +138,6 @@ const Header = () => {
                     onClick={() => handleLanguageChange("uzb")}
                   >
                     <img src={uzb} alt="Uzbek" className="lang-icon" />
-                    {/* {t("Uzbek")} */}
                     Uzbek
                   </div>
                   <div
@@ -152,7 +145,6 @@ const Header = () => {
                     onClick={() => handleLanguageChange("rus")}
                   >
                     <img src={rus} alt="Russian" className="lang-icon" />
-                    {/* {t("Rus")} */}
                     Rus
                   </div>
                 </div>
