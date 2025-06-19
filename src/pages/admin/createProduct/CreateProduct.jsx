@@ -8,77 +8,77 @@ const CreateProduct = () => {
       <form className="createProduct__form" action="">
         <label className="createProduct__form__item">
           sku
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
         <label className="createProduct__form__item">
           name
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
         <label className="createProduct__form__item">
           visibilityInCatalog
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
         <label className="createProduct__form__item">
           language
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
         <label className="createProduct__form__item">
           translationGroup
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
         <label className="createProduct__form__item">
           shortDescription
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
         <label className="createProduct__form__item">
           description
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           inStock
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           images
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           carName
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           model
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           oem
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           years
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           price
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           imageUrl
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           trtCode
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           brand
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <label>
+        <label className="createProduct__form__item">
           categories
-          <input type="text" />
+          <input className="createProduct__form__input" type="text" />
         </label>
-        <button type="submit">Создать</button>
+        <button className="create__product__form__btn" type="submit">Создать</button>
       </form>
     </div>
   );

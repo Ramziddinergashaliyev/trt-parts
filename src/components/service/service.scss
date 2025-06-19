@@ -8,16 +8,17 @@
   }
 
   &__card {
-    background: linear-gradient(135deg, #f6f6f6, #eaeaea);
+    background: linear-gradient(135deg, #fdfbfb, #eaeaea);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: translateY(-10px);
+      transform: translateY(-2px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
     }
 
     &::before {
@@ -27,7 +28,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(95deg, #aaa8, #fff, #aaa8, #aaa1);
+      background: linear-gradient(95deg, #aaa6, #fff, #aaa6, #aaa1);
       background-size: 300% 300%;
       z-index: -1;
       border-radius: 10px;
@@ -46,25 +47,26 @@
       justify-content: space-between;
       padding-bottom: 30px;
 
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+        color: rgb(92, 91, 91);
+      }
+
       &-img {
         background-color: black;
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
 
     &-top-info {
       &-title {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 400;
         line-height: 23.4px;
         border-bottom: 1px solid gray;
@@ -78,7 +80,7 @@
       }
 
       &-text {
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 300;
         color: rgba(104, 104, 104, 1);
         transition: color 0.3s ease;
@@ -125,3 +127,9 @@
     }
   }
 }
+
+.service__card:hover .service__card-top-img {
+  transform: scale(1.009);
+  transition: .3s;
+}
+

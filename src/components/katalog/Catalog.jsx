@@ -23,12 +23,10 @@ const Catalog = () => {
            >
            📥 Скачать PDF-файл
           </a>
-        </div>
-  
-        
+        </div>        
       </div>
-        <CatalogCard />
-        <div className="catalog__info__bottom">
+       <CatalogCard />
+       <div className="catalog__info__bottom">
           <h3 className="catalog__info__bottom-title">О продукции</h3>
           <div className="catalog__info__bottom-text">
             <div className="catalog__info__bottom-text-left">
@@ -42,7 +40,11 @@ const Catalog = () => {
               производительности и долговечности.
             </div>
           </div>
-        </div>
+       </div>
+       <div className="catalog__info__card">
+          <div className="catalog__info__card__left"></div>
+          <div className="catalog__info__card__right"></div>
+       </div>
       </div>
     </div>
   );

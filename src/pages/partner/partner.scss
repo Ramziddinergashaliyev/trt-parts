@@ -30,12 +30,18 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    padding: 30px 0px;
+    padding: 20px 0px;
   }
 
   &__card {
     background-color: white;
     box-shadow: 1px 1px 10px #aaa4;
+    border-radius: 2px;
+    
+    &:hover {
+      box-shadow: 1px 1px 125px rgba(121, 112, 112, 0.15);
+      transition: 0.5s;
+    }
 
     &__top {
       display: flex;
@@ -62,6 +68,11 @@
         width: 100%;
       }
     }
+  }
+
+  &__card:hover {
+    box-shadow: 1px 1px 10px rgb(182, 181, 181);
+    transition: .5s;
   }
 
   @media (max-width: 1270px) {

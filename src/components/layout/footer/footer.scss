@@ -98,6 +98,7 @@
     &__list-title {
       padding-bottom: 10px;
     }
+
     &__bottom {
       padding-top: 40px;
 
@@ -107,6 +108,7 @@
       }
     }
   }
+  
   @media (max-width: 450px) {
     &__nav {
       display: grid;

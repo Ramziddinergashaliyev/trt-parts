@@ -32,24 +32,26 @@ const Filter = () => {
             <p className="filter__top__left-title">Поиск продукции</p>
           </div>
           <div className="filter__top__icon">
-            <img src={img} alt="" />
+            <img className="filter__top__icon-img" src={img} alt="" />
           </div>
         </div>
         <form className="filter__form" onSubmit={handleSearch}>
           <div className="filter__form-left">
-            <label htmlFor="">
+            <label className="filter__form-left__label" htmlFor="">
               OEM номер
               <input
                 onChange={(e) => setOne(e.target.value)}
+                className="filter__form-left-input"
                 type="search"
                 value={one}
                 placeholder="2875013"
               />
             </label>
-            <label htmlFor="">
+            <label className="filter__form-left__label" htmlFor="">
               TRT-код
               <input
                 onChange={(e) => setTwo(e.target.value)}
+                className="filter__form-left-input"
                 type="search"
                 value={two}
                 placeholder="NR1001"
@@ -57,19 +59,21 @@ const Filter = () => {
             </label>
           </div>
           <div className="filter__form-right">
-            <label htmlFor="">
+            <label className="filter__form-left__label" htmlFor="">
               Марка
               <input
                 onChange={(e) => setThree(e.target.value)}
+                className="filter__form-left-input"
                 type="search"
                 value={three}
                 placeholder="DAEWOO"
               />
             </label>
-            <label htmlFor="">
+            <label className="filter__form-left__label" htmlFor="">
               Модель
               <input
                 onChange={(e) => setFour(e.target.value)}
+                className="filter__form-left__input"
                 type="search"
                 value={four}
                 placeholder="Nexia"
@@ -79,6 +83,7 @@ const Filter = () => {
               Найти деталь
             </button>
           </div>
+          
         </form>
       </div>
     </div>

@@ -59,6 +59,7 @@ const Company = () => {
             <img src={img} alt="Company Image" />
           </div>
         </div>
+
         <div className="company__info__bottom">
           <p className="company__info__bottom-text">
             Лаборатория компании использует современное автоматизированное
@@ -81,10 +82,13 @@ const Company = () => {
             расширить свое присутствие на новые международные рынки в будущем.
           </p>
         </div>
+
         <Service />
         <Photo />
         <Partner />
+
       </div>
+
       <div className="company__swiper">
         <div className="container">
           <h4 className="company__swiper-title">Наши Сертификаты</h4>
@@ -140,7 +144,8 @@ const Company = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-      </div>
+      </div> 
+
     </div>
   );
 };

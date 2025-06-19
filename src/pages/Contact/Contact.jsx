@@ -3,11 +3,14 @@ import "./contact.scss";
 import icon from "../../assets/icons/mail.svg";
 
 const Contact = () => {
+
   useEffect(() => {
     window.scroll(0, 0);
   });
+  
   return (
     <div className="contact">
+
       <div className="contact__bg"></div>
       <div className="container">
         <p className="contact__title">НАШИ КОНТАКТЫ</p>
@@ -20,18 +23,12 @@ const Contact = () => {
             </p>
             <div className="contact__left__information">
               <p className="contact__left__information-text">Номер телефона</p>
-              <a
-                className="contact__left__information-number"
-                href="tel: +998 71 203-20-30"
-              >
+              <a className="contact__left__information-number" href="tel: +998 71 203-20-30">
                 +998 71 203-20-30
               </a>
               <div className="contact__left__information__mail">
                 <img src={icon} alt="" />
-                <a
-                  className="contact__left__information__mail-link"
-                  href="mailto:info@trt-parts.com"
-                >
+                <a className="contact__left__information__mail-link" href="mailto:info@trt-parts.com">
                   info@trt-parts.com
                 </a>
               </div>
@@ -62,7 +59,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 };

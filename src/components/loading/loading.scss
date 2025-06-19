@@ -50,11 +50,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 590px) {
   .loading__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 350px) {
   .loading__wrapper {
     grid-template-columns: 1fr;

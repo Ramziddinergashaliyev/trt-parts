@@ -36,7 +36,6 @@ const CatalogCard = () => {
               </NavLink>
               <div className="catalogCard__box-info">
                 <h3 className="catalogCard__box-info-title">{item?.name}</h3>
-                {/* <p className="catalogCard__box-info-text">Раздел</p> */}
               </div>
             </div>
           </div>

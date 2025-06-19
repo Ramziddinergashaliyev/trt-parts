@@ -1,17 +1,14 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-  useGetCategoriesByIdQuery,
-  useGetCategoriesQuery,
-} from "../../context/api/categoryApi";
+import { useGetCategoriesByIdQuery } from "../../context/api/categoryApi";
 import ProductItem from "../../components/productItem/ProductItem";
 import "./catalogPage.scss";
 import Loading from "../../components/loading/Loading";
 
 const CatalogPage = () => {
+
   const { id } = useParams();
   const { data } = useGetCategoriesByIdQuery(id);
-  console.log(data?.parts);
 
   useEffect(() => {
     window.scroll(0, 0);

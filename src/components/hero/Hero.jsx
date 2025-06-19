@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./hero.scss";
+
 import icon from "../../assets/img/hero.png";
 import { FaAngleRight } from "react-icons/fa6";
 import img from "../../assets/img/RedCar.jpg";
@@ -34,7 +36,7 @@ const Hero = () => {
       label: "3/3",
       subtitle:
         "Полный цикл производства современных высококачественных автозапчастей для легковых и грузовых автомобилей",
-    },
+    }
   ];
 
   const AnimatedStats = ({ endValue, text }) => {
@@ -136,6 +138,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="swipper__line"></div>
+
+     
     </>
   );
 };
@@ -163,7 +167,7 @@ export default Hero;
 //     {
 //       video: video1, 
 //       title: "Глобальные стандарты качества",
-//       label: "1/3",
+//       label: "1/1",
 //       subtitle:
 //         "Полный цикл производства современных высококачественных автозапчастей для легковых и грузовых автомобилей",
 //     }
