@@ -1,9 +1,9 @@
 import React from "react";
-import "./loadingProduct.scss";
+import "./loadingSingle.scss";
 
 const LoadingSingle = () => {
   return (
-    <div className="">
+    <div className="loadingSin">
       <div className="loadingSin__wrapper">
         <div className="loadingSin__item">
           <div className="loadingSin__img2">

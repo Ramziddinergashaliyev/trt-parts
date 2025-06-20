@@ -95,8 +95,7 @@ const Footer = () => {
               <a
                 href="https://t.me/YOUR_TELEGRAM_USERNAME"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <button>
                   <FaTelegramPlane />
                 </button>
@@ -104,8 +103,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/trt_official_global"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <button>
                   <FaInstagram />
                 </button>
@@ -113,8 +111,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <button>
                   <FaFacebookF />
                 </button>

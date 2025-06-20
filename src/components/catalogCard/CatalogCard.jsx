@@ -23,20 +23,16 @@ const CatalogCard = () => {
               backgroundPosition: "top right",
               backgroundSize: "350px auto",
             }}
-            className="catalogCard__box-item"
-          >
+            className="catalogCard__box-item">
             <div className="catalogCard__box-item-card">
-              <NavLink
-                className="catalogCard__box-item-card-link"
-                to={`/rychagi-podveski/${item?.id}`}
-              >
-                <button>
+              <NavLink className="catalogCard__box-item-card-link" to={`/rychagi-podveski/${item?.id}`}>
+                <button className="catalogCard__box-item-card-link-btn">
                   <FaArrowRight />
                 </button>
               </NavLink>
               <div className="catalogCard__box-info">
                 <h3 className="catalogCard__box-info-title">{item?.name}</h3>
-              </div>
+              </div>              
             </div>
           </div>
         ))}

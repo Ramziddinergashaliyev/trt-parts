@@ -4,6 +4,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./galarey.scss";
+
 import img1 from "../../assets/galery/g1.png";
 import img2 from "../../assets/galery/g2.png";
 import img3 from "../../assets/galery/g3.png";

@@ -19,14 +19,7 @@ const Accardion = () => {
   return (
     <div className="accardion">
 
-      {
-      /* <video className="accardion__video-bg" autoPlay loop muted>
-        <source src={bgVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> */
-      }
-
-      <video className="accardion__video-bg" autoPlay loop >
+      <video className="accardion__video-bg" autoPlay loop muted>
         <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

@@ -91,6 +91,7 @@ const HandleSwiper = () => {
       </Swiper>
       <button className="swiper-button prev-button"></button>
       <button className="swiper-button next-button"></button>
+      
     </div>
   );
 };

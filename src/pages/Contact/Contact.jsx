@@ -13,10 +13,10 @@ const Contact = () => {
 
       <div className="contact__bg"></div>
       <div className="container">
-        <p className="contact__title">НАШИ КОНТАКТЫ</p>
         <div className="contact__info">
           <div className="contact__left">
             <h3 className="contact__left__title">Свяжитесь с нами</h3>
+            <h4 className="contact__left__desc">КОНТАКТЫ</h4>
             <p className="contact__left__text">
               Для приобретения продукции, а также по вопросам сотрудничества и
               получения консультаций, свяжитесь с нами:
@@ -41,8 +41,8 @@ const Contact = () => {
           <div className="contact__right">
             <h2 className="contact__right__title">Форма для связи</h2>
             <form action="" className="contact__right__form">
-              <input placeholder={"Ваше имя"} type="text" />
-              <input placeholder={"Номер телефона"} type="text" />
+              <input placeholder={"имя"} type="text" />
+              <input placeholder={"Номер"} type="text" />
               <textarea
                 placeholder="Комментарий"
                 id=""
@@ -50,7 +50,10 @@ const Contact = () => {
                 rows="10"
               ></textarea>
               <button className="contact__right__form-btn">
-                Оставить заявку →
+                <p className="contact__right__form-btn-text">
+                  Оставить заявку →
+                </p>
+
               </button>
             </form>
             <p className="contact__right__text">
@@ -60,6 +63,7 @@ const Contact = () => {
           </div>
         </div>
       </div> 
+
     </div>
   );
 };

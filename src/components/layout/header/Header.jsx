@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import icon from "../../../assets/img/logo.png";
 import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
@@ -54,47 +54,28 @@ const Header = () => {
           <NavLink to={"/"} className="header__nav__icons">
             <img src={icon} alt="header-icon" />
           </NavLink>
-          <ul
-            className={`header__nav__list ${hide ? "header__nav__list-show" : ""
-              }`}
-          >
-            <li className="header__nav__item">
-              <NavLink
-                onClick={() => setHide(false)}
-                className={"header__nav__item-link"}
-                to={"/razdel"}
-              >
+          <ul className={`header__nav__list ${hide ? "header__nav__list-show" : ""}`}>
+            <li className="header__nav__item"> 
+              <NavLink onClick={() => setHide(false)} className={"header__nav__item-link"} to={"/razdel"}>
                 Каталог
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink
-                onClick={() => setHide(false)}
-                className={"header__nav__item-link"}
-                to={"/company"}
-              >
+              <NavLink onClick={() => setHide(false)} className={"header__nav__item-link"} to={"/company"} >
                 Компании
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink
-                onClick={() => setHide(false)}
-                className={"header__nav__item-link"}
-                to={"/accardion"}
-              >
+              <NavLink onClick={() => setHide(false)} className={"header__nav__item-link"} to={"/accardion"}>
                 Партнеры
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink
-                onClick={() => setHide(false)}
-                className={"header__nav__item-link"}
-                to={"/contact"}
-              >
+              <NavLink onClick={() => setHide(false)} className={"header__nav__item-link"} to={"/contact"}>
                 Контакты
               </NavLink>
             </li>
-            <li className="header__nav__item">
+            {/* <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
                 className={"header__nav__item-link"}
@@ -102,11 +83,10 @@ const Header = () => {
               >
                 Галарея
               </NavLink>
-            </li>
+            </li> */}
             <li className="header__nav__item">
               <div className="custom-dropdown" ref={dropdownRef}>
-                <div
-                  className="custom-dropdown-selected"
+                <div className="custom-dropdown-selected"
                   onClick={() =>
                     document
                       .querySelector(".custom-dropdown-options")
@@ -123,15 +103,13 @@ const Header = () => {
                 <div className="custom-dropdown-options">
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("uzb")}
-                  >
+                    onClick={() => handleLanguageChange("uzb")}>
                     <img src={uzb} alt="Uzbek" className="lang-icon" />
                     Uzbek
                   </div>
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("rus")}
-                  >
+                    onClick={() => handleLanguageChange("rus")}>
                     <img src={rus} alt="Russian" className="lang-icon" />
                     Rus
                   </div>
@@ -139,10 +117,7 @@ const Header = () => {
               </div>
             </li>
             <li className="header__nav__item-phone">
-              <a
-                className={"header__nav__item-tel"}
-                href="tel:+99871 203-20-30"
-              >
+              <a className={"header__nav__item-tel"} href="tel:+99871 203-20-30">
                 +99871 203-20-30
               </a>
             </li>
@@ -173,9 +148,7 @@ const Header = () => {
         </nav>
       </header>
       <div
-        className={`header__nav__search__result ${hideSearch ? "header__nav__search__result-hide" : ""
-          }`}
-      >
+        className={`header__nav__search__result ${hideSearch ? "header__nav__search__result-hide" : ""}`}>
         <div className="header__nav__search__result-form container">
           <CiSearch />
           <input placeholder="Поиск продукции..." type="search" />

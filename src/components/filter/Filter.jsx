@@ -83,7 +83,6 @@ const Filter = () => {
               Найти деталь
             </button>
           </div>
-          
         </form>
       </div>
     </div>

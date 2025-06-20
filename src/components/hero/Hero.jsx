@@ -84,8 +84,7 @@ const Hero = () => {
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "top",
                   backgroundSize: "cover",
-                }}
-              >
+                }}>
                 <div className="swiper__overlay container">
                   <div className="swiper__overlay__left">
                     <p className="swiper__overlay__left-text">АВТОЗАПЧАСТИ</p>
@@ -93,11 +92,9 @@ const Hero = () => {
                       {slide.title}
                     </h2>
                   </div>
+
                   <div className="swiper__overlay__right">
-                    <NavLink
-                      to={"/contact"}
-                      className="swiper__overlay__right-btns"
-                    >
+                    <NavLink to={"/contact"} className="swiper__overlay__right-btns">
                       <button className="swiper__overlay__right-btns-white">
                         Связаться с нами
                       </button>
@@ -138,8 +135,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="swipper__line"></div>
-
-     
     </>
   );
 };
@@ -207,8 +202,7 @@ export default Hero;
 //           style={{ transition: "ease-in-out 0.5s" }}
 //           autoplay={{ delay: 3000 }}
 //           speed={1500}
-//           loop
-//         >
+//           loop >
 //           {slides.map((slide, index) => (
 //             <SwiperSlide key={index}>
 //               <div className="swiper__slide">
