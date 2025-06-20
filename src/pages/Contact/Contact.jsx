@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./contact.scss";
 import icon from "../../assets/icons/mail.svg";
+import { FaArrowRight } from "react-icons/fa6";
+
 
 const Contact = () => {
 
@@ -27,7 +29,7 @@ const Contact = () => {
                 +998 71 203-20-30
               </a>
               <div className="contact__left__information__mail">
-                <img src={icon} alt="" />
+                <img src={icon} alt="mail-icon" />
                 <a className="contact__left__information__mail-link" href="mailto:info@trt-parts.com">
                   info@trt-parts.com
                 </a>
@@ -51,9 +53,8 @@ const Contact = () => {
               ></textarea>
               <button className="contact__right__form-btn">
                 <p className="contact__right__form-btn-text">
-                  Оставить заявку →
+                  Оставить заявку <FaArrowRight />
                 </p>
-
               </button>
             </form>
             <p className="contact__right__text">

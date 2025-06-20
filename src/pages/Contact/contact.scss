@@ -104,6 +104,7 @@
     padding-top: 50px;
     &__title {
       font-size: 20px;
+      letter-spacing: 1.5px;
       padding-bottom: 10px;
       font-weight: 600;
       line-height: 30.2px;
@@ -153,22 +154,7 @@
           color: rgb(155, 150, 150);
         }
       }
-
-      // &-btn {
-      //   width: 300px;
-      //   border: 1px solid transparent;
-      //   border-radius: 4px;
-      //   padding: 20px 40px;
-      //   background: rgba(208, 1, 1, 1);
-      //   font-size: 18px;
-      //   font-weight: 500;
-      //   line-height: 18.7px;
-      //   text-align: center;
-      //   color: white;
-      //   margin: 20px 0px;
-      //   font-weight: 400;
-      // }
-
+      
       &-btn {
         position: relative;
         width: 300px;
@@ -181,6 +167,7 @@
         z-index: 0;
         transition: all 0.6s ease;
         margin: 20px 0px;
+        
         &-text {
           position: relative;
           z-index: 2;
@@ -188,6 +175,10 @@
           font-size: 17px;
           font-weight: 500;
           color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
         }
 
         &::before {
@@ -206,7 +197,7 @@
           left: 0;
         }
 
-        &:hover span {
+        &:hover .contact__right__form-btn-text {
           letter-spacing: 1px;
         }
 
