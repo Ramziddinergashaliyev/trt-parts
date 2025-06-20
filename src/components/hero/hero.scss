@@ -553,6 +553,7 @@
       z-index: 1;
     }
 
+    //overlay video uchun
     &::after {
       content: '';
       position: absolute;
@@ -560,8 +561,8 @@
       left: 0;
       right: 0;
       bottom: 0px; 
-      background: rgba(39, 39, 39, 0.4); 
-      backdrop-filter: blur(2px); 
+      background: rgba(0, 0, 0, 0.4); 
+      backdrop-filter: blur(1px); 
       z-index: 2;
       pointer-events: none; 
     }
@@ -640,7 +641,7 @@
       }
 
       &-btns:hover {
-        transform: scale(1.1);
+        transform: scale(0.95);
         border-right: none;
         transition: 0.6s;
       }
