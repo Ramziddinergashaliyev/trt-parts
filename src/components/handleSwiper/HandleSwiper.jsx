@@ -4,62 +4,10 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./handleSwiper.scss";
-import img1 from "../../assets/img/img1.png";
-import img2 from "../../assets/img/img2.png";
-import img3 from "../../assets/img/img3.png";
+import { ITEMS } from "../../static";
 
 const HandleSwiper = () => {
-  const items = [
-    {
-      id: 1,
-      img: img1,
-      title: "Опора шаровая TRT SPARK R8004",
-      subtitle: "Шаровые опоры",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "Рулевой наконечник TRT 7172",
-      subtitle: "Рулевые наконечники",
-    },
-    {
-      id: 3,
-      img: img3,
-      title: "Рычаг подвески TRT SPARK 1424",
-      subtitle: "Рычаги подвески",
-    },
-    {
-      id: 4,
-      img: img3,
-      title: "Рулевой наконечник TRT 7172",
-      subtitle: "Рулевые наконечники",
-    },
-    {
-      id: 1,
-      img: img1,
-      title: "Опора TRT SPARK R8004",
-      subtitle: "Шаровые опоры",
-    },
-    {
-      id: 2,
-      img: img2,
-      title: "Рулевой TRT 7172",
-      subtitle: "Рулевые наконечники",
-    },
-    {
-      id: 3,
-      img: img3,
-      title: "Рычаг TRT SPARK 1424",
-      subtitle: "Рычаги подвески",
-    },
-    {
-      id: 4,
-      img: img3,
-      title: "Рулевой наконечник 7172",
-      subtitle: "Рулевые наконечники",
-    },
-  ];
-
+  
   return (
     <div className="custom-swiper-container">
       <h2 className="swiper-title__name">Рекомендации</h2>
@@ -77,7 +25,7 @@ const HandleSwiper = () => {
           1112: { slidesPerView: 4 },
         }}
       >
-        {items.map((item) => (
+        {ITEMS?.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="swiper-slide-content">
               <img src={item.img} alt={item.title} className="swiper-image" />

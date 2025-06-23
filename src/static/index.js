@@ -25,6 +25,10 @@ import servicePhoto1 from "../assets/img/prinsp1.png"
 import servicePhoto2 from "../assets/img/prinsp2.png"
 import servicePhoto3 from "../assets/img/prinsp3.png"
 
+import item1 from "../assets/img/img1.png";
+import item2 from "../assets/img/img2.png";
+import item3 from "../assets/img/img3.png";
+
 export const PARTNER = [
  {
     id: 1,
@@ -276,4 +280,55 @@ export const SERVICE = [
    name: "Клиентоориентированность и гибкость",
    title: "Мы ценим наших клиентов и стремимся удовлетворить их индивидуальные потребности. Благодаря высокому уровню гибкости в производстве мы способны адаптироваться к изменениям на рынке и быстро реагировать на запросы клиентов. Мы поддерживаем долгосрочные партнерские отношения."
  }
+]
+
+export const ITEMS = [
+   {
+         id: 1,
+         img: item1,
+         title: "Опора шаровая TRT SPARK R8004",
+         subtitle: "Шаровые опоры",
+       },
+       {
+         id: 2,
+         img: item2,
+         title: "Рулевой наконечник TRT 7172",
+         subtitle: "Рулевые наконечники",
+       },
+       {
+         id: 3,
+         img: item3,
+         title: "Рычаг подвески TRT SPARK 1424",
+         subtitle: "Рычаги подвески",
+       },
+       {
+         id: 4,
+         img: item3,
+         title: "Рулевой наконечник TRT 7172",
+         subtitle: "Рулевые наконечники",
+       },
+       {
+         id: 1,
+         img: item1,
+         title: "Опора TRT SPARK R8004",
+         subtitle: "Шаровые опоры",
+       },
+       {
+         id: 2,
+         img: item2,
+         title: "Рулевой TRT 7172",
+         subtitle: "Рулевые наконечники",
+       },
+       {
+         id: 3,
+         img: item3,
+         title: "Рычаг TRT SPARK 1424",
+         subtitle: "Рычаги подвески",
+       },
+       {
+         id: 4,
+         img: item3,
+         title: "Рулевой наконечник 7172",
+         subtitle: "Рулевые наконечники",
+       },
 ]

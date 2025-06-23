@@ -66,7 +66,7 @@ const Hero = () => {
                 </button>
               </NavLink>
               <div className="hero__overlay__right">
-                <img src={icon} alt="" />
+                <img src={icon} alt="hero-icons" />
               </div>
               <p className="hero__overlay__right-title">
                 1/1
