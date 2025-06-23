@@ -569,14 +569,14 @@
   }
 
   &__overlay {
-    padding: calc(100vh - 48vh) 0 20px 0;
+    padding: calc(100vh - 50vh) 0 20px 0;
     width: 85%;
     color: #fff;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     z-index: 70;
-    border-bottom: 1px solid #fff;
+    border-bottom: 0.5px solid #d8d8d8;
     position: relative;
 
     &__left {
