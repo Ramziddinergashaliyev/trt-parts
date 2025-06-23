@@ -7,8 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   const AnimatedStats = ({ endValue, text }) => {
-    const [count, setCount] = useState(0);
-
+    const [count, setCount] = useState(1200);
     useEffect(() => {
       const interval = setInterval(() => {
         setCount((prev) => {
@@ -18,7 +17,7 @@ const Hero = () => {
           }
           return prev + 1;
         });
-      }, 1);
+      }, 10);
       return () => clearInterval(interval);
     }, [endValue]);
 
