@@ -207,12 +207,12 @@ const Hero = () => {
               <div className="swiper__slide">
                 <video
                   className="swiper__slide__video"
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="metadata"
-  poster="/preview.jpg"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/preview.jpg"
                 >
                   <source src={slide.video} type="video/mp4" />
                   Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
