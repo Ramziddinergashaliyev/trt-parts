@@ -42,13 +42,14 @@
     align-items: flex-end;
     justify-content: space-between;
     z-index: 70;
-    border-bottom: 0.5px solid #d8d8d8;
+    border-bottom: 0.5px solid #9b9b9bce;
     position: relative;
 
     &__left {
       &-text {
-        font-size: 14px;
-        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 300;
         line-height: 14px;
         text-align: left;
         color: rgba(255, 255, 255, 0.8); 
@@ -73,7 +74,7 @@
     &__right {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
 
       &-btns {
         display: flex;
@@ -88,6 +89,8 @@
           background: rgba(255, 255, 255, 1);
           border: 1px solid #fff;
           border-right: none;
+          font-size: 15px;
+          letter-spacing: 1.2px;
         }
 
         &-red {
@@ -115,9 +118,10 @@
 
       &-title {
         font-size: 20px;
+        letter-spacing: 4px;
         font-weight: 400;
         line-height: 22px;
-        padding-left: 20px;
+        // padding-left: 20px;
         color: rgba(255, 255, 255, 0.7);
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
       }
@@ -131,12 +135,13 @@
 
     &__left {
       position: relative;
-      bottom: 70px;
+      bottom: 80px;
       left: 0px;
       z-index: 66;
 
       &-text {
         font-size: 16px;
+        letter-spacing: 1.3px;
         font-weight: 300;
         line-height: 25.6px;
         color: rgba(255, 255, 255, 0.9); 
@@ -186,6 +191,7 @@
 
         &-text {
           font-size: 14px;
+          letter-spacing: 1.5px;
           font-weight: 300;
           line-height: 18.2px;
           color: rgba(0, 0, 0, 0.5);

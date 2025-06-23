@@ -93,7 +93,7 @@ const Footer = () => {
             </li>
             <li className="footer__item__information">
               <a
-                href="https://t.me/YOUR_TELEGRAM_USERNAME"
+                href="https://t.me/"
                 target="_blank"
                 rel="noopener noreferrer">
                 <button>
