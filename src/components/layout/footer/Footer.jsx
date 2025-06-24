@@ -10,8 +10,11 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
+
       <div className="container">
+
         <nav className="footer__nav">
+
           <ul className="footer__list">
             <h3 className="footer__list-title">КОМПАНИЯ</h3>
             <li className="footer__item">
@@ -40,6 +43,7 @@ const Footer = () => {
               </NavLink>
             </li>
           </ul>
+
           <ul className="footer__list">
             <h3 className="footer__list-title">ПРОДУКЦИЯ</h3>
             <li className="footer__item">
@@ -62,6 +66,7 @@ const Footer = () => {
               <NavLink className={"footer__item-link"}>Ступицы</NavLink>
             </li>
           </ul>
+
           <ul className="footer__list">
             <h3 className="footer__list-title">МАТЕРИАЛЫ</h3>
             <li className="footer__item">
@@ -71,6 +76,7 @@ const Footer = () => {
               <NavLink className={"footer__item-link"}>Лаборатория</NavLink>
             </li>
           </ul>
+
           <ul className="footer__list">
             <h3 className="footer__list-title">КОНТАКТЫ</h3>
             <li className="footer__item">
@@ -118,11 +124,15 @@ const Footer = () => {
               </a>
             </li>
           </ul>
+
         </nav>
+
         <div className="footer__bottom">
+
           <div className="footer__bottom-icon">
             <img src={icon} alt="" />
           </div>
+
           <div className="footer__bottom-info">
             <p className="footer__bottom-info-text">
               TECHNOLOGIES OF REAL TIME — Полный цикл производства <br />{" "}
@@ -132,8 +142,11 @@ const Footer = () => {
               © 2024 | Все права защищены
             </p>
           </div>
+          
         </div>
+
       </div>
+
     </footer>
   );
 };

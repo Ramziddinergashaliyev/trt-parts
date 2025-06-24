@@ -116,8 +116,7 @@ const Company = () => {
                 slidesPerView: 4,
                 spaceBetween: 30,
               },
-            }}
-          >
+            }}>
             <SwiperSlide>
               <img src={img1} alt="IQNET" className="company__swiper-img" />
             </SwiperSlide>

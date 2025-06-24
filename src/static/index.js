@@ -282,7 +282,7 @@ export const SERVICE = [
  }
 ]
 
-export const ITEMS = [
+export const Swipper = [
    {
          id: 1,
          img: item1,

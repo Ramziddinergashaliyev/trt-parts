@@ -47,6 +47,8 @@ const Header = () => {
   const handleSearchClick = () => {
     setHideSearch((prev) => !prev);
   };
+
+  
   return (
     <>
       <header className="header">
@@ -75,15 +77,6 @@ const Header = () => {
                 Контакты
               </NavLink>
             </li>
-            {/* <li className="header__nav__item">
-              <NavLink
-                onClick={() => setHide(false)}
-                className={"header__nav__item-link"}
-                to={"/galary"}
-              >
-                Галарея
-              </NavLink>
-            </li> */}
             <li className="header__nav__item">
               <div className="custom-dropdown" ref={dropdownRef}>
                 <div className="custom-dropdown-selected"
@@ -91,8 +84,7 @@ const Header = () => {
                     document
                       .querySelector(".custom-dropdown-options")
                       .classList.toggle("show")
-                  }
-                >
+                  }>
                   <img
                     src={selectedLang === "rus" ? rus : uzb}
                     alt={selectedLang}
@@ -132,23 +124,21 @@ const Header = () => {
             {!hide ? (
               <button
                 onClick={() => setHide(true)}
-                className="header__nav__right-menu"
-              >
+                className="header__nav__right-menu">
                 <RxHamburgerMenu />
               </button>
             ) : (
               <button
                 onClick={() => setHide(false)}
-                className="header__nav__right-menu"
-              >
+                className="header__nav__right-menu">
                 <MdClose />
               </button>
             )}
           </div>
         </nav>
       </header>
-      <div
-        className={`header__nav__search__result ${hideSearch ? "header__nav__search__result-hide" : ""}`}>
+      
+      <div className={`header__nav__search__result ${hideSearch ? "header__nav__search__result-hide" : ""}`}>
         <div className="header__nav__search__result-form container">
           <CiSearch />
           <input placeholder="Поиск продукции..." type="search" />

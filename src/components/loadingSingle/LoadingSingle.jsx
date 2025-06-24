@@ -25,7 +25,7 @@ const LoadingSingle = () => {
           
           <div className="loadingSin__items-info">
             <div className="loadingSin__text bg__animation"></div>
-            <div className="loadingSin__text bg__animation"></div>
+            <div className="loadingSin__text bg__animation"></div>  
             <div className="loadingSin__text bg__animation"></div>
             <div className="loadingSin__text bg__animation"></div>
             <div className="loadingSin__text bg__animation"></div>

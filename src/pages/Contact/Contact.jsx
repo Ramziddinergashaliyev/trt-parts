@@ -3,7 +3,6 @@ import "./contact.scss";
 import icon from "../../assets/icons/mail.svg";
 import { FaArrowRight } from "react-icons/fa6";
 
-
 const Contact = () => {
 
   useEffect(() => {

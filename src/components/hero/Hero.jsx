@@ -32,6 +32,7 @@ const Hero = () => {
   return (
     <>
       <div className="hero">
+
         <div className="hero__slide">
           <video
             className="hero__slide__video"
@@ -40,8 +41,7 @@ const Hero = () => {
             loop
             playsInline
             preload="metadata"
-            poster="/preview.jpg"
-          >
+            poster="/preview.jpg">
             <source src={video1} type="video/mp4" />
             Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
           </video>
@@ -54,6 +54,7 @@ const Hero = () => {
               </h2>
             </div>
             <div className="hero__overlay__right">
+
               <NavLink
                 to={"/contact"}
                 className="hero__overlay__right-btns">
@@ -64,12 +65,15 @@ const Hero = () => {
                   <FaAngleRight />
                 </button>
               </NavLink>
+
               <div className="hero__overlay__right">
                 <img src={icon} alt="hero-icons" />
               </div>
+
               <p className="hero__overlay__right-title">
                 1/1
               </p>
+
             </div>
           </div>
         </div>
@@ -92,7 +96,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
       </div>
+
       <div className="hero__line"></div>
     </>
   );
