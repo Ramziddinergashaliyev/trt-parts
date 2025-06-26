@@ -14,22 +14,24 @@
     border-bottom: 1px solid rgba(172, 170, 170, 0.548);
   }
 
-  &__info__btn {
-    display: inline-block;
-    padding: 14px 40px;
-    background-color: #d00101;
-    color: #fff;
-    border-radius: 2px;
-    font-size: 15px;
-    letter-spacing: 1.1px;
-    font-weight: 400;
-    transition: background-color 0.3s ease;
+  &__btns {   
+    &-link {
+      display: inline-block;
+      padding: 14px 40px;
+      background-color: #d00101;
+      color: #fff;
+      border-radius: 2px;
+      font-size: 15px;
+      letter-spacing: 1.1px;
+      font-weight: 400;
+      transition: background-color 0.3s ease;
+    }
   }
 
   &__info__btn:hover {
     background-color: #fff;
     color: #d00101;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   &__info {

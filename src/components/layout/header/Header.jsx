@@ -8,6 +8,8 @@ import rus from "../../../assets/icons/rus.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
+import { RiMenuFill } from "react-icons/ri";
+
 
 import "./header.scss";
 
@@ -125,7 +127,7 @@ const Header = () => {
               <button
                 onClick={() => setHide(true)}
                 className="header__nav__right-menu">
-                <RxHamburgerMenu />
+                <RiMenuFill />
               </button>
             ) : (
               <button

@@ -14,16 +14,10 @@ const Catalog = () => {
             </h3>
           </div>
 
-          <div className="catalog__download">
-            <a
-              href="https://trt-parts.com/wp-content/uploads/2025/04/katalog.pdf"
-              download=""
-              target="_blank"
-              rel="noopener noreferrer"
-              className="catalog__info__btn">
-              📥Скачать PDF-файл
-            </a> 
-          </div>                   
+          <div className="catalog__btns">
+            <a className="catalog__btns-link" download={""} target="_blank" rel="noopener noreferrer" href="https://trt-parts.com/wp-content/uploads/2025/04/katalog.pdf">📥 Скачать PDF-файл </a>
+          </div>
+          
         </div>
         <CatalogCard />
         <div className="catalog__info__bottom">

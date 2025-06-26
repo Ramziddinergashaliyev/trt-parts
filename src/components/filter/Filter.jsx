@@ -26,6 +26,7 @@ const Filter = () => {
   return (
     <div className="filter">
       <div className="container">
+
         <div className="filter__top">
           <div className="filter__top__left">
             <p className="filter__top__left-text">ФИЛЬТР</p>
@@ -35,7 +36,8 @@ const Filter = () => {
             <img className="filter__top__icon-img" src={img} alt="" />
           </div>
         </div>
-        <form className="filter__form" onSubmit={handleSearch}>
+
+        <form className="filter__form" onSubmit={handleSearch}>         
           <div className="filter__form-left">
             <label className="filter__form-left__label" htmlFor="">
               OEM номер
@@ -58,6 +60,7 @@ const Filter = () => {
               />
             </label>
           </div>
+
           <div className="filter__form-right">
             <label className="filter__form-left__label" htmlFor="">
               Марка
@@ -69,20 +72,23 @@ const Filter = () => {
                 placeholder="DAEWOO"
               />
             </label>
-            <label className="filter__form-left__label" htmlFor="">
+            <div className="filter__form-right__btn">
+              <label className="filter__form-left__label" htmlFor="">
               Модель
               <input
                 onChange={(e) => setFour(e.target.value)}
-                className="filter__form-left__input"
+                className="filter__form-left-input"
                 type="search"
                 value={four}
                 placeholder="Nexia"
-              />
-            </label>
-            <button type="submit" className="filter__form-btn">
-              Найти деталь
-            </button>
+                />
+              </label>
+              <button type="submit" className="filter__form-btn">
+                Найти деталь
+              </button>
+            </div>
           </div>
+
         </form>
       </div>
     </div>

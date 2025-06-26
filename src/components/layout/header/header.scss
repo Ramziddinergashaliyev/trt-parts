@@ -130,12 +130,14 @@
   &__nav__right {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 
     &-menu {
+      padding-top: 8px;
       border: none;
       background: transparent;
-      font-size: 25px;
+      font-size: 33px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -171,11 +173,11 @@
     }
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     &__nav__list {
       position: fixed;
       left: -100%;
-      top: 90px;
+      top: 80px;
       width: 100%;
       height: calc(100vh - 100px);
       background-color: #2a2324;
@@ -203,7 +205,7 @@
     }
   }
 
-  @media (max-width: 470px) {
+  @media (max-width: 530px) {
     &__nav__btn {
       display: none;
     }
@@ -223,7 +225,7 @@
   position: relative;
   display: inline-block;
 
-  .custom-dropdown-selected {
+  &-selected {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -244,7 +246,7 @@
     }
   }
 
-  .custom-dropdown-options {
+  &-options {
     display: none;
     position: absolute;
     top: 100%;
@@ -258,22 +260,22 @@
     &.show {
       display: block;
     }
+  }
+  
+  &-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    cursor: pointer;
 
-    .custom-dropdown-option {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px;
-      cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
 
-      &:hover {
-        background-color: #f0f0f0;
-      }
-
-      .lang-icon {
-        width: 25px;
-        height: 25px;
-      }
+    .lang-icon {
+      width: 25px;
+      height: 25px;
     }
   }
 }

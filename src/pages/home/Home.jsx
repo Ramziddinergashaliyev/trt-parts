@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <Fragment>
       <Hero />
-      <Filter />
+      {/* <Filter />
       <Auto />
       <Prinsp />
       <Catalog />
-      <Vapros />
+      <Vapros /> */}
     </Fragment>
   );
 };
