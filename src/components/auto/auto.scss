@@ -8,10 +8,10 @@
     object-fit: cover;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 400px) {
     height: auto;
-    background: url("../../assets//img/home-img-min.png") no-repeat center
-      center/cover;
+    background: url("../../assets/img/bgimg.jpg") no-repeat center
+      center/contain;
     height: 210px;
 
     img {

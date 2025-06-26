@@ -7,7 +7,7 @@
 
   &__top {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
     padding-bottom: 60px;
 
@@ -140,60 +140,62 @@
     }
   }
 
-  @media (max-width: 1440px) {
-    width: 100%;
-    background: #f5f5f5;
+  @media (max-width:1020px) {
+    padding: 20px 0px;
     &__form {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 1400px) {
-    &__form {
-      &-right {
+      &-left {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 20px;
-        align-items: flex-end;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
       }
-    }
-  }
 
-  @media (max-width: 850px) {
-    &__top__icon {
-      img {
-        width: 45px;
-        height: 45px;
-      }
-    }
-  }
-
-  @media (max-width: 700px) {
-    &__form {
-      &-left,
       &-right {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 10px;
+        grid-gap: 30px;
         align-items: flex-end;
-      }
+        &__btn {
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: flex-end;
+          gap: 30px;
+        }
+      }    
+
     }
+    &__top {
+      padding-bottom: 20px;
+    }
+    
   }
 
-  @media (max-width: 540px) {
-    padding: 15px 0;
-    margin: 0;
+  @media (max-width: 650px) {
+    &__top__left-title {
+      font-size: 25px;
+    }
 
     &__form {
-      grid-template-columns: repeat(1, 1fr);
+      display: flex;
+      flex-direction: column;
+      gap: 15px 30px;
     }
 
-    &__top__left-title {
-      font-size: 24px;
+    &__form-left {
+      gap: 15px;
     }
 
-    &__top__icon {
-      display: none;
+    &__form-right {
+      gap: 15px;
+    }
+
+    &__form-left__label {
+      gap: 10px;
+      font-size: 18px;
+    }
+
+    &__form-btn,
+    &__form-left-input {
+      padding: 10px;
     }
   }
 }
