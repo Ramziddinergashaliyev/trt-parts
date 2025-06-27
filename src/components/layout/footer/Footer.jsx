@@ -10,11 +10,8 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
-
       <div className="container">
-
         <nav className="footer__nav">
-
           <ul className="footer__list">
             <h3 className="footer__list-title">КОМПАНИЯ</h3>
             <li className="footer__item">

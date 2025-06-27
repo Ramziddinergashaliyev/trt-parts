@@ -5,7 +5,7 @@
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 20px;
     &-item {
-      height: 310px;
+      height: 330px;
       background-color: #fff !important;
       padding: 20px;
       border-radius: 4px;
@@ -96,7 +96,7 @@
 
     &-info {
       position: absolute;
-      top: 240px;
+      top: 250px;
       left: 0;
       &-title {
         font-size: 24px;
@@ -111,6 +111,17 @@
         font-weight: 400;
         color: #7d7d7d;
       }
+    }
+  }
+
+  @media (max-width: 1350px) {
+    &__box-info-title {
+      font-size: 18px;
+    }
+
+    &__box-info {
+      top: 260px;
+      left: 0;
     }
   }
 

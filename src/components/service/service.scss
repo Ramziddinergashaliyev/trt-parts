@@ -93,6 +93,8 @@
     }
   }
 
+
+
   @keyframes gradient-animation {
     0% {
       background-position: 0% 50%;
@@ -103,6 +105,23 @@
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  @media (max-width: 1000px) {
+    &__card {
+      padding: 24px 16px;
+
+      &-top-info-title {
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      &-top-info-text {
+        font-size: 13px;
+        font-weight: 200;
+      }
+    }
+
   }
 
   @media (max-width: 1200px) {

@@ -5,11 +5,9 @@ import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import uzb from "../../../assets/icons/uzb.webp";
 import rus from "../../../assets/icons/rus.png";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { RiMenuFill } from "react-icons/ri";
-
 
 import "./header.scss";
 
@@ -50,7 +48,6 @@ const Header = () => {
     setHideSearch((prev) => !prev);
   };
 
-  
   return (
     <>
       <header className="header">
@@ -121,7 +118,9 @@ const Header = () => {
               <FiSearch />
             </div>
             <div className="header__nav__btn">
-              <button>Оставить заявку</button>
+              <button>
+                <a href="/contact">Оставить заявку</a>
+              </button>
             </div>
             {!hide ? (
               <button
