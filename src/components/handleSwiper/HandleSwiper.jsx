@@ -21,7 +21,7 @@ const HandleSwiper = () => {
           200: { slidesPerView: 1 },
           650: { slidesPerView: 2 },
           1111: { slidesPerView: 3 },
-          1112: { slidesPerView: 4 },
+          1210: { slidesPerView: 4 },
         }}
       >
         {Swipper?.map((el) => (
