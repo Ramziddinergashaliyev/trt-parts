@@ -96,7 +96,7 @@
 import React, { useState, useEffect } from "react";
 import "./hero.scss";
 import icon from "../../assets/img/hero.png";
-import poster from "../../assets/img/preview.png"; // Video preview rasmi
+import poster from "../../assets/img/preview.png";
 import { FaAngleRight } from "react-icons/fa6";
 import video1 from "../../assets/video/video.mp4";
 import { NavLink } from "react-router-dom";
