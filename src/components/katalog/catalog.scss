@@ -14,26 +14,6 @@
     padding-bottom: 20px;
   }
 
-  // &__card-btns-item {
-  //   display: inline-block;
-  //   width: 260px;
-  //   padding: 14px 20px;
-  //   background-color: #d00101;
-  //   color: #fff;
-  //   border-radius: 2px;
-  //   font-size: 15px;
-  //   letter-spacing: 1.1px;
-  //   font-weight: 400;
-  //   transition: background-color 0.3s ease;
-  //   border: 1px solid transparent;
-  // }
-
-  // &__card-btns-item:hover {
-  //   background-color: #fff;
-  //   color: #d00101;
-  //   transition: 0.5s;
-  // }
-
   &__card-link {
     display: inline-block;
     width: 260px;
@@ -50,7 +30,7 @@
   }
 
   &__card-link:hover {
-    background-color: #fff;
+    background: #fff;
     color: #d00101;
     transition: 0.5s;
   }

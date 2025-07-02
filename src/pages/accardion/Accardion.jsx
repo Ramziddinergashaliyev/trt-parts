@@ -3,7 +3,7 @@ import "./accardion.scss";
 import { ACCARDION } from "../../static";
 import { FiPlus } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
-import bgVideo from "../../assets/video/partner-bg.mp4"; 
+import bgVideo from "../../assets/video/acc.webm"; 
 
 const Accardion = () => {
   useEffect(() => {

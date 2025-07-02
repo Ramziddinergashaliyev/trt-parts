@@ -84,8 +84,8 @@
     }
 
     &__btns:hover {
-      transform: scale(1.02);
-      transform: 0.5;
+      transform: scale(1.01);
+      transform: 0.3s;
     }
 
     &__btns:hover .vapros__card__btns-white {
@@ -97,12 +97,14 @@
 
   &__card:hover {
     box-shadow: 1px 1px 10px gray;
-    transform: scale(1.06);
+    transform: scale(1.02);
+    transition: .3s;
   }
 
   @media (max-width: 500px) {
     &__card {
       padding: 20px;
+        
       &__top__left {
         font-size: 20px;
         line-height: 24px;
@@ -111,6 +113,7 @@
       .vapros__card__btns-white {
         padding: 10px !important;
       }
+
       .vapros__card__btns-red {
         padding: 10px !important;
       }

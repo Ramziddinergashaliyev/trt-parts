@@ -18,7 +18,6 @@ const Catalog = () => {
             <a href="https://trt-parts.com/wp-content/uploads/2025/04/katalog.pdf"
             target="_blank" rel="noopener noreferrer">📥 Скачать PDF-файл</a>
           </button>
-
         </div>
         <CatalogCard />
         <div className="catalog__info__bottom">
