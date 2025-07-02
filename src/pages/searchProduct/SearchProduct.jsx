@@ -3,7 +3,10 @@ import { CiSearch } from "react-icons/ci";
 
 import "./searchProduct.scss";
 import ProductItem from "../../components/productItem/ProductItem";
-import { useGetProductsQuery, useSearchProductsQuery } from "../../context/api/productApi";
+import {
+  useGetProductsQuery,
+  useSearchProductsQuery,
+} from "../../context/api/productApi";
 import Loading from "../../components/loading/Loading";
 
 const SearchProduct = () => {

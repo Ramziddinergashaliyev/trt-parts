@@ -17,7 +17,7 @@ const Home = () => {
       <Auto />
       <Prinsp />
       <Catalog />
-      <Vapros /> 
+      <Vapros />
     </Fragment>
   );
 };

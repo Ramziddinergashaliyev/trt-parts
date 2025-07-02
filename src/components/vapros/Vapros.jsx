@@ -13,7 +13,8 @@ const Vapros = () => {
           className="vapros__card"
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
-          data-aos-duration="1000">
+          data-aos-duration="1000"
+        >
           <div className="vapros__card__top">
             <h3 className="vapros__card__top__left">
               Возникли вопросы <br />

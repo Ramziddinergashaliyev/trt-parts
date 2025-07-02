@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
- import "./contact.scss";
- import icon from "../../assets/icons/mail.svg";
- import { FaArrowRight } from "react-icons/fa6";
+import "./contact.scss";
+import icon from "../../assets/icons/mail.svg";
+import { FaArrowRight } from "react-icons/fa6";
 
- const Contact = () => {
+const Contact = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
 
-   useEffect(() => {
-     window.scroll(0, 0);
-   });
-  
-   return (
-     <div className="contact">
-       <div className="contact__bg"></div>
-       <div className="container">
-         <div className="contact__info">
-           {/* <div className="contact__left">
+  return (
+    <div className="contact">
+      <div className="contact__bg"></div>
+      <div className="container">
+        <div className="contact__info">
+          {/* <div className="contact__left">
              <h3 className="contact__left__title">Свяжитесь с нами</h3>
              <h4 className="contact__left__desc">КОНТАКТЫ</h4>
              <p className="contact__left__text">
@@ -38,7 +37,7 @@ import React, { useEffect } from "react";
                </p>
              </div>
            </div> */}
-           {/* <div className="contact__right">
+          {/* <div className="contact__right">
              <h2 className="contact__right__title">Форма для связи</h2>
              <form action="" className="contact__right__form">
                <input placeholder={"имя"} type="text" />
@@ -60,10 +59,10 @@ import React, { useEffect } from "react";
                данных.
              </p>
            </div> */}
-         </div>
-       </div> 
-     </div>
-   );
- };
+        </div>
+      </div>
+    </div>
+  );
+};
 
- export default Contact;
+export default Contact;

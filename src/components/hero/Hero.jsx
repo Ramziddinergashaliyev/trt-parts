@@ -2,7 +2,7 @@
 // import "./hero.scss";
 // import icon from "../../assets/img/hero.png";
 // import { FaAngleRight } from "react-icons/fa6";
-// import video1 from "../../assets/video/video.mp4"; 
+// import video1 from "../../assets/video/video.mp4";
 // import { NavLink } from "react-router-dom";
 
 // const Hero = () => {
@@ -36,7 +36,7 @@
 //           <video className="hero__slide__video" autoPlay muted loop playsInline preload="metadata" poster="/preview.jpg">
 //             <source src={video1} type="video/mp4" />
 //             Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
-//           </video>         
+//           </video>
 //           <div className="hero__overlay container">
 //             <div className="hero__overlay__left">
 //               <p className="hero__overlay__left-text">АВТОЗАПЧАСТИ</p>
@@ -68,7 +68,7 @@
 //         <div className="hero__bottom">
 //           <div className="hero__bottom__left container">
 //             <p className="hero__bottom__left-text">
-//               Полный цикл производства современных высококачественных 
+//               Полный цикл производства современных высококачественных
 //               автозапчастей <br /> для легковых и грузовых автомобилей
 //             </p>
 //           </div>
@@ -90,8 +90,6 @@
 // };
 
 // export default Hero;
-
-
 
 import React, { useState, useEffect } from "react";
 import "./hero.scss";
@@ -160,10 +158,7 @@ const Hero = () => {
               </h2>
             </div>
             <div className="hero__overlay__right">
-              <NavLink
-                to={"/contact"}
-                className="hero__overlay__right-btns"
-              >
+              <NavLink to={"/contact"} className="hero__overlay__right-btns">
                 <button className="hero__overlay__right-btns-white">
                   Связаться с нами
                 </button>

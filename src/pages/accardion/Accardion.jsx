@@ -3,7 +3,7 @@
 // import { ACCARDION } from "../../static";
 // import { FiPlus } from "react-icons/fi";
 // import { RiCloseFill } from "react-icons/ri";
-// import bgVideo from "../../assets/video/acc.webm"; 
+// import bgVideo from "../../assets/video/acc.webm";
 
 // const Accardion = () => {
 //   useEffect(() => {
@@ -47,7 +47,7 @@
 //             </li>
 //           ))}
 //         </ul>
-        
+
 //       </div>
 //     </div>
 //   );
@@ -55,14 +55,13 @@
 
 // export default Accardion;
 
-
 import React, { useState, useEffect } from "react";
 import "./accardion.scss";
 import { ACCARDION } from "../../static";
 import { FiPlus } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 import bgVideo from "../../assets/video/acc.webm";
-import poster from "../../assets/img/acc-preview.png"; // ➕ Preview rasmi
+import poster from "../../assets/img/acc-preview.png";
 
 const Accardion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -78,8 +77,6 @@ const Accardion = () => {
 
   return (
     <div className="accardion">
-
-      {/* Video qismi */}
       <div className="accardion__video">
         <video
           className="accardion__video-bg"
@@ -95,7 +92,6 @@ const Accardion = () => {
           Your browser does not support the video tag.
         </video>
 
-        {/* Video ochilguncha preview rasm */}
         {!videoLoaded && (
           <div className="accardion__preview">
             <img src={poster} alt="preview" />
@@ -103,7 +99,6 @@ const Accardion = () => {
         )}
       </div>
 
-      {/* Accordion qismi */}
       <div className="accardion__list">
         <h3 className="accardion__title">Дистрибьюторы</h3>
 
@@ -144,7 +139,6 @@ const Accardion = () => {
           ))}
         </ul>
       </div>
-
     </div>
   );
 };

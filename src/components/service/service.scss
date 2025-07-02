@@ -93,8 +93,6 @@
     }
   }
 
-
-
   @keyframes gradient-animation {
     0% {
       background-position: 0% 50%;
@@ -121,7 +119,6 @@
         font-weight: 200;
       }
     }
-
   }
 
   @media (max-width: 1200px) {
@@ -149,6 +146,5 @@
 
 .service__card:hover .service__card-top-img {
   transform: scale(1.009);
-  transition: .3s;
+  transition: 0.3s;
 }
-

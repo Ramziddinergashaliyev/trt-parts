@@ -5,7 +5,7 @@ import "./partner.scss";
 const Partner = () => {
   useEffect(() => {
     window.scroll(0, 0);
-  }); 
+  });
 
   return (
     <div className="partner">
@@ -38,4 +38,3 @@ const Partner = () => {
 };
 
 export default Partner;
-

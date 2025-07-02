@@ -9,14 +9,19 @@ const Catalog = () => {
         <div className="catalog__top">
           <div className="catalog__info">
             <p className="catalog__info-title">КАТАЛОГ</p>
-            <h3 className="catalog__info-text"> 
+            <h3 className="catalog__info-text">
               Разделы предоставляемой <span>продукции</span>
             </h3>
-          </div>  
+          </div>
 
           <button className="catalog__card-link">
-            <a href="https://trt-parts.com/wp-content/uploads/2025/04/katalog.pdf"
-            target="_blank" rel="noopener noreferrer">📥 Скачать PDF-файл</a>
+            <a
+              href="https://trt-parts.com/wp-content/uploads/2025/04/katalog.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📥 Скачать PDF-файл
+            </a>
           </button>
         </div>
         <CatalogCard />

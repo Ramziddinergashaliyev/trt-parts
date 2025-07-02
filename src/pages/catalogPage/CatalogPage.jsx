@@ -6,7 +6,6 @@ import "./catalogPage.scss";
 import Loading from "../../components/loading/Loading";
 
 const CatalogPage = () => {
-
   const { id } = useParams();
   const { data } = useGetCategoriesByIdQuery(id);
 

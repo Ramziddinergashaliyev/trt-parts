@@ -95,10 +95,7 @@ const Footer = () => {
               </NavLink>
             </li>
             <li className="footer__item__information">
-              <a
-                href="https://t.me/"
-                target="_blank"
-                rel="noopener noreferrer">
+              <a href="https://t.me/" target="_blank" rel="noopener noreferrer">
                 <button>
                   <FaTelegramPlane />
                 </button>
@@ -106,7 +103,8 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/trt_official_global"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <button>
                   <FaInstagram />
                 </button>
@@ -114,18 +112,17 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <button>
                   <FaFacebookF />
                 </button>
               </a>
             </li>
           </ul>
-
         </nav>
 
         <div className="footer__bottom">
-
           <div className="footer__bottom-icon">
             <img src={icon} alt="" />
           </div>
@@ -139,11 +136,8 @@ const Footer = () => {
               © 2024 | Все права защищены
             </p>
           </div>
-          
         </div>
-
       </div>
-
     </footer>
   );
 };

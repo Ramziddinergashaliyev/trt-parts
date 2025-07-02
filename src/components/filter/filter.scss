@@ -15,7 +15,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-  
+
       &-text {
         font-size: 14px;
         font-weight: 500;
@@ -25,7 +25,7 @@
         color: rgba(134, 134, 134, 0.65);
         padding-bottom: 10px;
       }
-  
+
       &-title {
         font-size: 42px;
         font-weight: 400;
@@ -46,28 +46,28 @@
       grid-template-columns: 1.5fr 2fr;
       grid-gap: 30px;
       &__label {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      font-size: 24px;
-      letter-spacing: 1px;
-      font-weight: 300;
-      color: gray;
-    }
-    
-    &-input {
-      display: flex;
-      flex: 1;
-      padding: 22px;
-      outline: none;
-      border: 1px solid #aaa3;
-      font-size: 16px;
-      color: gray;
-       &::placeholder {
-        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 24px;
         letter-spacing: 1px;
+        font-weight: 300;
+        color: gray;
       }
-     }
+
+      &-input {
+        display: flex;
+        flex: 1;
+        padding: 22px;
+        outline: none;
+        border: 1px solid #aaa3;
+        font-size: 16px;
+        color: gray;
+        &::placeholder {
+          font-size: 16px;
+          letter-spacing: 1px;
+        }
+      }
     }
 
     &-right {
@@ -75,16 +75,15 @@
       grid-template-columns: 1.5fr 2fr;
       grid-gap: 30px;
       align-items: flex-end;
-    
+
       &__btn {
         display: grid;
         grid-template-columns: 1fr 300px;
         align-items: flex-end;
         gap: 30px;
       }
-
     }
-    
+
     &-search {
       display: flex;
       align-items: center;
@@ -100,7 +99,7 @@
 
       input {
         border: none !important;
-        color: gray;       
+        color: gray;
       }
     }
 
@@ -118,7 +117,7 @@
       align-items: center;
       justify-content: center;
     }
-  
+
     &-btn::before {
       content: "";
       position: absolute;
@@ -140,7 +139,7 @@
     }
   }
 
-  @media (max-width:1020px) {
+  @media (max-width: 1020px) {
     padding: 20px 0px;
     &__form {
       &-left {
@@ -160,13 +159,12 @@
           align-items: flex-end;
           gap: 30px;
         }
-      }    
+      }
     }
-    
+
     &__top {
       padding-bottom: 20px;
     }
-    
   }
 
   @media (max-width: 650px) {

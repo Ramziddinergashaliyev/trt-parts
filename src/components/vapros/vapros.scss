@@ -98,13 +98,13 @@
   &__card:hover {
     box-shadow: 1px 1px 10px gray;
     transform: scale(1.02);
-    transition: .3s;
+    transition: 0.3s;
   }
 
   @media (max-width: 500px) {
     &__card {
       padding: 20px;
-        
+
       &__top__left {
         font-size: 20px;
         line-height: 24px;

@@ -26,7 +26,6 @@ const Filter = () => {
   return (
     <div className="filter">
       <div className="container">
-
         <div className="filter__top">
           <div className="filter__top__left">
             <p className="filter__top__left-text">ФИЛЬТР</p>
@@ -37,7 +36,7 @@ const Filter = () => {
           </div>
         </div>
 
-        <form className="filter__form" onSubmit={handleSearch}>         
+        <form className="filter__form" onSubmit={handleSearch}>
           <div className="filter__form-left">
             <label className="filter__form-left__label" htmlFor="">
               OEM номер
@@ -74,13 +73,13 @@ const Filter = () => {
             </label>
             <div className="filter__form-right__btn">
               <label className="filter__form-left__label" htmlFor="">
-              Модель
-              <input
-                onChange={(e) => setFour(e.target.value)}
-                className="filter__form-left-input"
-                type="search"
-                value={four}
-                placeholder="Nexia"
+                Модель
+                <input
+                  onChange={(e) => setFour(e.target.value)}
+                  className="filter__form-left-input"
+                  type="search"
+                  value={four}
+                  placeholder="Nexia"
                 />
               </label>
               <button type="submit" className="filter__form-btn">
@@ -88,7 +87,6 @@ const Filter = () => {
               </button>
             </div>
           </div>
-
         </form>
       </div>
     </div>

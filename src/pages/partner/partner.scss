@@ -37,7 +37,7 @@
     background-color: white;
     box-shadow: 1px 1px 10px #aaa4;
     border-radius: 2px;
-    
+
     &:hover {
       box-shadow: 1px 1px 125px rgba(121, 112, 112, 0.15);
       transition: 0.5s;
@@ -54,7 +54,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      
+
       &-title {
         font-size: 14px;
         font-weight: 400;
@@ -73,7 +73,7 @@
 
   &__card:hover {
     box-shadow: 1px 1px 10px rgb(182, 181, 181);
-    transition: .5s;
+    transition: 0.5s;
   }
 
   @media (max-width: 1270px) {
@@ -90,7 +90,7 @@
       }
     }
   }
-  
+
   @media (max-width: 1000px) {
     &__cards {
       grid-template-columns: repeat(3, 1fr);

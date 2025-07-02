@@ -78,7 +78,9 @@ const CreateProduct = () => {
           categories
           <input className="createProduct__form__input" type="text" />
         </label>
-        <button className="create__product__form__btn" type="submit">Создать</button>
+        <button className="create__product__form__btn" type="submit">
+          Создать
+        </button>
       </form>
     </div>
   );

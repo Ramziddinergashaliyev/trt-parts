@@ -34,7 +34,6 @@
   }
 
   @media (max-width: 670px) {
-
     &__cards {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
@@ -44,7 +43,6 @@
     .filter__top__left-title {
       font-size: 30px;
     }
-
   }
 
   @media (max-width: 380px) {
@@ -53,5 +51,4 @@
       grid-gap: 10px;
     }
   }
-  
 }
