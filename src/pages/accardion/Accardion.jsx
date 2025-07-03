@@ -61,7 +61,7 @@ import { ACCARDION } from "../../static";
 import { FiPlus } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 import bgVideo from "../../assets/video/acc.webm";
-import poster from "../../assets/img/acc-preview.png";
+import poster from "../../assets/img/acc-preview.webp";
 
 const Accardion = () => {
   const [activeIndex, setActiveIndex] = useState(null);

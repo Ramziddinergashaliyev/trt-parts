@@ -1,8 +1,8 @@
 import React from "react";
 import "./photo.scss";
-import img from "../../assets/company/img1.png";
-import img1 from "../../assets/company/img2.png";
-import img2 from "../../assets/company/img3.png";
+import img from "../../assets/company/img1.webp";
+import img1 from "../../assets/company/img2.webp";
+import img2 from "../../assets/company/img3.webp";
 
 const Photo = () => {
   return (

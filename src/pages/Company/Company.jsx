@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import img from "../../assets/img/2.png";
-import img1 from "../../assets/sertifikat/IQNET.png";
-import img2 from "../../assets/sertifikat/SICQ.png";
-import img3 from "../../assets/sertifikat/TRT.png";
-import img4 from "../../assets/sertifikat/UZAUTO.png";
+import img from "../../assets/img/2.webp";
+import img1 from "../../assets/sertifikat/IQNET.webp";
+import img2 from "../../assets/sertifikat/SICQ.webp";
+import img3 from "../../assets/sertifikat/TRT.webp";
+import img4 from "../../assets/sertifikat/UZAUTO.webp";
 
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
