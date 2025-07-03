@@ -265,7 +265,6 @@ const Header = () => {
                 Контакты
               </NavLink>
             </li>
-
             <li className="header__nav__item">
               <div className="custom-dropdown" ref={dropdownRef}>
                 <button
@@ -275,8 +274,7 @@ const Header = () => {
                     document
                       .querySelector(".custom-dropdown-options")
                       ?.classList.toggle("show")
-                  }
-                >
+                  }>
                   <img
                     src={selectedLang === "rus" ? rus : uzb}
                     alt={selectedLang === "rus" ? "Русский" : "Oʻzbek"}
@@ -287,35 +285,30 @@ const Header = () => {
                 <div className="custom-dropdown-options">
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("uzb")}
-                  >
+                    onClick={() => handleLanguageChange("uzb")}>
                     <img src={uzb} alt="Uzbek tili" className="lang-icon" />
                     Uzbek
                   </div>
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("rus")}
-                  >
+                    onClick={() => handleLanguageChange("rus")}>
                     <img src={rus} alt="Русский язык" className="lang-icon" />
                     Rus
                   </div>
                 </div>
               </div>
             </li>
-
             <li className="header__nav__item-phone">
               <a className="header__nav__item-tel" href="tel:+998712032030">
                 +99871 203-20-30
               </a>
             </li>
           </ul>
-
           <div className="header__nav__right">
             <button
               onClick={handleSearchClick}
               className="header__nav__search"
-              aria-label="Mahsulot qidiruvi"
-            >
+              aria-label="Mahsulot qidiruvi">
               <FiSearch />
             </button>
 

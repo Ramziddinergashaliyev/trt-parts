@@ -1,9 +1,11 @@
 .catalogCard {
   padding-top: 40px;
+
   &__box {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 20px;
+
     &-item {
       height: 330px;
       background-color: #fff !important;
@@ -78,6 +80,7 @@
           &-btn {
             border: none;
             background-color: transparent;
+
             svg {
               display: flex;
               align-items: center;
@@ -85,11 +88,13 @@
               font-size: 20px;
               color: #333;
             }
+
           }
 
           &:hover {
             transform: scale(1.1);
           }
+
         }
       }
     }
@@ -98,6 +103,7 @@
       position: absolute;
       top: 250px;
       left: 0;
+
       &-title {
         font-size: 24px;
         font-weight: 500;
@@ -111,10 +117,13 @@
         font-weight: 400;
         color: #7d7d7d;
       }
+      
     }
+
   }
 
   @media (max-width: 1350px) {
+
     &__box-info-title {
       font-size: 18px;
     }
@@ -123,6 +132,7 @@
       top: 260px;
       left: 0;
     }
+
   }
 
   @media (max-width: 1000px) {
@@ -133,12 +143,14 @@
     &__box-info-title {
       font-size: 18px;
     }
+
   }
 
   @media (max-width: 680px) {
     &__box {
       grid-template-columns: 1fr;
     }
+
   }
 
   @media (max-width: 500px) {

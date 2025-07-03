@@ -61,7 +61,6 @@ import { ACCARDION } from "../../static";
 import { FiPlus } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 import bgVideo from "../../assets/video/acc.webm";
-import poster from "../../assets/img/acc-preview.webp";
 
 const Accardion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -85,18 +84,11 @@ const Accardion = () => {
           muted
           playsInline
           preload="auto"
-          poster={poster}
           onLoadedData={() => setVideoLoaded(true)}
         >
           <source src={bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {!videoLoaded && (
-          <div className="accardion__preview">
-            <img src={poster} alt="preview" />
-          </div>
-        )}
       </div>
 
       <div className="accardion__list">

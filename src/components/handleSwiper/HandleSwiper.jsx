@@ -22,8 +22,7 @@ const HandleSwiper = () => {
           650: { slidesPerView: 2 },
           1111: { slidesPerView: 3 },
           1210: { slidesPerView: 4 },
-        }}
-      >
+        }}>
         {Swipper?.map((el) => (
           <SwiperSlide key={el?.id}>
             <div className="custom__swiper-content">

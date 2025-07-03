@@ -106,7 +106,6 @@
 
 // export default Hero;
 
-
 import React, { useState } from "react";
 import "./hero.scss";
 import icon from "../../assets/img/hero.png";
