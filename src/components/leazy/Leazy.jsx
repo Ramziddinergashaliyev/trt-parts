@@ -6,7 +6,7 @@ const Leazy = () => {
   return (
     <div className="leazy">
       <div className="leazy__card">
-        <img src={img} alt="" />
+        <img src={img} alt="leazy__card-img" />
       </div>
     </div>
   );

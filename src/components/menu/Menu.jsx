@@ -6,7 +6,7 @@ function Menu({ setClose }) {
   return (
     <div className="products__top">
       <button onClick={() => setClose((p) => !p)}>
-        <img src={img} alt="" />
+        <img src={img} alt="products-img" />
       </button>
     </div>
   );

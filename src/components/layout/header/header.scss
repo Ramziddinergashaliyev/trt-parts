@@ -4,6 +4,11 @@
   top: 0;
   left: 0;
   z-index: 9999;
+.header__nav__search,
+  .custom-dropdown-selected {
+    border: none;
+    background-color: transparent;
+  }
 
   &__nav {
     display: flex;

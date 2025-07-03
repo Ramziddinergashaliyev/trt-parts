@@ -118,6 +118,10 @@
       align-items: flex-start;
       gap: 10px;
 
+      label {
+        width: 100%;
+      }
+
       input {
         padding: 20px 0px;
         background: transparent;

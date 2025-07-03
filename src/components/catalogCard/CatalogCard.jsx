@@ -31,7 +31,7 @@ const CatalogCard = () => {
                   className="catalogCard__box-item-card-link"
                   to={`/rychagi-podveski/${item?.id}`}
                 >
-                  <button className="catalogCard__box-item-card-link-btn">
+                  <button aria-label="Yuborish" className="catalogCard__box-item-card-link-btn">
                     <FaArrowRight />
                   </button>
                 </NavLink>

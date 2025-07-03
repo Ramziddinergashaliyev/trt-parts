@@ -8,9 +8,9 @@ const Photo = () => {
   return (
     <div className="photo">
       <div className="photo__cards">
-        <img className="photo__cards-img" src={img} alt="" />
-        <img className="photo__cards-img" src={img1} alt="" />
-        <img className="photo__cards-img" src={img2} alt="" />
+        <img className="photo__cards-img" src={img} alt="photo__cards-img" />
+        <img className="photo__cards-img" src={img1} alt="photo__cards-img" />
+        <img className="photo__cards-img" src={img2} alt="photo__cards-img" />
       </div>
     </div>
   );

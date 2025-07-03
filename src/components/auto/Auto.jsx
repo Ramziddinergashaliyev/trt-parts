@@ -6,7 +6,7 @@ import img from "../../assets/img/bgimg.jpg";
 const Auto = () => {
   return (
     <div className="auto">
-      <img src={img} alt="" />
+      <img src={img} alt="auto-foto" />
     </div>
   );
 };
