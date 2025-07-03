@@ -67,6 +67,7 @@ import React, { lazy, useEffect, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Leazy from "./components/leazy/Leazy";
 
 // Pages
 const Home = lazy(() => import("./pages/home/Home"));
@@ -95,7 +96,9 @@ const Login = lazy(() => import("./pages/login/Login"));
 const Layout = lazy(() => import("./components/layout/Layout"));
 
 // Fallback Component
-const Loading = () => <div className="loading-global">Загрузка...</div>;
+const Loading = () => <div className="loading-global">
+  <Leazy/>
+</div>;
 
 const App = () => {
   useEffect(() => {
