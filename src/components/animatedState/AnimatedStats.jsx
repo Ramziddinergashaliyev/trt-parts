@@ -1,4 +1,3 @@
-// components/AnimatedStats.jsx
 import { useEffect, useState } from "react";
 
 const AnimatedStats = ({ endValue, text, start = 1200, speed = 10 }) => {
