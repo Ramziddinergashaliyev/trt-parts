@@ -1,5 +1,5 @@
 .footer {
-  padding: 50px 0px;
+  padding: 50px 0px 10px;
   background: rgba(24, 24, 24, 1);
 
   &__nav {
@@ -15,14 +15,14 @@
       line-height: 27.41px;
       text-align: left;
       color: rgba(255, 255, 255, 0.9);
-      padding-bottom: 30px;
+      padding-bottom: 20px;
     }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    padding: 2px 0px 5px;
 
     &__information {
       display: flex;
@@ -70,7 +70,7 @@
   }
 
   &__bottom {
-    padding-top: 80px;
+    padding-top: 40px;
 
     &-info {
       display: flex;

@@ -4,11 +4,12 @@
   top: 0;
   left: 0;
   z-index: 9999;
-.header__nav__search,
+  .header__nav__search,
   .custom-dropdown-selected {
     border: none;
     background-color: transparent;
   }
+
 
   &__nav {
     display: flex;
@@ -28,7 +29,7 @@
 
   &__nav__item {
     &-link {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 500;
       line-height: 17px;
       color: rgba(255, 255, 255, 0.9);
@@ -36,7 +37,7 @@
     }
 
     &-tel {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       line-height: 18px;
       color: rgba(255, 255, 255, 0.9);
@@ -122,7 +123,7 @@
   &__nav__btn {
     button {
       width: 240px;
-      font-size: 15px;
+      font-size: 19px;
       padding: 8px 16px;
       height: 58px;
       background-color: rgba(255, 255, 255, 0.4);
@@ -266,7 +267,7 @@
       display: block;
     }
   }
-  
+
   &-option {
     display: flex;
     align-items: center;

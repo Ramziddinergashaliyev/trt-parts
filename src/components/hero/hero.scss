@@ -66,7 +66,7 @@
 
     &__left {
       &-text {
-        font-size: 15px;
+        font-size: 16px;
         letter-spacing: 2px;
         font-weight: 300;
         line-height: 14px;
@@ -77,8 +77,8 @@
       }
 
       &-title {
-        font-size: 70px;
-        font-weight: 400;
+        font-size: 74px;
+        font-weight: 500;
         line-height: 76px;
         letter-spacing: 2px;
         text-align: left;
@@ -102,13 +102,14 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
         &-white {
-          padding: 8px 10px;
-          width: 200px;
+          padding: 12px 10px;
+          width: 240px;
           height: calc(57px - 4px);
           background: rgba(255, 255, 255, 1);
           border: 1px solid #fff;
           border-right: none;
-          font-size: 15px;
+          font-size: 18px;
+          height: 60px;
           letter-spacing: 1.2px;
         }
 
@@ -117,7 +118,7 @@
           align-items: center;
           justify-content: center;
           width: 60px;
-          height: 53px;
+          height: 60px;
           padding: 8px;
           border: 1px solid red;
           background: rgba(255, 44, 44, 1);
@@ -158,9 +159,9 @@
       z-index: 66;
 
       &-text {
-        font-size: 16px;
+        font-size: 18px;
         letter-spacing: 1.3px;
-        font-weight: 300;
+        font-weight: 200;
         line-height: 25.6px;
         color: rgba(255, 255, 255, 0.9);
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
@@ -197,24 +198,24 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding-top: 20px;
+      padding-top: 10px;
       z-index: 80;
       position: relative;
 
       &-title {
-        font-size: 48px;
+        font-size: 60px;
         font-weight: 600;
         line-height: 48px;
         color: rgba(255, 44, 44, 1);
       }
 
       &-text {
-        font-size: 14px;
+        font-size: 16px;
         letter-spacing: 1.5px;
         font-weight: 300;
         line-height: 18.2px;
         color: rgba(0, 0, 0, 0.5);
-        width: 40%;
+        width: 30%;
       }
 
       p {
@@ -224,12 +225,7 @@
     }
   }
 
-  @media (max-width: 1440px) {
-    // &__bottom__left {
-    //   bottom: 15px;
-    //   left: 20%;
-    // }
-
+  @media (max-width: 1440px) {   
     &__bottom__left-text {
       width: 55%;
     }

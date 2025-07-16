@@ -8,8 +8,6 @@ import { Catalog } from "../../static";
 
 const CatalogCard = () => {
   const { data } = useGetCategoriesQuery();
-  console.log(data);
-  // const data = Catalog
 
   return data ? (
     <>

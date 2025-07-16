@@ -18,6 +18,7 @@ function Sidebar() {
     dispatch(logout());
     navigate("/");
   };
+  
   return (
     <section className="sidebar">
       <NavLink className="sidebar__top">

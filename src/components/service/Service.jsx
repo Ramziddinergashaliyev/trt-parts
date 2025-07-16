@@ -10,7 +10,7 @@ const Service = () => {
           <div key={el?.id} className="service__card" data-aos="flip-up">
             <div className="service__card-top">
               <div className="service__card-top-img">
-                <img className="service__card-top-imgs" src={el?.img} alt="" />
+                <img className="service__card-top-imgs" src={el?.img} alt="Service-img" />
               </div>
               <p className="service__card-top__title">{el?.number}</p>
             </div>

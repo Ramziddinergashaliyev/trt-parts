@@ -5,6 +5,31 @@
   margin: 40px auto;
   padding: 100px 0px;
 
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
+  .react-select__control {
+    display: flex;
+    flex: 1;
+    padding: 8px;
+    height: 70px;
+    outline: none;
+    border: 1px solid #aaa3;
+    font-size: 16px;
+    color: rgb(238, 233, 233);
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .react-select__placeholder {
+    color: #aaa;
+  }
+
+  .react-select__single-value {
+    color: gray;
+  }
+  
   &__top {
     display: flex;
     align-items: flex-end;

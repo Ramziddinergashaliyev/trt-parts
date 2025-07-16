@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const AnimatedStats = ({ endValue, text, start = 1200, speed = 10 }) => {
+const AnimatedStats = ({ endValue, text, start = 10000, speed = 1 }) => {
   const [count, setCount] = useState(start);
 
   useEffect(() => {
