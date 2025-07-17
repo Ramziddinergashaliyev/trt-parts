@@ -26,7 +26,7 @@ const Characteristics = ({ data }) => {
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Артикул бренда</h3>
           <span className="characteristic__row__desc">{data?.trtCode}</span>
-        </tr>
+        </tr>       
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Базовая единица</h3>
           <span className="characteristic__row__desc">{data?.unit}шт</span>
