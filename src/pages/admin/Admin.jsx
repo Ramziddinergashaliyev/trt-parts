@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,memo } from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./admin.scss";
 import { Outlet } from "react-router-dom";
@@ -17,4 +17,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default memo(Admin);

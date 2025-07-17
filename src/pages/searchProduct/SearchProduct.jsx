@@ -53,7 +53,7 @@
 // export default SearchProduct;
 
 
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
 import "./searchProduct.scss";
@@ -117,4 +117,4 @@ const SearchProduct = () => {
   );
 };
 
-export default SearchProduct;
+export default memo(SearchProduct);

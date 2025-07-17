@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect , memo} from "react";
 import img from "../../assets/img/2.webp";
 import img1 from "../../assets/sertifikat/IQNET.webp";
 import img2 from "../../assets/sertifikat/SICQ.webp";
@@ -148,4 +148,4 @@ const Company = () => {
   );
 };
 
-export default Company;
+export default memo(Company);

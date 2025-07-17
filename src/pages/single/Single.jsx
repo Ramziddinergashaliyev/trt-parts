@@ -96,7 +96,7 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { useParams } from "react-router-dom";
 
 import "./single.scss";
@@ -199,4 +199,4 @@ const Single = () => {
   );
 };
 
-export default Single;
+export default memo(Single);

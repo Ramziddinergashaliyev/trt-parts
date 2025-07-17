@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,memo } from "react";
 import "./accardion.scss";
 import { ACCARDION } from "../../static";
 import { FiPlus } from "react-icons/fi";
@@ -78,4 +78,4 @@ const Accardion = () => {
   );
 };
 
-export default Accardion;
+export default memo(Accardion);

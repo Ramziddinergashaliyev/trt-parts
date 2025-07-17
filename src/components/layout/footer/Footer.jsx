@@ -42,19 +42,19 @@ const Footer = () => {
               <h3 className="footer__list-title">ПРОДУКЦИЯ</h3>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link">Наконечники рулевой тяги</span>
+              <span className="footer__item-link" style={{cursor: "pointer"}}>Наконечники рулевой тяги</span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link">Резиновые комплектующие</span>
+              <span className="footer__item-link" style={{cursor: "pointer"}}>Резиновые комплектующие</span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link">Рычаги подвески</span>
+              <span className="footer__item-link" style={{cursor: "pointer"}}>Рычаги подвески</span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link">Шарниры и рулевые тяги</span>
+              <span className="footer__item-link" style={{cursor: "pointer"}}>Шарниры и рулевые тяги</span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link">Шаровые опоры</span>
+              <span className="footer__item-link" style={{cursor: "pointer"}}>Шаровые опоры</span>
             </li>
           </ul>
 

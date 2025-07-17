@@ -55,7 +55,7 @@
 // export default FilterResults;
 
 
-import React, { useEffect } from "react";
+import React, { useEffect , memo } from "react";
 import { useLocation } from "react-router-dom";
 import { useSearchAllProductsQuery } from "../../context/api/productApi";
 import ProductItem from "../../components/productItem/ProductItem";
@@ -108,4 +108,4 @@ const FilterResults = () => {
   );
 };
 
-export default FilterResults;
+export default memo(FilterResults);

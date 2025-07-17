@@ -70,7 +70,7 @@
 
 
 
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import "./contact.scss";
 import icon from "../../assets/icons/mail.svg";
 import { FaArrowRight } from "react-icons/fa6";
@@ -169,4 +169,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

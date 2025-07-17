@@ -62,7 +62,7 @@
 
 
 
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./login.scss";
@@ -144,4 +144,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default memo(Login);

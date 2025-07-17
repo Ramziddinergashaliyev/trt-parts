@@ -31,7 +31,7 @@
 
 
 
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import "./result.scss";
 import { FILTER } from "../../static";
 import ProductItem from "../../components/productItem/ProductItem";
@@ -61,4 +61,4 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default memo(Result);

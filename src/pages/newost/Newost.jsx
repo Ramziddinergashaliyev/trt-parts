@@ -31,7 +31,7 @@
 // export default Newost;
 
 
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import "./newost.scss";
 import { NEWS } from "../../static";
 
@@ -66,4 +66,4 @@ const Newost = () => {
   );
 };
 
-export default Newost;
+export default memo(Newost);

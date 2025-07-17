@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { useParams } from "react-router-dom";
 import { useGetCategoriesByIdQuery } from "../../context/api/categoryApi";
 import ProductItem from "../../components/productItem/ProductItem";
@@ -32,4 +32,4 @@ const CatalogPage = () => {
   );
 };
 
-export default CatalogPage;
+export default memo(CatalogPage);

@@ -39,7 +39,7 @@
 
 // export default Partner;
 
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { PARTNER } from "../../static";
 import "./partner.scss";
 
@@ -96,4 +96,4 @@ const Partner = () => {
   );
 };
 
-export default Partner;
+export default memo(Partner);

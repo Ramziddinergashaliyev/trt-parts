@@ -35,7 +35,7 @@
 // export default Razdel;
 
 
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import CatalogCard from "../../components/catalogCard/CatalogCard";
 
 import "./razdel.scss";
@@ -74,4 +74,4 @@ const Razdel = () => {
   );
 };
 
-export default Razdel;
+export default memo(Razdel);

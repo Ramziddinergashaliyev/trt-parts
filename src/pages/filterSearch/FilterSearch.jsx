@@ -35,7 +35,7 @@
 // export default FilterSearch;
 
 
-import React, { useEffect } from "react";
+import React, { useEffect ,memo } from "react";
 import Filter from "../../components/filter/Filter";
 import ProductItem from "../../components/productItem/ProductItem";
 import { FILTER } from "../../static";
@@ -73,4 +73,4 @@ const FilterSearch = () => {
   );
 };
 
-export default FilterSearch;
+export default memo(FilterSearch);

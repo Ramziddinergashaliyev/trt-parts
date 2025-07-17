@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, memo, useEffect } from "react";
 import Hero from "../../components/hero/Hero";
 import Auto from "../../components/auto/Auto";
 import Prinsp from "../../components/prinsp/Prinsp";
@@ -22,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);
