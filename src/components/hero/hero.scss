@@ -77,9 +77,9 @@
       }
 
       &-title {
-        font-size: 64px;
+        font-size: 74px;
         font-weight: 500;
-        line-height: 66px;
+        line-height: 76px;
         letter-spacing: 2px;
         text-align: left;
         text-underline-position: from-font;
@@ -159,11 +159,11 @@
       z-index: 66;
 
       &-text {
-        font-size: 16px;
-        width: 50%;
+        font-size: 18px;
         letter-spacing: 1.3px;
         font-weight: 200;
         line-height: 25.6px;
+        width: 50%;
         color: rgba(255, 255, 255, 0.9);
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
       }
@@ -204,7 +204,7 @@
       position: relative;
 
       &-title {
-        font-size: 55px;
+        font-size: 60px;
         font-weight: 600;
         line-height: 48px;
         color: rgba(255, 44, 44, 1);
@@ -223,6 +223,16 @@
         font-size: 16px;
         color: #333;
       }
+    }
+  }
+
+  @media (max-width:1665px) {
+    &__overlay__left-title {
+       font-size: 58px;
+       line-height: 64px;
+    }
+    &__bottom__info-stats-title {
+       font-size: 52px;
     }
   }
 
