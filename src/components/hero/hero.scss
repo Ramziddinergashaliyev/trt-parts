@@ -236,6 +236,15 @@
     }
   }
 
+  @media (max-width:1630px) {
+    &__bottom__info {
+gap: 0;
+    }
+    &__bottom__info-stats-title {
+       font-size: 42px;
+    }
+  }
+
   @media (max-width: 1440px) {   
     &__bottom__left-text {
       width: 55%;

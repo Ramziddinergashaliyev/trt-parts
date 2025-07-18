@@ -153,9 +153,9 @@
   }
 
   @media (max-width: 1615px) {
-    &__nav__list {
-      gap: 18px;
-    }
+    // &__nav__list {
+    //   gap: 18px;
+    // }
 
     &__nav__item-phone {
       a {
@@ -179,7 +179,7 @@
     }
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1120px) {
     &__nav__list {
       position: fixed;
       left: -100%;
