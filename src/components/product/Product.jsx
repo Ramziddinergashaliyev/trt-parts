@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
 import "./product.scss";
 import { IoCreateOutline } from "react-icons/io5";
@@ -26,7 +26,7 @@ const Product = ({ product, isTrue }) => {
         <img
           src={product?.images[0]}
           alt={product?.name || "Mahsulot rasmi"}
-          loading="lazy"
+          loading="lazy"  
         />
       </NavLink>
 
@@ -49,4 +49,4 @@ const Product = ({ product, isTrue }) => {
   );
 };
 
-export default Product;
+export default memo(Product);

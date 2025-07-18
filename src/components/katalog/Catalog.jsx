@@ -20,7 +20,7 @@ const Catalog = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              📥 Скачать PDF-файл
+              Скачать PDF-файл
             </a>
           </button>
         </div>

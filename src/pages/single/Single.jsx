@@ -111,6 +111,8 @@ import { useGetProductByIdQuery } from "../../context/api/productApi";
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
+  console.log(data);
+  
 
   const [activeTab, setActiveTab] = useState("reviews");
   const [selectedImage, setSelectedImage] = useState("");
@@ -157,9 +159,9 @@ const Single = () => {
                   TRT-код: <span>{data.trtCode}</span>
                 </li>
               )}
-              {data?.carName && (
+              {data?.marka && (
                 <li className="detail__card__info-item">
-                  Марка: <span>{data.carName}</span>
+                  Марка: <span>{data.marka}</span>
                 </li>
               )}
               {data?.model && (
@@ -172,9 +174,9 @@ const Single = () => {
                   ОЕМ номер: <span>{data.oem.join(", ")}</span>
                 </li>
               )}
-              {data?.years && (
+              {data?.year && (
                 <li className="detail__card__info-item">
-                  Год: <span>{data.years}</span>
+                  Год: <span>{data.year}</span>
                 </li>
               )}
             </ul>

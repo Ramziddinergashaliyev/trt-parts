@@ -9,7 +9,7 @@ const Characteristics = ({ data }) => {
       <table className="characteristic__table">
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Marka</h3>
-          <span className="characteristic__row__desc">{data?.carName}</span>
+          <span className="characteristic__row__desc">{data?.marka}</span>
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Модель</h3>

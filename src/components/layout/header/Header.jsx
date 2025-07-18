@@ -115,6 +115,7 @@ const Header = () => {
                 +99871 203-20-30
               </a>
             </li>
+
           </ul>
           <div className="header__nav__right">
             <button
@@ -133,8 +134,7 @@ const Header = () => {
             <button
               onClick={() => setHide(!hide)}
               className="header__nav__right-menu"
-              aria-label={hide ? "Menyuni yopish" : "Menyuni ochish"}
-            >
+              aria-label={hide ? "Menyuni yopish" : "Menyuni ochish"}>
               {hide ? <MdClose /> : <RiMenuFill />}
             </button>
           </div>

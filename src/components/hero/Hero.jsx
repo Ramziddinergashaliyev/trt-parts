@@ -40,8 +40,7 @@ const Hero = () => {
               className="hero__overlay__left"
               initial={{ opacity: 0, x: -80 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+              transition={{ duration: 0.8 }}>
               <p className="hero__overlay__left-text">АВТОЗАПЧАСТИ</p>
               <h2 className="hero__overlay__left-title">
                 Глобальные стандарты качества

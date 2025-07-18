@@ -77,9 +77,9 @@
       }
 
       &-title {
-        font-size: 74px;
+        font-size: 64px;
         font-weight: 500;
-        line-height: 76px;
+        line-height: 66px;
         letter-spacing: 2px;
         text-align: left;
         text-underline-position: from-font;
@@ -159,7 +159,8 @@
       z-index: 66;
 
       &-text {
-        font-size: 18px;
+        font-size: 16px;
+        width: 50%;
         letter-spacing: 1.3px;
         font-weight: 200;
         line-height: 25.6px;
@@ -203,7 +204,7 @@
       position: relative;
 
       &-title {
-        font-size: 60px;
+        font-size: 55px;
         font-weight: 600;
         line-height: 48px;
         color: rgba(255, 44, 44, 1);
