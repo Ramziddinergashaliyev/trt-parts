@@ -30,12 +30,9 @@ const Hero = () => {
           </video>
 
           {!videoLoaded && (
-            <>
             <div className="hero__preview">
               <img src={poster} alt="preview" />
             </div>
-            <div className="loading-spinner" />
-            </>
           )}
 
           <div className="hero__overlay container">
