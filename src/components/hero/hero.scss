@@ -169,6 +169,26 @@
       }
     }
 
+    .loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #fff;
+  border-top: 3px solid #f00;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
     &__info {
       position: absolute;
       bottom: -5px;
