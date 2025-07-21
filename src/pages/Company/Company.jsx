@@ -25,7 +25,7 @@ const Company = () => {
 
   return (
     <div className="company">
-      <div className="company__bg"></div>
+      {/* <div className="company__bg"></div> */}
       <div className="container">
         <div className="company__info">
           <div className="company__info__left">

@@ -1,12 +1,12 @@
 .filterResults {
   background-color: #f5f5f5;
-  &__bg {
-    background: url(../../assets/img/filterResult.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 160px;
-  }
+  // &__bg {
+  //   background: url(../../assets/img/filterResult.webp);
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   height: 160px;
+  // }
   &__top {
     background: #f5f5f5;
     margin-top: -40px;
@@ -16,8 +16,8 @@
     font-weight: 400;
     line-height: 25.3px;
     color: #000000b2;
-    padding: 30px 0px;
-    border-bottom: 1px solid gray;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(194, 194, 194);
   }
   &__cards {
     display: grid;

@@ -99,8 +99,8 @@ const Footer = () => {
               </address>
             </li>
             <li className="footer__item">
-              <a href="mailto:info@trt-parts.com" className="footer__item-link">
-                info@trt-parts.com
+              <a href="mailto:sales@trt-parts.com" className="footer__item-link">              
+sales@trt-parts.com
               </a>
             </li>
             <li className="footer__item__information">

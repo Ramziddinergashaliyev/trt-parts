@@ -3,11 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Swipper } from "../../static";
 
 import "./handleSwiper.scss";
+import { useGetProductsQuery } from "../../context/api/productApi";
 
 const HandleSwiper = () => {
+
+  const { data } = useGetProductsQuery()
+  console.log(data);
+
   return (
     <div className="custom__swiper">
       <h2 className="custom__swiper__title">Рекомендации</h2>
@@ -24,17 +28,17 @@ const HandleSwiper = () => {
           1111: { slidesPerView: 3 },
           1210: { slidesPerView: 4 },
         }}>
-        {Swipper?.map((el) => (
+        {data?.map((el) => (
           <SwiperSlide key={el?.id}>
             <div className="custom__swiper-content">
               <img
-                src={el?.img}
+                src={el?.images[0]}
                 alt={el?.title}
                 className="custom__swiper-image"
               />
               <div className="custom__swiper-info">
-                <h3 className="custom__swiper-info-title">{el?.title}</h3>
-                <p className="custom__swiper-info-subtitle">{el?.subtitle}</p>
+                <h3 className="custom__swiper-info-title">{el?.name}</h3>
+                <p className="custom__swiper-info-subtitle">{el?.trtCode}</p>
               </div>
             </div>
           </SwiperSlide>

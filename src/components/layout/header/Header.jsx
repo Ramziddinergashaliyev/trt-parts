@@ -3,17 +3,18 @@ import { NavLink } from "react-router-dom";
 import icon from "../../../assets/img/logo.png";
 import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
-import uzb from "../../../assets/icons/uzb.webp";
+import uzb from "../../../assets/icons/rus.png";
 import rus from "../../../assets/icons/rus.png";
 import { MdClose } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { RiMenuFill } from "react-icons/ri";
+import eng from "../../../assets/icons/english.png";
 
 import "./header.scss";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
-  const [selectedLang, setSelectedLang] = useState("uzb");
+  const [selectedLang, setSelectedLang] = useState("rus");
   const dropdownRef = useRef(null);
   const [hide, setHide] = useState(false);
   const [hideSearch, setHideSearch] = useState(null);
@@ -51,32 +52,57 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <nav className="header__nav container" role="navigation" aria-label="Asosiy menyu">
+        <nav
+          className="header__nav container"
+          role="navigation"
+          aria-label="Asosiy menyu"
+        >
           <NavLink to="/" className="header__nav__icons">
             <img src={icon} alt="TRT logotipi" />
           </NavLink>
 
-          <ul className={`header__nav__list ${hide ? "header__nav__list-show" : ""}`}>
+          <ul
+            className={`header__nav__list ${
+              hide ? "header__nav__list-show" : ""
+            }`}
+          >
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/razdel">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/razdel"
+              >
                 Каталог
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/company">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/company"
+              >
                 Компании
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/accardion">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/accardion"
+              >
                 Партнеры
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/contact">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/contact"
+              >
                 Контакты
               </NavLink>
             </li>
+            
             <li className="header__nav__item">
               <div className="custom-dropdown" ref={dropdownRef}>
                 <button
@@ -86,26 +112,34 @@ const Header = () => {
                     document
                       .querySelector(".custom-dropdown-options")
                       ?.classList.toggle("show")
-                  }>
+                  }
+                >
                   <img
-                    src={selectedLang === "rus" ? rus : uzb}
-                    alt={selectedLang === "rus" ? "Русский" : "Oʻzbek"}
+                    src={selectedLang === "rus" ? rus : eng}
+                    alt={selectedLang === "rus" ? "Русский" : "English"}
                     className="lang-icon"
                   />
-                  <span>{t(selectedLang === "uzb" ? "Uzbek" : "Rus")}</span>
+                  <span>{selectedLang === "rus" ? "Rus" : "English"}</span>
                 </button>
+
                 <div className="custom-dropdown-options">
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("uzb")}>
-                    <img src={uzb} alt="Uzbek tili" className="lang-icon" />
-                    Uzbek
+                    onClick={() => handleLanguageChange("rus")}
+                  >
+                    <img src={rus} alt="Русский язык" className="lang-icon" />
+                    Rus
                   </div>
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("rus")}>
-                    <img src={rus} alt="Русский язык" className="lang-icon" />
-                    Rus
+                    onClick={() => handleLanguageChange("eng")}
+                  >
+                    <img
+                      src={eng}
+                      alt="English language"
+                      className="lang-icon"
+                    />
+                    English
                   </div>
                 </div>
               </div>
@@ -115,13 +149,13 @@ const Header = () => {
                 +99871 203-20-30
               </a>
             </li>
-
           </ul>
           <div className="header__nav__right">
             <button
               onClick={handleSearchClick}
               className="header__nav__search"
-              aria-label="Mahsulot qidiruvi">
+              aria-label="Mahsulot qidiruvi"
+            >
               <FiSearch />
             </button>
 
@@ -134,7 +168,8 @@ const Header = () => {
             <button
               onClick={() => setHide(!hide)}
               className="header__nav__right-menu"
-              aria-label={hide ? "Menyuni yopish" : "Menyuni ochish"}>
+              aria-label={hide ? "Menyuni yopish" : "Menyuni ochish"}
+            >
               {hide ? <MdClose /> : <RiMenuFill />}
             </button>
           </div>

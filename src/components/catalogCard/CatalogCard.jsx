@@ -14,7 +14,8 @@ const CatalogCard = () => {
       <div className="catalogCard">
         <div className="catalogCard__box" data-aos="zoom-in-down">
           {data?.slice(0, 6)?.map((item) => (
-            <div
+            <NavLink to={`/rychagi-podveski/${item?.id}`}>
+              <div
               key={item.id}
               style={{
                 backgroundImage: `url(${item?.imageUrl})`,
@@ -25,9 +26,9 @@ const CatalogCard = () => {
               className="catalogCard__box-item"
             >
               <div className="catalogCard__box-item-card">
-                <NavLink
+                <div
                   className="catalogCard__box-item-card-link"
-                  to={`/rychagi-podveski/${item?.id}`}
+                  
                 >
                   <button
                     aria-label="Yuborish"
@@ -35,12 +36,13 @@ const CatalogCard = () => {
                   >
                     <FaArrowRight />
                   </button>
-                </NavLink>
+                </div>
                 <div className="catalogCard__box-info">
                   <h3 className="catalogCard__box-info-title">{item?.name}</h3>
                 </div>
               </div>
-            </div>
+              </div>
+            </NavLink>
           ))}
         </div>
       </div>

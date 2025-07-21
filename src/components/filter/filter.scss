@@ -3,8 +3,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100% 100%;
-  margin: 40px auto;
-  padding: 10px 0px 40px;
+  margin: 40px 0px 10px;
+  padding: 30px 0px 60px;
 
   .css-1u9des2-indicatorSeparator {
     display: none;
@@ -33,9 +33,9 @@
 
   &__top {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    padding-bottom: 60px;
+    padding: 30px 0px;
 
     &__left {
       display: flex;
