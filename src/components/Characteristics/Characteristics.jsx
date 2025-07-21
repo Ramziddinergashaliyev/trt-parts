@@ -13,7 +13,7 @@ const Characteristics = ({ data }) => {
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Модель</h3>
-          <span className="characteristic__row__desc">{data?.model}</span>
+          <span className="characteristic__row__desc">{data?.model[0]}</span>
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Страна</h3>

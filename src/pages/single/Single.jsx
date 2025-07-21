@@ -94,8 +94,6 @@
 
 // export default Single;
 
-
-
 import React, { useEffect, useState, memo } from "react";
 import { useParams } from "react-router-dom";
 
@@ -112,7 +110,6 @@ const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
   console.log(data);
-  
 
   const [activeTab, setActiveTab] = useState("reviews");
   const [selectedImage, setSelectedImage] = useState("");
@@ -128,7 +125,8 @@ const Single = () => {
   }, [data]);
 
   if (isLoading) return <LoadingSingle />;
-  if (error || !data) return <p className="error">Xatolik yuz berdi. Qayta urinib ko‘ring.</p>;
+  if (error || !data)
+    return <p className="error">Xatolik yuz berdi. Qayta urinib ko‘ring.</p>;
 
   return (
     <div className="detail">
@@ -139,7 +137,9 @@ const Single = () => {
               {data.images.map((img, index) => (
                 <div
                   key={index}
-                  className={`thumbnail ${selectedImage === img ? "active" : ""}`}
+                  className={`thumbnail ${
+                    selectedImage === img ? "active" : ""
+                  }`}
                   onClick={() => setSelectedImage(img)}
                 >
                   <img src={img} alt={`thumb-${index}`} />
@@ -164,14 +164,15 @@ const Single = () => {
                   Марка: <span>{data.marka}</span>
                 </li>
               )}
-              {data?.model && (
+              {data?.model?.length > 0 && (
                 <li className="detail__card__info-item">
-                  Модель: <span>{data.model}</span>
+                  Модель: <span>{data.model[0]}</span>
                 </li>
               )}
+
               {data?.oem?.length > 0 && (
                 <li className="detail__card__info-item">
-                  ОЕМ номер: <span>{data.oem.join(", ")}</span>
+                  ОЕМ номер: <span>{data.oem[0]}</span>
                 </li>
               )}
               {data?.year && (

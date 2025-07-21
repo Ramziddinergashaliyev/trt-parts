@@ -111,6 +111,21 @@ const Filter = () => {
     label: product.trtCode,
   }));
 
+  const oemOptions = data?.map((product) => ({
+    value: product.oem[0],
+    label: product.oem[0],
+  }));
+
+  const markaOptions = data?.map((product) => ({
+    value: product.marka[0],
+    label: product.marka[0],
+  }));
+
+  const modelOptions = data?.map((product) => ({
+    value: product.model[0],
+    label: product.model[0],
+  }));
+
   const [oem, setOem] = useState("");
   const [trt, setTrt] = useState("");
   const [brand, setBrand] = useState("");
@@ -157,7 +172,7 @@ const Filter = () => {
               OEM номер
               <Select
                 id="trt"
-                options={trtOptions}
+                options={oemOptions}
                 onChange={(selectedOption) =>
                   setOem(selectedOption?.value || "")
                 }
@@ -185,7 +200,7 @@ const Filter = () => {
               Марка
               <Select
                 id="brand"
-                options={trtOptions}
+                options={markaOptions}
                 onChange={(selectedOption) =>
                   setBrand(selectedOption?.value || "")
                 }
@@ -199,7 +214,7 @@ const Filter = () => {
                 Модель
                 <Select
                   id="model"
-                  options={trtOptions}
+                  options={modelOptions}
                   onChange={(selectedOption) =>
                     setModel(selectedOption?.value || "")
                   }

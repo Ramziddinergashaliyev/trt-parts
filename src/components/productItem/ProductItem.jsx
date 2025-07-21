@@ -11,13 +11,13 @@ const ProductItem = ({ data, isTrue }) => {
   }
 
   return (
-    <div className="product-list" role="list" aria-label="Mahsulotlar ro‘yxati">
+    <>
       {data.map((product) => (
         <div role="listitem" key={product?.id}>
           <Product product={product} isTrue={isTrue} />
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -1,40 +1,83 @@
+// .application {
+//   padding: 10px 0px 40px;
+//   &__card {
+//     background-color: #f5f5f5;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 14px;
+//     border: 1px solid #aaa2;
+//   }
+
+//   &__text {
+//     color: rgba(0, 0, 0, 0.6);
+//     font-size: calc(0.6666666667 * (1vw + 1vh));
+//     font-weight: 300;
+//     line-height: 160%;
+//     word-wrap: break-word;
+//     text-align: start;
+//   }
+
+//   &__title {
+//     font-size: 16px;
+//     font-weight: 500;
+//     line-height: 25.6px;
+//     text-align: left;
+//     text-underline-position: from-font;
+//     text-decoration-skip-ink: none;
+//     color: #000;
+//   }
+
+//   &__desc {
+//     font-size: 16px;
+//     font-weight: 300;
+//     line-height: 25.6px;
+//     text-align: left;
+//     text-underline-position: from-font;
+//     text-decoration-skip-ink: none;
+//     color: #000;
+//   }
+// }
+
+
 .application {
-  padding: 10px 0px 40px;
+  padding: 10px 0 40px;
+
   &__card {
-    background-color: #f5f5f5;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 14px;
-    border: 1px solid #aaa2;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    background-color: #f5f5f5;
+
+    // Har ikkinchi qator uchun oq fon
+    &:nth-child(even) {
+      background-color: #ffffff;
+    }
   }
 
   &__text {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: calc(0.6666666667 * (1vw + 1vh));
-    font-weight: 300;
-    line-height: 160%;
-    word-wrap: break-word;
-    text-align: start;
+    flex: 1;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
   }
 
   &__title {
+    flex: 1;
     font-size: 16px;
     font-weight: 500;
-    line-height: 25.6px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #000;
+    text-align: center;
   }
 
   &__desc {
+    flex: 1;
     font-size: 16px;
     font-weight: 300;
-    line-height: 25.6px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #000;
+    text-align: right;
   }
 }
