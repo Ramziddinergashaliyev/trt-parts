@@ -1,12 +1,4 @@
 .company {
-  // &__bg {
-  //   background: url(../../assets/img/company.webp);
-  //   background-position: center;
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   height: 180px;
-  // }
-
   &__info {
     padding: 40px 0px;
     display: grid;
@@ -74,26 +66,19 @@
     }
   }
 
-  .company__swiper {
+  &__swiper {
     margin: 50px 0px;
     text-align: center;
     background: rgba(245, 245, 245, 1);
     padding: 40px 0px;
 
     &-title {
-      font-size: 20px;
+      font-size: 32px;
       font-weight: 400;
-      line-height: 30px;
+      line-height: 36px;
       text-align: left;
-      color: rgba(0, 0, 0, 1);
-      padding-bottom: 20px;
-    }
-
-    &-title {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #2c3e50;
+      color: rgb(255, 44, 44);
+      padding-bottom: 40px;
     }
 
     &-container {
@@ -114,6 +99,41 @@
       transform: scale(0.999);
     }
   }
+
+  .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  
+
+  &__img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    animation: zoomIn 0.3s ease;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
   .swiper-pagination-bullet {
     background-color: #000;

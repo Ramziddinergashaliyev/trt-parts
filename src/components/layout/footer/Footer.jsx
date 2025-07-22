@@ -47,27 +47,27 @@ const Footer = () => {
             </li>
             <li className="footer__item">
               <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/3"}>Наконечники рулевой тяги</NavLink>
+                <NavLink to={"rychagi-podveski/4"}>Наконечники рулевой тяги</NavLink>
               </span>
             </li>
             <li className="footer__item">
               <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/4"}>Резиновые комплектующие</NavLink>
+                <NavLink to={"rychagi-podveski/5"}>Резиновые комплектующие</NavLink>
               </span>
             </li>
             <li className="footer__item">
               <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/1"}>Рычаги подвески</NavLink>
+                <NavLink to={"rychagi-podveski/2"}>Рычаги подвески</NavLink>
               </span>
             </li>
             <li className="footer__item">
               <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/6"}>Шарниры и рулевые тяги</NavLink>
+                <NavLink to={"rychagi-podveski/7"}>Шарниры и рулевые тяги</NavLink>
               </span>
             </li>
             <li className="footer__item">
               <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/2"}>Шаровые опоры</NavLink>
+                <NavLink to={"rychagi-podveski/3"}>Шаровые опоры</NavLink>
               </span>
             </li>
           </ul>

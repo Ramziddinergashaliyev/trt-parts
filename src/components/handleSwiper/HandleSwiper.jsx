@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 
 import "./handleSwiper.scss";
 import { useGetProductsQuery } from "../../context/api/productApi";
+import { NavLink } from "react-router-dom";
 
 const HandleSwiper = () => {
 
@@ -31,11 +32,13 @@ const HandleSwiper = () => {
         {data?.map((el) => (
           <SwiperSlide key={el?.id}>
             <div className="custom__swiper-content">
+              <NavLink to={`/single/${el?.id}`}  onClick={() => window.scrollTo(0, 0)}>
               <img
                 src={el?.images[0]}
                 alt={el?.title}
                 className="custom__swiper-image"
-              />
+                />
+                </NavLink>
               <div className="custom__swiper-info">
                 <h3 className="custom__swiper-info-title">{el?.name}</h3>
                 <p className="custom__swiper-info-subtitle">{el?.trtCode}</p>

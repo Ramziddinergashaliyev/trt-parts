@@ -1,8 +1,8 @@
-import React, { useEffect , memo} from "react";
+import React, { useEffect, memo, useState } from "react";
 import img from "../../assets/img/2.webp";
 import img1 from "../../assets/sertifikat/IQNET.webp";
 import img2 from "../../assets/sertifikat/SICQ.webp";
-import img3 from "../../assets/sertifikat/TRT.webp";
+import img3 from "../../assets/sertifikat/TRT.png";
 import img4 from "../../assets/sertifikat/UZAUTO.webp";
 
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
@@ -19,13 +19,26 @@ import Photo from "../../components/photo/Photo";
 import Partner from "../partner/Partner";
 
 const Company = () => {
+  const [modalImage, setModalImage] = useState(null);
+
+  const handleOpenModal = (imgSrc) => {
+    setModalImage(imgSrc);
+  };
+
   useEffect(() => {
-    window.scroll(0, 0);
-  });
+    document.body.style.overflow = modalImage ? "hidden" : "auto";
+  }, [modalImage]);
+
+  const handleCloseModal = () => {
+    setModalImage(null);
+  };
+
+  // useEffect(() => {
+  //   window.scroll(0, 0);
+  // });
 
   return (
     <div className="company">
-      {/* <div className="company__bg"></div> */}
       <div className="container">
         <div className="company__info">
           <div className="company__info__left">
@@ -99,51 +112,33 @@ const Company = () => {
             loop={true}
             className="company__swiper-container"
             breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 15,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
+              320: { slidesPerView: 1, spaceBetween: 10 },
+              480: { slidesPerView: 2, spaceBetween: 15 },
+              768: { slidesPerView: 3, spaceBetween: 20 },
+              1024: { slidesPerView: 4, spaceBetween: 30 },
             }}
           >
-            <SwiperSlide>
-              <img src={img1} alt="IQNET" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img2} alt="SICQ" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img3} alt="TRT" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img4} alt="UZAUTO" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img1} alt="IQNET" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img2} alt="SICQ" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img3} alt="TRT" className="company__swiper-img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={img4} alt="UZAUTO" className="company__swiper-img" />
-            </SwiperSlide>
+            {[img1, img2, img3, img4, img1, img2, img3, img4].map(
+              (img, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={img}
+                    alt={`cert-${index}`}
+                    className="company__swiper-img"
+                    onClick={() => handleOpenModal(img)}
+                  />
+                </SwiperSlide>
+              )
+            )}
           </Swiper>
         </div>
       </div>
+
+      {modalImage && (
+        <div className="modal" onClick={handleCloseModal}>
+          <img src={modalImage} alt="Zoom" className="modal__img" />
+        </div>
+      )}
     </div>
   );
 };
