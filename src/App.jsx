@@ -76,6 +76,7 @@ import Result from "./pages/result/Result";
 import FilterSearch from "./pages/filterSearch/FilterSearch";
 import SearchProduct from "./pages/searchProduct/SearchProduct";
 import Accardion from "./pages/accardion/Accardion";
+import NewsPage from "./pages/newsPage/NewsPage";
 
 const App = () => {
   return (
@@ -92,6 +93,7 @@ const App = () => {
         <Route path="/result" element={<Result />} />
         <Route path="/accardion" element={<Accardion />} />
         <Route path="/search" element={<SearchProduct />} />
+        <Route path="/new" element={<NewsPage />} />
         <Route path="/filterResults" element={<FilterResults />} />
         <Route path="/rychagi-podveski/:id" element={<CatalogPage />} />
       </Route>

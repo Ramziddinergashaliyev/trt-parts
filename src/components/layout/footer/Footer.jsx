@@ -77,7 +77,9 @@ const Footer = () => {
               <h3 className="footer__list-title">МАТЕРИАЛЫ</h3>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link">Новости</span>
+              <span className="footer__item-link">
+                <NavLink to={"/new"}>Новости</NavLink>
+              </span>
             </li>
           </ul>
 

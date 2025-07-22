@@ -27,8 +27,7 @@ const CatalogCard = () => {
             >
               <div className="catalogCard__box-item-card">
                 <div
-                  className="catalogCard__box-item-card-link"
-                  
+                  className="catalogCard__box-item-card-link"                  
                 >
                   <button
                     aria-label="Yuborish"
