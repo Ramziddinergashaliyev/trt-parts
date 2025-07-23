@@ -39,7 +39,7 @@
         border-radius: 10px;
         transition: opacity 0.5s ease;
         opacity: 0;
-      }    
+      }
 
       &:hover::before {
         opacity: 1;
@@ -88,13 +88,11 @@
               font-size: 20px;
               color: #333;
             }
-
           }
 
           &:hover {
             transform: scale(1.1);
           }
-
         }
       }
     }
@@ -117,13 +115,10 @@
         font-weight: 400;
         color: #7d7d7d;
       }
-      
     }
-
   }
 
   @media (max-width: 1350px) {
-
     &__box-info-title {
       font-size: 18px;
     }
@@ -132,7 +127,6 @@
       top: 260px;
       left: 0;
     }
-
   }
 
   @media (max-width: 1000px) {
@@ -143,20 +137,28 @@
     &__box-info-title {
       font-size: 18px;
     }
-
   }
 
   @media (max-width: 680px) {
     &__box {
       grid-template-columns: 1fr;
     }
-
   }
 
   @media (max-width: 500px) {
+    padding-top: 15px;
     &__box-item-card {
       gap: 100px;
     }
+
+    &__box-item {
+      height: 290px;
+      background-size: 270px !important;
+    }
+
+    &__box-info {
+      top: 240px;
+      left: 0;
+    }
   }
-  
 }

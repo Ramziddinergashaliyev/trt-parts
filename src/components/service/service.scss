@@ -29,7 +29,13 @@
       width: 100%;
       height: 100%;
       // background: linear-gradient(95deg, #aaa6, #fff, #aaa6, #aaa1);
-      background: linear-gradient(95deg, rgba(197, 196, 196, 0.4), #fff, rgba(197, 196, 196, 0.4), #aaa1);
+      background: linear-gradient(
+        95deg,
+        rgba(197, 196, 196, 0.4),
+        #fff,
+        rgba(197, 196, 196, 0.4),
+        #aaa1
+      );
       background-size: 300% 300%;
       z-index: -1;
       border-radius: 10px;
@@ -87,6 +93,11 @@
         color: rgba(104, 104, 104, 1);
         transition: color 0.3s ease;
         padding-top: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* 4 qator */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &:hover {
           color: rgba(0, 0, 0, 0.8);
@@ -104,6 +115,20 @@
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 1470px) {
+    &__card {
+      padding: 20px;
+    }
+
+    &__card-top-info-title {
+      font-size: 18px;
+    }
+
+    &__card-top-info-text {
+      font-size: 14px;
     }
   }
 
@@ -143,7 +168,27 @@
         grid-column: span 1;
       }
     }
+
+    &__cards {
+      gap: 10px;
+    }
+
+    &__card-top-info-title {
+      padding-bottom: 10px;
+    }
+
+    &__card-top-img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    &__card-top {
+      padding-bottom: 20px;
+    }
   }
+
+  
 }
 
 .service__card:hover .service__card-top-img {

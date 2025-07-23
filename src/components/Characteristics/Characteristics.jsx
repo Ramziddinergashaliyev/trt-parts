@@ -40,7 +40,7 @@ const Characteristics = ({ data }) => {
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">Кросс коды OEM</h3>
-          <span className="characteristic__row__desc">{data?.oem}</span>
+          <span className="characteristic__row__desc">{data?.oem[0]}</span>
         </tr>
       </table>
     </div>

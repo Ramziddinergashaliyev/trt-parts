@@ -21,12 +21,16 @@ const Product = ({ product, isTrue }) => {
   };
 
   return (
-    <div className="result__card" role="group" aria-label={`Mahsulot: ${product?.name}`}>
+    <div
+      className="result__card"
+      role="group"
+      aria-label={`Mahsulot: ${product?.name}`}
+    >
       <NavLink to={`/single/${product?.id}`} className="result__card__img">
         <img
           src={product?.images[0]}
           alt={product?.name || "Mahsulot rasmi"}
-          loading="lazy"  
+          loading="lazy"
         />
       </NavLink>
 

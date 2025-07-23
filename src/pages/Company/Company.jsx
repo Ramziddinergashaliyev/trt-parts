@@ -2,7 +2,7 @@ import React, { useEffect, memo, useState } from "react";
 import img from "../../assets/img/2.webp";
 import img1 from "../../assets/sertifikat/IQNET.webp";
 import img2 from "../../assets/sertifikat/SICQ.webp";
-import img3 from "../../assets/sertifikat/TRT.png";
+import img3 from "../../assets/sertifikat/TRT.webp";
 import img4 from "../../assets/sertifikat/UZAUTO.webp";
 
 import { Pagination, Navigation, Autoplay } from "swiper/modules";

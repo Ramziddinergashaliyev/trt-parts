@@ -1,4 +1,4 @@
-import React, { useEffect , memo } from "react";
+import React, { useEffect, memo } from "react";
 import { useLocation } from "react-router-dom";
 import { useSearchAllProductsQuery } from "../../context/api/productApi";
 import ProductItem from "../../components/productItem/ProductItem";
@@ -24,7 +24,6 @@ const FilterResults = () => {
 
   return (
     <main className="filterResults">
-
       <section className="filterResults__top">
         <Filter />
       </section>
@@ -52,7 +51,6 @@ const FilterResults = () => {
 
 export default memo(FilterResults);
 
-
 // import React, { useEffect, memo } from "react";
 // import { useLocation } from "react-router-dom";
 // import { useSearchAllProductsQuery } from "../../context/api/productApi";
@@ -60,8 +58,6 @@ export default memo(FilterResults);
 // import Filter from "../../components/filter/Filter";
 // import Loading from "../../components/loading/Loading";
 // import "./filterResults.scss";
-
-  
 
 // const FilterResults = () => {
 //   const location = useLocation();

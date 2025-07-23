@@ -34,8 +34,7 @@
 
 // export default FilterSearch;
 
-
-import React, { useEffect ,memo } from "react";
+import React, { useEffect, memo } from "react";
 import Filter from "../../components/filter/Filter";
 import ProductItem from "../../components/productItem/ProductItem";
 import { FILTER } from "../../static";
@@ -57,7 +56,10 @@ const FilterSearch = () => {
       </section>
 
       <section className="container" aria-labelledby="search-result-heading">
-        <h1 id="search-result-heading" className="filterSearch__cards-info-text">
+        <h1
+          id="search-result-heading"
+          className="filterSearch__cards-info-text"
+        >
           Результат поиска:
         </h1>
 

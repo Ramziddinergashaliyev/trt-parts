@@ -153,13 +153,9 @@
   }
 
   @media (max-width: 1615px) {
-    // &__nav__list {
-    //   gap: 18px;
-    // }
-
     &__nav__item-phone {
       a {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 
@@ -177,13 +173,25 @@
     &__nav__item-phone {
       display: none;
     }
+
+    &__nav__btn {
+      button {
+        height: 50px;
+        padding: 8px 16px !important;
+      }
+    }
+
+    &__nav {
+      height: 70px;
+      padding: 5px 0px;
+    }
   }
 
   @media (max-width: 1120px) {
     &__nav__list {
       position: fixed;
       left: -100%;
-      top: 80px;
+      top: 70px;
       width: 100%;
       height: calc(100vh - 100px);
       background-color: #2a2324;
@@ -217,13 +225,6 @@
     }
   }
 
-  @media (max-width: 350px) {
-    // &__nav__icons {
-    //   img {
-    //     width: 80px;
-    //   }
-    // }
-  }
 }
 
 .custom-dropdown {

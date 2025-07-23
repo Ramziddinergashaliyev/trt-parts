@@ -16,30 +16,30 @@ const CatalogCard = () => {
           {data?.slice(0, 6)?.map((item) => (
             <NavLink to={`/rychagi-podveski/${item?.id}`}>
               <div
-              key={item.id}
-              style={{
-                backgroundImage: `url(${item?.imageUrl})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "top right",
-                backgroundSize: "350px auto",
-              }}
-              className="catalogCard__box-item"
-            >
-              <div className="catalogCard__box-item-card">
-                <div
-                  className="catalogCard__box-item-card-link"                  
-                >
-                  <button
-                    aria-label="Yuborish"
-                    className="catalogCard__box-item-card-link-btn"
-                  >
-                    <FaArrowRight />
-                  </button>
+                key={item.id}
+                style={{
+                  backgroundImage: `url(${item?.imageUrl})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "top right",
+                  backgroundSize: "350px auto",
+                }}
+                className="catalogCard__box-item"
+              >
+                <div className="catalogCard__box-item-card">
+                  <div className="catalogCard__box-item-card-link">
+                    <button
+                      aria-label="Yuborish"
+                      className="catalogCard__box-item-card-link-btn"
+                    >
+                      <FaArrowRight />
+                    </button>
+                  </div>
+                  <div className="catalogCard__box-info">
+                    <h3 className="catalogCard__box-info-title">
+                      {item?.name}
+                    </h3>
+                  </div>
                 </div>
-                <div className="catalogCard__box-info">
-                  <h3 className="catalogCard__box-info-title">{item?.name}</h3>
-                </div>
-              </div>
               </div>
             </NavLink>
           ))}

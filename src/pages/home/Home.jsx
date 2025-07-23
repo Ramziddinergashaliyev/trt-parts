@@ -12,12 +12,12 @@ const Home = () => {
   });
   return (
     <Fragment>
-      <Hero />
-      <Filter />
-      <Auto />
-      <Prinsp />
-      <Catalog />
-      <Vapros />
+      <Hero /> 
+      <Filter /> 
+      <Auto /> 
+      <Prinsp /> 
+      <Catalog /> 
+      <Vapros /> 
     </Fragment>
   );
 };
