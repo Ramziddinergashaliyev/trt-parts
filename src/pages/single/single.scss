@@ -34,7 +34,7 @@
   &__title {
     font-size: 28px;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 36px;
     color: rgba(0, 0, 0, 0.8);
     padding-bottom: 50px;
   }
@@ -205,6 +205,20 @@
     }
   }
 
+  @media (max-width: 500px) {
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__card__info-item {
+      font-size: 20px;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+
   @media (max-width: 400px) {
     &__card__info-item {
       font-size: 20px;
@@ -213,9 +227,13 @@
       }
     }
 
-    &__title {
-      font-size: 22px;
-      line-height: 26px;
+    &__card__info-list {
+      gap: 10px;
+    }
+
+    &__card__info-item span {
+      padding-left: 10px; 
+      color: rgb(126, 28, 28);
     }
 
     &__img {

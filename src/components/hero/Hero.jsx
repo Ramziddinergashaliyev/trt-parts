@@ -21,7 +21,7 @@ const Hero = () => {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={poster}
             onLoadedData={() => setVideoLoaded(true)}
           >

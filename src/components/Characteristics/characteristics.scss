@@ -44,4 +44,23 @@
   &__table td:last-child {
     border-right: 0;
   }
+
+  @media (max-width: 1500px) {
+    &__row__desc {
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__row__text {
+      font-size: 13px;
+    }
+
+    &__row {
+      &__desc {
+        font-size: 13px;
+      }
+    }
+  }
 }

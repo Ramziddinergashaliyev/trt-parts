@@ -6,8 +6,9 @@
   &__card {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 30px;
+    padding-bottom: 10px;
+
   }
 
   button {
@@ -40,5 +41,28 @@
 
   &-text {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .tabs button {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 660px) {
+  .tabs__card {
+    max-width: 660px;
+    overflow-x: scroll;
+  }
+
+  .tabs__card::-webkit-scrollbar {
+    height: 2px;
+    width: 5px !important;
+  }
+  
+  .tabs__card::-webkit-scrollbar-thumb  {
+    padding-top: 10px;
+    background-color: #a3a3a3;
   }
 }
