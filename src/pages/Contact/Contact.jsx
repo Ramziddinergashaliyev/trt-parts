@@ -23,7 +23,6 @@ const Contact = () => {
               Для приобретения продукции, а также по вопросам сотрудничества и
               получения консультаций, свяжитесь с нами:
             </p>
-
             <address className="contact__left__information">
               <p className="contact__left__information-text">Номер телефона</p>
               <a

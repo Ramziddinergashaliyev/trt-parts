@@ -52,7 +52,7 @@ const CatalogCard = () => {
         <div className="catalogCard__box" data-aos="zoom-in-down">
           {Catalog?.slice(0, 6)?.map((item) => (
             <div
-              key={item.id}
+              key={item?.id}
               style={{
                 backgroundImage: `url(${item?.imageUrl})`,
                 backgroundRepeat: "no-repeat",

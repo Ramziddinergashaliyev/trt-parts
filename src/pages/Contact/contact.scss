@@ -39,7 +39,7 @@
       font-size: 18px;
       color: rgb(146, 146, 146);
       padding: 40px 0px 0px 0px;
-      font-weight: 300;
+      font-weight: 300; 
     }
 
     &__text {
@@ -221,7 +221,7 @@
     }
   }
 
-  @media (max-width: 660px) {
+  @media (max-width: 730px) {
     &__info {
       padding: 20px 0px;
     }
@@ -267,6 +267,24 @@
 
     &__right__form-btn {
       padding: 10px;
+    }
+
+    &__bg {
+      height: 120px;
+    }
+
+    &__left__text {
+      font-size: 14px;
+    }
+
+    &__left__information-adress {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__right__form-btn {
+      width: 220px;
     }
   }
 }

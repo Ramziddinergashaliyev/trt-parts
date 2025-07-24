@@ -4,6 +4,7 @@ import { ACCARDION } from "../../static";
 import { FiPlus } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
 import bgVideo from "../../assets/video/acc.webm";
+import { button } from "framer-motion/client";
 
 const Accardion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -51,7 +52,7 @@ const Accardion = () => {
                     activeIndex === index ? "accardion__icon--rotated" : ""
                   }`}
                 >
-                  {activeIndex === index ? <RiCloseFill /> : <FiPlus />}
+                  {activeIndex === index ? <button className="accardion-btn"><RiCloseFill /></button> : <button className="accardion-btn"><FiPlus /></button>}
                 </span>
               </div>
               <div

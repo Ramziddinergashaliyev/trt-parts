@@ -258,29 +258,53 @@ export const ACCARDION = [
  }
 ]
 
-export const SERVICE = [
+export const SERVICERU = [
  {
    id: 1,
    img: servicePhoto1,
    number: "01",
    name: "Надежность и качество",
-   title: "Наше оборудование и процессы производства направлены на обеспечение долговечности и надежности наших продуктов"
+   desc: "Наше оборудование и процессы производства направлены на обеспечение долговечности и надежности наших продуктов"
  },
  {
    id: 2,
    img: servicePhoto2,
    number: "02",
    name: "Передовые технологии",
-   title: "Cовременные методы тестирования, автоматизированные системы контроля качества и инновационные материалы в производстве"
+   desc: "Cовременные методы тестирования, автоматизированные системы контроля качества и инновационные материалы в производстве"
  },
  {
    id: 3,
    img: servicePhoto3,
    number: "03",
    name: "Клиентоориентированность и гибкость",
-   title: "Мы ценим наших клиентов и стремимся удовлетворить их индивидуальные потребности. Благодаря высокому уровню гибкости в производстве мы способны адаптироваться к изменениям на рынке и быстро реагировать на запросы клиентов. Мы поддерживаем долгосрочные партнерские отношения."
+   desc: "Мы ценим наших клиентов и стремимся удовлетворить их индивидуальные потребности. Благодаря высокому уровню гибкости в производстве мы способны адаптироваться к изменениям на рынке и быстро реагировать на запросы клиентов. Мы поддерживаем долгосрочные партнерские отношения."
  }
 ]
+
+export const SERVICEENG = [
+  {
+    id: 1,
+    name: "Reliability and Quality",
+    desc: "Our equipment and production processes are aimed at ensuring the durability and reliability of our products",
+    img: servicePhoto1,
+    number: "01"
+  },
+  {
+    id: 2,
+    name: "Advanced Technologies",
+    desc: "Modern testing methods, automated quality control systems and innovative materials in production",
+    img: servicePhoto2,
+    number: "02"
+  },
+  {
+    id: 3,
+    name: "Customer Orientation and Flexibility",
+    desc: "We value our clients and strive to meet their individual needs. Thanks to our flexibility in production, we can adapt to market changes and respond quickly to customer demands. We maintain long-term partnerships.",
+    img: servicePhoto3,
+    number: "03"
+  }
+];
 
 export const Swipper = [
    {

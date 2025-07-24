@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import img from "../../assets/icons/settings.svg";
 import "./filter.scss";
 import { useGetProductsQuery } from "../../context/api/productApi";
+import { useTranslation } from "react-i18next";
 
 const Filter = () => {
   const { data } = useGetProductsQuery();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const trtOptions = data?.map((product) => ({
@@ -41,7 +43,7 @@ const Filter = () => {
         state: { oem, trt, brand, model },
       });
     } else {
-      alert("Iltimos, kamida bitta maydonni to‘ldiring!");
+      alert(t("alert_fill_one"));
     }
   };
 
@@ -50,7 +52,7 @@ const Filter = () => {
       <div className="container">
         <div className="filter__top">
           <div className="filter__top__left">
-            <p className="filter__top__left-title">Поиск продукции</p>
+            <p className="filter__top__left-title">{t("search_products")}</p>
           </div>
           <div className="filter__top__icon">
             <img className="filter__top__icon-img" src={img} alt="settings" />
@@ -60,21 +62,21 @@ const Filter = () => {
         <form className="filter__form" onSubmit={handleSearch}>
           <div className="filter__form-left">
             <label className="filter__form-left__label">
-              OEM номер
+              {t("oem_number")}
               <Select
                 options={oemOptions}
                 onChange={(option) => setOem(option?.value || "")}
-                placeholder="Поиск..."
+                placeholder={t("search")}
                 classNamePrefix="react-select"
               />
             </label>
 
             <label className="filter__form-left__label">
-              TRT-код
+              {t("trt_code")}
               <Select
                 options={trtOptions}
                 onChange={(option) => setTrt(option?.value || "")}
-                placeholder="Поиск..."
+                placeholder={t("search")}
                 classNamePrefix="react-select"
               />
             </label>
@@ -82,27 +84,27 @@ const Filter = () => {
 
           <div className="filter__form-right">
             <label className="filter__form-left__label">
-              Марка
+              {t("brand")}
               <Select
                 options={markaOptions}
                 onChange={(option) => setBrand(option?.value || "")}
-                placeholder="Поиск..."
+                placeholder={t("search")}
                 classNamePrefix="react-select"
               />
             </label>
 
             <div className="filter__form-right__btn">
               <label className="filter__form-left__label">
-                Модель
+                {t("model")}
                 <Select
                   options={modelOptions}
                   onChange={(option) => setModel(option?.value || "")}
-                  placeholder="Поиск..."
+                  placeholder={t("search")}
                   classNamePrefix="react-select"
                 />
               </label>
               <button type="submit" className="filter__form-btn">
-                Найти деталь
+                {t("find_part")}
               </button>
             </div>
           </div>

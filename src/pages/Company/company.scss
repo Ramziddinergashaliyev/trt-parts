@@ -45,6 +45,9 @@
     }
 
     &__right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
       img {
         width: 100%;
         border-radius: 6px;

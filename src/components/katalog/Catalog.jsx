@@ -1,16 +1,19 @@
 import React from "react";
 import "./catalog.scss";
 import CatalogCard from "../../components/catalogCard/CatalogCard";
+import { useTranslation, Trans } from "react-i18next";
 
 const Catalog = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="catalog">
       <div className="container">
         <div className="catalog__top">
           <div className="catalog__info">
-            <p className="catalog__info-title">КАТАЛОГ</p>
+            <p className="catalog__info-title">{t("catalog")}</p>
             <h3 className="catalog__info-text">
-              Разделы предоставляемой <span>продукции</span>
+              <Trans i18nKey="catalog_heading" components={{ 1: <span /> }} />
             </h3>
           </div>
 
@@ -20,24 +23,18 @@ const Catalog = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Скачать PDF-файл
+              {t("download_pdf")}
             </a>
           </button>
         </div>
+
         <CatalogCard />
+
         <div className="catalog__info__bottom">
-          <h3 className="catalog__info__bottom-title">О продукции</h3>
+          <h3 className="catalog__info__bottom-title">{t("about_product")}</h3>
           <div className="catalog__info__bottom-text">
-            <p className="catalog__info__bottom-text-left">
-              Мы гордимся предлагать широкий ассортимент высококачественных
-              автозапчастей, разработанных с использованием передовых технологий
-              и инновационных материалов.
-            </p>
-            <p className="catalog__info__bottom-text-right">
-              Наша продукция включает в себя запасные части для легковых и
-              грузовых автомобилей, спроектированные для обеспечения оптимальной
-              производительности и долговечности.
-            </p>
+            <p className="catalog__info__bottom-text-left">{t("left_text")}</p>
+            <p className="catalog__info__bottom-text-right">{t("right_text")}</p>
           </div>
         </div>
       </div>
