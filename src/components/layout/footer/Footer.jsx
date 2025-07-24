@@ -4,105 +4,110 @@ import { FaTelegramPlane, FaInstagram, FaFacebookF } from "react-icons/fa";
 import icon from "../../../assets/img/logo.png";
 
 import "./footer.scss";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="container">
         <nav className="footer__nav">
           <ul className="footer__list">
-            
             <li className="footer__item">
-              <h3 className="footer__list-title">КОМПАНИЯ</h3>
+              <h3 className="footer__list-title">{t("kompany")}</h3>
             </li>
 
             <li className="footer__item">
               <NavLink to="/razdel" className="footer__item-link">
-                Каталог
+                {t("Каталог")}
               </NavLink>
             </li>
 
             <li className="footer__item">
               <NavLink to="/company" className="footer__item-link">
-                О компании
+                {t("компании")}
               </NavLink>
             </li>
 
             <li className="footer__item">
               <NavLink to="/accardion" className="footer__item-link">
-                Партнеры
+                {t("Партнеры")}
               </NavLink>
             </li>
-            
+
             <li className="footer__item">
               <NavLink to="/contact" className="footer__item-link">
-                Контакты
+                {t("Контакты")}
               </NavLink>
             </li>
           </ul>
 
           <ul className="footer__list">
             <li className="footer__item">
-              <h3 className="footer__list-title">ПРОДУКЦИЯ</h3>
+              <h3 className="footer__list-title">{t("ПРОДУКЦИЯ")}</h3>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/4"}>Наконечники рулевой тяги</NavLink>
+              <span className="footer__item-link" style={{ cursor: "pointer" }}>
+                <NavLink to={"rychagi-podveski/4"}>{t("рулевой")}</NavLink>
               </span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/5"}>Резиновые комплектующие</NavLink>
+              <span className="footer__item-link" style={{ cursor: "pointer" }}>
+                <NavLink to={"rychagi-podveski/5"}>
+                  {t("комплектующие")}
+                </NavLink>
               </span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/2"}>Рычаги подвески</NavLink>
+              <span className="footer__item-link" style={{ cursor: "pointer" }}>
+                <NavLink to={"rychagi-podveski/2"}>{t("подвески")}</NavLink>
               </span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/7"}>Шарниры и рулевые тяги</NavLink>
+              <span className="footer__item-link" style={{ cursor: "pointer" }}>
+                <NavLink to={"rychagi-podveski/7"}>{t("тяги")}</NavLink>
               </span>
             </li>
             <li className="footer__item">
-              <span className="footer__item-link" style={{cursor: "pointer"}}>
-                <NavLink to={"rychagi-podveski/3"}>Шаровые опоры</NavLink>
+              <span className="footer__item-link" style={{ cursor: "pointer" }}>
+                <NavLink to={"rychagi-podveski/3"}>{t("опоры")}</NavLink>
               </span>
             </li>
           </ul>
 
           <ul className="footer__list">
             <li className="footer__item">
-              <h3 className="footer__list-title">МАТЕРИАЛЫ</h3>
+              <h3 className="footer__list-title">{t("МАТЕРИАЛЫ")}</h3>
             </li>
             <li className="footer__item">
               <span className="footer__item-link">
-                <NavLink to={"/new"}>Новости</NavLink>
+                <NavLink to={"/new"}>{t("news")}</NavLink>
               </span>
             </li>
           </ul>
 
           <ul className="footer__list">
             <li className="footer__item">
-              <h3 className="footer__list-title">КОНТАКТЫ</h3>
+              <h3 className="footer__list-title">{t("КОНТАКТЫ")}</h3>
             </li>
             <li className="footer__item">
-              <span>Номер телефона </span>
+              <span>{t("nomer")}</span>
               <a href="tel:+998712032030" className="footer__item-link">
                 +99871 203-20-30
               </a>
             </li>
             <li className="footer__item">
-              <span>Адрес </span>
+              <span>{t("Адрес")}</span>
               <address className="footer__item-link">
-                Узбекистан, Ташкентская область, 111811, Зангиатинский р-н,
-                Эркин КФЙ, ул. Зафаробод, 37а
+                {t("address")}
               </address>
             </li>
             <li className="footer__item">
-              <a href="mailto:sales@trt-parts.com" className="footer__item-link">              
-sales@trt-parts.com
+              <a
+                href="mailto:sales@trt-parts.com"
+                className="footer__item-link"
+              >
+                sales@trt-parts.com
               </a>
             </li>
             <li className="footer__item__information">
@@ -127,10 +132,11 @@ sales@trt-parts.com
 
           <div className="footer__bottom-info">
             <p className="footer__bottom-info-text">
-              TECHNOLOGIES OF REAL TIME — Полный цикл производства <br />
-              современных высококачественных автозапчастей
+              {t("TRT")}
             </p>
-            <p className="footer__bottom-info-text">© 2025 | Все права защищены</p>
+            <p className="footer__bottom-info-text">
+             {t("2025")}
+            </p>
           </div>
         </div>
       </div>
@@ -139,5 +145,3 @@ sales@trt-parts.com
 };
 
 export default Footer;
-
-

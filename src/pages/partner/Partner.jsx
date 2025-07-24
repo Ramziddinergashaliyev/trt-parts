@@ -1,18 +1,19 @@
 import React, { memo, useEffect } from "react";
 import { PARTNER } from "../../static";
 import "./partner.scss";
+import { useTranslation } from "react-i18next";
 
 const Partner = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const { t } = useTranslation()
 
   return (
     <section className="partner" aria-labelledby="partnerTitle">
       <div className="partner__info">
-        <p className="partner__info-text">НАШИ ПАРТНЕРЫ</p>
         <h2 className="partner__info-title" id="partnerTitle">
-          Компании-поставщики сырья
+          {t("Компании-поставщики")}
         </h2>
       </div>
 

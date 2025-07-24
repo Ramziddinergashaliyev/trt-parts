@@ -2,11 +2,13 @@ import React, { useEffect, memo } from "react";
 import "./contact.scss";
 import icon from "../../assets/icons/mail.svg";
 import { FaArrowRight } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const { t } = useTranslation()
 
   return (
     <main className="contact">
@@ -16,15 +18,14 @@ const Contact = () => {
         <div className="contact__info">
           <section className="contact__left" aria-labelledby="contact-heading">
             <h1 id="contact-heading" className="contact__left__title">
-              Свяжитесь с нами
+              {t("Свяжитесь с нами")}
             </h1>
-            <h2 className="contact__left__desc">КОНТАКТЫ</h2>
+            <h2 className="contact__left__desc">{t("КОНТАКТЫ")}</h2>
             <p className="contact__left__text">
-              Для приобретения продукции, а также по вопросам сотрудничества и
-              получения консультаций, свяжитесь с нами:
+              {t("Для приобретения")}
             </p>
             <address className="contact__left__information">
-              <p className="contact__left__information-text">Номер телефона</p>
+              <p className="contact__left__information-text">{t("nomer")}</p>
               <a
                 className="contact__left__information-number"
                 href="tel:+998712032030"
@@ -43,15 +44,14 @@ const Contact = () => {
               </div>
 
               <p className="contact__left__information-adress">
-                Узбекистан, Ташкентская область, 111811, Зангиатинский р-н,
-                <br /> Эркин КФЙ, ул. Зафаробод, 37а
+               {t("address")}
               </p>
             </address>
           </section>
 
           <section className="contact__right" aria-labelledby="form-heading">
             <h2 id="form-heading" className="contact__right__title">
-              Форма для связи
+              {t("Форма для связи")}
             </h2>
 
             <form
@@ -59,14 +59,14 @@ const Contact = () => {
               onSubmit={(e) => e.preventDefault()}
             >
               <label>
-                <input type="text" name="name" placeholder="Имя" required />
+                <input type="text" name="name" placeholder={t("Имя")} required />
               </label>
 
               <label>
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Номер"
+                  placeholder={t("Номер")}
                   pattern="^\+?\d{9,15}$"
                   required
                 />
@@ -75,7 +75,7 @@ const Contact = () => {
               <label>
                 <textarea
                   name="message"
-                  placeholder="Комментарий"
+                  placeholder={t("Комментарий")}
                   rows="6"
                   required
                 ></textarea>
@@ -83,14 +83,13 @@ const Contact = () => {
 
               <button type="submit" className="contact__right__form-btn">
                 <span className="contact__right__form-btn-text">
-                  Оставить заявку <FaArrowRight aria-hidden="true" />
+                  {t("Оставить заявку")} <FaArrowRight aria-hidden="true" />
                 </span>
               </button>
             </form>
 
             <p className="contact__right__text">
-              Нажимая на кнопку, вы соглашаетесь на обработку ваших персональных
-              данных.
+              {t("Нажимая")}
             </p>
           </section>
         </div>

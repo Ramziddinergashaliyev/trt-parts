@@ -2,10 +2,13 @@ import React from "react";
 import icons from "../../assets/icons/vapros.svg";
 import { FaAngleRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./vapros.scss";
 
 const Vapros = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="vapros">
       <div className="vapros__cards container">
@@ -17,26 +20,27 @@ const Vapros = () => {
         >
           <div className="vapros__card__top">
             <h3 className="vapros__card__top__left">
-              Возникли вопросы <br />
-              <span>или предложения?</span>
+              {t("have_questions")} <br />
+              <span>{t("or_suggestions")}</span>
             </h3>
             <img src={icons} alt="Vapros-icons" />
           </div>
           <div className="vapros__card__info">
             <p className="vapros__card__info-text">
-              Оставьте заявку, заполнив специальную форму, либо свяжитесь с нами
-              по нашим контактным данным.
+              {t("leave_request_instruction")}
             </p>
           </div>
           <NavLink to={"contact"} className="vapros__card__btns">
             <button className="vapros__card__btns-white">
-              Связаться с нами
+              {t("contact_us")}
             </button>
             <button className="vapros__card__btns-red">
               <FaAngleRight />
             </button>
           </NavLink>
         </div>
+
+        
       </div>
     </div>
   );
