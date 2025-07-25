@@ -1,7 +1,9 @@
 import React from "react";
 import "./tab.scss";
+import { useTranslation } from "react-i18next";
 
 const Tabs = ({ activeTab, onTabClick }) => {
+  const { t } = useTranslation()
   return (
     <div className="tabs">
       <div className="container tabs__card">
@@ -9,19 +11,19 @@ const Tabs = ({ activeTab, onTabClick }) => {
           className={`tab ${activeTab === "reviews" ? "active" : ""}`}
           onClick={() => onTabClick("reviews")}
         >
-          Информация о номере ОЕМ
+          {t("Информация")}
         </button>
         <button
           className={`tab ${activeTab === "Application" ? "active" : ""}`}
           onClick={() => onTabClick("Application")}
         >
-          Применимость
+          {t("Применимость")}
         </button>
         <button
           className={`tab ${activeTab === "Information" ? "active" : ""}`}
           onClick={() => onTabClick("Information")}
         >
-          Доп. информация
+          {t("Доп")}
         </button>
       </div>
     </div>

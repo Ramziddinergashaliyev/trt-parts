@@ -9,11 +9,12 @@ import Information from "../../components/Information/Information";
 import Characteristics from "../../components/Characteristics/Characteristics";
 import HandleSwiper from "../../components/handleSwiper/HandleSwiper";
 import { useGetProductByIdQuery } from "../../context/api/productApi";
+import { useTranslation } from "react-i18next";
 
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
-
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("reviews");
   const [selectedImage, setSelectedImage] = useState("");
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -41,7 +42,9 @@ const Single = () => {
               {data.images.map((img, index) => (
                 <div
                   key={index}
-                  className={`thumbnail ${selectedImage === img ? "active" : ""}`}
+                  className={`thumbnail ${
+                    selectedImage === img ? "active" : ""
+                  }`}
                   onClick={() => setSelectedImage(img)}
                   onMouseEnter={() => setHoveredImage(img)}
                   onMouseLeave={() => setHoveredImage(null)}
@@ -51,10 +54,7 @@ const Single = () => {
               ))}
             </div>
             <div className="detail__img">
-              <img
-                src={hoveredImage || selectedImage}
-                alt="Mahsulot rasmi"
-              />
+              <img src={hoveredImage || selectedImage} alt="Mahsulot rasmi" />
             </div>
           </div>
 
@@ -63,27 +63,27 @@ const Single = () => {
             <ul className="detail__card__info-list">
               {data?.trtCode && (
                 <li className="detail__card__info-item">
-                  TRT-код: <span>{data.trtCode}</span>
+                  {t("TRT-код")}: <span>{data.trtCode}</span>
                 </li>
               )}
               {data?.marka && (
                 <li className="detail__card__info-item">
-                  Марка: <span>{data.marka}</span>
+                  {t("Марка")}: <span>{data.marka}</span>
                 </li>
               )}
               {data?.model?.length > 0 && (
                 <li className="detail__card__info-item">
-                  Модель: <span>{data.model[0]}</span>
+                  {t("Модель")}: <span>{data.model[0]}</span>
                 </li>
               )}
               {data?.oem?.length > 0 && (
                 <li className="detail__card__info-item">
-                  ОЕМ номер: <span>{data.oem[0]}</span>
+                  {t("oem")}: <span>{data.oem[0]}</span>
                 </li>
               )}
               {data?.year && (
                 <li className="detail__card__info-item">
-                  Год: <span>{data.year}</span>
+                  {t("Год")}: <span>{data.year}</span>
                 </li>
               )}
             </ul>

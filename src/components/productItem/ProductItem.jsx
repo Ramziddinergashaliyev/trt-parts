@@ -1,62 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "../product/Product";
+import Stack from "@mui/material/Stack";
+import Pagination from "@mui/material/Pagination";
+import "./productItem.scss";
 
 const ProductItem = ({ data, isTrue }) => {
+  const [page, setPage] = useState(1);
+  const productsPerPage = 4;
+
   if (!data || data.length === 0) {
     return (
       <div className="no-products" role="alert" aria-live="polite">
-        Mahsulotlar topilmadi.
+        Товары не найдены.
       </div>
     );
   }
 
+  const totalPages = Math.ceil(data.length / productsPerPage);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
+  const startIndex = (page - 1) * productsPerPage;
+  const currentProducts = data.slice(startIndex, startIndex + productsPerPage);
+
   return (
-    <>
-      {data.map((product) => (
+    <div className="productItem">
+      <div className="productItem__cards">
+        {currentProducts.map((product) => (
         <div role="listitem" key={product?.id}>
           <Product product={product} isTrue={isTrue} />
         </div>
       ))}
-    </>
+      </div>
+
+      <Stack spacing={2} className="productItem-pagenetion">
+        <Pagination
+          count={totalPages}
+          page={page}
+          onChange={handleChange}
+          color="primary"
+          shape="rounded"
+        />
+      </Stack>
+    </div>
   );
 };
 
 export default ProductItem;
-
-
-// import React, { useEffect, useRef } from "react";
-// import Product from "../product/Product";
-
-// const ProductItem = ({ data, isTrue }) => {
-//   const firstProductRef = useRef(null);
-
-//   useEffect(() => {
-//     if (firstProductRef.current) {
-//       firstProductRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-//     }
-//   }, [data]);
-
-//   if (!data || data.length === 0) {
-//     return (
-//       <div className="no-products" role="alert" aria-live="polite">
-//         Mahsulotlar topilmadi.
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <>
-//       {data.map((product, index) => (
-//         <div
-//           key={product?.id}
-//           role="listitem"
-//           ref={index === 0 ? firstProductRef : null}
-//         >
-//           <Product product={product} isTrue={isTrue} />
-//         </div>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default ProductItem;

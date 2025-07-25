@@ -20,7 +20,7 @@ const CatalogPage = () => {
           <>
             <p className="catalogPage__text">РАЗДЕЛ</p>
             <h3 className="catalogPage__title">{data?.category?.name}</h3>
-            <div className="catalogPage__cards">
+            <div>
               <ProductItem data={data?.parts} />
             </div>
           </>

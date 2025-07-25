@@ -9,7 +9,7 @@
   "АВТОЗАПЧАСТИ": "AUTO PARTS",
   "Глобальные стандарты качества": "Global Quality Standards",
   "Связаться с нами": "Contact Us",
-  "Полный цикл производства современных высококачественных автозапчастей для легковых и грузовых автомобилей": "Full cycle of production of modern high-quality auto parts for cars and trucks",
+  "Полный": "Full cycle of production of modern high-quality auto parts for cars and trucks",
   "Деталей в день": "Parts per day",
   "Доля экспорта": "Export share",
   "search_products": "Product Search",
@@ -67,5 +67,22 @@
   "Имя": "Name",
   "Номер": "Number",
   "Комментарий": "Comment",
-  "Нажимая":"By clicking the button, you agree to the processing of your personal data."
+  "Нажимая":"By clicking the button, you agree to the processing of your personal data.",
+  "TRT-код": "TRT code",
+  "Модель": "Model",
+  "oem": "OEM number",
+  "Год": "Year",
+  "Марка": "Brand",
+  "Информация":"Characteristics",
+  "Применимость": "Applicability",
+  "Доп": "OEM Number Information",
+  "Рекомендации": "Recommendations",
+  "Страна": "Country",
+  "Бренд": "Brand",
+  "Артикул": "Brand article",
+  "Базовая": "Basic unit",
+  "Категория": "Category on the site",
+  "Кросc": "Cross codes OEM"
+
+
 }

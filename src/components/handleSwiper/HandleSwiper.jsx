@@ -7,16 +7,18 @@ import "swiper/css/navigation";
 import "./handleSwiper.scss";
 import { useGetProductsQuery } from "../../context/api/productApi";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HandleSwiper = () => {
-
+  const { t } = useTranslation()
   const { data } = useGetProductsQuery()
   console.log(data);
 
   return (
     <div className="custom__swiper">
-      <h2 className="custom__swiper__title">Рекомендации</h2>
+      <h2 className="custom__swiper__title">{t("Рекомендации")}</h2>
       <Swiper
+        className="custom__swiper-cards"
         modules={[Navigation, Autoplay]}
         spaceBetween={5}
         slidesPerView={4}
