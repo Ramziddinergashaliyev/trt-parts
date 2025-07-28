@@ -258,6 +258,37 @@ export const ACCARDION = [
  }
 ]
 
+export const ACCARDIONEN = [
+ {
+    id: 1,
+    country: "Ukraine",
+    name: "LLC “PETOLAVTO”",
+    title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
+    number: "+380(50)3146633",
+ },
+ {
+    id: 2,
+    country: "Tajikistan",
+    name: "LLC “TOSOL-PLUS”",
+    title: "Tajikistan, Sughd region, J. Rasulov district, Mekhrobod settlement, I. Nurmatov street 45/4",
+    number: "+992 92 707 49 86",
+ },
+ {
+    id: 3,
+    country: "Kazakhstan",
+    name: "TOO “Tanauto Kazakhstan”",
+    title: "Republic of Kazakhstan, 050050, Almaty, 169 A Raiymbek Ave.",
+    number: "+7 727 347 00 26",
+ },  
+ {
+    id: 4,
+    country: "Turkmenistan",
+    name: "IP “Nuryev Guvanch Tagandurdyevich”",
+    title: "Turkmenistan, Mary velayat, Vekilbazar Etrap, Akgonur",
+    number: "+993 65 551008",
+ }
+]
+
 export const SERVICERU = [
  {
    id: 1,

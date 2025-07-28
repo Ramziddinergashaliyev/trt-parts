@@ -9,14 +9,14 @@ const Product = ({ product, isTrue }) => {
   const [deleteProduct] = useDeleteProductMutation();
 
   const handleDelete = async () => {
-    const confirmDelete = window.confirm("Mahsulotni o‘chirishni xohlaysizmi?");
+    const confirmDelete = window.confirm("Вы хотите удалить продукт?");
     if (!confirmDelete) return;
 
     try {
       await deleteProduct(product?.id).unwrap();
     } catch (error) {
       console.error("O‘chirishda xatolik:", error);
-      alert("Xatolik yuz berdi. Iltimos, keyinroq urinib ko‘ring.");
+      alert("Произошла ошибка. Повторите попытку позже.");
     }
   };
 

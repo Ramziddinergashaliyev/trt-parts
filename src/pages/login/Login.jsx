@@ -20,14 +20,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // optional: validation
     if (!value.username || !value.password) {
       alert("Iltimos, foydalanuvchi nomi va parolni to‘ldiring.");
       return;
     }
-
-    // Agar siz redux orqali login qilishni istasangiz
-    // dispatch(loginUser(value));
 
     navigate("/admin/manageProduct");
   };

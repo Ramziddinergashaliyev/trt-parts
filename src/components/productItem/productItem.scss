@@ -14,10 +14,10 @@
 
   .css-yewtcl-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
     background-color: rgb(208, 1, 1);
-   &:hover {
-    background-color: rgb(208, 1, 1);
-   }
-   }
+    &:hover {
+      background-color: rgb(208, 1, 1);
+    }
+  }
 
   @media (max-width: 980px) {
     &__cards {

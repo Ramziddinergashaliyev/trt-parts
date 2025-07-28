@@ -1,4 +1,4 @@
-  .prinsp {
+.prinsp {
   padding: 40px 0px;
 
   &__top {
@@ -86,7 +86,7 @@
     }
   }
 
-  @media (max-width:860px) {
+  @media (max-width: 860px) {
     &__top__left-title {
       font-size: 24px;
       line-height: 28px;
@@ -99,10 +99,10 @@
     }
 
     @media (max-width: 400px) {
-    .prinsp__top__left-title {
-      line-height: 24px;
+      .prinsp__top__left-title {
+        line-height: 24px;
+      }
     }
-  }
 
     &__top__right {
       &-white {

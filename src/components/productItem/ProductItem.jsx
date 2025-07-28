@@ -11,7 +11,7 @@ const ProductItem = ({ data, isTrue }) => {
   if (!data || data.length === 0) {
     return (
       <div className="no-products" role="alert" aria-live="polite">
-        Товары не найдены.
+        {t("найдены.")}
       </div>
     );
   }
@@ -28,21 +28,26 @@ const ProductItem = ({ data, isTrue }) => {
     <div className="productItem">
       <div className="productItem__cards">
         {currentProducts.map((product) => (
-        <div role="listitem" key={product?.id}>
-          <Product product={product} isTrue={isTrue} />
-        </div>
-      ))}
+          <div role="listitem" key={product?.id}>
+            <Product product={product} isTrue={isTrue} />
+          </div>
+        ))}
       </div>
-
-      <Stack spacing={2} className="productItem-pagenetion">
-        <Pagination
-          count={totalPages}
-          page={page}
-          onChange={handleChange}
-          color="primary"
-          shape="rounded"
-        />
-      </Stack>
+      {data.length > 4 ? (
+        <>
+          <Stack spacing={2} className="productItem-pagenetion">
+            <Pagination
+              count={totalPages}
+              page={page}
+              onChange={handleChange}
+              color="primary"
+              shape="rounded"
+            />
+          </Stack>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
