@@ -20,13 +20,17 @@ const Header = () => {
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
-    document.querySelector(".custom-dropdown-options")?.classList.remove("show");
+    document
+      .querySelector(".custom-dropdown-options")
+      ?.classList.remove("show");
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        document.querySelector(".custom-dropdown-options")?.classList.remove("show");
+        document
+          .querySelector(".custom-dropdown-options")
+          ?.classList.remove("show");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -40,29 +44,53 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <nav className="header__nav container" role="navigation" aria-label="header nav">
+        <nav
+          className="header__nav container"
+          role="navigation"
+          aria-label="header nav"
+        >
           <NavLink to="/" className="header__nav__icons">
             <img src={icon} alt="TRT logotipi" />
           </NavLink>
 
-          <ul className={`header__nav__list ${hide ? "header__nav__list-show" : ""}`}>
+          <ul
+            className={`header__nav__list ${
+              hide ? "header__nav__list-show" : ""
+            }`}
+          >
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/razdel">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/razdel"
+              >
                 {t("Каталог")}
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/company">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/company"
+              >
                 {t("Компании")}
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/accardion">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/accardion"
+              >
                 {t("Партнеры")}
               </NavLink>
             </li>
             <li className="header__nav__item">
-              <NavLink onClick={() => setHide(false)} className="header__nav__item-link" to="/contact">
+              <NavLink
+                onClick={() => setHide(false)}
+                className="header__nav__item-link"
+                to="/contact"
+              >
                 {t("Контакты")}
               </NavLink>
             </li>
@@ -98,7 +126,12 @@ const Header = () => {
                     className="custom-dropdown-option"
                     onClick={() => handleLanguageChange("eng")}
                   >
-                    <img src={eng} alt="English language" className="lang-icon" />
+                    <img
+                      src={eng}
+                      alt=""
+                      aria-hidden="true"
+                      className="lang-icon"
+                    />
                     English
                   </div>
                 </div>
@@ -139,7 +172,9 @@ const Header = () => {
       </header>
 
       <div
-        className={`header__nav__search__result ${hideSearch ? "header__nav__search__result-hide" : ""}`}
+        className={`header__nav__search__result ${
+          hideSearch ? "header__nav__search__result-hide" : ""
+        }`}
         role="search"
         aria-label="Sayt bo'yicha qidiruv"
       >

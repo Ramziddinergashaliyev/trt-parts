@@ -34,9 +34,9 @@ const Vapros = () => {
             <button className="vapros__card__btns-white">
               {t("contact_us")}
             </button>
-            <button className="vapros__card__btns-red">
+            <span className="vapros__card__btns-red">
               <FaAngleRight />
-            </button>
+            </span>
           </NavLink>
         </div>
 

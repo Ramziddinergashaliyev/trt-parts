@@ -68,13 +68,13 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <NavLink to="/contact" className="hero__overlay__right-btns">
+              <NavLink to="/contact"  aria-label="qidiruv" className="hero__overlay__right-btns">
                 <button className="hero__overlay__right-btns-white">
                   {t("Связаться с нами")}
                 </button>
-                <button className="hero__overlay__right-btns-red">
+                <span className="hero__overlay__right-btns-red">
                   <FaAngleRight />
-                </button>
+                </span>
               </NavLink>
 
               <div className="hero__overlay__right-img">

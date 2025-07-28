@@ -38,7 +38,6 @@
       z-index: 1;
     }
 
-    //overlay video uchun
     &::after {
       content: "";
       position: absolute;
@@ -414,8 +413,6 @@
       position: absolute;
       top: calc(100vh - 27vh);
       text-align: start;
-      // left: 8%;
-      // z-index: 66;
     }
 
     &__bottom__left-text {

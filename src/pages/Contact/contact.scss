@@ -163,7 +163,7 @@
         position: relative;
         width: 300px;
         padding: 18px 36px;
-        background: rgba(208, 1, 1, 1);
+        background: #d00101;
         border: none;
         border-radius: 5px;
         overflow: hidden;
@@ -185,29 +185,29 @@
           gap: 10px;
         }
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(120deg, #ff416c, #ff4b2b);
-          transition: all 0.4s ease;
-          z-index: 1;
-        }
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   left: -100%;
+        //   width: 100%;
+        //   height: 100%;
+        //   background: linear-gradient(120deg, #ff416c, #ff4b2b);
+        //   transition: all 0.4s ease;
+        //   z-index: 1;
+        // }
 
-        &:hover::before {
-          left: 0;
-        }
+        // &:hover::before {
+        //   left: 0;
+        // }
 
-        &:hover .contact__right__form-btn-text {
-          letter-spacing: 1px;
-        }
+        // &:hover .contact__right__form-btn-text {
+        //   letter-spacing: 1px;
+        // }
 
-        &:active {
-          transform: scale(0.97);
-        }
+        // &:active {
+        //   transform: scale(0.97);
+        // }
       }
     }
 
