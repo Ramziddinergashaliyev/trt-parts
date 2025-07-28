@@ -36,12 +36,12 @@ const Hero = () => {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             poster={poster}
             onLoadedData={() => setVideoLoaded(true)}
           >
             <source src={video1} type="video/mp4" />
-            Sizning brauzeringiz video formatini qo'llab-quvvatlamaydi.
+            {t("Ваш браузер")}
           </video>
 
           {!videoLoaded && (
@@ -71,7 +71,7 @@ const Hero = () => {
             >
               <NavLink
                 to="/contact"
-                aria-label="qidiruv"
+                aria-label="Связаться с нами"
                 className="hero__overlay__right-btns"
               >
                 <button className="hero__overlay__right-btns-white">

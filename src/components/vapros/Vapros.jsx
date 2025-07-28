@@ -38,9 +38,7 @@ const Vapros = () => {
               <FaAngleRight />
             </span>
           </NavLink>
-        </div>
-
-        
+        </div>       
       </div>
     </div>
   );

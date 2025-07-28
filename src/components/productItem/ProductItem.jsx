@@ -21,6 +21,8 @@ const ProductItem = ({ data, isTrue }) => {
     setPage(value);
   };
 
+  
+
   const startIndex = (page - 1) * productsPerPage;
   const currentProducts = data.slice(startIndex, startIndex + productsPerPage);
 

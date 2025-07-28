@@ -26,6 +26,10 @@ const Service = () => {
                   </div>
                   <p className="service__card-top__title">{el.number}</p>
                 </div>
+                <div className="service__card-top-item">
+                  <h3 className="service__card-top-item-title"></h3>
+                  <p className="service__card-top-item-text"></p>
+                </div>
                 <div className="service__card-top-info">
                   <h3 className="service__card-top-info-title">{el.name}</h3>
                   <h3 className="service__card-top-info-text">{el.desc}</h3>

@@ -92,7 +92,7 @@ const Footer = () => {
             </li>
             <li className="footer__item">
               <span>{t("nomer")}</span>
-              <a href="tel:+998712032030" className="footer__item-link">
+              <a href="tel:+998712032030" className="footer__item-link footer__item-link-phone">
                 +99871 203-20-30
               </a>
             </li>
@@ -105,7 +105,7 @@ const Footer = () => {
             <li className="footer__item">
               <a
                 href="mailto:sales@trt-parts.com"
-                className="footer__item-link"
+                className="footer__item-link footer__item-link-mail"
               >
                 sales@trt-parts.com
               </a>

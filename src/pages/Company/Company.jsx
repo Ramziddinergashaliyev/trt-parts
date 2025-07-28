@@ -34,10 +34,6 @@ const Company = () => {
     setModalImage(null);
   };
 
-  // useEffect(() => {
-  //   window.scroll(0, 0);
-  // });
-
   return (
     <div className="company">
       <div className="container">

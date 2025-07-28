@@ -22,8 +22,7 @@ const CatalogCard = () => {
                   backgroundPosition: "top right",
                   backgroundSize: "350px auto",
                 }}
-                className="catalogCard__box-item"
-              >
+                className="catalogCard__box-item">
                 <div className="catalogCard__box-item-card">
                   <div className="catalogCard__box-item-card-link">
                     <span className="catalogCard__box-item-card-link-btn">
