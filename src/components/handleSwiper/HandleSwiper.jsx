@@ -28,7 +28,7 @@ const HandleSwiper = () => {
         breakpoints={{
           200: { slidesPerView: 1 },
           650: { slidesPerView: 2 },
-          1111: { slidesPerView: 3 },
+          1110: { slidesPerView: 3 },
           1210: { slidesPerView: 4 },
         }}>
         {data?.map((el) => (

@@ -15,7 +15,7 @@ const Catalog = () => {
             <h3 className="catalog__info-text">
               <Trans i18nKey="catalog_heading" components={{ 1: <span /> }} />
             </h3>
-          </div>
+            </div>
 
           <button className="catalog__card-link">
             <a

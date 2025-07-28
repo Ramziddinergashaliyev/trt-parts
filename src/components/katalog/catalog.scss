@@ -16,6 +16,8 @@
 
   &__card-link {
     display: inline-block;
+    min-width: 48px;
+    min-height: 48px;
     width: 260px;
     padding: 14px 20px;
     background-color: #d00101;

@@ -14,9 +14,8 @@ const CatalogCard = () => {
       <div className="catalogCard">
         <div className="catalogCard__box" data-aos="zoom-in-down">
           {data?.slice(0, 6)?.map((item) => (
-            <NavLink to={`/rychagi-podveski/${item?.id}`}>
+            <NavLink key={item.id} to={`/rychagi-podveski/${item?.id}`}>
               <div
-                key={item.id}
                 style={{
                   backgroundImage: `url(${item?.imageUrl})`,
                   backgroundRepeat: "no-repeat",
@@ -27,9 +26,7 @@ const CatalogCard = () => {
               >
                 <div className="catalogCard__box-item-card">
                   <div className="catalogCard__box-item-card-link">
-                    <span
-                      className="catalogCard__box-item-card-link-btn"
-                    >
+                    <span className="catalogCard__box-item-card-link-btn">
                       <FaArrowRight />
                     </span>
                   </div>
@@ -49,10 +46,9 @@ const CatalogCard = () => {
     <>
       <div className="catalogCard">
         <div className="catalogCard__box" data-aos="zoom-in-down">
-          {Catalog?.slice(0, 6)?.map((item) => (
-            <NavLink to={`/rychagi-podveski/${item?.id}`}>
+          {Catalog?.map((item) => (
+            <NavLink key={item.id} to={`/rychagi-podveski/${item?.id}`}>
               <div
-                key={item.id}
                 style={{
                   backgroundImage: `url(${item?.imageUrl})`,
                   backgroundRepeat: "no-repeat",
@@ -63,12 +59,11 @@ const CatalogCard = () => {
               >
                 <div className="catalogCard__box-item-card">
                   <div className="catalogCard__box-item-card-link">
-                    <span
-                      className="catalogCard__box-item-card-link-btn"
-                    >
+                    <span className="catalogCard__box-item-card-link-btn">
                       <FaArrowRight />
                     </span>
                   </div>
+
                   <div className="catalogCard__box-info">
                     <h3 className="catalogCard__box-info-title">
                       {item?.name}

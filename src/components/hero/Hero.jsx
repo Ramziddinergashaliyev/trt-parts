@@ -12,16 +12,17 @@ import { useTranslation } from "react-i18next";
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [currentLang, setCurrentLang] = useState(i18n.language); 
+  const [currentLang, setCurrentLang] = useState(i18n.language);
+
   useEffect(() => {
     const handleLanguageChange = (lng) => {
-      setCurrentLang(lng); 
+      setCurrentLang(lng);
     };
 
     i18n.on("languageChanged", handleLanguageChange);
 
     return () => {
-      i18n.off("languageChanged", handleLanguageChange); 
+      i18n.off("languageChanged", handleLanguageChange);
     };
   }, [i18n]);
 
@@ -68,7 +69,11 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <NavLink to="/contact"  aria-label="qidiruv" className="hero__overlay__right-btns">
+              <NavLink
+                to="/contact"
+                aria-label="qidiruv"
+                className="hero__overlay__right-btns"
+              >
                 <button className="hero__overlay__right-btns-white">
                   {t("Связаться с нами")}
                 </button>
@@ -86,19 +91,21 @@ const Hero = () => {
 
         <div className="hero__bottom">
           <div className="hero__bottom__left container">
-            <p className="hero__bottom__left-text">
-              {t("Полный")}
-            </p>
+            <p className="hero__bottom__left-text">{t("Полный")}</p>
           </div>
 
           <div className="hero__bottom__info container">
             <div className="hero__bottom__info-stats">
               <AnimatedStats endValue={12000} text="+" />
-              <p className="hero__bottom__info-stats-text">{t("Деталей в день")}</p>
+              <p className="hero__bottom__info-stats-text">
+                {t("Деталей в день")}
+              </p>
             </div>
             <div className="hero__bottom__info-stats">
               <AnimatedStats endValue={65} text="%" />
-              <p className="hero__bottom__info-stats-text">{t("Доля экспорта")}</p>
+              <p className="hero__bottom__info-stats-text">
+                {t("Доля экспорта")}
+              </p>
             </div>
           </div>
         </div>
