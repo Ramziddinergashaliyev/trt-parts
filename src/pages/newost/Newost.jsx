@@ -10,7 +10,9 @@ const Newost = () => {
   return (
     <section className="newost container" aria-labelledby="blogTitle">
       <p className="newost__text">БЛОГ КОМПАНИИ</p>
-      <h2 className="newost__title" id="blogTitle">Новости TRT</h2>
+      <h2 className="newost__title" id="blogTitle">
+        Новости TRT
+      </h2>
 
       <div className="newost__cards">
         {NEWS?.map((el) => (

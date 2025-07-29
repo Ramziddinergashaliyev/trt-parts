@@ -5,7 +5,8 @@ import "./characteristics.scss";
 import { useTranslation } from "react-i18next";
 
 const Characteristics = ({ data }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
+
   return (
     <div className="characteristic">
       <table className="characteristic__table">
@@ -28,7 +29,7 @@ const Characteristics = ({ data }) => {
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Артикул")}</h3>
           <span className="characteristic__row__desc">{data?.trtCode}</span>
-        </tr>       
+        </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Базовая")}</h3>
           <span className="characteristic__row__desc">{data?.unit}шт</span>

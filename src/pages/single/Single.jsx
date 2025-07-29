@@ -30,8 +30,7 @@ const Single = () => {
   }, [data]);
 
   if (isLoading) return <LoadingSingle />;
-  if (error || !data)
-    return <p className="error">Xatolik yuz berdi. Qayta urinib ko‘ring.</p>;
+  if (error || !data) return <p className="error">{t("Произошла ошибка")}</p>;
 
   return (
     <div className="detail">

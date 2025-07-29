@@ -6,7 +6,7 @@ import Loading from "../../components/loading/Loading";
 
 const NewsPage = () => {
   const [posts, setPosts] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(8); 
+  const [visibleCount, setVisibleCount] = useState(8);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -43,14 +43,17 @@ const Footer = () => {
           </ul>
 
           <ul className="footer__list">
+
             <li className="footer__item">
               <h3 className="footer__list-title">{t("ПРОДУКЦИЯ")}</h3>
             </li>
+
             <li className="footer__item">
               <span className="footer__item-link" style={{ cursor: "pointer" }}>
                 <NavLink to={"rychagi-podveski/4"}>{t("рулевой")}</NavLink>
               </span>
             </li>
+
             <li className="footer__item">
               <span className="footer__item-link" style={{ cursor: "pointer" }}>
                 <NavLink to={"rychagi-podveski/5"}>
@@ -58,50 +61,61 @@ const Footer = () => {
                 </NavLink>
               </span>
             </li>
+
             <li className="footer__item">
               <span className="footer__item-link" style={{ cursor: "pointer" }}>
                 <NavLink to={"rychagi-podveski/2"}>{t("подвески")}</NavLink>
               </span>
             </li>
+
             <li className="footer__item">
               <span className="footer__item-link" style={{ cursor: "pointer" }}>
                 <NavLink to={"rychagi-podveski/7"}>{t("тяги")}</NavLink>
               </span>
             </li>
+
             <li className="footer__item">
               <span className="footer__item-link" style={{ cursor: "pointer" }}>
                 <NavLink to={"rychagi-podveski/3"}>{t("опоры")}</NavLink>
               </span>
             </li>
+            
           </ul>
 
           <ul className="footer__list">
+
             <li className="footer__item">
               <h3 className="footer__list-title">{t("МАТЕРИАЛЫ")}</h3>
             </li>
+
             <li className="footer__item">
               <span className="footer__item-link">
                 <NavLink to={"/new"}>{t("news")}</NavLink>
               </span>
             </li>
+            
           </ul>
 
           <ul className="footer__list">
+
             <li className="footer__item">
               <h3 className="footer__list-title">{t("КОНТАКТЫ")}</h3>
             </li>
+
             <li className="footer__item">
               <span>{t("nomer")}</span>
               <a href="tel:+998712032030" className="footer__item-link footer__item-link-phone">
                 +99871 203-20-30
               </a>
             </li>
+
             <li className="footer__item">
               <span>{t("Адрес")}</span>
               <address className="footer__item-link">
                 {t("address")}
               </address>
             </li>
+
             <li className="footer__item">
               <a
                 href="mailto:sales@trt-parts.com"
@@ -110,6 +124,7 @@ const Footer = () => {
                 sales@trt-parts.com
               </a>
             </li>
+
             <li className="footer__item__information">
               <a
                 href="https://www.instagram.com/trt_official_global"
@@ -122,6 +137,7 @@ const Footer = () => {
                 </button>
               </a>
             </li>
+
           </ul>
         </nav>
 
