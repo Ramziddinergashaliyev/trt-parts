@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 import CatalogPage from "./pages/catalogPage/CatalogPage";
 import Auth from "./pages/auth/Auth";
@@ -24,6 +25,7 @@ import NewsPage from "./pages/newsPage/NewsPage";
 
 const App = () => {
   return (
+    <>
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
@@ -48,6 +50,8 @@ const App = () => {
         <Route path="createProduct" element={<CreateProduct />} />
       </Route>
     </Routes>
+    <ToastContainer /> 
+    </>
   );
 };
 

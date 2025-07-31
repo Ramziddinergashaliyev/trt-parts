@@ -5,14 +5,16 @@ import "./characteristics.scss";
 import { useTranslation } from "react-i18next";
 
 const Characteristics = ({ data }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
+    console.log(currentLang);
 
   return (
     <div className="characteristic">
       <table className="characteristic__table">
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Марка")}</h3>
-          <span className="characteristic__row__desc">{data?.marka}</span>
+          <span className="characteristic__row__desc">{data?.carName[0]}</span>
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Модель")}</h3>
@@ -20,7 +22,7 @@ const Characteristics = ({ data }) => {
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Страна")}</h3>
-          <span className="characteristic__row__desc">{data?.country}</span>
+          <span className="characteristic__row__desc">Узбекистан</span>
         </tr>
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Бренд")}</h3>
@@ -37,7 +39,13 @@ const Characteristics = ({ data }) => {
         <tr className="characteristic__row">
           <h3 className="characteristic__row__text">{t("Категория")}</h3>
           <span className="characteristic__row__desc">
-            {data?.categories?.[0].name}
+            {
+              currentLang === "rus"
+              ?
+              data?.categories?.[0].translations.ru.name
+              :
+              data?.categories?.[0].translations.en.name
+            }
           </span>
         </tr>
         <tr className="characteristic__row">

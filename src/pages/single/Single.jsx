@@ -14,10 +14,16 @@ import { useTranslation } from "react-i18next";
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("reviews");
   const [selectedImage, setSelectedImage] = useState("");
   const [hoveredImage, setHoveredImage] = useState(null);
+  const currentLang = i18n.language;
+  console.log(currentLang);
+
+
+    console.log(data);
+    
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,16 +64,24 @@ const Single = () => {
           </div>
 
           <div className="detail__card__info">
-            <h3 className="detail__title">{data.name}</h3>
+            <h3 className="detail__title">
+              {
+                currentLang === "rus"
+                ?
+                data?.translations?.ru?.name
+                :
+                data?.translations?.en?.name
+              }
+            </h3>
             <ul className="detail__card__info-list">
               {data?.trtCode && (
                 <li className="detail__card__info-item">
                   {t("TRT-код")}: <span>{data.trtCode}</span>
                 </li>
               )}
-              {data?.marka && (
+              {data?.carName && (
                 <li className="detail__card__info-item">
-                  {t("Марка")}: <span>{data.marka}</span>
+                  {t("Марка")}: <span>{data.carName[0]}</span>
                 </li>
               )}
               {data?.model?.length > 0 && (
@@ -80,9 +94,9 @@ const Single = () => {
                   {t("oem")}: <span>{data.oem[0]}</span>
                 </li>
               )}
-              {data?.year && (
+              {data?.years && (
                 <li className="detail__card__info-item">
-                  {t("Год")}: <span>{data.year}</span>
+                  {t("Год")}: <span>{data.years[0]}</span>
                 </li>
               )}
             </ul>

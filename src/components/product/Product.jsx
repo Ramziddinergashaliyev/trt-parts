@@ -4,9 +4,14 @@ import "./product.scss";
 import { IoCreateOutline } from "react-icons/io5";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useDeleteProductMutation } from "../../context/api/productApi";
+import { useTranslation } from "react-i18next";
 
 const Product = ({ product, isTrue }) => {
   const [deleteProduct] = useDeleteProductMutation();
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+  console.log(currentLang);
+  
 
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Вы хотите удалить продукт?");
@@ -29,7 +34,7 @@ const Product = ({ product, isTrue }) => {
       <NavLink to={`/single/${product?.id}`} className="result__card__img">
         <img
           src={product?.images[0]}
-          alt={product?.name || "Mahsulot rasmi"}
+          alt={product?.translations?.ru?.name || "Mahsulot rasmi"}
           loading="lazy"
         />
       </NavLink>
@@ -46,7 +51,15 @@ const Product = ({ product, isTrue }) => {
       )}
 
       <div className="result__card__info">
-        <p className="result__card__info-text">{product?.name}</p>
+        <p className="result__card__info-text">
+          {
+            currentLang === "rus"
+            ?
+            product?.translations?.ru?.name
+            :
+            product?.translations?.en?.name
+          }
+        </p>
         <p className="result__card__info-title">{product?.trtCode}</p>
       </div>
     </div>

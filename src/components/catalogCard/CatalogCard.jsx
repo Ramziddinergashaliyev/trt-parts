@@ -2,12 +2,18 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
+import { useTranslation } from "react-i18next";
 
 import "./catalogCard.scss";
 import { Catalog } from "../../static";
 
 const CatalogCard = () => {
   const { data } = useGetCategoriesQuery();
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+  console.log(currentLang);
+
+  console.log(data);
 
   return data ? (
     <>
@@ -22,7 +28,8 @@ const CatalogCard = () => {
                   backgroundPosition: "top right",
                   backgroundSize: "350px auto",
                 }}
-                className="catalogCard__box-item">
+                className="catalogCard__box-item"
+              >
                 <div className="catalogCard__box-item-card">
                   <div className="catalogCard__box-item-card-link">
                     <span className="catalogCard__box-item-card-link-btn">
@@ -31,7 +38,9 @@ const CatalogCard = () => {
                   </div>
                   <div className="catalogCard__box-info">
                     <h3 className="catalogCard__box-info-title">
-                      {item?.name}
+                      {currentLang === "rus"
+                        ? item?.translations?.ru?.name
+                        : item?.translations?.en?.name}
                     </h3>
                   </div>
                 </div>

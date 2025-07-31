@@ -4,10 +4,14 @@ import { useGetCategoriesByIdQuery } from "../../context/api/categoryApi";
 import ProductItem from "../../components/productItem/ProductItem";
 import "./catalogPage.scss";
 import Loading from "../../components/loading/Loading";
+import { useTranslation } from "react-i18next";
 
 const CatalogPage = () => {
   const { id } = useParams();
   const { data } = useGetCategoriesByIdQuery(id);
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+  console.log(currentLang);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -19,7 +23,11 @@ const CatalogPage = () => {
         {data ? (
           <>
             <p className="catalogPage__text">РАЗДЕЛ</p>
-            <h3 className="catalogPage__title">{data?.category?.name}</h3>
+            <h3 className="catalogPage__title">
+              {currentLang === "rus"
+                ? data?.category?.translations?.ru?.name
+                : data?.category?.translations?.en?.name}
+            </h3>
             <div>
               <ProductItem data={data?.parts} />
             </div>

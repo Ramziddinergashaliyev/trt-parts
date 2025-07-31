@@ -3,10 +3,12 @@ import Product from "../product/Product";
 import Stack from "@mui/material/Stack";
 import Pagination from "@mui/material/Pagination";
 import "./productItem.scss";
+import { useTranslation } from "react-i18next";
 
 const ProductItem = ({ data, isTrue }) => {
   const [page, setPage] = useState(1);
-  const productsPerPage = 4;
+  const { t } = useTranslation()
+  const productsPerPage = 8;
 
   if (!data || data.length === 0) {
     return (
@@ -20,8 +22,6 @@ const ProductItem = ({ data, isTrue }) => {
   const handleChange = (event, value) => {
     setPage(value);
   };
-
-  
 
   const startIndex = (page - 1) * productsPerPage;
   const currentProducts = data.slice(startIndex, startIndex + productsPerPage);

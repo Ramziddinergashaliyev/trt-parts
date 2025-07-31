@@ -10,8 +10,10 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const HandleSwiper = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { data } = useGetProductsQuery()
+  const currentLang = i18n.language;
+    console.log(currentLang);
   console.log(data);
 
   return (
@@ -42,7 +44,13 @@ const HandleSwiper = () => {
                 />
                 </NavLink>
               <div className="custom__swiper-info">
-                <h3 className="custom__swiper-info-title">{el?.name}</h3>
+                <h3 className="custom__swiper-info-title">{
+                  currentLang === "rus"
+                  ?
+                  el?.translations?.ru?.name
+                  :
+                  el?.translations?.en?.name
+                }</h3>
                 <p className="custom__swiper-info-subtitle">{el?.trtCode}</p>
               </div>
             </div>
