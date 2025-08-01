@@ -19,12 +19,7 @@ const Single = () => {
   const [selectedImage, setSelectedImage] = useState("");
   const [hoveredImage, setHoveredImage] = useState(null);
   const currentLang = i18n.language;
-  console.log(currentLang);
-
-
-    console.log(data);
-    
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
