@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import img from "../../assets/img/psc.png";
 
 import "./handleSwiper.scss";
 import { useGetProductsQuery } from "../../context/api/productApi";
@@ -10,10 +11,10 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const HandleSwiper = () => {
-  const { t, i18n } = useTranslation()
-  const { data } = useGetProductsQuery()
+  const { t, i18n } = useTranslation();
+  const { data } = useGetProductsQuery();
   const currentLang = i18n.language;
-    console.log(currentLang);
+  console.log(currentLang);
   console.log(data);
 
   return (
@@ -32,33 +33,42 @@ const HandleSwiper = () => {
           650: { slidesPerView: 2 },
           1110: { slidesPerView: 3 },
           1210: { slidesPerView: 4 },
-        }}>
+        }}
+      >
         {data?.map((el) => (
           <SwiperSlide key={el?.id}>
             <div className="custom__swiper-content">
-              <NavLink to={`/single/${el?.id}`}  onClick={() => window.scrollTo(0, 0)}>
-              <img
-                src={el?.images[0]}
-                alt={el?.title}
-                className="custom__swiper-image"
-                />
-                </NavLink>
+              <NavLink
+                to={`/single/${el?.id}`}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                {el?.images && el.images.length > 0 && el.images[0] ? (
+                  <img
+                    src={el?.images[0]}
+                    alt={el?.title}
+                    className="custom__swiper-image"
+                  />
+                ) : (
+                  <img
+                    src={img}
+                    alt={el?.translations?.ru?.name || "Mahsulot rasmi"}
+                    className="custom__swiper-image"
+                    loading="lazy"
+                  />
+                )}
+              </NavLink>
               <div className="custom__swiper-info">
-                <h3 className="custom__swiper-info-title">{
-                  currentLang === "rus"
-                  ?
-                  el?.translations?.ru?.name
-                  :
-                  el?.translations?.en?.name
-                }</h3>
+                <h3 className="custom__swiper-info-title">
+                  {currentLang === "rus"
+                    ? el?.translations?.ru?.name
+                    : el?.translations?.en?.name}
+                </h3>
                 <p className="custom__swiper-info-subtitle">{el?.trtCode}</p>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      
     </div>
   );
 };

@@ -5,13 +5,13 @@ import { IoCreateOutline } from "react-icons/io5";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useDeleteProductMutation } from "../../context/api/productApi";
 import { useTranslation } from "react-i18next";
+import img from "../../assets/img/psc.png";
 
 const Product = ({ product, isTrue }) => {
   const [deleteProduct] = useDeleteProductMutation();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   console.log(currentLang);
-  
 
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Вы хотите удалить продукт?");
@@ -32,11 +32,19 @@ const Product = ({ product, isTrue }) => {
       aria-label={`Mahsulot: ${product?.name}`}
     >
       <NavLink to={`/single/${product?.id}`} className="result__card__img">
-        <img
-          src={product?.images[0]}
-          alt={product?.translations?.ru?.name || "Mahsulot rasmi"}
-          loading="lazy"
-        />
+        {product?.images && product.images.length > 0 && product.images[0] ? (
+          <img
+            src={product.images[0]}
+            alt={product?.translations?.ru?.name || "Mahsulot rasmi"}
+            loading="lazy"
+          />
+        ) : (
+          <img
+            src={img}
+            alt={product?.translations?.ru?.name || "Mahsulot rasmi"}
+            loading="lazy"
+          />
+        )}
       </NavLink>
 
       {isTrue && (
@@ -52,13 +60,9 @@ const Product = ({ product, isTrue }) => {
 
       <div className="result__card__info">
         <p className="result__card__info-text">
-          {
-            currentLang === "rus"
-            ?
-            product?.translations?.ru?.name
-            :
-            product?.translations?.en?.name
-          }
+          {currentLang === "rus"
+            ? product?.translations?.ru?.name
+            : product?.translations?.en?.name}
         </p>
         <p className="result__card__info-title">{product?.trtCode}</p>
       </div>

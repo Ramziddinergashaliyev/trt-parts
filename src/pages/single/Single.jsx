@@ -10,6 +10,7 @@ import Characteristics from "../../components/Characteristics/Characteristics";
 import HandleSwiper from "../../components/handleSwiper/HandleSwiper";
 import { useGetProductByIdQuery } from "../../context/api/productApi";
 import { useTranslation } from "react-i18next";
+import img from "../../assets/img/psc.png";
 
 const Single = () => {
   const { id } = useParams();
@@ -19,7 +20,10 @@ const Single = () => {
   const [selectedImage, setSelectedImage] = useState("");
   const [hoveredImage, setHoveredImage] = useState(null);
   const currentLang = i18n.language;
-  
+
+  const images = data?.images?.filter(img => img?.trim()) || []; 
+  const hasImages = images.length > 0;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,7 +41,7 @@ const Single = () => {
     <div className="detail">
       <div className="container">
         <div className="detail__cards">
-          <div className="detail__card__img">
+          {/* <div className="detail__card__img">
             <div className="detail__card__imgs">
               {data.images.map((img, index) => (
                 <div
@@ -56,17 +60,48 @@ const Single = () => {
             <div className="detail__img">
               <img src={hoveredImage || selectedImage} alt="Mahsulot rasmi" />
             </div>
+          </div> */}
+
+          <div className="detail__card__img">
+            <div className="detail__card__imgs">
+              {hasImages ? (
+                images.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`thumbnail ${
+                      selectedImage === img ? "active" : ""
+                    }`}
+                    onClick={() => setSelectedImage(img)}
+                    onMouseEnter={() => setHoveredImage(img)}
+                    onMouseLeave={() => setHoveredImage(null)}
+                  >
+                    <img src={img} alt={`thumb-${index}`} />
+                  </div>
+                ))
+              ) : (
+                <div className="thumbnail active">
+                  <img src={img} alt="no-image" />
+                </div>
+              )}
+            </div>
+
+            <div className="detail__img">
+              <img
+                src={
+                  hasImages
+                    ? hoveredImage || selectedImage || images[0]
+                    : img
+                }
+                alt="Mahsulot rasmi"
+              />
+            </div>
           </div>
 
           <div className="detail__card__info">
             <h3 className="detail__title">
-              {
-                currentLang === "rus"
-                ?
-                data?.translations?.ru?.name
-                :
-                data?.translations?.en?.name
-              }
+              {currentLang === "rus"
+                ? data?.translations?.ru?.name
+                : data?.translations?.en?.name}
             </h3>
             <ul className="detail__card__info-list">
               {data?.trtCode && (

@@ -35,7 +35,7 @@ const ProductItem = ({ data, isTrue }) => {
           </div>
         ))}
       </div>
-      {data.length > 4 ? (
+      {data.length > 8 ? (
         <>
           <Stack spacing={2} className="productItem-pagenetion">
             <Pagination
