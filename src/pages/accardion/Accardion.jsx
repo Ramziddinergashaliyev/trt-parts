@@ -11,7 +11,6 @@ const Accardion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const { t, i18n } = useTranslation();
-  console.log(i18n.languages);
 
   useEffect(() => {
     window.scrollTo(0, 0);

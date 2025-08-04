@@ -41,27 +41,6 @@ const Single = () => {
     <div className="detail">
       <div className="container">
         <div className="detail__cards">
-          {/* <div className="detail__card__img">
-            <div className="detail__card__imgs">
-              {data.images.map((img, index) => (
-                <div
-                  key={index}
-                  className={`thumbnail ${
-                    selectedImage === img ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedImage(img)}
-                  onMouseEnter={() => setHoveredImage(img)}
-                  onMouseLeave={() => setHoveredImage(null)}
-                >
-                  <img src={img} alt={`thumb-${index}`} />
-                </div>
-              ))}
-            </div>
-            <div className="detail__img">
-              <img src={hoveredImage || selectedImage} alt="Mahsulot rasmi" />
-            </div>
-          </div> */}
-
           <div className="detail__card__img">
             <div className="detail__card__imgs">
               {hasImages ? (

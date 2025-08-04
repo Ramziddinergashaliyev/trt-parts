@@ -17,21 +17,35 @@ const Filter = () => {
     label: product.trtCode,
   }));
 
- const oemOptions = data?.map((product) => {
-  const value = Array.isArray(product.oem) && product.oem.length > 0 ? product.oem[0] : "";
-  return { value, label: value };
-}).filter((option) => option.value); 
+  const oemOptions = data
+    ?.map((product) => {
+      const value =
+        Array.isArray(product.oem) && product.oem.length > 0
+          ? product.oem[0]
+          : "";
+      return { value, label: value };
+    })
+    .filter((option) => option.value);
 
-const markaOptions = data?.map((product) => {
-  const value = Array.isArray(product.carName) && product.carName.length > 0 ? product.carName[0] : "";
-  return { value, label: value };
-}).filter((option) => option.value);
+  const markaOptions = data
+    ?.map((product) => {
+      const value =
+        Array.isArray(product.carName) && product.carName.length > 0
+          ? product.carName[0]
+          : "";
+      return { value, label: value };
+    })
+    .filter((option) => option.value);
 
-const modelOptions = data?.map((product) => {
-  const value = Array.isArray(product.model) && product.model.length > 0 ? product.model[0] : "";
-  return { value, label: value };
-}).filter((option) => option.value);
-
+  const modelOptions = data
+    ?.map((product) => {
+      const value =
+        Array.isArray(product.model) && product.model.length > 0
+          ? product.model[0]
+          : "";
+      return { value, label: value };
+    })
+    .filter((option) => option.value);
 
   const [oem, setOem] = useState("");
   const [trt, setTrt] = useState("");
@@ -94,7 +108,7 @@ const modelOptions = data?.map((product) => {
                 classNamePrefix="react-select"
               />
             </label>
-            
+
             <div className="filter__form-right__btn">
               <label className="filter__form-left__label">
                 {t("model")}

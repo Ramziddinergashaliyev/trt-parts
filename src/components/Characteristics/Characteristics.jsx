@@ -38,13 +38,9 @@ const Characteristics = ({ data }) => {
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Категория")}</th>
           <td className="characteristic__row__desc">
-            {
-              currentLang === "rus"
-              ?
-              data?.categories?.[0].translations.ru.name
-              :
-              data?.categories?.[0].translations.en.name
-            }
+            {currentLang === "rus"
+              ? data?.categories?.[0].translations.ru.name
+              : data?.categories?.[0].translations.en.name}
           </td>
         </tr>
         <tr className="characteristic__row">
