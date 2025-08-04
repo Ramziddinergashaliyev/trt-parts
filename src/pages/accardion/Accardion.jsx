@@ -3,7 +3,7 @@ import "./accardion.scss";
 import { ACCARDION, ACCARDIONEN } from "../../static";
 import { FiPlus } from "react-icons/fi";
 import { RiCloseFill } from "react-icons/ri";
-import bgVideo from "../../assets/video/acc.mp4";
+import bgVideo from "../../assets/video/acc.webm";
 import { button } from "framer-motion/client";
 import { useTranslation } from "react-i18next";
 
