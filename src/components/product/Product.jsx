@@ -6,12 +6,12 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useDeleteProductMutation } from "../../context/api/productApi";
 import { useTranslation } from "react-i18next";
 import img from "../../assets/img/psc.png";
+import { toast } from "react-toastify";
 
 const Product = ({ product, isTrue }) => {
   const [deleteProduct] = useDeleteProductMutation();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(currentLang);
 
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Вы хотите удалить продукт?");
@@ -21,7 +21,7 @@ const Product = ({ product, isTrue }) => {
       await deleteProduct(product?.id).unwrap();
     } catch (error) {
       console.error("O‘chirishda xatolik:", error);
-      alert("Произошла ошибка. Повторите попытку позже.");
+      toast.error("Произошла ошибка. Повторите попытку позже.");
     }
   };
 
@@ -35,13 +35,13 @@ const Product = ({ product, isTrue }) => {
         {product?.images && product.images.length > 0 && product.images[0] ? (
           <img
             src={product.images[0]}
-            alt={product?.translations?.ru?.name || "Mahsulot rasmi"}
+            alt={product?.translations?.[currentLang]?.name || "Mahsulot rasmi"}
             loading="lazy"
           />
         ) : (
           <img
             src={img}
-            alt={product?.translations?.ru?.name || "Mahsulot rasmi"}
+            alt={product?.translations?.[currentLang]?.name || "Mahsulot rasmi"}
             loading="lazy"
           />
         )}
@@ -49,10 +49,10 @@ const Product = ({ product, isTrue }) => {
 
       {isTrue && (
         <div className="result__card__img__btn">
-          <button aria-label="Mahsulotni tahrirlash">
+          <button type="button" aria-label="Mahsulotni tahrirlash">
             <IoCreateOutline />
           </button>
-          <button onClick={handleDelete} aria-label="Mahsulotni o‘chirish">
+          <button type="button" onClick={handleDelete} aria-label="Mahsulotni o‘chirish">
             <AiOutlineDelete />
           </button>
         </div>

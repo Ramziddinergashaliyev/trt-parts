@@ -11,9 +11,6 @@ const CatalogCard = () => {
   const { data } = useGetCategoriesQuery();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(currentLang);
-
-  console.log(data);
 
   return data ? (
     <>

@@ -128,9 +128,10 @@ const Header = () => {
                   >
                     <img
                       src={eng}
-                      alt=""
+                      alt="English icon"
                       aria-hidden="true"
                       className="lang-icon"
+                      loading="leazy"
                     />
                     English
                   </div>

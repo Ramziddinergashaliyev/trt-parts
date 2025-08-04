@@ -48,35 +48,25 @@ const Footer = () => {
             </li>
 
             <li className="footer__item">
-              <span className="footer__item-link" style={{ cursor: "pointer" }}>
-                <NavLink to={"rychagi-podveski/14"}>{t("рулевой")}</NavLink>
-              </span>
+                <NavLink className="footer__item-link"  style={{ cursor: "pointer" }} to={"rychagi-podveski/14"}>{t("рулевой")}</NavLink>
             </li>
 
             <li className="footer__item">
-              <span className="footer__item-link" style={{ cursor: "pointer" }}>
-                <NavLink to={"rychagi-podveski/15"}>
+                <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/15"}>
                   {t("комплектующие")}
                 </NavLink>
-              </span>
             </li>
 
             <li className="footer__item">
-              <span className="footer__item-link" style={{ cursor: "pointer" }}>
-                <NavLink to={"rychagi-podveski/12"}>{t("подвески")}</NavLink>
-              </span>
+                <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/12"}>{t("подвески")}</NavLink>
             </li>
 
             <li className="footer__item">
-              <span className="footer__item-link" style={{ cursor: "pointer" }}>
-                <NavLink to={"rychagi-podveski/17"}>{t("тяги")}</NavLink>
-              </span>
+                <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/17"}>{t("тяги")}</NavLink>
             </li>
 
             <li className="footer__item">
-              <span className="footer__item-link" style={{ cursor: "pointer" }}>
-                <NavLink to={"rychagi-podveski/13"}>{t("опоры")}</NavLink>
-              </span>
+                <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/13"}>{t("опоры")}</NavLink>
             </li>
           </ul>
 
@@ -87,9 +77,7 @@ const Footer = () => {
             </li>
 
             <li className="footer__item">
-              <span className="footer__item-link">
-                <NavLink to={"/new"}>{t("news")}</NavLink>
-              </span>
+                <NavLink className="footer__item-link" to={"/new"}>{t("news")}</NavLink>
             </li>
             
           </ul>
@@ -130,9 +118,9 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="Instagram sahifasiga o‘tish"
               >
-                <button aria-label="Instagram sahifasiga o‘tish">
+                <span>
                   <FaInstagram />
-                </button>
+                </span>
               </a>
             </li>
 

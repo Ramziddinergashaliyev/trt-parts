@@ -23,7 +23,7 @@ const Application = ({ data }) => {
               : data?.model?.[index] || ""}
           </h3>
           <p className="application__desc">
-            {data?.year?.length === 1
+            {data?.years?.length === 1
               ? data.years[0]
               : data?.years?.[index] || ""}
           </p>

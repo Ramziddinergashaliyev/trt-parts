@@ -26,6 +26,13 @@ const Hero = () => {
     };
   }, [i18n]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVideoLoaded(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <div className="hero">

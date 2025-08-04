@@ -7,38 +7,37 @@ import { useTranslation } from "react-i18next";
 const Characteristics = ({ data }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
-    console.log(currentLang);
 
   return (
     <div className="characteristic">
       <table className="characteristic__table">
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Марка")}</h3>
-          <span className="characteristic__row__desc">{data?.carName[0]}</span>
+          <th className="characteristic__row__text">{t("Марка")}</th>
+          <td className="characteristic__row__desc">{data?.carName[0]}</td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Модель")}</h3>
-          <span className="characteristic__row__desc">{data?.model[0]}</span>
+          <th className="characteristic__row__text">{t("Модель")}</th>
+          <td className="characteristic__row__desc">{data?.model[0]}</td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Страна")}</h3>
-          <span className="characteristic__row__desc">Узбекистан</span>
+          <th className="characteristic__row__text">{t("Страна")}</th>
+          <td className="characteristic__row__desc">Узбекистан</td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Бренд")}</h3>
-          <span className="characteristic__row__desc">{data?.brand}</span>
+          <th className="characteristic__row__text">{t("Бренд")}</th>
+          <td className="characteristic__row__desc">{data?.brand}</td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Артикул")}</h3>
-          <span className="characteristic__row__desc">{data?.trtCode}</span>
+          <th className="characteristic__row__text">{t("Артикул")}</th>
+          <td className="characteristic__row__desc">{data?.trtCode}</td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Базовая")}</h3>
-          <span className="characteristic__row__desc">{data?.unit}шт</span>
+          <th className="characteristic__row__text">{t("Базовая")}</th>
+          <td className="characteristic__row__desc">{data?.unit}шт</td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Категория")}</h3>
-          <span className="characteristic__row__desc">
+          <th className="characteristic__row__text">{t("Категория")}</th>
+          <td className="characteristic__row__desc">
             {
               currentLang === "rus"
               ?
@@ -46,11 +45,11 @@ const Characteristics = ({ data }) => {
               :
               data?.categories?.[0].translations.en.name
             }
-          </span>
+          </td>
         </tr>
         <tr className="characteristic__row">
-          <h3 className="characteristic__row__text">{t("Кросc")}</h3>
-          <span className="characteristic__row__desc">{data?.oem[0]}</span>
+          <th className="characteristic__row__text">{t("Кросc")}</th>
+          <td className="characteristic__row__desc">{data?.oem[0]}</td>
         </tr>
       </table>
     </div>

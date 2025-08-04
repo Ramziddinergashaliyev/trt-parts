@@ -5,6 +5,7 @@ import img from "../../assets/icons/settings.svg";
 import "./filter.scss";
 import { useGetProductsQuery } from "../../context/api/productApi";
 import { useTranslation } from "react-i18next";
+import { toast } from "react-toastify";
 
 const Filter = () => {
   const { data } = useGetProductsQuery();
@@ -44,7 +45,7 @@ const modelOptions = data?.map((product) => {
         state: { oem, trt, brand, model },
       });
     } else {
-      alert(t("alert_fill_one"));
+      toast.info(t("alert_fill_one"));
     }
   };
 

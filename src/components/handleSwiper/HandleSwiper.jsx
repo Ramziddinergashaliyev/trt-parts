@@ -14,9 +14,6 @@ const HandleSwiper = () => {
   const { t, i18n } = useTranslation();
   const { data } = useGetProductsQuery();
   const currentLang = i18n.language;
-  console.log(currentLang);
-  console.log(data);
-
   return (
     <div className="custom__swiper">
       <h2 className="custom__swiper__title">{t("Рекомендации")}</h2>
@@ -45,13 +42,18 @@ const HandleSwiper = () => {
                 {el?.images && el.images.length > 0 && el.images[0] ? (
                   <img
                     src={el?.images[0]}
-                    alt={el?.title}
+                    alt={currentLang === "rus"
+                    ? el?.translations?.ru?.name
+                    : el?.translations?.en?.name}
                     className="custom__swiper-image"
+                    loading="lazy"
                   />
                 ) : (
                   <img
                     src={img}
-                    alt={el?.translations?.ru?.name || "Mahsulot rasmi"}
+                    alt={currentLang === "rus"
+                    ? el?.translations?.ru?.name
+                    : el?.translations?.en?.name}
                     className="custom__swiper-image"
                     loading="lazy"
                   />

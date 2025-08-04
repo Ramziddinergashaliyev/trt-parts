@@ -36,7 +36,7 @@
       gap: 10px;
       padding: 10px 0px;
 
-      button {
+      span {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -55,7 +55,7 @@
         }
       }
 
-      button:hover {
+      span:hover {
         background-color: black;
         transition: 0.6s;
         svg {
