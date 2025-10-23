@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const AnimatedStats = ({ endValue, text, start = 11000, speed = 0.1 }) => {
   const [count, setCount] = useState(start);
-
+//Ramziddin
   useEffect(() => {
     const interval = setInterval(() => {
       setCount((prev) => {
