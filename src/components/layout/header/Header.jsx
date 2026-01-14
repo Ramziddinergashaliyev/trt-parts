@@ -44,6 +44,7 @@ const Header = () => {
   return (
     <>
       <header className="header">
+
         <nav
           className="header__nav container"
           role="navigation"
@@ -53,11 +54,8 @@ const Header = () => {
             <img src={icon} alt="TRT logotipi" />
           </NavLink>
 
-          <ul
-            className={`header__nav__list ${
-              hide ? "header__nav__list-show" : ""
-            }`}
-          >
+          <ul className={`header__nav__list ${hide ? "header__nav__list-show" : ""}`}>
+
             <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
@@ -67,6 +65,7 @@ const Header = () => {
                 {t("Каталог")}
               </NavLink>
             </li>
+
             <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
@@ -76,6 +75,7 @@ const Header = () => {
                 {t("Компании")}
               </NavLink>
             </li>
+
             <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
@@ -85,6 +85,7 @@ const Header = () => {
                 {t("Партнеры")}
               </NavLink>
             </li>
+
             <li className="header__nav__item">
               <NavLink
                 onClick={() => setHide(false)}
@@ -115,6 +116,7 @@ const Header = () => {
                 </button>
 
                 <div className="custom-dropdown-options">
+
                   <div
                     className="custom-dropdown-option"
                     onClick={() => handleLanguageChange("rus")}
@@ -122,6 +124,7 @@ const Header = () => {
                     <img src={rus} alt="Русский язык" className="lang-icon" />
                     Rus
                   </div>
+
                   <div
                     className="custom-dropdown-option"
                     onClick={() => handleLanguageChange("eng")}
@@ -135,6 +138,7 @@ const Header = () => {
                     />
                     English
                   </div>
+
                 </div>
               </div>
             </li>
@@ -144,9 +148,11 @@ const Header = () => {
                 +99871 203-20-30
               </a>
             </li>
+
           </ul>
 
           <div className="header__nav__right">
+            
             <button
               onClick={handleSearchClick}
               className="header__nav__search"
@@ -164,21 +170,18 @@ const Header = () => {
             <button
               onClick={() => setHide(!hide)}
               className="header__nav__right-menu"
-              aria-label={hide ? "menu exit" : "Menu open"}
-            >
+              aria-label={hide ? "menu exit" : "Menu open"}>
               {hide ? <MdClose /> : <RiMenuFill />}
             </button>
+
           </div>
         </nav>
+
       </header>
 
       <div
-        className={`header__nav__search__result ${
-          hideSearch ? "header__nav__search__result-hide" : ""
-        }`}
-        role="search"
-        aria-label="Sayt bo'yicha qidiruv"
-      >
+        className={`header__nav__search__result ${hideSearch ? "header__nav__search__result-hide" : ""}`}
+        role="search" aria-label="Sayt bo'yicha qidiruv">
         <div className="header__nav__search__result-form container">
           <CiSearch />
           <input
@@ -188,6 +191,7 @@ const Header = () => {
           />
         </div>
       </div>
+
     </>
   );
 };

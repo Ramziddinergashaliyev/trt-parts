@@ -28,6 +28,7 @@ const ProductItem = ({ data, isTrue }) => {
 
   return (
     <div className="productItem">
+
       <div className="productItem__cards">
         {currentProducts.map((product) => (
           <div role="listitem" key={product?.id}>
@@ -35,6 +36,7 @@ const ProductItem = ({ data, isTrue }) => {
           </div>
         ))}
       </div>
+
       {data.length > 8 ? (
         <>
           <Stack spacing={2} className="productItem-pagenetion">
@@ -50,6 +52,7 @@ const ProductItem = ({ data, isTrue }) => {
       ) : (
         <></>
       )}
+
     </div>
   );
 };

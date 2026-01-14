@@ -108,6 +108,7 @@ const Hero = () => {
                 {t("Деталей в день")}
               </p>
             </div>
+
             <div className="hero__bottom__info-stats">
               <AnimatedStats endValue={65} text="%" />
               <p className="hero__bottom__info-stats-text">
@@ -115,6 +116,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
+
         </div>
       </div>
 

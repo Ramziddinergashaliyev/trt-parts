@@ -119,6 +119,7 @@
   }
 
   @media (max-width: 1350px) {
+
     &__box-info-title {
       font-size: 18px;
     }
@@ -127,6 +128,7 @@
       top: 260px;
       left: 0;
     }
+
   }
 
   @media (max-width: 1000px) {
@@ -147,6 +149,7 @@
 
   @media (max-width: 500px) {
     padding-top: 15px;
+
     &__box-item-card {
       gap: 100px;
     }
@@ -159,6 +162,7 @@
     &__box-info {
       top: 240px;
       left: 0;
-    }
+    } 
   }
+  
 }

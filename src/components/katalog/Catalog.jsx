@@ -11,6 +11,7 @@ const Catalog = () => {
     <div className="catalog">
       <div className="container">
         <div className="catalog__top">
+
           <div className="catalog__info">
             <p className="catalog__info-title">{t("catalog")}</p>
             <h3 className="catalog__info-text">
@@ -27,6 +28,7 @@ const Catalog = () => {
           >
             {t("download_pdf")}
           </a>
+          
         </div>
 
         <CatalogCard />
@@ -40,6 +42,7 @@ const Catalog = () => {
             </p>
           </div>
         </div>
+        
       </div>
     </div>
   );

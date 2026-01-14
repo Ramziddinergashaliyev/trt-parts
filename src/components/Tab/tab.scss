@@ -8,7 +8,6 @@
     justify-content: flex-start;
     gap: 30px;
     padding-bottom: 10px;
-
   }
 
   button {
@@ -50,6 +49,7 @@
     white-space: nowrap;
   }
 }
+
 @media (max-width: 660px) {
   .tabs__card {
     max-width: 660px;

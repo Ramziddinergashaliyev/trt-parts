@@ -85,12 +85,12 @@
     padding-bottom: 20px;
 
     &-ewe {
-        padding: 8px 20px;
-        font-size: 14px;
-        background-color: #333;
-        color: white;
-        border-radius: 4px;
-        border: none;
+      padding: 8px 20px;
+      font-size: 14px;
+      background-color: #333;
+      color: white;
+      border-radius: 4px;
+      border: none;
     }
 
     &-ewe:hover {
@@ -98,23 +98,23 @@
     }
 
     &-insta {
-        padding: 8px 20px;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background-color: #408bd1;
-        color: white;
-        border: none;
-        border-radius: 4px;
+      padding: 8px 20px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #408bd1;
+      color: white;
+      border: none;
+      border-radius: 4px;
 
-        svg {
-            font-size: 20px;
-        }
+      svg {
+        font-size: 20px;
+      }
     }
 
     &-insta:hover {
-        background-color: #326fa8;
+      background-color: #326fa8;
     }
 
   }
@@ -144,6 +144,7 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+
     svg {
       width: 40px;
       height: 40px;
@@ -179,8 +180,10 @@
     &__cards {
       grid-template-columns: repeat(1, 1fr);
     }
+
     &__top {
-        gap: 10px;
+      gap: 10px;
+
       &-img {
         position: relative;
         width: 60px;

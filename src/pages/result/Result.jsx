@@ -12,6 +12,7 @@ const Result = () => {
   return (
     <div className="result">
       <div className="result__bg" aria-hidden="true"></div>
+      
       <div className="container">
         <p className="result__desc">ФИЛЬТР</p>
         <h1 className="result__title">Рычаги подвески</h1>
@@ -24,6 +25,7 @@ const Result = () => {
           <Loading />
         )}
       </div>
+      
     </div>
   );
 };

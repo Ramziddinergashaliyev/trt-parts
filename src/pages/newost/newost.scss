@@ -69,12 +69,14 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
   @media (max-width: 900px) {
     &__cards {
       grid-template-columns: repeat(2, 1fr);
       padding: 20px 0px;
     }
   }
+  
   @media (max-width: 520px) {
     &__cards {
       grid-template-columns: repeat(1, 1fr);

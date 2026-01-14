@@ -5,9 +5,11 @@ import "./razdel.scss";
 import { useTranslation } from "react-i18next";
 
 const Razdel = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const { t } = useTranslation()
 
   return (

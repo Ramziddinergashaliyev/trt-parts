@@ -42,6 +42,7 @@ const Accardion = () => {
 
         <ul className="accardion__list-info container">
           <p className="accardion__list-info-text">{t("Список")}</p>
+
           {i18n.languages[0] == "rus" ? (
             <>
               {ACCARDION?.map((el, index) => (
@@ -52,9 +53,8 @@ const Accardion = () => {
                   >
                     <p className="accardion__header__country">{el?.country}</p>
                     <span
-                      className={`accardion__icon ${
-                        activeIndex === index ? "accardion__icon--rotated" : ""
-                      }`}
+                      className={`accardion__icon ${activeIndex === index ? "accardion__icon--rotated" : ""
+                        }`}
                     >
                       {activeIndex === index ? (
                         <button className="accardion-btn">
@@ -67,10 +67,10 @@ const Accardion = () => {
                       )}
                     </span>
                   </div>
+
                   <div
-                    className={`accardion__content ${
-                      activeIndex === index ? "accardion__content--open" : ""
-                    }`}
+                    className={`accardion__content ${activeIndex === index ? "accardion__content--open" : ""
+                      }`}
                   >
                     <div className="accardion__content-inner">
                       <p className="accardion__content__name">{el?.name}</p>
@@ -96,9 +96,8 @@ const Accardion = () => {
                   >
                     <p className="accardion__header__country">{el?.country}</p>
                     <span
-                      className={`accardion__icon ${
-                        activeIndex === index ? "accardion__icon--rotated" : ""
-                      }`}
+                      className={`accardion__icon ${activeIndex === index ? "accardion__icon--rotated" : ""
+                        }`}
                     >
                       {activeIndex === index ? (
                         <button className="accardion-btn">
@@ -111,10 +110,10 @@ const Accardion = () => {
                       )}
                     </span>
                   </div>
+
                   <div
-                    className={`accardion__content ${
-                      activeIndex === index ? "accardion__content--open" : ""
-                    }`}
+                    className={`accardion__content ${activeIndex === index ? "accardion__content--open" : ""
+                      }`}
                   >
                     <div className="accardion__content-inner">
                       <p className="accardion__content__name">{el?.name}</p>
@@ -131,6 +130,7 @@ const Accardion = () => {
               ))}
             </>
           )}
+          
         </ul>
       </div>
     </div>

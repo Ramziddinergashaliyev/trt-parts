@@ -26,31 +26,31 @@ import NewsPage from "./pages/newsPage/NewsPage";
 const App = () => {
   return (
     <>
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/razdel" element={<Razdel />} />
-        <Route path="/company" element={<Company />} />
-        <Route path="/partner" element={<Partner />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/single/:id" element={<Single />} />
-        <Route path="/filter" element={<FilterSearch />} />
-        <Route path="/newost" element={<Newost />} />
-        <Route path="/result" element={<Result />} />
-        <Route path="/accardion" element={<Accardion />} />
-        <Route path="/search" element={<SearchProduct />} />
-        <Route path="/new" element={<NewsPage />} />
-        <Route path="/filterResults" element={<FilterResults />} />
-        <Route path="/rychagi-podveski/:id" element={<CatalogPage />} />
-      </Route>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/razdel" element={<Razdel />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/partner" element={<Partner />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/single/:id" element={<Single />} />
+          <Route path="/filter" element={<FilterSearch />} />
+          <Route path="/newost" element={<Newost />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/accardion" element={<Accardion />} />
+          <Route path="/search" element={<SearchProduct />} />
+          <Route path="/new" element={<NewsPage />} />
+          <Route path="/filterResults" element={<FilterResults />} />
+          <Route path="/rychagi-podveski/:id" element={<CatalogPage />} />
+        </Route>
 
-      <Route path="/login" element={<Login />} />
-      <Route path="/admin/" element={<Admin />}>
-        <Route path="manageProduct" element={<ManageProduct />} />
-        <Route path="createProduct" element={<CreateProduct />} />
-      </Route>
-    </Routes>
-    <ToastContainer /> 
+        {/* <Route path="/login" element={<Login />} />
+        <Route path="/admin/" element={<Admin />}>
+          <Route path="manageProduct" element={<ManageProduct />} />
+          <Route path="createProduct" element={<CreateProduct />} />
+        </Route> */}
+      </Routes>
+      <ToastContainer />
     </>
   );
 };

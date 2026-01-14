@@ -7,7 +7,6 @@ import { SERVICERU } from "../../static/index";
 
 const Service = () => {
   const { i18n } = useTranslation();
-  console.log(i18n.languages);
 
   return (
     <div className="service">
@@ -24,8 +23,10 @@ const Service = () => {
                       alt="Service-img"
                     />
                   </div>
+
                   <p className="service__card-top__title">{el.number}</p>
                 </div>
+
                 <div className="service__card-top-info">
                   <h3 className="service__card-top-info-title">{el.name}</h3>
                   <h3 className="service__card-top-info-text">{el.desc}</h3>
@@ -37,7 +38,9 @@ const Service = () => {
           <>
             {SERVICEENG?.map((el) => (
               <div key={el.id} className="service__card" data-aos="flip-up">
+
                 <div className="service__card-top">
+
                   <div className="service__card-top-img">
                     <img
                       className="service__card-top-imgs"
@@ -45,12 +48,16 @@ const Service = () => {
                       alt="Service-img"
                     />
                   </div>
+
                   <p className="service__card-top__title">{el.number}</p>
+
                 </div>
+
                 <div className="service__card-top-info">
                   <h3 className="service__card-top-info-title">{el.name}</h3>
                   <h3 className="service__card-top-info-text">{el.desc}</h3>
                 </div>
+                
               </div>
             ))}
           </>

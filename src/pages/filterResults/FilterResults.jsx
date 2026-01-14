@@ -26,8 +26,11 @@ const FilterResults = () => {
 
   return (
     <main className="filterResults">
+
       <section className="filterResults__top"></section>
+
       <Filter />
+      
       <section className="container" aria-labelledby="results-heading">
         <h1 id="results-heading" className="filterResults__title">
           {t("Результат поиска")}:
@@ -45,6 +48,7 @@ const FilterResults = () => {
           <p className="no-results-message">{t("найдено")}.</p>
         )}
       </section>
+
     </main>
   );
 };

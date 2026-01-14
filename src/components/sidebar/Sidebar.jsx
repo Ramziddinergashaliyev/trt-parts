@@ -18,13 +18,14 @@ function Sidebar() {
     dispatch(logout());
     navigate("/");
   };
-  
+
   return (
     <section className="sidebar">
       <NavLink className="sidebar__top">
         <img src={img} alt="" />
         <p className="sidebar__top-title">PARTS</p>
       </NavLink>
+
       <ul className="sidebar__item">
         <div>
           <li className="sidebar__list">
@@ -40,6 +41,7 @@ function Sidebar() {
             </NavLink>
           </li>
         </div>
+
         <div className="sidebar__btns">
           <NavLink to={"/"} className="sidebar__btns__title">
             <IoHomeOutline />

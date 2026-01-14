@@ -12,6 +12,7 @@ const Prinsp = () => {
   return (
     <section className="prinsp container" aria-labelledby="prinsp-title">
       <div className="prinsp__top">
+        
         <div className="prinsp__top__left">
           <h2 id="prinsp-title" className="prinsp__top__left-title">
             {t("quality_title")} <br />
@@ -29,6 +30,7 @@ const Prinsp = () => {
             <FaAngleRight />
           </span>
         </NavLink>
+
       </div>
 
       <Service />

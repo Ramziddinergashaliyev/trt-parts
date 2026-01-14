@@ -66,6 +66,7 @@ const Filter = () => {
   return (
     <div className="filter">
       <div className="container">
+
         <div className="filter__top">
           <div className="filter__top__left">
             <p className="filter__top__left-title">{t("search_products")}</p>
@@ -99,6 +100,7 @@ const Filter = () => {
           </div>
 
           <div className="filter__form-right">
+
             <label className="filter__form-left__label">
               {t("brand")}
               <Select
@@ -119,12 +121,15 @@ const Filter = () => {
                   classNamePrefix="react-select"
                 />
               </label>
+
               <button type="submit" className="filter__form-btn">
                 {t("find_part")}
               </button>
             </div>
+
           </div>
         </form>
+
       </div>
     </div>
   );

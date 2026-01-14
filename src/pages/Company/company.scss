@@ -6,6 +6,7 @@
     grid-gap: 40px;
 
     &__left {
+
       &-text {
         font-size: 14px;
         font-weight: 400;
@@ -42,12 +43,14 @@
         flex-direction: column;
         gap: 10px;
       }
+      
     }
 
     &__right {
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
+
       img {
         width: 100%;
         border-radius: 6px;

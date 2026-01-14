@@ -49,6 +49,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
+    
     span {
       padding-left: 20px;
       color: rgba(126, 28, 28, 1);
@@ -166,6 +167,7 @@
       align-items: center;
       gap: 10px;
       padding-bottom: 10px;
+
       div {
         width: 100px !important;
         height: 80px;
@@ -213,6 +215,7 @@
 
     &__card__info-item {
       font-size: 20px;
+
       span {
         font-size: 18px;
       }
@@ -222,6 +225,7 @@
   @media (max-width: 400px) {
     &__card__info-item {
       font-size: 20px;
+
       span {
         padding-left: 10px;
       }

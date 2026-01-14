@@ -64,11 +64,13 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
   @media (max-width: 680px) {
     &__cards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   @media (max-width: 440px) {
     &__cards {
       grid-template-columns: repeat(1, 1fr);

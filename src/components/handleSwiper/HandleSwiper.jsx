@@ -14,9 +14,11 @@ const HandleSwiper = () => {
   const { t, i18n } = useTranslation();
   const { data } = useGetProductsQuery();
   const currentLang = i18n.language;
+
   return (
     <div className="custom__swiper">
       <h2 className="custom__swiper__title">{t("Рекомендации")}</h2>
+     
       <Swiper
         className="custom__swiper-cards"
         modules={[Navigation, Autoplay]}
@@ -34,6 +36,7 @@ const HandleSwiper = () => {
       >
         {data?.map((el) => (
           <SwiperSlide key={el?.id}>
+
             <div className="custom__swiper-content">
               <NavLink
                 to={`/single/${el?.id}`}
@@ -43,8 +46,8 @@ const HandleSwiper = () => {
                   <img
                     src={el?.images[0]}
                     alt={currentLang === "rus"
-                    ? el?.translations?.ru?.name
-                    : el?.translations?.en?.name}
+                      ? el?.translations?.ru?.name
+                      : el?.translations?.en?.name}
                     className="custom__swiper-image"
                     loading="lazy"
                   />
@@ -52,13 +55,14 @@ const HandleSwiper = () => {
                   <img
                     src={img}
                     alt={currentLang === "rus"
-                    ? el?.translations?.ru?.name
-                    : el?.translations?.en?.name}
+                      ? el?.translations?.ru?.name
+                      : el?.translations?.en?.name}
                     className="custom__swiper-image"
                     loading="lazy"
                   />
                 )}
               </NavLink>
+
               <div className="custom__swiper-info">
                 <h3 className="custom__swiper-info-title">
                   {currentLang === "rus"
@@ -68,9 +72,11 @@ const HandleSwiper = () => {
                 <p className="custom__swiper-info-subtitle">{el?.trtCode}</p>
               </div>
             </div>
+
           </SwiperSlide>
         ))}
       </Swiper>
+      
     </div>
   );
 };

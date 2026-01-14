@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useCreateContactMutation } from "../../context/api/contactApi";
 import { useGetProductsQuery } from "../../context/api/productApi";
 import { toast } from "react-toastify";
+import { useGetValue } from "../../hooks/useGetValue";
 
 const initialState = {
   name: "",
@@ -14,49 +15,52 @@ const initialState = {
 };
 
 const Contact = () => {
-  const [Sendmassage] = useCreateContactMutation();
-  const [formData, setFormData] = useState(initialState);
-  const { data } = useGetProductsQuery();
+  const [Sendmassage, { data, isSuccess, isError }] = useCreateContactMutation();
+  const { formData, setFormData, handleChange } = useGetValue(initialState)
+  const { t } = useTranslation();
   console.log(data);
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { t } = useTranslation();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      await Sendmassage(formData).unwrap();
-      toast.success(t("Сообщение успешно отправлено!"));
-      setFormData(initialState);
-    } catch (error) {
-      toast.error(t("Ошибка при отправке формы"));
-      console.error("Error:", error);
-    }
+    Sendmassage(formData);
+    setFormData(initialState);
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success(t("Сообщение успешно отправлено!"));
+    }
+  }, [isSuccess])
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(t("Ошибка при отправке формы"));
+    }
+  }, [isError])
 
   return (
     <main className="contact">
       <div className="contact__bg" aria-hidden="true"></div>
 
       <div className="container">
+
         <div className="contact__info">
+
           <section className="contact__left" aria-labelledby="contact-heading">
             <h1 id="contact-heading" className="contact__left__title">
               {t("Свяжитесь с нами")}
             </h1>
+
             <h2 className="contact__left__desc">{t("КОНТАКТЫ")}</h2>
             <p className="contact__left__text">{t("Для приобретения")}</p>
+
             <address className="contact__left__information">
               <p className="contact__left__information-text">{t("nomer")}</p>
+              
               <a
                 className="contact__left__information-number"
                 href="tel:+998712032030"
@@ -138,7 +142,9 @@ const Contact = () => {
 
             <p className="contact__right__text">{t("Нажимая")}</p>
           </section>
+
         </div>
+
       </div>
     </main>
   );

@@ -7,9 +7,10 @@ const LoadingSingle = () => {
       className="loadingSin container"
       role="status"
       aria-live="polite"
-      aria-busy="true"
-    >
+      aria-busy="true">
+
       <div className="loadingSin__wrapper">
+
         <div className="loadingSin__item">
           <div className="loadingSin__img2">
             {Array.from({ length: 3 }).map((_, i) => (
@@ -23,15 +24,16 @@ const LoadingSingle = () => {
 
           <div
             className="loadingSin__img1 bg__animation"
-            aria-hidden="true"
-          ></div>
+            aria-hidden="true">
+          </div>
         </div>
 
         <div className="loadingSin__items">
+
           <div
             className="loadingSin__title bg__animation"
-            aria-hidden="true"
-          ></div>
+            aria-hidden="true">
+          </div>
 
           <div className="loadingSin__items-info">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -43,8 +45,11 @@ const LoadingSingle = () => {
             ))}
           </div>
         </div>
+
       </div>
+
       <div className="loadingSin__bottom">
+
         <div className="loadingSin__bottom__items">
           {Array.from({ length: 3 }).map((_, i) => (
             <div
@@ -54,10 +59,13 @@ const LoadingSingle = () => {
             ></div>
           ))}
         </div>
+
         {Array.from({ length: 3 }).map((_, i) => (
           <div key={i} className="loadingSin__bottom-table bg__animation"></div>
         ))}
+
       </div>
+
     </div>
   );
 };

@@ -11,6 +11,7 @@ const Partner = () => {
 
   return (
     <section className="partner" aria-labelledby="partnerTitle">
+      
       <div className="partner__info">
         <h2 className="partner__info-title" id="partnerTitle">
           {t("Компании-поставщики")}
@@ -20,6 +21,7 @@ const Partner = () => {
       <div className="partner__cards">
         {PARTNER?.map((el) => (
           <article key={el?.id} className="partner__card">
+  
             <div className="partner__card__top">
               <div className="partner__card__top-left">
                 <img
@@ -49,6 +51,7 @@ const Partner = () => {
                 loading="lazy"
               />
             </div>
+
           </article>
         ))}
       </div>

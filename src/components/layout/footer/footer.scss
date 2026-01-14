@@ -58,6 +58,7 @@
       span:hover {
         background-color: black;
         transition: 0.6s;
+
         svg {
           color: white !important;
           transition: 0.6s;
@@ -91,10 +92,12 @@
       line-height: 21.32px;
       color: rgba(255, 255, 255, 0.5);
     }
+    
   }
 
   @media (max-width: 800px) {
     padding: 30px 0px;
+
     &__nav {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

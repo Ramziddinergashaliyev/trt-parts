@@ -21,7 +21,7 @@ const Single = () => {
   const [hoveredImage, setHoveredImage] = useState(null);
   const currentLang = i18n.language;
 
-  const images = data?.images?.filter(img => img?.trim()) || []; 
+  const images = data?.images?.filter(img => img?.trim()) || [];
   const hasImages = images.length > 0;
 
   useEffect(() => {
@@ -34,6 +34,7 @@ const Single = () => {
     }
   }, [data]);
 
+
   if (isLoading) return <LoadingSingle />;
   if (error || !data) return <p className="error">{t("Произошла ошибка")}</p>;
 
@@ -42,14 +43,14 @@ const Single = () => {
       <div className="container">
         <div className="detail__cards">
           <div className="detail__card__img">
+
             <div className="detail__card__imgs">
               {hasImages ? (
                 images.map((img, index) => (
                   <div
                     key={index}
-                    className={`thumbnail ${
-                      selectedImage === img ? "active" : ""
-                    }`}
+                    className={`thumbnail ${selectedImage === img ? "active" : ""
+                      }`}
                     onClick={() => setSelectedImage(img)}
                     onMouseEnter={() => setHoveredImage(img)}
                     onMouseLeave={() => setHoveredImage(null)}
@@ -126,6 +127,7 @@ const Single = () => {
       <div className="container">
         <HandleSwiper />
       </div>
+
     </div>
   );
 };

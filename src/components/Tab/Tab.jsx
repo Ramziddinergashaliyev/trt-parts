@@ -13,12 +13,14 @@ const Tabs = ({ activeTab, onTabClick }) => {
         >
           {t("Информация")}
         </button>
+        
         <button
           className={`tab ${activeTab === "Application" ? "active" : ""}`}
           onClick={() => onTabClick("Application")}
         >
           {t("Применимость")}
         </button>
+
         <button
           className={`tab ${activeTab === "Information" ? "active" : ""}`}
           onClick={() => onTabClick("Information")}

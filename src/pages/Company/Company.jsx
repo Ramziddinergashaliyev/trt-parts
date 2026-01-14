@@ -38,38 +38,50 @@ const Company = () => {
   return (
     <div className="company">
       <div className="container">
+        
         <div className="company__info">
+
           <div className="company__info__left">
+            
             <h3 className="company__info__left-title">{t("компании")}</h3>
+
             <h3 className="company__info__left-desc">
               TECHNOLOGIES OF REAL TIME
             </h3>
+
             <p className="company__info__left-texts">
               <span>
                 {t("trttext")}
-              </span>{" "}
+              </span>
+
               <br />
               <span>
                 {t("трудятся")}
               </span>
+
               <br />
               <span>
                 {t("Сотрудники")}
               </span>
             </p>
+
           </div>
+
           <div className="company__info__right">
             <img src={img} alt="Company Image" />
           </div>
+
         </div>
 
         <div className="company__info__bottom">
           <p className="company__info__bottom-text">
             {t("Лаборатория")}
           </p>
+
           <p className="company__info__bottom-text">
             {t("Особое")}
           </p>
+
           <p className="company__info__bottom-text">
             {t("При производстве")}
           </p>
@@ -82,7 +94,9 @@ const Company = () => {
 
       <div className="company__swiper">
         <div className="container">
+
           <h4 className="company__swiper-title">{t("Наши Сертификаты")}</h4>
+
           <Swiper
             modules={[Pagination, Navigation, Autoplay]}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -110,6 +124,7 @@ const Company = () => {
               )
             )}
           </Swiper>
+
         </div>
       </div>
 

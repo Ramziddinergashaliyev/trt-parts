@@ -71,6 +71,7 @@
       display: grid;
       grid-template-columns: 1.5fr 2fr;
       grid-gap: 30px;
+
       &__label {
         display: flex;
         flex-direction: column;
@@ -89,11 +90,13 @@
         border: 1px solid #aaa3;
         font-size: 16px;
         color: gray;
+
         &::placeholder {
           font-size: 16px;
           letter-spacing: 1px;
         }
       }
+
     }
 
     &-right {
@@ -108,6 +111,7 @@
         align-items: flex-end;
         gap: 30px;
       }
+      
     }
 
     &-search {
@@ -167,6 +171,7 @@
 
   @media (max-width: 1020px) {
     padding: 20px 0px;
+
     &__form {
       &-left {
         display: grid;
@@ -179,6 +184,7 @@
         grid-template-columns: 1fr;
         grid-gap: 20px;
         align-items: flex-end;
+
         &__btn {
           display: grid;
           grid-template-columns: 1fr;
@@ -211,23 +217,22 @@
     }
 
     .react-select__control {
-    display: flex;
-    flex: 1;
-    padding: 8px;
-    height: 60px;
-    outline: none;
-    border: 1px solid #aaa3;
-    font-size: 16px;
-    color: rgb(238, 233, 233);
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
+      display: flex;
+      flex: 1;
+      padding: 8px;
+      height: 60px;
+      outline: none;
+      border: 1px solid #aaa3;
+      font-size: 16px;
+      color: rgb(238, 233, 233);
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
 
     &__form-btn {
       height: 60px;
     }
   }
-
 
   @media (max-width: 650px) {
     &__top__left-title {

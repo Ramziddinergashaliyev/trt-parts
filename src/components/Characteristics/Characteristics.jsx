@@ -10,31 +10,38 @@ const Characteristics = ({ data }) => {
 
   return (
     <div className="characteristic">
+
       <table className="characteristic__table">
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Марка")}</th>
           <td className="characteristic__row__desc">{data?.carName[0]}</td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Модель")}</th>
           <td className="characteristic__row__desc">{data?.model[0]}</td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Страна")}</th>
           <td className="characteristic__row__desc">Узбекистан</td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Бренд")}</th>
           <td className="characteristic__row__desc">{data?.brand}</td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Артикул")}</th>
           <td className="characteristic__row__desc">{data?.trtCode}</td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Базовая")}</th>
           <td className="characteristic__row__desc">{data?.unit}шт</td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Категория")}</th>
           <td className="characteristic__row__desc">
@@ -43,11 +50,13 @@ const Characteristics = ({ data }) => {
               : data?.categories?.[0].translations.en.name}
           </td>
         </tr>
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Кросc")}</th>
           <td className="characteristic__row__desc">{data?.oem[0]}</td>
         </tr>
       </table>
+
     </div>
   );
 };

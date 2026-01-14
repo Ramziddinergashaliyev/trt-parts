@@ -31,6 +31,7 @@ const Login = () => {
   return (
     <div className="login">
       <form className="login__form" onSubmit={handleSubmit}>
+        
         <div>
           <h3 className="login__form__title">Ro‘yxatdan o‘tish</h3>
           <p className="login__form__text">
