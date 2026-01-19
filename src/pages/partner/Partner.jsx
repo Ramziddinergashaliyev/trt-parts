@@ -4,14 +4,16 @@ import "./partner.scss";
 import { useTranslation } from "react-i18next";
 
 const Partner = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   const { t } = useTranslation()
 
   return (
     <section className="partner" aria-labelledby="partnerTitle">
-      
+
       <div className="partner__info">
         <h2 className="partner__info-title" id="partnerTitle">
           {t("Компании-поставщики")}
@@ -21,7 +23,7 @@ const Partner = () => {
       <div className="partner__cards">
         {PARTNER?.map((el) => (
           <article key={el?.id} className="partner__card">
-  
+
             <div className="partner__card__top">
               <div className="partner__card__top-left">
                 <img
@@ -33,6 +35,7 @@ const Partner = () => {
                 />
                 <p className="partner__card__top-left-title">{el?.name}</p>
               </div>
+
               <div className="partner__card__top-right">
                 <img
                   src={el?.icon}

@@ -7,6 +7,7 @@ import Loading from "../../components/loading/Loading";
 import "./filterSearch.scss";
 
 const FilterSearch = () => {
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

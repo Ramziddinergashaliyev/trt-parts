@@ -18,8 +18,7 @@ const Contact = () => {
   const [Sendmassage, { data, isSuccess, isError }] = useCreateContactMutation();
   const { formData, setFormData, handleChange } = useGetValue(initialState)
   const { t } = useTranslation();
-  console.log(data);
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -51,6 +50,7 @@ const Contact = () => {
         <div className="contact__info">
 
           <section className="contact__left" aria-labelledby="contact-heading">
+
             <h1 id="contact-heading" className="contact__left__title">
               {t("Свяжитесь с нами")}
             </h1>
@@ -60,7 +60,7 @@ const Contact = () => {
 
             <address className="contact__left__information">
               <p className="contact__left__information-text">{t("nomer")}</p>
-              
+
               <a
                 className="contact__left__information-number"
                 href="tel:+998712032030"
@@ -82,9 +82,11 @@ const Contact = () => {
                 {t("address")}
               </p>
             </address>
+
           </section>
 
           <section className="contact__right" aria-labelledby="form-heading">
+
             <h2 id="form-heading" className="contact__right__title">
               {t("Форма для связи")}
             </h2>
@@ -141,6 +143,7 @@ const Contact = () => {
             </form>
 
             <p className="contact__right__text">{t("Нажимая")}</p>
+            
           </section>
 
         </div>

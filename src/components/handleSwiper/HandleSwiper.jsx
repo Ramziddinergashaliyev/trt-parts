@@ -18,7 +18,7 @@ const HandleSwiper = () => {
   return (
     <div className="custom__swiper">
       <h2 className="custom__swiper__title">{t("Рекомендации")}</h2>
-     
+
       <Swiper
         className="custom__swiper-cards"
         modules={[Navigation, Autoplay]}
@@ -34,6 +34,7 @@ const HandleSwiper = () => {
           1210: { slidesPerView: 4 },
         }}
       >
+
         {data?.map((el) => (
           <SwiperSlide key={el?.id}>
 
@@ -75,8 +76,9 @@ const HandleSwiper = () => {
 
           </SwiperSlide>
         ))}
+
       </Swiper>
-      
+
     </div>
   );
 };

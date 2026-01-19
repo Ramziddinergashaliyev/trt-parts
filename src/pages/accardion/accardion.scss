@@ -102,14 +102,15 @@
   &-btn {
     background-color: transparent;
     border: none;
+
     svg {
       font-size: 24px;
     }
   }
 
   &__icon {
-    font-size: 30px;
     font-weight: 300;
+    font-size: 30px;
     color: #d00101;
     transition: transform 0.3s ease;
 
@@ -148,7 +149,7 @@
     }
 
     &__number {
-      font-size: 18px; 
+      font-size: 18px;
       font-weight: 300;
       color: #000;
       text-decoration: none;

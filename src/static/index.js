@@ -58,7 +58,7 @@ export const PARTNER = [
     img: img4,
     icon: icon4,
     name: "Китай",
-  },
+  }
 ];
 
 export const NEWS = [
@@ -117,7 +117,7 @@ export const NEWS = [
     title: "Тестовая новость бренда TRT",
     desc: "Нашими партнерами являются компании зарекомендовавшие себя на мировой арене как производители высококачественного сырья с многолетним опытом.",
     date: "24.07.2023",
-  },
+  }
 ];
 
 export const FILTER = [
@@ -225,7 +225,7 @@ export const Catalog = [
     id: 6,
     name: "Шарниры и рулевые тяги",
     imageUrl: photo6,
-  },
+  }
 ];
 
 export const ACCARDION = [

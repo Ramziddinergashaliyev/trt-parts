@@ -57,7 +57,7 @@ const Service = () => {
                   <h3 className="service__card-top-info-title">{el.name}</h3>
                   <h3 className="service__card-top-info-text">{el.desc}</h3>
                 </div>
-                
+
               </div>
             ))}
           </>

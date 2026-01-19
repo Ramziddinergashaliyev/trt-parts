@@ -119,7 +119,6 @@
   }
 
   @media (max-width: 1350px) {
-
     &__box-info-title {
       font-size: 18px;
     }
@@ -128,7 +127,6 @@
       top: 260px;
       left: 0;
     }
-
   }
 
   @media (max-width: 1000px) {
@@ -140,7 +138,7 @@
       font-size: 18px;
     }
   }
-
+  
   @media (max-width: 680px) {
     &__box {
       grid-template-columns: 1fr;
@@ -164,5 +162,4 @@
       left: 0;
     } 
   }
-  
 }

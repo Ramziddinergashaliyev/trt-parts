@@ -43,8 +43,8 @@ const Vapros = () => {
             </span>
           </NavLink>
 
-        </div>  
-             
+        </div>
+
       </div>
     </div>
   );

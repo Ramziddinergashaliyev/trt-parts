@@ -10,6 +10,7 @@ const Home = () => {
   useEffect(() => {
     window.scroll(0, 0);
   });
+  
   return (
     <Fragment>
       <Hero /> 

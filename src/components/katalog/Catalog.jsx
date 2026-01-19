@@ -28,7 +28,7 @@ const Catalog = () => {
           >
             {t("download_pdf")}
           </a>
-          
+
         </div>
 
         <CatalogCard />
@@ -42,7 +42,6 @@ const Catalog = () => {
             </p>
           </div>
         </div>
-        
       </div>
     </div>
   );

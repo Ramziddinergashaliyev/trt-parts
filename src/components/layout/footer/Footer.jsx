@@ -8,12 +8,14 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
+  
   return (
     <footer className="footer">
       <div className="container">
+
         <nav className="footer__nav">
+
           <ul className="footer__list">
-            
             <li className="footer__item">
               <h3 className="footer__list-title">{t("kompany")}</h3>
             </li>
@@ -126,9 +128,11 @@ const Footer = () => {
             </li>
 
           </ul>
+
         </nav>
 
         <div className="footer__bottom">
+
           <div className="footer__bottom-icon">
             <img src={icon} alt="TRT kompaniyasi logotipi" />
           </div>

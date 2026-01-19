@@ -71,6 +71,7 @@ const Filter = () => {
           <div className="filter__top__left">
             <p className="filter__top__left-title">{t("search_products")}</p>
           </div>
+          
           <div className="filter__top__icon">
             <img className="filter__top__icon-img" src={img} alt="settings" />
           </div>

@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div className="login">
       <form className="login__form" onSubmit={handleSubmit}>
-        
+
         <div>
           <h3 className="login__form__title">Ro‘yxatdan o‘tish</h3>
           <p className="login__form__text">
@@ -56,6 +56,7 @@ const Login = () => {
             <p>Parol</p>
             <span>Parolni unutdingizmi?</span>
           </div>
+          
           <input
             value={value.password}
             onChange={handleChange}
@@ -72,6 +73,7 @@ const Login = () => {
         </div>
 
         <button type="submit">Tizimga kirish</button>
+        
       </form>
     </div>
   );

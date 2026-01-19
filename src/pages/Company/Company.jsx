@@ -23,6 +23,7 @@ import { useTranslation } from "react-i18next";
 const Company = () => {
   const [modalImage, setModalImage] = useState(null);
   const { t } = useTranslation()
+
   const handleOpenModal = (imgSrc) => {
     setModalImage(imgSrc);
   };
@@ -38,11 +39,11 @@ const Company = () => {
   return (
     <div className="company">
       <div className="container">
-        
+
         <div className="company__info">
 
           <div className="company__info__left">
-            
+
             <h3 className="company__info__left-title">{t("компании")}</h3>
 
             <h3 className="company__info__left-desc">
@@ -53,7 +54,7 @@ const Company = () => {
               <span>
                 {t("trttext")}
               </span>
-
+              
               <br />
               <span>
                 {t("трудятся")}

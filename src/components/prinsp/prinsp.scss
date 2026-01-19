@@ -65,7 +65,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         svg {
           display: flex;
           align-items: center;
@@ -97,12 +97,6 @@
   @media (max-width: 460px) {
     &__top__left-title {
       font-size: 20px;
-    }
-
-    @media (max-width: 400px) {
-      .prinsp__top__left-title {
-        line-height: 24px;
-      }
     }
 
     &__top__right {
@@ -137,6 +131,12 @@
       &-red {
         padding: 18px;
       }
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__top__left-title {
+      line-height: 24px;
     }
   }
 }

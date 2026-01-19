@@ -30,7 +30,7 @@ const FilterResults = () => {
       <section className="filterResults__top"></section>
 
       <Filter />
-      
+
       <section className="container" aria-labelledby="results-heading">
         <h1 id="results-heading" className="filterResults__title">
           {t("Результат поиска")}:

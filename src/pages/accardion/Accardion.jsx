@@ -90,6 +90,7 @@ const Accardion = () => {
             <>
               {ACCARDIONEN?.map((el, index) => (
                 <li key={el?.id} className="accardion__item">
+
                   <div
                     className="accardion__header"
                     onClick={() => toggleAccordion(index)}
@@ -126,13 +127,16 @@ const Accardion = () => {
                       </a>
                     </div>
                   </div>
+
                 </li>
               ))}
             </>
           )}
-          
+
         </ul>
+
       </div>
+
     </div>
   );
 };

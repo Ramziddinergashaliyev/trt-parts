@@ -34,6 +34,7 @@ function Sidebar() {
               create products
             </NavLink>
           </li>
+
           <li className="sidebar__list">
             <NavLink to={"manageProduct"} className={"sidebar__left__text"}>
               <MdManageHistory />
@@ -47,6 +48,7 @@ function Sidebar() {
             <IoHomeOutline />
             <p>Home</p>
           </NavLink>
+
           <div className="sidebar__btns__title" onClick={handleLogout}>
             <FiLogOut />
             <p>Login out</p>

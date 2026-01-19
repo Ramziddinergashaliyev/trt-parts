@@ -24,18 +24,22 @@ const Hero = () => {
     return () => {
       i18n.off("languageChanged", handleLanguageChange);
     };
+
   }, [i18n]);
 
   useEffect(() => {
+
     const timer = setTimeout(() => {
       setVideoLoaded(true);
     }, 3000);
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
       <div className="hero">
+        
         <div className="hero__slide">
           <video
             className="hero__slide__video"
@@ -97,11 +101,13 @@ const Hero = () => {
         </div>
 
         <div className="hero__bottom">
+
           <div className="hero__bottom__left container">
             <p className="hero__bottom__left-text">{t("Полный")}</p>
           </div>
 
           <div className="hero__bottom__info container">
+
             <div className="hero__bottom__info-stats">
               <AnimatedStats endValue={12000} text="+" />
               <p className="hero__bottom__info-stats-text">
@@ -115,9 +121,11 @@ const Hero = () => {
                 {t("Доля экспорта")}
               </p>
             </div>
+
           </div>
 
         </div>
+
       </div>
 
       <div className="hero__line"></div>

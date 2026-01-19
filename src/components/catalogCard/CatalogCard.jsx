@@ -11,6 +11,8 @@ const CatalogCard = () => {
   const { data } = useGetCategoriesQuery();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
+  console.log(data);
+  
 
   return data ? (
     <>
@@ -20,7 +22,7 @@ const CatalogCard = () => {
             <NavLink key={item.id} to={`/rychagi-podveski/${item?.id}`}>
               <div
                 style={{
-                  backgroundImage: `url(${item?.imageUrl})`,
+                  backgroundImage: `url(${item?.images})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "top right",
                   backgroundSize: "350px auto",
@@ -33,6 +35,7 @@ const CatalogCard = () => {
                       <FaArrowRight />
                     </span>
                   </div>
+
                   <div className="catalogCard__box-info">
                     <h3 className="catalogCard__box-info-title">
                       {currentLang === "rus"
@@ -62,6 +65,7 @@ const CatalogCard = () => {
                 }}
                 className="catalogCard__box-item"
               >
+
                 <div className="catalogCard__box-item-card">
                   <div className="catalogCard__box-item-card-link">
                     <span className="catalogCard__box-item-card-link-btn">
@@ -75,6 +79,7 @@ const CatalogCard = () => {
                     </h3>
                   </div>
                 </div>
+
               </div>
             </NavLink>
           ))}

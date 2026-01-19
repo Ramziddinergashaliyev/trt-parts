@@ -28,6 +28,20 @@
     }
   }
 
+  &-blocked-file {
+    display: flex;
+    font-size: 22px;
+    line-height: 22px;
+    list-style: none;
+
+    &-lists {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      object-fit: cover;
+    }
+  }
+
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

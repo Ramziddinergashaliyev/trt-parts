@@ -39,7 +39,7 @@
       font-size: 18px;
       color: rgb(146, 146, 146);
       padding: 40px 0px 0px 0px;
-      font-weight: 300; 
+      font-weight: 300;
     }
 
     &__text {
@@ -102,7 +102,7 @@
 
   &__right {
     padding-top: 50px;
-    
+
     &__title {
       font-size: 20px;
       letter-spacing: 1.5px;
@@ -186,7 +186,6 @@
           justify-content: center;
           gap: 10px;
         }
-
       }
     }
 
@@ -224,6 +223,7 @@
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 10px;
     }
+
     &__left__information-adress,
     &__left__text {
       padding: 20px 0px;
@@ -239,6 +239,7 @@
     &__left__title {
       font-size: 26px;
     }
+
     &__left__information-number,
     &__left__information__mail-link {
       font-size: 16px;

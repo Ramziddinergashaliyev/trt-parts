@@ -1,5 +1,5 @@
 .catalog {
-  background: url(../../assets/img/catolog-bg.png);
+  background: url(../../assets/img/catolog-bg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,6 +53,11 @@
       color: rgba(255, 255, 255, 0.65);
     }
 
+    &-block {
+      display: flex;
+      align-items: center;
+    }
+
     &-text {
       font-size: 32px;
       font-weight: 400;
@@ -98,6 +103,7 @@
       }
     }
   }
+  
 
   @media (max-width: 740px) {
     &__top {

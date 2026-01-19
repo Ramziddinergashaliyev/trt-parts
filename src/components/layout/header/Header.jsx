@@ -44,7 +44,6 @@ const Header = () => {
   return (
     <>
       <header className="header">
-
         <nav
           className="header__nav container"
           role="navigation"
@@ -140,6 +139,7 @@ const Header = () => {
                   </div>
 
                 </div>
+
               </div>
             </li>
 
@@ -152,7 +152,7 @@ const Header = () => {
           </ul>
 
           <div className="header__nav__right">
-            
+
             <button
               onClick={handleSearchClick}
               className="header__nav__search"
@@ -176,7 +176,6 @@ const Header = () => {
 
           </div>
         </nav>
-
       </header>
 
       <div
@@ -191,7 +190,6 @@ const Header = () => {
           />
         </div>
       </div>
-
     </>
   );
 };

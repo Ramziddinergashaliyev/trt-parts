@@ -13,7 +13,7 @@ const Tabs = ({ activeTab, onTabClick }) => {
         >
           {t("Информация")}
         </button>
-        
+
         <button
           className={`tab ${activeTab === "Application" ? "active" : ""}`}
           onClick={() => onTabClick("Application")}
