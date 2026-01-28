@@ -4,7 +4,7 @@ import { logout } from "../slices/authSlice";
 const baseQuery = async (args, api, extraOptions) => {
   const { dispatch } = api;
   const rawBaseQuery = fetchBaseQuery({
-    baseUrl: "https://backend.diomend.uz/",
+    baseUrl: "https://backtrt-parts.trtparts.com/",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("x-auth-token");
       if (token) {
@@ -24,6 +24,7 @@ const baseQuery = async (args, api, extraOptions) => {
   }
   return result;
 };
+
 const baseQueryWithRetry = retry(baseQuery, { maxRetries: 0 });
 
 export const api = createApi({

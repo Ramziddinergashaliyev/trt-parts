@@ -11,6 +11,7 @@ const CatalogPage = () => {
   const { data } = useGetCategoriesByIdQuery(id);
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
+  console.log(data);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -24,8 +25,8 @@ const CatalogPage = () => {
             <p className="catalogPage__text">РАЗДЕЛ</p>
             <h3 className="catalogPage__title">
               {currentLang === "rus"
-                ? data?.category?.translations?.ru?.name
-                : data?.category?.translations?.en?.name}
+                ? data?.translations?.ru?.name
+                : data?.translations?.en?.name}
             </h3>
             <div>
               <ProductItem data={data?.parts} />

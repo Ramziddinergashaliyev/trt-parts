@@ -23,10 +23,9 @@ const Service = () => {
                       alt="Service-img"
                     />
                   </div>
-
                   <p className="service__card-top__title">{el.number}</p>
                 </div>
-
+                
                 <div className="service__card-top-info">
                   <h3 className="service__card-top-info-title">{el.name}</h3>
                   <h3 className="service__card-top-info-text">{el.desc}</h3>

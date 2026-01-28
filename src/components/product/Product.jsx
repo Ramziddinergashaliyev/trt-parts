@@ -29,8 +29,7 @@ const Product = ({ product, isTrue }) => {
     <div
       className="result__card"
       role="group"
-      aria-label={`Mahsulot: ${product?.name}`}
-    >
+      aria-label={`Mahsulot: ${product?.name}`}>
       <NavLink to={`/single/${product?.id}`} className="result__card__img">
         {product?.images && product.images.length > 0 && product.images[0] ? (
           <img

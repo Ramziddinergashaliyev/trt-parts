@@ -34,7 +34,6 @@ const HandleSwiper = () => {
           1210: { slidesPerView: 4 },
         }}
       >
-
         {data?.map((el) => (
           <SwiperSlide key={el?.id}>
 

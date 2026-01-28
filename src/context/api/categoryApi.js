@@ -12,7 +12,7 @@ export const categoryApi = api.injectEndpoints({
 
     getCategoriesById: build.query({
       query: (id) => ({
-        url: `/products/part/category/${id}`,
+        url: `/categories/${id}`,
       }),
       providesTags: ["Categories"],
     }),

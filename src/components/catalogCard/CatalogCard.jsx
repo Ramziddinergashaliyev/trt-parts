@@ -11,8 +11,6 @@ const CatalogCard = () => {
   const { data } = useGetCategoriesQuery();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(data);
-  
 
   return data ? (
     <>
@@ -25,7 +23,7 @@ const CatalogCard = () => {
                   backgroundImage: `url(${item?.images})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "top right",
-                  backgroundSize: "350px auto",
+                  backgroundSize: "300px auto",
                 }}
                 className="catalogCard__box-item"
               >
@@ -52,7 +50,7 @@ const CatalogCard = () => {
     </>
   ) : (
     <>
-      <div className="catalogCard">
+      {/* <div className="catalogCard">
         <div className="catalogCard__box" data-aos="zoom-in-down">
           {Catalog?.map((item) => (
             <NavLink key={item.id} to={`/rychagi-podveski/${item?.id}`}>
@@ -84,9 +82,8 @@ const CatalogCard = () => {
             </NavLink>
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
-
 export default CatalogCard;

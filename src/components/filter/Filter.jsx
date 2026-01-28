@@ -111,7 +111,7 @@ const Filter = () => {
                 classNamePrefix="react-select"
               />
             </label>
-
+            
             <div className="filter__form-right__btn">
               <label className="filter__form-left__label">
                 {t("model")}

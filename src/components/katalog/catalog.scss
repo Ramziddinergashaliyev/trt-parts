@@ -84,7 +84,6 @@
       color: rgba(255, 255, 255, 1);
       padding-bottom: 10px;
     }
-
     &-text {
       display: flex;
       align-items: center;
@@ -103,7 +102,6 @@
       }
     }
   }
-  
 
   @media (max-width: 740px) {
     &__top {
@@ -145,6 +143,8 @@
       }
     }
   }
+
+  
 
   @media (max-width: 500px) {
     &__info-text {

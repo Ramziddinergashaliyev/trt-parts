@@ -55,6 +55,26 @@
     option {
       color: black;
     }
+
+    @media (max-width:1590px) {
+      &-link {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      &-tel {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    @media (max-width:1300px) {
+      &-tel {
+        display: none;
+      }
+    }
   }
 
   &__nav__item-phone {
@@ -130,6 +150,14 @@
       border: 1px solid transparent;
       border-radius: 4px;
     }
+
+    @media (max-width:1580px) {
+      button {
+        width: 220px;
+        font-size: 17px;
+        height: 54px;
+      }
+    }
   }
 
   &__nav__right {
@@ -169,10 +197,6 @@
   }
 
   @media (max-width: 1500px) {
-    &__nav__item-phone {
-      display: none;
-    }
-
     &__nav__btn {
       button {
         height: 50px;
@@ -226,7 +250,7 @@
 }
 
 .custom-dropdown {
-  width: 140px;
+  width: 110px;
   position: relative;
   display: inline-block;
 

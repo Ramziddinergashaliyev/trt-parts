@@ -47,8 +47,8 @@ const Header = () => {
         <nav
           className="header__nav container"
           role="navigation"
-          aria-label="header nav"
-        >
+          aria-label="header nav">
+
           <NavLink to="/" className="header__nav__icons">
             <img src={icon} alt="TRT logotipi" />
           </NavLink>
@@ -97,6 +97,7 @@ const Header = () => {
 
             <li className="header__nav__item">
               <div className="custom-dropdown" ref={dropdownRef}>
+
                 <button
                   className="custom-dropdown-selected"
                   aria-label="Tilni tanlash"
@@ -156,8 +157,7 @@ const Header = () => {
             <button
               onClick={handleSearchClick}
               className="header__nav__search"
-              aria-label="header search"
-            >
+              aria-label="header search">
               <FiSearch />
             </button>
 
@@ -166,15 +166,14 @@ const Header = () => {
                 <NavLink to="/contact">{t("Оставить заявку")}</NavLink>
               </button>
             </div>
-
             <button
               onClick={() => setHide(!hide)}
               className="header__nav__right-menu"
               aria-label={hide ? "menu exit" : "Menu open"}>
               {hide ? <MdClose /> : <RiMenuFill />}
             </button>
-
           </div>
+
         </nav>
       </header>
 
@@ -195,3 +194,16 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
