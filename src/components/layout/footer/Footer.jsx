@@ -80,7 +80,7 @@ const Footer = () => {
             </li>
 
             <li className="footer__item">
-              <NavLink className="footer__item-link" to={"/new"}>{t("news")}</NavLink>
+              <NavLink className="footer__item-link" to={"/news"}>{t("news")}</NavLink>
             </li>
 
           </ul>

@@ -5,6 +5,7 @@ import Prinsp from "../../components/prinsp/Prinsp";
 import Vapros from "../../components/vapros/Vapros";
 import Filter from "../../components/filter/Filter";
 import Catalog from "../../components/katalog/Catalog";
+import NewsCard from "../../components/newsCard/NewsCard";
 
 const Home = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Home = () => {
       <Prinsp /> 
       <Catalog /> 
       <Vapros /> 
+      <NewsCard/>
     </Fragment>
   );
 };

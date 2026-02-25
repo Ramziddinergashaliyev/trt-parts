@@ -22,6 +22,8 @@ import FilterSearch from "./pages/filterSearch/FilterSearch";
 import SearchProduct from "./pages/searchProduct/SearchProduct";
 import Accardion from "./pages/accardion/Accardion";
 import NewsPage from "./pages/newsPage/NewsPage";
+import News from "./pages/news/News";
+import NewsSingle from "./pages/newsSingle/newsSingle";
 
 const App = () => {
   return (
@@ -35,13 +37,14 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/single/:id" element={<Single />} />
           <Route path="/filter" element={<FilterSearch />} />
-          <Route path="/newost" element={<Newost />} />
+          <Route path="/news" element={<News />} />
           <Route path="/result" element={<Result />} />
           <Route path="/accardion" element={<Accardion />} />
           <Route path="/search" element={<SearchProduct />} />
           <Route path="/new" element={<NewsPage />} />
           <Route path="/filterResults" element={<FilterResults />} />
           <Route path="/rychagi-podveski/:id" element={<CatalogPage />} />
+          <Route path='/news-single/:id' element={<NewsSingle />} />
         </Route>
 
         {/* <Route path="/login" element={<Login />} />

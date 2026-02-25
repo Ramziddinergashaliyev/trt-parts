@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState, memo, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 import LoadingSingle from "../../components/loadingSingle/LoadingSingle";
@@ -16,10 +16,15 @@ import "./single.scss";
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
+  console.log(data);
+  
   const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("reviews");
   const [selectedImage, setSelectedImage] = useState("");
   const [hoveredImage, setHoveredImage] = useState(null);
+  const [canScrollUp, setCanScrollUp] = useState(false);
+  const [canScrollDown, setCanScrollDown] = useState(false);
+  const thumbnailContainerRef = useRef(null);
   const currentLang = i18n.language;
 
   const images = data?.images?.filter(img => img?.trim()) || [];
@@ -35,6 +40,45 @@ const Single = () => {
     }
   }, [data]);
 
+  const checkScrollButtons = () => {
+    const container = thumbnailContainerRef.current;
+    if (container) {
+      setCanScrollUp(container.scrollTop > 0);
+      setCanScrollDown(
+        container.scrollTop < container.scrollHeight - container.clientHeight
+      );
+    }
+  };
+
+  useEffect(() => {
+    checkScrollButtons();
+    const container = thumbnailContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScrollButtons);
+      return () => container.removeEventListener('scroll', checkScrollButtons);
+    }
+  }, [images]);
+
+  const scrollUp = () => {
+    const container = thumbnailContainerRef.current;
+    if (container) {
+      container.scrollBy({
+        top: -110,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollDown = () => {
+    const container = thumbnailContainerRef.current;
+    if (container) {
+      container.scrollBy({
+        top: 110,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   if (isLoading) return <LoadingSingle />;
   if (error || !data) return <p className="error">{t("Произошла ошибка")}</p>;
 
@@ -45,24 +89,49 @@ const Single = () => {
 
           <div className="detail__card__img">
 
-            <div className="detail__card__imgs">
-              {hasImages ? (
-                images.map((img, index) => (
-                  <div
-                    key={index}
-                    className={`thumbnail ${selectedImage === img ? "active" : ""
-                      }`}
-                    onClick={() => setSelectedImage(img)}
-                    onMouseEnter={() => setHoveredImage(img)}
-                    onMouseLeave={() => setHoveredImage(null)}
-                  >
-                    <img src={img} alt={`thumb-${index}`} />
+            <div className="thumbnail-wrapper">
+              {images.length > 4 && (
+                <button
+                  className={`scroll-button scroll-button-up ${!canScrollUp ? 'disabled' : ''}`}
+                  onClick={scrollUp}
+                  disabled={!canScrollUp}
+                >
+                  <svg width="16" height="10" viewBox="0 0 20 12" fill="none">
+                    <path d="M10 0L20 12H0L10 0Z" fill="currentColor" />
+                  </svg>
+                </button>
+              )}
+
+              <div className="detail__card__imgs" ref={thumbnailContainerRef}>
+                {hasImages ? (
+                  images.map((img, index) => (
+                    <div
+                      key={index}
+                      className={`thumbnail ${selectedImage === img ? "active" : ""}`}
+                      onClick={() => setSelectedImage(img)}
+                      onMouseEnter={() => setHoveredImage(img)}
+                      onMouseLeave={() => setHoveredImage(null)}
+                    >
+                      <img src={img} alt={`thumb-${index}`} />
+                    </div>
+                  ))
+                ) : (
+                  <div className="thumbnail active">
+                    <img src={img} alt="no-image" />
                   </div>
-                ))
-              ) : (
-                <div className="thumbnail active">
-                  <img src={img} alt="no-image" />
-                </div>
+                )}
+              </div>
+
+              {images.length > 4 && (
+                <button
+                  className={`scroll-button scroll-button-down ${!canScrollDown ? 'disabled' : ''}`}
+                  onClick={scrollDown}
+                  disabled={!canScrollDown}
+                >
+                  <svg width="16" height="10" viewBox="0 0 20 12" fill="none">
+                    <path d="M10 12L0 0H20L10 12Z" fill="currentColor" />
+                  </svg>
+                </button>
               )}
             </div>
 
@@ -135,7 +204,8 @@ const Single = () => {
       </div>
 
       <div className="container">
-        <HandleSwiper />
+        {/* <HandleSwiper /> */}
+        <HandleSwiper categoryId={data?.categories} currentProductId={id} />
       </div>
 
     </div>
