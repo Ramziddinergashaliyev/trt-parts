@@ -16,6 +16,7 @@ const Footer = () => {
         <nav className="footer__nav">
 
           <ul className="footer__list">
+            
             <li className="footer__item">
               <h3 className="footer__list-title">{t("kompany")}</h3>
             </li>
@@ -43,6 +44,7 @@ const Footer = () => {
                 {t("Контакты")}
               </NavLink>
             </li>
+
           </ul>
 
           <ul className="footer__list">

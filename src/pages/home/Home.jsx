@@ -19,8 +19,8 @@ const Home = () => {
       <Auto /> 
       <Prinsp /> 
       <Catalog /> 
-      <Vapros /> 
       <NewsCard/>
+      <Vapros /> 
     </Fragment>
   );
 };
