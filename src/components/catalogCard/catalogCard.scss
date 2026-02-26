@@ -1,3 +1,27 @@
+@keyframes float-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrow-slide {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
 .catalogCard {
   padding-top: 40px;
 
@@ -5,6 +29,30 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-gap: 20px;
+
+    a:nth-child(1) .catalogCard__box-item {
+      animation-delay: 0s;
+    }
+
+    a:nth-child(2) .catalogCard__box-item {
+      animation-delay: 0.08s;
+    }
+
+    a:nth-child(3) .catalogCard__box-item {
+      animation-delay: 0.16s;
+    }
+
+    a:nth-child(4) .catalogCard__box-item {
+      animation-delay: 0.24s;
+    }
+
+    a:nth-child(5) .catalogCard__box-item {
+      animation-delay: 0.32s;
+    }
+
+    a:nth-child(6) .catalogCard__box-item {
+      animation-delay: 0.40s;
+    }
 
     &-item {
       height: 300px;
@@ -19,36 +67,22 @@
       justify-content: space-between;
       background: linear-gradient(135deg, #f6f6f6, #eaeaea);
       position: relative;
+
+      animation: float-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(95deg, #aaa6, #aaa1, #aaa6, #aaa1);
-        background-size: 300% 300%;
-        z-index: -1;
-        border-radius: 10px;
-        transition: opacity 0.5s ease;
-        opacity: 0;
-      }
+        .catalogCard__box-item-card-link {
+          background-color: #222;
 
-      &:hover::before {
-        opacity: 1;
-        animation: gradient-animation 3s infinite ease-in-out;
-      }
-
-      &:hover {
-        transform: scale(1.02);
-        transition: transform 0.2s ease-in-out;
+          svg {
+            color: #fff;
+            animation: arrow-slide 0.6s ease infinite;
+          }
+        }
       }
 
       &-card {
@@ -71,11 +105,9 @@
           justify-content: center;
           align-items: center;
           font-size: 18px;
-          color: #333;
           cursor: pointer !important;
-          color: white;
           box-shadow: 1px 1px 6px #aaa8;
-          transition: 0.6s;
+          transition: background-color 0.25s ease;
 
           &-btn {
             border: none;
@@ -87,11 +119,8 @@
               justify-content: center;
               font-size: 20px;
               color: #333;
+              transition: color 0.25s ease;
             }
-          }
-
-          &:hover {
-            transform: scale(1.1);
           }
         }
       }
@@ -138,7 +167,7 @@
       font-size: 18px;
     }
   }
-  
+
   @media (max-width: 680px) {
     &__box {
       grid-template-columns: 1fr;
@@ -160,6 +189,6 @@
     &__box-info {
       top: 240px;
       left: 0;
-    } 
+    }
   }
 }

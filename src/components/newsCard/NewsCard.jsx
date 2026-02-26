@@ -22,9 +22,6 @@ const NewsCard = () => {
         return { day, month, year };
     };
 
-    console.log(productData);
-    
-
     return (
         <section className="news-section container">
             <div className="news-header">

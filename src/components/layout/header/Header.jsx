@@ -166,12 +166,14 @@ const Header = () => {
                 <NavLink to="/contact">{t("Оставить заявку")}</NavLink>
               </button>
             </div>
+
             <button
               onClick={() => setHide(!hide)}
               className="header__nav__right-menu"
               aria-label={hide ? "menu exit" : "Menu open"}>
               {hide ? <MdClose /> : <RiMenuFill />}
             </button>
+
           </div>
 
         </nav>
@@ -189,6 +191,7 @@ const Header = () => {
           />
         </div>
       </div>
+      
     </>
   );
 };
