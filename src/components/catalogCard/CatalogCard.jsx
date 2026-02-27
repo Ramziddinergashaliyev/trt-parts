@@ -26,7 +26,7 @@ const CatalogCard = () => {
                   backgroundImage: `url(${item?.images})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "top right",
-                  backgroundSize: "300px auto",
+                  backgroundSize: "350px auto",
                 }}
                 className="catalogCard__box-item">
                 <div className="catalogCard__box-item-card">
