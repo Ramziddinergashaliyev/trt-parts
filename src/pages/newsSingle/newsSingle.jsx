@@ -17,7 +17,7 @@ const NewsSingle = () => {
     const { t, i18n } = useTranslation()
     const observerRef = useRef(null)
 
-    const fullData = i18n?.language === "ru" ? newsData : newsDataEn
+    const fullData = i18n?.language === "rus" ? newsData : newsDataEn
 
     useEffect(() => {
         window.scrollTo(0, 0)

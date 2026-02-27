@@ -11,7 +11,6 @@
 }
 
 @keyframes arrow-slide {
-
   0%,
   100% {
     transform: translateX(0);
@@ -28,7 +27,7 @@
   &__box {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 12px;
 
     a:nth-child(1) .catalogCard__box-item {
       animation-delay: 0s;
@@ -67,7 +66,6 @@
       justify-content: space-between;
       background: linear-gradient(135deg, #f6f6f6, #eaeaea);
       position: relative;
-
       animation: float-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 

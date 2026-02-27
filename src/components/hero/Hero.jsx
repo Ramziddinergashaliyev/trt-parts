@@ -39,7 +39,7 @@
 //   return (
 //     <>
 //       <div className="hero">
-        
+
 //         <div className="hero__slide">
 //           <video
 //             className="hero__slide__video"
@@ -135,8 +135,6 @@
 
 // export default Hero;
 
-
-
 import React, { useState, useEffect, useRef } from "react";
 import "./hero.scss";
 import icon from "../../assets/img/hero.png";
@@ -188,6 +186,7 @@ const MagneticBtn = ({ children }) => {
     x.set((e.clientX - (rect.left + rect.width / 2)) * 0.3);
     y.set((e.clientY - (rect.top + rect.height / 2)) * 0.3);
   };
+
   const onLeave = () => { x.set(0); y.set(0); };
 
   return (
@@ -198,28 +197,11 @@ const MagneticBtn = ({ children }) => {
   );
 };
 
-
-const CursorGlow = () => {
-  // const x = useMotionValue(-300);
-  // const y = useMotionValue(-300);
-  // const sx = useSpring(x, { stiffness: 70, damping: 22 });
-  // const sy = useSpring(y, { stiffness: 70, damping: 22 });
-
-  // useEffect(() => {
-  //   const fn = (e) => { x.set(e.clientX); y.set(e.clientY); };
-  //   window.addEventListener("mousemove", fn);
-  //   return () => window.removeEventListener("mousemove", fn);
-  // }, []);
-
-  // return (
-  //   <motion.div className="hero__glow"
-  //     style={{ left: sx, top: sy, translateX: "-50%", translateY: "-50%" }} />
-  // );
-};
-
+const CursorGlow = () => { };
 
 const Grain = () => {
   const ref = useRef(null);
+
   useEffect(() => {
     const c = ref.current;
     const ctx = c.getContext("2d");
@@ -231,8 +213,8 @@ const Grain = () => {
       const d = img.data;
       for (let i = 0; i < d.length; i += 4) {
         const v = Math.random() * 255;
-        d[i] = d[i+1] = d[i+2] = v;
-        d[i+3] = 15;
+        d[i] = d[i + 1] = d[i + 2] = v;
+        d[i + 3] = 15;
       }
       ctx.putImageData(img, 0, 0);
       raf = requestAnimationFrame(draw);
@@ -240,6 +222,7 @@ const Grain = () => {
     draw();
     return () => cancelAnimationFrame(raf);
   }, []);
+
   return <canvas ref={ref} className="hero__grain" />;
 };
 
@@ -249,8 +232,8 @@ const Hero = () => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    i18n.on("languageChanged", () => {});
-    return () => i18n.off("languageChanged", () => {});
+    i18n.on("languageChanged", () => { });
+    return () => i18n.off("languageChanged", () => { });
   }, [i18n]);
 
   useEffect(() => {
@@ -336,6 +319,7 @@ const Hero = () => {
               <AnimatedStats endValue={12000} text="+" />
               <p className="hero__bottom__info-stats-text">{t("Деталей в день")}</p>
             </div>
+
             <div className="hero__bottom__info-stats">
               <AnimatedStats endValue={65} text="%" />
               <p className="hero__bottom__info-stats-text">{t("Доля экспорта")}</p>

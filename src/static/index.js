@@ -445,193 +445,171 @@ export const Swipper = [
 ];
 
 export const newsData = [
-    {
-        id: 1,
-        category: "Новости",
-        world: [""],
-        title: "Узбекско-Пакистанский бизнес-форум и выставка «Сделано в Узбекистане» в Исламабаде",
-        description: ["Узбекско-Пакистанский бизнес-форум и выставка «Сделано в Узбекистане» пройдут 5–6 февраля 2026 года в Исламабаде, столице Исламской Республики Пакистан."],
-        date: "5–6 февраль 2026",
-        img: isl,
-        image: [ione, itwo, ithree],
-        fullContent: ["Эти мероприятия станут важной платформой для прямого диалога и сотрудничества между представителями государственных структур и деловых кругов обеих стран.", "Форум будет посвящён укреплению двусторонних торгово-экономических отношений, развитию инвестиционного сотрудничества и обмену опытом между узбекскими и пакистанскими компаниями. Ключевыми темами обсуждения станут инвестиционный потенциал Узбекистана, доступные механизмы поддержки иностранных инвесторов, а также стратегии по созданию и дальнейшему развитию благоприятного инвестиционного климата.", "В рамках программы состоится выставка «Сделано в Узбекистане», на которой будет представлен широкий ассортимент продукции узбекских производителей. Выставка направлена на продвижение экспортно-ориентированных товаров, расширение деловых партнёрств и стимулирование развития долгосрочных кооперационных связей с пакистанскими компаниями.", "Узбекско-Пакистанский бизнес-форум и выставка подчёркивают растущий интерес обеих стран к расширению экономического сотрудничества и созданию новых возможностей для взаимного роста."]
-    },
-    {
-        id: 2,
-        category: "Новости",
-        world: [""],
-        title: "Valesco на Международной выставке в Багдаде 2026",
-        description: ["Valesco принимает участие в Международной выставке в Багдаде 2026, которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых платформ региона, объединяя производителей, дистрибьюторов и профессионалов отрасли из различных секторов."],
-        date: "1-7 февраль, 2026",
-        img: iraq,
-        image: [iraq1, iraq2],
-        fullContent: ["В рамках выставки Valesco демонстрирует свои высококачественные автомобильные смазочные материалы и масла иракским импортёрам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства новым рынкам и укрепить международное присутствие Valesco.", "В ходе выставки представители Valesco провели ряд продуктивных переговоров с потенциальными партнёрами. Обсуждения были сосредоточены на следующих вопросах:", "Анализ автомобильного рынка Ирака", "Сегменты смазочных материалов с высоким спросом", "Возможности логистики и дистрибуции", "Стратегии расширения присутствия продукции Valesco в Ираке", "В результате этих встреч было успешно заключено несколько экспортных соглашений, что является важным шагом к долгосрочному сотрудничеству с иракскими партнёрами.", "Участие в Международной выставке в Багдаде 2026 подчёркивает приверженность Valesco расширению экспортных рынков, укреплению торгово-экономических связей между Узбекистаном и Ираком и предоставлению клиентам по всему миру надёжных и высокоэффективных смазочных материалов."]
-    },
-    {
-        id: 3,
-        category: "Новости",
-        world: [""],
-        title: "Компания Valesco провела масштабный розыгрыш призов в Худжанде, Таджикистан",
-        description: ["В начале января компания Valesco совместно с нашим официальным дистрибьютером в Таджикистане компанией Tosol Plus провела масштабный розыгрыш призов по итогам акции, проведённой среди покупателей в 2025-м году."],
-        date: "11 январь, 2026",
-        img: news0,
-        image: [news1, news2],
-        fullContent: ["Valesco и Tosol Plus успешно организовали и провели лотерею с розыгрышем большого количества призов. Данное  мероприятие траслировалось онлайн в Instagram и было направлено на укрепление доверия клиентов, рост имени Бренда Valesco.", "Мероприятие привлекло большое количество участников, создало оживленную, увлекательную атмосферу, наполненную волнением и предвкушением.", "В течение всего мероприятия гости принимали прямое активное участие в розыгрыше призов, вращая лотерейный барабан, каждому были даны равные шансы на победу. Масштабная акция и последовавшей за ней розыгрыш призов была разработана не только для поощрения лояльных клиентов, но и для укрепления Бренда Valesco среди обычных потребителей, автосервисов и дистрибьютеров на всем рынке Таджикистана ", "Было вручено впечатляющее количество призов, отражающих масштаб и амбиции акции. Победители получили 3 электромобиля, 250 телевизоров, 50 утюгов, 10 холодильников и 10 кондиционеров, что сделало это мероприятие одним из самых запоминающихся рекламных акций автомобильных брендов в регионе.", "Розыгрыш призов был организован в тесном сотрудничестве с официальным дистрибьютором Valesco в Таджикистане, ООО «ТОСОЛ-ПЛЮС», чья поддержка и местный опыт сыграли ключевую роль в успешном проведении мероприятия.", "Valesco выражает искреннюю благодарность всем участникам, партнерам и организаторам, которые внесли свой вклад в успех этой инициативы. Подобные мероприятия подтверждают нашу приверженность взаимодействию с клиентами, развитию рынка и предоставлению ценности, выходящей за рамки нашей продукции.", "В ближайшем будущем запланированы новые рекламные кампании, специальные мероприятия и интересные возможности для розыгрыша призов, поскольку Valesco продолжает расширять свое присутствие и укреплять отношения на международных рынках."]
-    },
-    {
-        id: 4,
-        category: "Новости",
-        world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
-        title: "Automechanika 2025",
-        description: ["В 2025 году Valesco с гордостью принимает участие в самых важных мировых автомобильных торговых выставках под брендом Automechanika. Эти глобальные мероприятия предоставляют возможность для взаимодействия с профессионалами отрасли, партнерами и клиентами, демонстрируя наши новейшие продуктовые решения и технологии.", "В течение всего года Valesco будет демонстрировать расширяющийся портфель автомобильных жидкостей и смазочных материалов, разработанных в соответствии с международными стандартами и требованиями современных транспортных средств."],
-        date: "2025",
-        img: news3,
-        image: [world6, world5, world4, world1, world2, world3],
-        locationData: [
-            {
-                id: 'dubai',
-                title: 'Automechanika Dubai',
-                location: 'Дубай, ОАЭ',
-                description: 'Valesco принимает участие в выставке Automechanika Dubai — одной из крупнейших в мире выставок автомобильного послепродажного рынка. Мероприятие объединяет мировых производителей и дистрибьюторов, предоставляя идеальную платформу для демонстрации продукции и развития международных партнёрств.',
-                images: [Done, Dtwo, Dthree, Dfour],
-                position: 'right'
-            },
-            {
-                id: 'astana',
-                title: 'Automechanika Astana',
-                location: 'Астана, Казахстан',
-                description: 'Valesco принимает участие в выставке Automechanika Astana — ключевой выставке автомобильного послепродажного рынка Центральной Азии. Мероприятие служит важной платформой для установления контактов с профессионалами отрасли, укрепления региональных партнёрств и презентации наших решений в области автомобильных технических жидкостей.',
-                images: [Aone, Atwo, Athree, Afour],
-                position: 'left'
-            },
-            {
-                id: 'moscow',
-                title: 'MIMS Automobility Moscow',
-                location: 'Москва, Россия',
-                description: 'Valesco принимает участие в выставке MIMS Automobility Moscow — ведущей международной выставке автомобильного послепродажного рынка, объединяющей профессионалов отрасли из России, стран СНГ и других международных рынков. Мероприятие предоставляет важную платформу для демонстрации продукции, укрепления партнёрских связей и поиска новых бизнес-возможностей.',
-                images: [Mone, Mtwo, Mthree, Mfour],
-                position: 'right'
-            },
-            {
-                id: 'istanbul',
-                title: 'Automechanika Istanbul 2025',
-                location: 'Стамбул, Турция',
-                description: 'Automechanika Istanbul служит ключевой точкой встречи для Европы, Ближнего Востока и окружающих регионов. Участие Valesco подчеркивает нашу приверженность региональному росту и прямому взаимодействию с дистрибьюторами, автомастерскими и автомобильными профессионалами. Выставка предоставляет уникальную платформу для демонстрации инновационных продуктов и установления долгосрочных деловых отношений.',
-                images: [Ione, Itwo, Ithree, Ifour],
-                position: 'left'
-            },
-            {
-                id: 'tashkent',
-                title: 'Automechanika Tashkent 2025',
-                location: 'Ташкент, Узбекистан',
-                description: 'Как важная выставка для Центральной Азии, Automechanika Tashkent позволяет Valesco тесно взаимодействовать с местными рынками и отраслевыми партнерами. Мероприятие поддерживает наше постоянное расширение и укрепляет наше присутствие в регионе. Это стратегически важная платформа для укрепления партнерских отношений и представления продукции на быстрорастущем рынке Центральной Азии.',
-                images: [Tone, Ttwo, Tfour, Tthree],
-                position: 'right'
-            },
-            {
-                id: 'shanghai',
-                title: 'Automechanika Shanghai 2025',
-                location: 'Шанхай, Китай',
-                description: 'Одна из крупнейших автомобильных выставок в мире, Automechanika Shanghai объединяет производителей, дистрибьюторов и отраслевых экспертов со всех мировых рынков. На этом мероприятии Valesco представляет свои последние инновации и укрепляет партнерские отношения в азиатском и международном автомобильном секторе. Выставка открывает двери к новым возможностям сотрудничества на крупнейших азиатских рынках.',
-                images: [one, four, two, three],
-                position: 'left'
-            }
-        ]
-    }
+  {
+    id: 1,
+    category: "Новости",
+    world: [""],
+    title: "Узбекско-Пакистанский бизнес-форум и выставка ТРТ в Исламабаде",
+    description: ["Узбекистано–Пакистанский бизнес-форум и выставка TRT пройдут 5–6 февраля 2026 года в Исламабаде, столице Исламской Республики Пакистан."],
+    date: "5–6 февраль 2026",
+    img: isl,
+    image: [ione, itwo, ithree],
+    fullContent: ["Эти мероприятия послужат важной площадкой для прямого диалога и сотрудничества между представителями государственных институтов и бизнес-сообщества обеих стран.", "Форум будет посвящен укреплению двусторонних торгово-экономических отношений, инвестиционному сотрудничеству и обмену опытом между узбекскими и пакистанскими компаниями. Ключевыми темами обсуждения станут инвестиционный потенциал Узбекистана, доступные механизмы поддержки иностранных инвесторов, а также стратегии создания и дальнейшего развития благоприятного инвестиционного климата.", "Узбекско-пакистанский бизнес-форум и выставка ТРТ подчеркивают растущий интерес обеих стран к расширению экономического сотрудничества и созданию новых возможностей для взаимного роста."]
+  },
+  {
+    id: 2,
+    category: "Новости",
+    world: [""],
+    title: "TRT на Международной ярмарке в Багдаде 2026",
+    description: ["ООО \"TRT JV TECHNOLOGIES REAL TIME\" принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
+    date: "1-7 февраль, 2026",
+    img: iraq,
+    image: [iraq1, iraq2],
+    fullContent: ["В рамках выставки TRT демонстрирует свои высококачественные автомобильные компоненты иракским импортерам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.", "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами. Обсуждения были сосредоточены на:", "• Анализ рынка автомобилей Ирака", "• Высоко востребованные сегменты автомобильных компонентов", "• Возможности логистики и дистрибуции", "• Стратегии расширения присутствия продуктов ТРТ в Ираке", "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.", "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков, укреплению узбекско-иракских торгово-экономических отношений и поставке надежных, высокопроизводительных автомобильных решений клиентам по всему миру."]
+  },
+  {
+    id: 4,
+    category: "Новости",
+    world: ["Автомеханика Дубай", "Автомеханика Астана", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+    title: "TRT на ведущих международных автомобильных выставках 2025",
+    description: ["ООО \"TRT JV TECHNOLOGIES OF REAL TIME\" с гордостью участвует в самых престижных в мире выставках после автомобильного рынка, укрепляя свое присутствие в мире и расширяя международные партнерские отношения.", "В 2025 году TRT продемонстрировала свои высококачественные автомобильные компоненты на следующих крупных отраслевых мероприятиях:"],
+    date: "2025",
+    img: news3,
+    image: [world6, world5, world4, world1, world2, world3],
+    locationData: [
+      {
+        id: 'dubai',
+        title: 'Автомеханика Дубай',
+        location: 'Дубай, ОАЭ',
+        description: 'Проводимая в Объединенных Арабских Эмиратах, Automechanika Dubai служит крупнейшей международной торговой выставкой для послерыночной автомобильной промышленности на Ближнем Востоке. На этой стратегической платформе TRT представила свои экспортно-ориентированные автомобильные компоненты дистрибьюторам, оптовым торговцам и региональным партнерам из ГСК, Африки и Азии. Выставка позволила TRT укрепить свое присутствие на рынках Ближнего Востока и инициировать новые дистрибьюторские соглашения.',
+        images: [Done, Dtwo, Dthree, Dfour],
+        position: 'right'
+      },
+      {
+        id: 'astana',
+        title: 'Автомеханика Астана',
+        location: 'Астана, Казахстан',
+        description: '"Автомеханика Астана" играет ключевую роль в соединении автомобильных рынков Центральной Азии. TRT использовала эту платформу для расширения сотрудничества в Казахстане и соседних странах, представляя инновационные решения, адаптированные к региональному рыночному спросу. Деловые переговоры были сосредоточены на оптимизации логистики, развитии цепочек поставок и долгосрочном партнерстве в области дистрибуции.',
+        images: [Aone, Atwo, Athree, Afour],
+        position: 'left'
+      },
+      {
+        id: 'moscow',
+        title: 'MIMS Automobile Москва',
+        location: 'Москва, Россия',
+        description: 'MIMS Automobility Москва - одна из крупнейших выставок автомобильной промышленности в Восточной Европе. В ходе выставки представители ТРТ провели продуктивные встречи с российскими дистрибьюторами и операторами сервисных сетей. В центре обсуждения были сегменты автомобильных компонентов, пользующиеся высоким спросом, а также стратегии укрепления присутствия на рынке в России и странах СНГ.',
+        images: [Mone, Mtwo, Mthree, Mfour],
+        position: 'right'
+      },
+      {
+        id: 'istanbul',
+        title: 'Автомеханика Стамбул',
+        location: 'Стамбул, Турция',
+        description: 'Automechanika Istanbul 2025 предоставила TRT прямой доступ к европейским, балканским и ближневосточным рынкам. Компания представила новейшие линии продукции, подчеркнув точность изготовления, долговечность и соответствие международным стандартам качества. Мероприятие способствовало расширению дистрибьюторской сети TRT в Турции и соседних регионах.',
+        images: [Ione, Itwo, Ithree, Ifour],
+        position: 'left'
+      },
+      {
+        id: 'tashkent',
+        title: 'Автомеханика Ташкент',
+        location: 'Ташкент, Узбекистан',
+        description: 'Automechanika Tashkent 2025 отметила лидерство TRT в отечественном автомобилестроении. Выставка послужила важной площадкой для демонстрации прочности узбекских автомобильных компонентов и укрепления сотрудничества с иностранными посетителями, посещающими мероприятие.',
+        images: [Tone, Ttwo, Tfour, Tthree],
+        position: 'right'
+      },
+      {
+        id: 'shanghai',
+        title: 'Автомеханика Шанхай',
+        location: 'Шанхай, Китай',
+        description: 'Automechanika Shanghai 2025, одна из крупнейших автомобильных выставок в мире, позволила TRT взаимодействовать с азиатскими производителями, поставщиками и глобальными дистрибьюторами. Участие в этой выставке подтвердило приверженность TRT технологическому прогрессу и интеграции в глобальную цепочку поставок автомобилей.',
+        images: [one, four, two, three],
+        position: 'left'
+      }
+    ]
+  }
 ]
 
 export const newsDataEn = [
-    {
-        id: 1,
-        category: "News",
-        world: [""],
-        title: "Uzbekistan–Pakistan Business Forum & “Made in Uzbekistan” Exhibition in Islamabad",
-        description: ["The Uzbekistan–Pakistan Business Forum and the “Made in Uzbekistan” Exhibition will be held on 5–6 February 2026 in Islamabad, the capital of the Islamic Republic of Pakistan."],
-        date: "5–6 February 2026",
-        img: isl,
-        image: [ione, itwo, ithree],
-        fullContent: ["These events will serve as an important platform for direct dialogue and cooperation between representatives of government institutions and the business communities of both countries.", "The forum will focus on strengthening bilateral trade and economic relations, promoting investment cooperation, and facilitating the exchange of experience between Uzbek and Pakistani companies. Key discussion topics will include Uzbekistan’s investment potential, available support mechanisms for foreign investors, and strategies for creating and further developing a favorable investment climate.", "As part of the program, the “Made in Uzbekistan” Exhibition will showcase a wide range of products from Uzbek manufacturers. The exhibition is aimed at promoting export-oriented goods, expanding business partnerships, and encouraging the development of long-term cooperative ties with Pakistani companies.", "The Uzbekistan–Pakistan Business Forum and exhibition highlight the growing interest of both countries in expanding economic collaboration and creating new opportunities for mutual growth."]
-    },
-    {
-        id: 2,
-        category: "Новости",
-        world: [""],
-        title: "Valesco at Baghdad International Fair 2026",
-        description: ["Valesco is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
-        date: "1-7 February, 2026",
-        img: iraq,
-        image: [iraq1, iraq2],
-        fullContent: ["Within the framework of the exhibition, Valesco is showcasing its high-quality automotive lubricants to Iraqi importers, distributors, and local market representatives. The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen Valesco’s international presence.", "During the exhibition, Valesco representatives held a series of productive negotiations with potential partners. Discussions focused on:", "Analysis of the Iraqi automotive market", "High-demand lubricant product segments", "Logistics and distribution opportunities", "Strategies for expanding the presence of Valesco products in Iraq", "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.", "Participation in the Baghdad International Fair 2026 highlights Valesco’s commitment to expanding export markets, strengthening Uzbekistan–Iraq trade and economic relations, and delivering reliable, high-performance lubricant solutions to customers worldwide."]
-    },
-    {
-        id: 3,
-        category: "News",
-        world: [""],
-        title: "Valesco hosts large-scale prize draw event in Khujand, Tajikistan",
-        description: ["At the beginning of January, Valesco, together with its official distributor in Tajikistan, Tosol Plus, held a large-scale prize draw as the final stage of a promotional campaign conducted among customers throughout 2025."],
-        date: "11 January, 2026",
-        img: news0,
-        image: [news1, news2],
-        fullContent: ["Valesco and Tosol Plus successfully organized and delivered a major lottery featuring a wide range of prizes. The event was broadcast live on Instagram and was aimed at strengthening customer trust and increasing brand awareness of Valesco.", "The event attracted a large number of participants and created a lively, engaging atmosphere filled with excitement and anticipation.", "Throughout the event, guests took an active part in the prize draw by spinning the lottery drum, with everyone having an equal chance to win. The large-scale promotion and the subsequent prize draw were designed not only to reward loyal customers, but also to strengthen the Valesco brand among everyday consumers, automotive service centers, and distributors across the entire Tajikistan market.", "An impressive number of prizes were awarded, reflecting the scale and ambition of the campaign. Winners received 3 electric vehicles, 250 televisions, 50 irons, 10 refrigerators, and 10 air conditioners, making this event one of the most memorable automotive brand promotional campaigns in the region.", "The prize draw was organized in close cooperation with Valesco’s official distributor in Tajikistan, TOSOL PLUS LLC, whose support and local expertise played a key role in the successful execution of the event.", "Valesco expresses its sincere gratitude to all participants, partners, and organizers who contributed to the success of this initiative. Such events reaffirm our commitment to customer engagement, market development, and delivering value beyond our products.", "In the near future, new promotional campaigns, special events, and exciting prize opportunities are planned, as Valesco continues to expand its presence and strengthen relationships in international markets."]
-    },
-    {
-        id: 4,
-        category: "News",
-        world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
-        title: "Automechanika 2025",
-        description: ["In 2025, Valesco proudly participates in some of the world's most important automotive trade exhibitions under the Automechanika brand. These global events provide an opportunity to connect with industry professionals, partners, and customers while presenting our latest product solutions and technologies.", "Throughout the year, Valesco will showcase its expanding portfolio of automotive fluids and lubricants, developed to meet international standards and the demands of modern vehicles."],
-        date: "2025",
-        img: news3,
-        image: [world6, world5, world4, world1, world2, world3],
-        locationData: [
-            {
-                id: 'dubai',
-                title: 'Automechanika Dubai',
-                location: 'Dubai, UAE',
-                description: 'Valesco participates in Automechanika Dubai, one of the world’s largest automotive aftermarket exhibitions. The event brings together global manufacturers and distributors, offering an ideal platform to showcase products and develop international partnerships.',
-                images: [Done, Dtwo, Dthree, Dfour],
-                position: 'right'
-            },
-            {
-                id: 'astana',
-                title: 'Automechanika Astana',
-                location: 'Astana, Kazakhstan',
-                description: 'Valesco participates in Automechanika Astana, a key automotive aftermarket exhibition for Central Asia. The event provides an important platform to connect with industry professionals, strengthen regional partnerships, and present our automotive fluid solutions.',
-                images: [Aone, Atwo, Athree, Afour],
-                position: 'left'
-            },
-            {
-                id: 'moscow',
-                title: 'MIMS Automobility Moscow',
-                location: 'Moscow, Russia',
-                description: 'Valesco participates in MIMS Automobility Moscow, a leading automotive aftermarket exhibition bringing together industry professionals from Russia, the CIS, and international markets. The event provides an important platform to showcase products, strengthen partnerships, and explore new business opportunities.',
-                images: [Mone, Mtwo, Mthree, Mfour],
-                position: 'right'
-            },
-            {
-                id: 'istanbul',
-                title: 'Automechanika Istanbul 2025',
-                location: 'Istanbul, Türkiye',
-                description: 'Automechanika Istanbul serves as a key meeting point for Europe, the Middle East, and surrounding regions. Valesco’s participation highlights our commitment to regional growth and direct engagement with distributors, workshops, and automotive professionals.',
-                images: [Ione, Itwo, Ithree, Ifour],
-                position: 'left'
-            },
-            {
-                id: 'tashkent',
-                title: 'Automechanika Tashkent 2025',
-                location: 'Tashkent, Uzbekistan',
-                description: 'As an important exhibition for Central Asia, Automechanika Tashkent allows Valesco to connect closely with local markets and industry partners. The event supports our continued expansion and reinforces our presence in the region.',
-                images: [Tone, Ttwo, Tfour, Tthree],
-                position: 'right'
-            },
-            {
-                id: 'shanghai',
-                title: 'Automechanika Shanghai 2025',
-                location: 'Shanghai, China',
-                description: 'One of the largest automotive exhibitions in the world, Automechanika Shanghai brings together manufacturers, distributors, and industry experts from across global markets. At this event, Valesco presents its latest innovations and strengthens partnerships in the Asian and international automotive sectors.',
-                images: [one, four, two, three],
-                position: 'left'
-            }
-        ]
-    }
+  {
+    id: 1,
+    category: "News",
+    world: [""],
+    title: "Uzbekistan–Pakistan Business Forum & TRT Exhibition in Islamabad",
+    description: ["The Uzbekistan–Pakistan Business Forum and the TRT Exhibition will be held on 5–6 February 2026 in Islamabad, the capital of the Islamic Republic of Pakistan."],
+    date: "5–6 February 2026",
+    img: isl,
+    image: [ione, itwo, ithree],
+    fullContent: ["These events will serve as an important platform for direct dialogue and cooperation between representatives of government institutions and the business communities of both countries.", "The forum will focus on strengthening bilateral trade and economic relations, promoting investment cooperation, and facilitating the exchange of experience between Uzbek and Pakistani companies. Key discussion topics will include Uzbekistan’s investment potential, available support mechanisms for foreign investors, and strategies for creating and further developing a favorable investment climate.", "As part of the program, the TRT Exhibition will showcase a wide range of automotive components manufactured by TRT JV LLC “TECHNOLOGIES OF REAL TIME.” The exhibition is aimed at promoting export-oriented products, expanding business partnerships, and encouraging the development of long-term cooperative ties with Pakistani companies.", "The Uzbekistan–Pakistan Business Forum and the TRT Exhibition highlight the growing interest of both countries in expanding economic collaboration and creating new opportunities for mutual growth."]
+  },
+  {
+    id: 2,
+    category: "News",
+    world: [""],
+    title: "TRT at Baghdad International Fair 2026",
+    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
+    date: "1-7 February, 2026",
+    img: iraq,
+    image: [iraq1, iraq2],
+    fullContent: ["Within the framework of the exhibition, TRT is showcasing its high-quality automotive components to Iraqi importers, distributors, and local market representatives. The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT’s international presence.", "During the exhibition, TRT representatives held a series of productive negotiations with potential partners. Discussions focused on:", "• Analysis of the Iraqi automotive market", "• High-demand automotive component segments", "• Logistics and distribution opportunities", "• Strategies for expanding the presence of TRT products in Iraq", "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.", "Participation in the Baghdad International Fair 2026 highlights TRT’s commitment to expanding export markets, strengthening Uzbekistan–Iraq trade and economic relations, and delivering reliable, high-performance automotive solutions to customers worldwide."]
+  },
+  {
+    id: 4,
+    category: "News",
+    world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
+    title: "TRT at Leading International Automotive Exhibitions 2025",
+    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” proudly participates in the world’s most influential automotive aftermarket exhibitions, strengthening its global presence and expanding international partnerships.", "In 2025, TRT showcased its high-quality automotive components at the following major industry events:"],
+    date: "2025",
+    img: news3,
+    image: [world6, world5, world4, world1, world2, world3],
+    locationData: [
+      {
+        id: 'dubai',
+        title: 'Automechanika Dubai',
+        location: 'Dubai, UAE',
+        description: 'Held in the United Arab Emirates, Automechanika Dubai serves as the largest international trade exhibition for the automotive aftermarket industry in the Middle East. At this strategic platform, TRT presented its export-oriented automotive components to distributors, wholesalers, and regional partners from the GCC, Africa, and Asia. The exhibition enabled TRT to strengthen its presence in Middle Eastern markets and initiate new distribution agreements.',
+        images: [Done, Dtwo, Dthree, Dfour],
+        position: 'right'
+      },
+      {
+        id: 'astana',
+        title: 'Automechanika Astana',
+        location: 'Astana, Kazakhstan',
+        description: 'Automechanika Astana plays a key role in connecting Central Asian automotive markets. TRT used this platform to expand cooperation within Kazakhstan and neighboring countries, presenting innovative solutions tailored to regional market demand. Business negotiations focused on logistics optimization, supply chain development, and long-term distribution partnerships.',
+        images: [Aone, Atwo, Athree, Afour],
+        position: 'left'
+      },
+      {
+        id: 'moscow',
+        title: 'MIMS Automobility Moscow',
+        location: 'Moscow, Russia',
+        description: 'MIMS Automobility Moscow is one of the largest automotive industry exhibitions in Eastern Europe. During the exhibition, TRT representatives held productive meetings with Russian distributors and service network operators. Discussions centered on high-demand automotive component segments and strategies for strengthening market presence in Russia and CIS countries.',
+        images: [Mone, Mtwo, Mthree, Mfour],
+        position: 'right'
+      },
+      {
+        id: 'istanbul',
+        title: 'Automechanika Istanbul',
+        location: 'Istanbul, Türkiye',
+        description: 'Automechanika Istanbul 2025 provided TRT with direct access to European, Balkan, and Middle Eastern markets. The company showcased its latest product lines, emphasizing manufacturing precision, durability, and compliance with international quality standards. The event contributed to expanding TRT’s distribution network across Turkey and neighboring regions.',
+        images: [Ione, Itwo, Ithree, Ifour],
+        position: 'left'
+      },
+      {
+        id: 'tashkent',
+        title: 'Automechanika Tashkent',
+        location: 'Tashkent, Uzbekistan',
+        description: 'Automechanika Tashkent 2025 highlighted TRT’s leadership within the domestic automotive manufacturing sector. The exhibition served as an important platform to demonstrate the strength of Uzbek-made automotive components and to strengthen cooperation with international visitors attending the event.',
+        images: [Tone, Ttwo, Tfour, Tthree],
+        position: 'right'
+      },
+      {
+        id: 'shanghai',
+        title: 'Automechanika Shanghai',
+        location: 'Shanghai, China',
+        description: 'Automechanika Shanghai 2025, one of the largest automotive exhibitions globally, allowed TRT to engage with Asian manufacturers, suppliers, and global distributors. Participation in this exhibition reinforced TRT’s commitment to technological advancement and integration into the global automotive supply chain.',
+        images: [one, four, two, three],
+        position: 'left'
+      }
+    ]
+  }
 ]

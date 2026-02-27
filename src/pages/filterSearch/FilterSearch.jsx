@@ -5,8 +5,10 @@ import { FILTER } from "../../static";
 import Loading from "../../components/loading/Loading";
 
 import "./filterSearch.scss";
+import { useTranslation } from "react-i18next";
 
 const FilterSearch = () => {
+  const { t } = useTranslation();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,7 +27,7 @@ const FilterSearch = () => {
           id="search-result-heading"
           className="filterSearch__cards-info-text"
         >
-          Результат поиска:
+          {t("Результат поиска:")}
         </h1>
 
         {FILTER && FILTER.length > 0 ? (

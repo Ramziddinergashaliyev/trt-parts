@@ -68,17 +68,21 @@ const Filter = () => {
       <div className="container">
 
         <div className="filter__top">
+          
           <div className="filter__top__left">
             <p className="filter__top__left-title">{t("search_products")}</p>
           </div>
-          
+
           <div className="filter__top__icon">
             <img className="filter__top__icon-img" src={img} alt="settings" />
           </div>
+
         </div>
 
         <form className="filter__form" onSubmit={handleSearch}>
+
           <div className="filter__form-left">
+
             <label className="filter__form-left__label">
               {t("oem_number")}
               <Select
@@ -98,6 +102,7 @@ const Filter = () => {
                 classNamePrefix="react-select"
               />
             </label>
+
           </div>
 
           <div className="filter__form-right">
@@ -111,8 +116,9 @@ const Filter = () => {
                 classNamePrefix="react-select"
               />
             </label>
-            
+
             <div className="filter__form-right__btn">
+
               <label className="filter__form-left__label">
                 {t("model")}
                 <Select
@@ -126,8 +132,8 @@ const Filter = () => {
               <button type="submit" className="filter__form-btn">
                 {t("find_part")}
               </button>
-            </div>
 
+            </div>
           </div>
         </form>
 

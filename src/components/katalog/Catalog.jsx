@@ -10,6 +10,7 @@ const Catalog = () => {
   return (
     <div className="catalog">
       <div className="container">
+        
         <div className="catalog__top">
 
           <div className="catalog__info">
@@ -24,8 +25,7 @@ const Catalog = () => {
             target="_blank"
             download
             rel="noopener noreferrer"
-            className="catalog__card-link"
-          >
+            className="catalog__card-link">
             {t("download_pdf")}
           </a>
 
@@ -42,6 +42,7 @@ const Catalog = () => {
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );

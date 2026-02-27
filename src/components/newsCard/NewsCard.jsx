@@ -8,8 +8,10 @@ import { useTranslation } from 'react-i18next';
 const NewsCard = () => {
     const { t, i18n } = useTranslation();
     const navigate = useNavigate();
+    console.log(i18n?.languages[0]);
 
-    const productData = i18n?.languages[0] === 'ru' ? newsData : newsDataEn;
+
+    const productData = i18n?.languages[0] === 'rus' ? newsData : newsDataEn;
 
     const handleViewAllNews = () => navigate('/news');
     const handleCardClick = (id) => navigate(`/news-single/${id}`);
@@ -29,7 +31,7 @@ const NewsCard = () => {
                     {t('Latest')} <span>{t('News')}</span>
                 </h2>
                 <NavLink to="/news" className="news-view-all">
-                    All News <MdArrowOutward />
+                    {t("All News")} <MdArrowOutward />
                 </NavLink>
             </div>
 
@@ -60,7 +62,7 @@ const NewsCard = () => {
                                 <h3 className="news-card__title">{item.title}</h3>
 
                                 <div className="news-card__footer">
-                                    <span className="news-card__read">Read more</span>
+                                    <span className="news-card__read">{t("Read more")}</span>
                                     <div className="news-card__arrow">
                                         <MdArrowOutward />
                                     </div>

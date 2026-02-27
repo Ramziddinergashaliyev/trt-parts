@@ -3,19 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
 import CatalogPage from "./pages/catalogPage/CatalogPage";
-import Auth from "./pages/auth/Auth";
 import FilterResults from "./pages/filterResults/FilterResults";
-import ManageProduct from "./pages/admin/manageProduct/ManageProduct";
-import CreateProduct from "./pages/admin/createProduct/CreateProduct";
-import Login from "./pages/login/Login";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
 import Company from "./pages/Company/Company";
 import Partner from "./pages/partner/Partner";
-import Newost from "./pages/newost/Newost";
 import Contact from "./pages/Contact/Contact";
 import Razdel from "./pages/razdel/Razdel";
-import Admin from "./pages/admin/Admin";
 import Single from "./pages/single/Single";
 import Result from "./pages/result/Result";
 import FilterSearch from "./pages/filterSearch/FilterSearch";
@@ -43,15 +37,9 @@ const App = () => {
           <Route path="/search" element={<SearchProduct />} />
           <Route path="/new" element={<NewsPage />} />
           <Route path="/filterResults" element={<FilterResults />} />
-          <Route path="/rychagi-podveski/:id" element={<CatalogPage />} />
+          <Route path="/:categoryName/:id" element={<CatalogPage />} />
           <Route path='/news-single/:id' element={<NewsSingle />} />
         </Route>
-
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/admin/" element={<Admin />}>
-          <Route path="manageProduct" element={<ManageProduct />} />
-          <Route path="createProduct" element={<CreateProduct />} />
-        </Route> */}
       </Routes>
       <ToastContainer />
     </>

@@ -11,7 +11,6 @@ const CatalogPage = () => {
   const { data } = useGetCategoriesByIdQuery(id);
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(data);
 
   useEffect(() => {
     window.scroll(0, 0);

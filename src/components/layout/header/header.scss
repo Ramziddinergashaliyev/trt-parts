@@ -197,7 +197,6 @@
   }
 
   @media (max-width: 1500px) {
-
     &__nav__btn {
       button {
         height: 50px;
@@ -209,11 +208,9 @@
       height: 70px;
       padding: 5px 0px;
     }
-
   }
 
   @media (max-width: 1120px) {
-
     &__nav__list {
       position: fixed;
       left: -100%;
@@ -243,7 +240,6 @@
     &__nav__list-show {
       left: 0;
     }
-    
   }
 
   @media (max-width: 530px) {

@@ -475,8 +475,6 @@
 //   padding-top: 40px;
 // }
 
-
-
 .hero {
   width: 100%;
   background-color: #0a0a0a;
@@ -564,12 +562,12 @@
       }
 
       &-text {
-        font-size: 13px;
-        letter-spacing: 4px;
-        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 600;
         line-height: 14px;
         text-align: left;
-        color: rgba(255, 44, 44, 0.9);
+        color: rgb(208, 1, 1);
         padding-bottom: 18px;
         text-transform: uppercase;
       }
@@ -587,12 +585,11 @@
         overflow: hidden;
       }
 
-      // Decorative rule after title
       &-rule {
         display: block;
         height: 2px;
         width: 80px;
-        background: rgba(255, 44, 44, 1);
+        background: rgb(208, 1, 1);
         margin-top: 20px;
         transform-origin: left;
       }
@@ -643,8 +640,8 @@
           justify-content: center;
           width: 60px;
           height: 60px;
-          background: rgba(255, 44, 44, 1);
-          border: 1px solid #e00;
+          background: rgb(208, 1, 1);
+          border: 1px solid rgb(208, 1, 1);
           transition: background 0.3s ease;
 
           svg {
@@ -665,7 +662,6 @@
     }
   }
 
-  // ── Bottom ────────────────────────────────────────────────────────────────
   &__bottom {
     display: flex;
     align-items: center;
@@ -719,7 +715,7 @@
         font-size: 60px;
         font-weight: 600;
         line-height: 48px;
-        color: rgba(255, 44, 44, 1);
+        color: rgb(208, 1, 1);
       }
 
       &-text {
@@ -968,7 +964,7 @@
 }
 
 .hero__line {
-  border-bottom: 3px solid rgba(255, 44, 44, 1);
+  border-bottom: 3px solid rgb(208, 1, 1);
   padding-top: 40px;
   transform-origin: left;
 }

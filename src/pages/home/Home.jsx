@@ -6,21 +6,23 @@ import Vapros from "../../components/vapros/Vapros";
 import Filter from "../../components/filter/Filter";
 import Catalog from "../../components/katalog/Catalog";
 import NewsCard from "../../components/newsCard/NewsCard";
+import YoutubeCard from "../../components/youtubecard/YoutubeCard";
 
 const Home = () => {
   useEffect(() => {
     window.scroll(0, 0);
   });
-  
+
   return (
     <Fragment>
-      <Hero /> 
-      <Filter /> 
-      <Auto /> 
-      <Prinsp /> 
-      <Catalog /> 
-      <NewsCard/>
-      <Vapros /> 
+      <Hero />
+      <Filter />
+      <Auto />
+      <Prinsp />
+      <Catalog />
+      <NewsCard />
+      <YoutubeCard />
+      <Vapros />
     </Fragment>
   );
 };

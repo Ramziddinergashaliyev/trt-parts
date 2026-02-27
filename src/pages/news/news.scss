@@ -141,7 +141,7 @@
         }
 
         .read-more {
-          background: linear-gradient(135deg, #ff0000, #ff4444);
+          background: rgb(208, 1, 1);
           color: white;
           transform: translateX(5px);
           box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.3);
@@ -187,7 +187,7 @@
           left: 16px;
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(10px);
-          color: red;
+          color: rgb(208, 1, 1);
           padding: 6px 16px;
           border-radius: 20px;
           font-size: 0.8rem;
@@ -260,8 +260,8 @@
           align-items: center;
           gap: 5px;
           background: transparent;
-          border: 1.5px solid red;
-          color: red;
+          border: 1.5px solid rgb(208, 1, 1);
+          color: rgb(208, 1, 1);
           padding: 8px 20px;
           border-radius: 12px;
           font-size: 0.9rem;

@@ -10,7 +10,7 @@ const News = () => {
   const [visibleCards, setVisibleCards] = useState([])
   const { t, i18n } = useTranslation()
 
-  const allData = i18n?.language === "ru" ? newsData : newsDataEn
+  const allData = i18n?.language === "rus" ? newsData : newsDataEn
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -50,7 +50,7 @@ const News = () => {
             <div className="card-content">
 
               <div className="card-date">{news.date}</div>
-              
+
               <h3 className="card-title">{news.title}</h3>
               <p className="card-description">{news.description}</p>
 

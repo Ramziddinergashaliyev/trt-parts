@@ -7,8 +7,7 @@ $accent: rgb(208, 1, 1);
 $accent2: #06b6d4;
 
 .news-section {
-    padding: 90px 48px;
-    background: $white;
+    padding: 50px 0px;
 }
 
 .news-header {
@@ -20,8 +19,8 @@ $accent2: #06b6d4;
 }
 
 .news-heading {
-    font-size: clamp(32px, 5vw, 60px);
-    font-weight: 700;
+    font-size: 54px;
+    font-weight: 600;
     color: $ink;
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -57,21 +56,28 @@ $accent2: #06b6d4;
 .news-view-all {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     text-decoration: none;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     letter-spacing: 0.04em;
     color: $accent;
     white-space: nowrap;
     padding-bottom: 1px;
     border-bottom: 1.5px solid transparent;
     transition: border-color 0.25s, gap 0.25s;
-    border-radius: 2px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(208, 1, 1);
+    width: 250px;
+    padding: 12px 16px;
+
 
     svg {
         font-size: 22px;
         transition: transform 0.3s;
+        color: white;
     }
 
     &:hover {
@@ -118,7 +124,6 @@ $accent2: #06b6d4;
     &:hover {
         transform: translateY(-8px);
         border-color: rgba($accent, 0.3);
-        box-shadow: 0 20px 60px rgba($accent, 0.1), 0 4px 16px rgba(0, 0, 0, 0.06);
 
         .news-card__image {
             transform: scale(1.06);
@@ -299,12 +304,25 @@ $accent2: #06b6d4;
 }
 
 @media (max-width: 768px) {
+
     .news-section {
-        padding: 60px 20px;
+        padding: 20px 0px;
+    }
+
+    .news-heading {
+        font-size: 34px;
+    }
+
+    .news-header {
+        margin-bottom: 24px;
     }
 
     .news-card__image-wrapper {
         height: 300px;
+    }
+
+    .news-grid {
+        margin-bottom: 15px;
     }
 }
 

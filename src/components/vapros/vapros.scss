@@ -35,7 +35,7 @@
         color: rgba(0, 0, 0, 1);
 
         span {
-          color: rgba(255, 44, 44, 1);
+          color: rgb(208, 1, 1);
         }
       }
     }
@@ -72,8 +72,8 @@
       &-red {
         border-radius: 0px 4px 4px 0px;
         padding: 21px;
-        background: rgba(255, 44, 44, 1);
-        border: 1px solid rgba(255, 44, 44, 1);
+        background: rgb(208, 1, 1);
+        border: 1px solid rgb(208, 1, 1);
         color: white;
 
         svg {
@@ -90,8 +90,8 @@
     }
 
     &__btns:hover .vapros__card__btns-white {
-      border: 1px solid rgba(255, 44, 44, 1);
-      color: rgba(255, 44, 44, 1);
+      border: 1px solid rgb(208, 1, 1);
+      color: rgb(208, 1, 1);
       transition: 0.5s;
     }
   }

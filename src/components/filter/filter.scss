@@ -57,7 +57,7 @@
         font-weight: 400;
         line-height: 35.2px;
         letter-spacing: 1px;
-        color: rgba(255, 44, 44, 1);
+        color: rgb(208, 1, 1);
       }
     }
   }
@@ -132,13 +132,14 @@
     }
 
     &-btn {
-      padding: 22px;
-      background: linear-gradient(0deg, #ff2c2c, #ff2c2c);
+      height: 66px;
+      padding: 6px;
+      background: rgb(208, 1, 1);
       color: #fff;
       border: 1px solid transparent;
       position: relative;
       overflow: hidden;
-      font-size: 16px;
+      font-size: 20px;
       letter-spacing: 1.2px;
       border-radius: 3px;
       display: flex;

@@ -204,7 +204,6 @@ const Single = () => {
       </div>
 
       <div className="container">
-        {/* <HandleSwiper /> */}
         <HandleSwiper categoryId={data?.categories} currentProductId={id} />
       </div>
 

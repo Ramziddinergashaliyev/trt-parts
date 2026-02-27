@@ -116,19 +116,16 @@ const Header = () => {
                 </button>
 
                 <div className="custom-dropdown-options">
-
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("rus")}
-                  >
+                    onClick={() => handleLanguageChange("rus")}>
                     <img src={rus} alt="Русский язык" className="lang-icon" />
                     Rus
                   </div>
 
                   <div
                     className="custom-dropdown-option"
-                    onClick={() => handleLanguageChange("eng")}
-                  >
+                    onClick={() => handleLanguageChange("eng")}>
                     <img
                       src={eng}
                       alt="English icon"
@@ -138,7 +135,6 @@ const Header = () => {
                     />
                     English
                   </div>
-
                 </div>
 
               </div>
@@ -191,7 +187,7 @@ const Header = () => {
           />
         </div>
       </div>
-      
+
     </>
   );
 };

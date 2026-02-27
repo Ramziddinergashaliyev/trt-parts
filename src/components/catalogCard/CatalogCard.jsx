@@ -17,7 +17,10 @@ const CatalogCard = () => {
       <div className="catalogCard">
         <div className="catalogCard__box" data-aos="zoom-in-down">
           {data?.slice(0, 6)?.map((item) => (
-            <NavLink key={item.id} to={`/rychagi-podveski/${item?.id}`}>
+            <NavLink
+              key={item.id}
+              to={`/${(currentLang === "rus" ? item?.translations?.ru?.name : item?.translations?.en?.name)?.toLowerCase().replace(/\s+/g, '-')}/${item?.id}`}
+            >
               <div
                 style={{
                   backgroundImage: `url(${item?.images})`,
