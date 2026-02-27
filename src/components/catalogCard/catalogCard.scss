@@ -54,7 +54,7 @@
     }
 
     &-item {
-      height: 330px;
+      height: 320px;
       background-color: #fff !important;
       padding: 20px;
       border-radius: 4px;
@@ -70,7 +70,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       @media (max-width:1550px) {
-        height: 300px;
+        height: 320px;
       }
 
       &:hover {
@@ -130,7 +130,7 @@
 
     &-info {
       position: absolute;
-      top: 230px;
+      top: 250px;
       left: 0;
 
       &-title {
