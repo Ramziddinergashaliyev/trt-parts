@@ -73,3 +73,7 @@ export const {
   useSearchProductsQuery,
   useSearchAllProductsQuery,
 } = productApi;
+
+
+
+
