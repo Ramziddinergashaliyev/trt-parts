@@ -89,7 +89,7 @@ const Company = () => {
         </div>
 
         <Service />
-        <Photo />
+        {/* <Photo /> */}
         <Partner />
       </div>
 
