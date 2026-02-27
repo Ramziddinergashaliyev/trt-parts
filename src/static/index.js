@@ -42,7 +42,6 @@ import itwo from "../assets/news/isl/two.webp"
 import ithree from "../assets/news/isl/four.webp"
 
 import iraq1 from "../assets/news/iraq/one.webp"
-import iraq2 from "../assets/news/iraq/two.webp"
 
 import world1 from "../assets/news/istanbul.webp"
 import world3 from "../assets/news/shanghai.webp"
@@ -464,7 +463,7 @@ export const newsData = [
     description: ["ООО \"TRT JV TECHNOLOGIES REAL TIME\" принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
     date: "1-7 февраль, 2026",
     img: iraq,
-    image: [iraq1, iraq2],
+    image: [iraq1],
     fullContent: ["В рамках выставки TRT демонстрирует свои высококачественные автомобильные компоненты иракским импортерам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.", "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами. Обсуждения были сосредоточены на:", "• Анализ рынка автомобилей Ирака", "• Высоко востребованные сегменты автомобильных компонентов", "• Возможности логистики и дистрибуции", "• Стратегии расширения присутствия продуктов ТРТ в Ираке", "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.", "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков, укреплению узбекско-иракских торгово-экономических отношений и поставке надежных, высокопроизводительных автомобильных решений клиентам по всему миру."]
   },
   {
@@ -549,7 +548,7 @@ export const newsDataEn = [
     description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
     date: "1-7 February, 2026",
     img: iraq,
-    image: [iraq1, iraq2],
+    image: [iraq1],
     fullContent: ["Within the framework of the exhibition, TRT is showcasing its high-quality automotive components to Iraqi importers, distributors, and local market representatives. The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT’s international presence.", "During the exhibition, TRT representatives held a series of productive negotiations with potential partners. Discussions focused on:", "• Analysis of the Iraqi automotive market", "• High-demand automotive component segments", "• Logistics and distribution opportunities", "• Strategies for expanding the presence of TRT products in Iraq", "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.", "Participation in the Baghdad International Fair 2026 highlights TRT’s commitment to expanding export markets, strengthening Uzbekistan–Iraq trade and economic relations, and delivering reliable, high-performance automotive solutions to customers worldwide."]
   },
   {
