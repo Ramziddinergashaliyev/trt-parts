@@ -478,7 +478,7 @@
 .hero {
   width: 100%;
   background-color: #0a0a0a;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 120px);
   position: relative;
   overflow: hidden;
 
@@ -542,7 +542,7 @@
   }
 
   &__overlay {
-    padding: calc(100vh - 50vh) 0 20px 0;
+    padding: calc(100vh - 60vh) 0 40px 0;
     width: 85%;
     color: #fff;
     display: flex;
@@ -576,11 +576,10 @@
         font-size: 74px;
         font-weight: 500;
         line-height: 80px;
-        letter-spacing: 1px;
         text-align: left;
         color: rgba(255, 255, 255, 1);
         width: 70%;
-        perspective: 800px;
+        // perspective: 800px;
         display: block;
         overflow: hidden;
       }
