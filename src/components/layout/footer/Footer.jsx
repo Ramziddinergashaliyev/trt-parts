@@ -8,12 +8,15 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
-  
+
   return (
     <footer className="footer">
       <div className="container">
+
         <nav className="footer__nav">
+
           <ul className="footer__list">
+
             <li className="footer__item">
               <h3 className="footer__list-title">{t("kompany")}</h3>
             </li>
@@ -41,6 +44,7 @@ const Footer = () => {
                 {t("Контакты")}
               </NavLink>
             </li>
+
           </ul>
 
           <ul className="footer__list">
@@ -136,7 +140,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__bottom-info">
-            <p className="footer__bottom-info-text">
+            <p className="footer__bottom-info-text footer__bottom-info-text-one">
               {t("TRT")}
             </p>
             <p className="footer__bottom-info-text">
@@ -145,7 +149,9 @@ const Footer = () => {
           </div>
 
         </div>
+
       </div>
+
     </footer>
   );
 };

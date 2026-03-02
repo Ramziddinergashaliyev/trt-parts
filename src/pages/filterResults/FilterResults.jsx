@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from "react";
+import React, { useEffect, useRef, memo } from "react";
 import { useLocation } from "react-router-dom";
 import { useSearchAllProductsQuery } from "../../context/api/productApi";
 import ProductItem from "../../components/productItem/ProductItem";
@@ -11,18 +11,25 @@ import { useTranslation } from "react-i18next";
 const FilterResults = () => {
   const location = useLocation();
   const { t } = useTranslation();
-  const { oem, trt, brand, model } = location.state || {};
+  const { oem, trt, marka, model } = location.state || {};
+  const resultsRef = useRef(null);
 
   const { data, error, isLoading } = useSearchAllProductsQuery({
     oem,
     trt,
-    brand,
+    marka,
     model,
   });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    if (!isLoading && (data || error) && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [isLoading, data, error]);
 
   return (
     <main className="filterResults">
@@ -31,7 +38,7 @@ const FilterResults = () => {
 
       <Filter />
 
-      <section className="container" aria-labelledby="results-heading">
+      <section ref={resultsRef} className="container" aria-labelledby="results-heading">
         <h1 id="results-heading" className="filterResults__title">
           {t("Результат поиска")}:
         </h1>
@@ -39,7 +46,7 @@ const FilterResults = () => {
         {isLoading ? (
           <Loading />
         ) : error ? (
-          <p className="error-message">Ошибка при загрузке результатов.</p>
+          <p className="error-message">{t("Ошибка при загрузке результатов.")}</p>
         ) : data?.length > 0 ? (
           <div>
             <ProductItem data={data} />

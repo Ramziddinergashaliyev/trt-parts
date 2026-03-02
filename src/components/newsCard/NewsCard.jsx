@@ -8,8 +8,6 @@ import { useTranslation } from 'react-i18next';
 const NewsCard = () => {
     const { t, i18n } = useTranslation();
     const navigate = useNavigate();
-    console.log(i18n?.languages[0]);
-
 
     const productData = i18n?.languages[0] === 'rus' ? newsData : newsDataEn;
 

@@ -89,7 +89,6 @@ const Company = () => {
         </div>
 
         <Service />
-        {/* <Photo /> */}
         <Partner />
       </div>
 

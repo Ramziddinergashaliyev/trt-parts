@@ -16,7 +16,6 @@ import "./single.scss";
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
-  console.log(data);
   
   const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("reviews");

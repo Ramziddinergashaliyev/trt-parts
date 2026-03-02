@@ -2,6 +2,7 @@ import React from "react";
 import "./application.scss";
 
 const Application = ({ data }) => {
+  
   const maxLength = Math.max(
     data?.carName?.length || 0,
     data?.model?.length || 0,

@@ -38,6 +38,7 @@ const Razdel = () => {
       
     </section>
   );
+
 };
 
 export default memo(Razdel);

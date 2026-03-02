@@ -8,7 +8,7 @@ const Partner = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const { t } = useTranslation()
 
   return (

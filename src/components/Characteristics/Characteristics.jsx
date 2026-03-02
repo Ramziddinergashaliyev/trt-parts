@@ -11,7 +11,6 @@ const Characteristics = ({ data }) => {
   return (
     <div className="characteristic">
       <table className="characteristic__table">
-
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Марка")}</th>
           <td className="characteristic__row__desc">{data?.carName[0]}</td>
@@ -55,7 +54,6 @@ const Characteristics = ({ data }) => {
           <th className="characteristic__row__text">{t("Кросc")}</th>
           <td className="characteristic__row__desc">{data?.oem[0]}</td>
         </tr>
-
       </table>
     </div>
   );

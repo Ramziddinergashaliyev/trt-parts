@@ -78,10 +78,7 @@
         box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
 
         .catalogCard__box-item-card-link {
-          background-color: #222;
-
           svg {
-            color: #fff;
             animation: arrow-slide 0.6s ease infinite;
           }
         }

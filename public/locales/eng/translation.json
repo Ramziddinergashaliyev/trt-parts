@@ -97,7 +97,13 @@
   "видео": "Our latest videos",
   "канал": "YouTube channel",
   "Перейти на канал": "Go to channel",
-  "Результат поиска:": "Search Result:"
+  "Результат поиска:": "Search Result:",
+  "Домашняя": "Home",
+  "Новости": "News",
+  "РАЗДЕЛ": "SECTION",
+  "Ошибка при загрузке результатов.": "Error loading results."
+
+
 
 
 }

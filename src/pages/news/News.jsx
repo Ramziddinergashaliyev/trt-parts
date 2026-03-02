@@ -40,8 +40,7 @@ const News = () => {
             key={news.id}
             className={`new-card ${visibleCards.includes(index) ? 'visible' : ''}`}
             onClick={() => handleNewsClick(news.id)}
-            style={{ cursor: 'pointer' }}
-          >
+            style={{ cursor: 'pointer' }}>
 
             <div className="card-image">
               <img src={news.img} alt={news.title} />

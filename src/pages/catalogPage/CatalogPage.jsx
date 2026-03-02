@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 const CatalogPage = () => {
   const { id } = useParams();
   const { data } = useGetCategoriesByIdQuery(id);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const CatalogPage = () => {
       <div className="container">
         {data ? (
           <>
-            <p className="catalogPage__text">РАЗДЕЛ</p>
+            <p className="catalogPage__text">{t("РАЗДЕЛ")}</p>
             <h3 className="catalogPage__title">
               {currentLang === "rus"
                 ? data?.translations?.ru?.name

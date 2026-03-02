@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './newsSingle.scss'
@@ -31,7 +30,6 @@ const NewsSingle = () => {
         }
     }, [id, navigate, fullData])
 
-    // Intersection Observer setup
     useEffect(() => {
         const observerCallback = (entries) => {
             entries.forEach((entry) => {
@@ -46,7 +44,6 @@ const NewsSingle = () => {
             rootMargin: '0px 0px -50px 0px'
         })
 
-        // Observe all location sections
         const sections = document.querySelectorAll('.location-section')
         sections.forEach((section) => {
             observerRef.current.observe(section)
@@ -112,6 +109,7 @@ const NewsSingle = () => {
             }
         })
     }
+
 
     if (!news) {
         return (

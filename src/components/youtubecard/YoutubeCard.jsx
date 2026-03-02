@@ -26,7 +26,7 @@ const YoutubeCard = () => {
             <div className="yt__icon">
               <FaYoutube />
             </div>
-            
+
             <div>
               <p className="yt__label">{t("видео")}</p>
               <h2 className="yt__title">{t("канал")}</h2>

@@ -105,14 +105,13 @@ const Header = () => {
                     document
                       .querySelector(".custom-dropdown-options")
                       ?.classList.toggle("show")
-                  }
-                >
+                  }>
                   <img
                     src={currentLang === "rus" ? rus : eng}
                     alt={currentLang === "rus" ? "Русский" : "English"}
                     className="lang-icon"
                   />
-                  <span>{currentLang === "rus" ? "Rus" : "English"}</span>
+                  <span>{currentLang === "rus" ? "RU" : "EN"}</span>
                 </button>
 
                 <div className="custom-dropdown-options">
@@ -120,7 +119,7 @@ const Header = () => {
                     className="custom-dropdown-option"
                     onClick={() => handleLanguageChange("rus")}>
                     <img src={rus} alt="Русский язык" className="lang-icon" />
-                    Rus
+                    RU
                   </div>
 
                   <div
@@ -133,7 +132,7 @@ const Header = () => {
                       className="lang-icon"
                       loading="leazy"
                     />
-                    English
+                    EN
                   </div>
                 </div>
 
@@ -193,8 +192,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
