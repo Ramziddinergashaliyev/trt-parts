@@ -49,17 +49,17 @@ const Filter = () => {
 
   const [oem, setOem] = useState(null);
   const [trt, setTrt] = useState(null);
-  const [marka, setMarka] = useState(null);
+  const [brand, setBrand] = useState(null);
   const [model, setModel] = useState(null);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (oem || trt || marka || model) {
+    if (oem || trt || brand || model) {
       navigate("/filterResults", {
         state: {
           oem: oem?.value || "",
           trt: trt?.value || "",
-          brand: marka?.value || "",
+          brand: brand?.value || "",
           model: model?.value || "",
         },
       });
@@ -117,8 +117,8 @@ const Filter = () => {
               {t("brand")}
               <Select
                 options={markaOptions}
-                value={marka}
-                onChange={(option) => setMarka(option)}
+                value={brand}
+                onChange={(option) => setBrand(option)}
                 isClearable
                 placeholder={t("search")}
                 classNamePrefix="react-select"

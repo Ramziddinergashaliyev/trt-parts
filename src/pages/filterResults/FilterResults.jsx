@@ -11,13 +11,13 @@ import { useTranslation } from "react-i18next";
 const FilterResults = () => {
   const location = useLocation();
   const { t } = useTranslation();
-  const { oem, trt, marka, model } = location.state || {};
+  const { oem, trt, brand, model } = location.state || {};
   const resultsRef = useRef(null);
 
   const { data, error, isLoading } = useSearchAllProductsQuery({
     oem,
     trt,
-    marka,
+    brand,
     model,
   });
 
