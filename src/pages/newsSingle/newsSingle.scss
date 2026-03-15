@@ -107,6 +107,7 @@
                         @media (max-width: 768px) {
                             height: 300px;
                         }
+
                     }
 
                     .article-image-name-title {
@@ -240,7 +241,6 @@
                     }
 
                     &.visible {
-
                         .animate-from-left,
                         .animate-from-right {
                             opacity: 1;

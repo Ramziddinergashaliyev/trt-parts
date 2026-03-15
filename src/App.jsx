@@ -18,6 +18,7 @@ import Accardion from "./pages/accardion/Accardion";
 import NewsPage from "./pages/newsPage/NewsPage";
 import News from "./pages/news/News";
 import NewsSingle from "./pages/newsSingle/newsSingle";
+import NotFound from "./pages/notfound/Notfound";
 
 const App = () => {
   return (
@@ -39,8 +40,10 @@ const App = () => {
           <Route path="/filterResults" element={<FilterResults />} />
           <Route path="/:categoryName/:id" element={<CatalogPage />} />
           <Route path='/news-single/:id' element={<NewsSingle />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      
       <ToastContainer />
     </>
   );

@@ -46,6 +46,7 @@ const NewsPage = () => {
                 <FaInstagram />
               </span>
             </div>
+
             <p className="news__top-title">trt_official_global</p>
           </a>
 
@@ -63,12 +64,14 @@ const NewsPage = () => {
                   alt={post.caption}
                   className="news__image"
                 />
+
                 <div className="news__caption">
                   <FaPlay />
                 </div>
               </a>
             ))}
           </div>
+
 
           <div className="news__btn">
             {visibleCount < posts.length && (

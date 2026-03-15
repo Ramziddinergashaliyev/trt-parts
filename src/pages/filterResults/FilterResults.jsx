@@ -60,4 +60,5 @@ const FilterResults = () => {
   );
 };
 
+
 export default memo(FilterResults);

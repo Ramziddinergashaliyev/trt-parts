@@ -28,7 +28,6 @@ const Newost = () => {
                 {el?.date}
               </time>
             </div>
-            
           </article>
         ))}
       </div>

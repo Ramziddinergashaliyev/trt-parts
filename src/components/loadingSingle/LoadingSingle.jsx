@@ -29,7 +29,6 @@ const LoadingSingle = () => {
         </div>
 
         <div className="loadingSin__items">
-
           <div
             className="loadingSin__title bg__animation"
             aria-hidden="true">

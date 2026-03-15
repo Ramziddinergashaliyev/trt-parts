@@ -51,6 +51,7 @@ const Product = ({ product, isTrue }) => {
           <button type="button" aria-label="Mahsulotni tahrirlash">
             <IoCreateOutline />
           </button>
+          
           <button type="button" onClick={handleDelete} aria-label="Mahsulotni o‘chirish">
             <AiOutlineDelete />
           </button>
@@ -58,12 +59,15 @@ const Product = ({ product, isTrue }) => {
       )}
 
       <div className="result__card__info">
+
         <p className="result__card__info-text">
           {currentLang === "rus"
             ? product?.translations?.ru?.name
             : product?.translations?.en?.name}
         </p>
+
         <p className="result__card__info-title">{product?.trtCode}</p>
+      
       </div>
     </div>
   );

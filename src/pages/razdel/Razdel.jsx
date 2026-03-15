@@ -16,6 +16,7 @@ const Razdel = () => {
     <section className="razdel" aria-labelledby="razdelTitle">
 
       <div className="razdel__bg" aria-hidden="true"></div>
+      
       <div className="container">
 
         <header className="razdel__info">
@@ -28,14 +29,14 @@ const Razdel = () => {
 
         <section className="razdel__info-bottom" aria-labelledby="qualityTitle">
           <p className="razdel__info-bottom__text">{t("продукция")}</p>
-    
+
           <h2 className="razdel__info-bottom__title" id="qualityTitle">
             {t("aboutText")}
           </h2>
         </section>
-        
+
       </div>
-      
+
     </section>
   );
 

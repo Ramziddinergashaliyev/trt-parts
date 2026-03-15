@@ -7,45 +7,51 @@ import { useGetProductsQuery } from "../../context/api/productApi";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 
+const uniqueOptions = (arr) => {
+  const seen = new Set();
+  
+  return arr?.filter((opt) => {
+    if (!opt.value || seen.has(opt.value)) return false;
+    seen.add(opt.value);
+    return true;
+  });
+};
+
 const Filter = () => {
   const { data } = useGetProductsQuery();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const trtOptions = data?.map((product) => ({
-    value: product.trtCode,
-    label: product.trtCode,
-  }));
+  const trtOptions = uniqueOptions(
+    data?.map((product) => ({
+      value: product.trtCode,
+      label: product.trtCode,
+    }))
+  );
 
-  const oemOptions = data
-    ?.map((product) => {
-      const value =
-        Array.isArray(product.oem) && product.oem.length > 0
-          ? product.oem[0]
-          : "";
-      return { value, label: value };
-    })
-    .filter((option) => option.value);
+  const oemOptions = uniqueOptions(
+    data?.flatMap((product) =>
+      Array.isArray(product.oem)
+        ? product.oem.map((o) => ({ value: o, label: o }))
+        : []
+    )
+  );
 
-  const markaOptions = data
-    ?.map((product) => {
-      const value =
-        Array.isArray(product.carName) && product.carName.length > 0
-          ? product.carName[0]
-          : "";
-      return { value, label: value };
-    })
-    .filter((option) => option.value);
+  const markaOptions = uniqueOptions(
+    data?.flatMap((product) =>
+      Array.isArray(product.carName)
+        ? product.carName.map((name) => ({ value: name, label: name }))
+        : []
+    )
+  );
 
-  const modelOptions = data
-    ?.map((product) => {
-      const value =
-        Array.isArray(product.model) && product.model.length > 0
-          ? product.model[0]
-          : "";
-      return { value, label: value };
-    })
-    .filter((option) => option.value);
+  const modelOptions = uniqueOptions(
+    data?.flatMap((product) =>
+      Array.isArray(product.model)
+        ? product.model.map((m) => ({ value: m, label: m }))
+        : []
+    )
+  );
 
   const [oem, setOem] = useState(null);
   const [trt, setTrt] = useState(null);
@@ -76,6 +82,7 @@ const Filter = () => {
           <div className="filter__top__left">
             <p className="filter__top__left-title">{t("search_products")}</p>
           </div>
+          
           <div className="filter__top__icon">
             <img className="filter__top__icon-img" src={img} alt="settings" />
           </div>
@@ -144,8 +151,9 @@ const Filter = () => {
               </button>
 
             </div>
+            
           </div>
-          
+
         </form>
 
       </div>

@@ -143,12 +143,13 @@ const Contact = () => {
             </form>
 
             <p className="contact__right__text">{t("Нажимая")}</p>
-            
+
           </section>
 
         </div>
 
       </div>
+
     </main>
   );
 };

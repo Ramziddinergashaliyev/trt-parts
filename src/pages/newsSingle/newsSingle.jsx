@@ -68,6 +68,7 @@ const NewsSingle = () => {
                 return (
                     <div key={location.id} className="location-section scroll-animate" data-direction="right">
                         <div className="location-content-wrapper layout-right">
+
                             <div className="location-images-block animate-from-right">
                                 <div className="images-grid">
                                     {location.images.map((img, imgIndex) => (
@@ -77,11 +78,13 @@ const NewsSingle = () => {
                                     ))}
                                 </div>
                             </div>
+
                             <div className="location-text-block animate-from-right">
                                 <h2 className="location-title">{location.title}</h2>
                                 <p className="location-subtitle">📍 {location.location}</p>
                                 <p className="location-description">{location.description}</p>
                             </div>
+
                         </div>
                     </div>
                 )
@@ -94,6 +97,7 @@ const NewsSingle = () => {
                                 <p className="location-subtitle">📍 {location.location}</p>
                                 <p className="location-description">{location.description}</p>
                             </div>
+
                             <div className="location-images-block animate-from-left">
                                 <div className="images-grid">
                                     {location.images.map((img, imgIndex) => (
@@ -109,7 +113,6 @@ const NewsSingle = () => {
             }
         })
     }
-
 
     if (!news) {
         return (
@@ -193,3 +196,4 @@ const NewsSingle = () => {
 }
 
 export default NewsSingle
+

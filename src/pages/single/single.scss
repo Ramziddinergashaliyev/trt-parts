@@ -36,7 +36,6 @@
       object-fit: contain;
       border-radius: 10px;
     }
-
   }
 
   &__title {
@@ -49,7 +48,6 @@
     @media (max-width:1560px) {
       padding-bottom: 30px;
     }
-    
   }
 
   &__card__info-list {
@@ -121,7 +119,7 @@
       width: 16px;
       height: 10px;
     }
-  }
+  }  
 
   &__card__imgs {
     display: flex;
@@ -130,10 +128,9 @@
     max-height: 405px;
     overflow-y: auto;
     overflow-x: hidden;
-    
     scrollbar-width: none;
     -ms-overflow-style: none;
-    
+
     &::-webkit-scrollbar {
       display: none;
     }

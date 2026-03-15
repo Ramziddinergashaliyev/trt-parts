@@ -15,7 +15,6 @@ const Header = () => {
   const [hide, setHide] = useState(false);
   const [hideSearch, setHideSearch] = useState(null);
   const dropdownRef = useRef(null);
-
   const currentLang = i18n.language || "rus";
 
   const handleLanguageChange = (lang) => {
@@ -186,7 +185,6 @@ const Header = () => {
           />
         </div>
       </div>
-
     </>
   );
 };

@@ -25,12 +25,15 @@ const NewsCard = () => {
     return (
         <section className="news-section container">
             <div className="news-header">
+               
                 <h2 className="news-heading">
                     {t('Latest')} <span>{t('News')}</span>
                 </h2>
+                
                 <NavLink to="/news" className="news-view-all">
                     {t("All News")} <MdArrowOutward />
                 </NavLink>
+
             </div>
 
             <div className="news-grid">

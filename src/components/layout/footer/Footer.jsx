@@ -121,8 +121,7 @@ const Footer = () => {
                 href="https://www.instagram.com/trt_official_global"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram sahifasiga o‘tish"
-              >
+                aria-label="Instagram sahifasiga o‘tish">
                 <span>
                   <FaInstagram />
                 </span>
@@ -151,7 +150,6 @@ const Footer = () => {
         </div>
 
       </div>
-
     </footer>
   );
 };

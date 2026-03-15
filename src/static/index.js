@@ -30,9 +30,6 @@ import item1 from "../assets/img/img1.png";
 import item2 from "../assets/img/img2.png";
 import item3 from "../assets/img/img3.png";
 
-import news0 from "../assets/news/news0.webp"
-import news1 from "../assets/news/news1.webp"
-import news2 from "../assets/news/news2.webp"
 import news3 from "../assets/news/news3.webp"
 import isl from "../assets/news/isl.webp"
 import iraq from "../assets/news/iraq.webp"
@@ -79,8 +76,6 @@ import Done from "../assets/news/dubai/one.webp"
 import Dtwo from "../assets/news/dubai/two.webp"
 import Dthree from "../assets/news/dubai/three.webp"
 import Dfour from "../assets/news/dubai/four.webp"
-
-
 
 export const PARTNER = [
   {
@@ -244,7 +239,7 @@ export const FILTER = [
     img: result,
     title: "Рулевой наконечник TRT 7172",
     desc: "Рулевые наконечники",
-  },
+  }
 ];
 
 export const Catalog = [

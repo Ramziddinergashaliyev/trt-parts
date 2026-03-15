@@ -1,140 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import "./hero.scss";
-// import icon from "../../assets/img/hero.png";
-// import poster from "../../assets/img/preview.webp";
-// import { FaAngleRight } from "react-icons/fa6";
-// import video1 from "../../assets/video/video.mp4";
-// import { NavLink } from "react-router-dom";
-// import { motion } from "framer-motion";
-// import AnimatedStats from "../animatedState/AnimatedStats";
-// import { useTranslation } from "react-i18next";
-
-// const Hero = () => {
-//   const { t, i18n } = useTranslation();
-//   const [videoLoaded, setVideoLoaded] = useState(false);
-//   const [currentLang, setCurrentLang] = useState(i18n.language);
-
-//   useEffect(() => {
-//     const handleLanguageChange = (lng) => {
-//       setCurrentLang(lng);
-//     };
-
-//     i18n.on("languageChanged", handleLanguageChange);
-
-//     return () => {
-//       i18n.off("languageChanged", handleLanguageChange);
-//     };
-
-//   }, [i18n]);
-
-//   useEffect(() => {
-
-//     const timer = setTimeout(() => {
-//       setVideoLoaded(true);
-//     }, 3000);
-
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   return (
-//     <>
-//       <div className="hero">
-
-//         <div className="hero__slide">
-//           <video
-//             className="hero__slide__video"
-//             autoPlay
-//             muted
-//             loop
-//             playsInline
-//             preload="auto"
-//             poster={poster}
-//             onLoadedData={() => setVideoLoaded(true)}
-//           >
-//             <source src={video1} type="video/mp4" />
-//             {t("Ваш браузер")}
-//           </video>
-
-//           {!videoLoaded && (
-//             <div className="hero__preview">
-//               <img src={poster} alt="preview" />
-//             </div>
-//           )}
-
-//           <div className="hero__overlay container">
-//             <motion.div
-//               className="hero__overlay__left"
-//               initial={{ opacity: 0, x: -80 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.8 }}
-//             >
-//               <p className="hero__overlay__left-text">{t("АВТОЗАПЧАСТИ")}</p>
-//               <h2 className="hero__overlay__left-title">
-//                 {t("Глобальные стандарты качества")}
-//               </h2>
-//             </motion.div>
-
-//             <motion.div
-//               className="hero__overlay__right"
-//               initial={{ opacity: 0, x: 80 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.8 }}
-//             >
-//               <NavLink
-//                 to="/contact"
-//                 aria-label="Связаться с нами"
-//                 className="hero__overlay__right-btns"
-//               >
-//                 <button className="hero__overlay__right-btns-white">
-//                   {t("Связаться с нами")}
-//                 </button>
-//                 <span className="hero__overlay__right-btns-red">
-//                   <FaAngleRight />
-//                 </span>
-//               </NavLink>
-
-//               <div className="hero__overlay__right-img">
-//                 <img src={icon} alt="hero-icons" />
-//               </div>
-//             </motion.div>
-//           </div>
-//         </div>
-
-//         <div className="hero__bottom">
-
-//           <div className="hero__bottom__left container">
-//             <p className="hero__bottom__left-text">{t("Полный")}</p>
-//           </div>
-
-//           <div className="hero__bottom__info container">
-
-//             <div className="hero__bottom__info-stats">
-//               <AnimatedStats endValue={12000} text="+" />
-//               <p className="hero__bottom__info-stats-text">
-//                 {t("Деталей в день")}
-//               </p>
-//             </div>
-
-//             <div className="hero__bottom__info-stats">
-//               <AnimatedStats endValue={65} text="%" />
-//               <p className="hero__bottom__info-stats-text">
-//                 {t("Доля экспорта")}
-//               </p>
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//       <div className="hero__line"></div>
-//     </>
-//   );
-// };
-
-// export default Hero;
-
 import React, { useState, useEffect, useRef } from "react";
 import "./hero.scss";
 import icon from "../../assets/img/hero.png";
@@ -162,8 +25,7 @@ const SplitText = ({ text, delay = 0 }) => {
                 duration: 0.6,
                 delay: delay + wi * 0.07 + ci * 0.025,
                 ease: [0.215, 0.61, 0.355, 1],
-              }}
-            >
+              }}>
               {char}
             </motion.span>
           ))}
@@ -186,7 +48,7 @@ const MagneticBtn = ({ children }) => {
     x.set((e.clientX - (rect.left + rect.width / 2)) * 0.3);
     y.set((e.clientY - (rect.top + rect.height / 2)) * 0.3);
   };
-
+  33
   const onLeave = () => { x.set(0); y.set(0); };
 
   return (
@@ -211,11 +73,13 @@ const Grain = () => {
       c.height = window.innerHeight;
       const img = ctx.createImageData(c.width, c.height);
       const d = img.data;
+
       for (let i = 0; i < d.length; i += 4) {
         const v = Math.random() * 255;
         d[i] = d[i + 1] = d[i + 2] = v;
         d[i + 3] = 15;
       }
+
       ctx.putImageData(img, 0, 0);
       raf = requestAnimationFrame(draw);
     };
@@ -224,7 +88,7 @@ const Grain = () => {
   }, []);
 
   return <canvas ref={ref} className="hero__grain" />;
-};
+}; 4
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -273,8 +137,7 @@ const Hero = () => {
               <motion.div className="hero__overlay__left-label-wrap"
                 initial={{ clipPath: "inset(0 100% 0 0)" }}
                 animate={{ clipPath: "inset(0 0% 0 0)" }}
-                transition={{ duration: 0.75, delay: 0.2, ease: [0.77, 0, 0.175, 1] }}
-              >
+                transition={{ duration: 0.75, delay: 0.2, ease: [0.77, 0, 0.175, 1] }}>
                 <p className="hero__overlay__left-text">{t("АВТОЗАПЧАСТИ")}</p>
               </motion.div>
 
@@ -283,6 +146,7 @@ const Hero = () => {
                   <SplitText text={t("Глобальные стандарты качества")} delay={0.3} />
                 </h2>
               )}
+
             </div>
 
             <motion.div className="hero__overlay__right"
@@ -290,6 +154,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.85, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
+
               <MagneticBtn>
                 <NavLink to="/contact" aria-label="Связаться с нами"
                   className="hero__overlay__right-btns">
@@ -305,6 +170,7 @@ const Hero = () => {
               <div className="hero__overlay__right-img">
                 <img src={icon} alt="hero-icons" />
               </div>
+
             </motion.div>
           </div>
         </div>

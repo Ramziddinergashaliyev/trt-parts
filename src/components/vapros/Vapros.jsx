@@ -12,7 +12,6 @@ const Vapros = () => {
   return (
     <div className="vapros">
       <div className="vapros__cards container">
-
         <div
           className="vapros__card"
           data-aos="flip-left"
@@ -44,7 +43,6 @@ const Vapros = () => {
           </NavLink>
 
         </div>
-
       </div>
     </div>
   );

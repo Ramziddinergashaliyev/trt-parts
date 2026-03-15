@@ -13,7 +13,6 @@ const Partner = () => {
 
   return (
     <section className="partner" aria-labelledby="partnerTitle">
-
       <div className="partner__info">
         <h2 className="partner__info-title" id="partnerTitle">
           {t("Компании-поставщики")}
@@ -58,7 +57,6 @@ const Partner = () => {
           </article>
         ))}
       </div>
-
     </section>
   );
 };

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const Tabs = ({ activeTab, onTabClick }) => {
   const { t } = useTranslation()
+  
   return (
     <div className="tabs">
       <div className="container tabs__card">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, memo, useRef } from "react";
 import { useParams } from "react-router-dom";
-
 import LoadingSingle from "../../components/loadingSingle/LoadingSingle";
 import Tabs from "../../components/Tab/Tab";
 import Application from "../../components/Application/Application";
@@ -16,7 +15,7 @@ import "./single.scss";
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
-  
+
   const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("reviews");
   const [selectedImage, setSelectedImage] = useState("");
@@ -85,16 +84,15 @@ const Single = () => {
     <div className="detail">
       <div className="container">
         <div className="detail__cards">
-
           <div className="detail__card__img">
 
             <div className="thumbnail-wrapper">
+
               {images.length > 4 && (
                 <button
                   className={`scroll-button scroll-button-up ${!canScrollUp ? 'disabled' : ''}`}
                   onClick={scrollUp}
-                  disabled={!canScrollUp}
-                >
+                  disabled={!canScrollUp}>
                   <svg width="16" height="10" viewBox="0 0 20 12" fill="none">
                     <path d="M10 0L20 12H0L10 0Z" fill="currentColor" />
                   </svg>
@@ -132,6 +130,7 @@ const Single = () => {
                   </svg>
                 </button>
               )}
+
             </div>
 
             <div className="detail__img">
@@ -148,7 +147,6 @@ const Single = () => {
           </div>
 
           <div className="detail__card__info">
-
             <h3 className="detail__title">
               {currentLang === "rus"
                 ? data?.translations?.ru?.name
@@ -186,9 +184,7 @@ const Single = () => {
                 </li>
               )}
             </ul>
-
           </div>
-
         </div>
       </div>
 
@@ -205,9 +201,10 @@ const Single = () => {
       <div className="container">
         <HandleSwiper categoryId={data?.categories} currentProductId={id} />
       </div>
-
     </div>
   );
+  
 };
+
 
 export default memo(Single);

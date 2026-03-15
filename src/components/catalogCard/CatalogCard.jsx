@@ -19,8 +19,7 @@ const CatalogCard = () => {
           {data?.slice(0, 6)?.map((item) => (
             <NavLink
               key={item.id}
-              to={`/${(currentLang === "rus" ? item?.translations?.ru?.name : item?.translations?.en?.name)?.toLowerCase().replace(/\s+/g, '-')}/${item?.id}`}
-            >
+              to={`/${(currentLang === "rus" ? item?.translations?.ru?.name : item?.translations?.en?.name)?.toLowerCase().replace(/\s+/g, '-')}/${item?.id}`}>
               <div
                 style={{
                   backgroundImage: `url(${item?.images})`,
