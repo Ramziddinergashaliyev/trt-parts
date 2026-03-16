@@ -345,7 +345,7 @@
 
   @media (max-width: 750px) {
     &__overlay {
-      padding: calc(100vh - 75vh) 0 20px 0;
+      padding: calc(100vh - 65vh) 0 20px 0;
       flex-direction: column;
       gap: 25px;
       align-items: start;
@@ -389,7 +389,7 @@
     }
 
     &__bottom__left {
-      top: calc(100vh - 30vh);
+      top: calc(100vh - 40vh);
       left: 8%;
       z-index: 66;
     }
@@ -427,7 +427,7 @@
 
   @media (max-width: 450px) {
     &__bottom__left {
-      top: calc(100vh - 27vh);
+      top: calc(100vh - 35vh);
     }
 
     &__bottom__left-text {
