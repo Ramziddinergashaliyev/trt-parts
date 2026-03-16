@@ -53,25 +53,25 @@ const Footer = () => {
             </li>
 
             <li className="footer__item">
-              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/14"}>{t("рулевой")}</NavLink>
+              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"наконечники-рулевой-тяги/3"}>{t("рулевой")}</NavLink>
             </li>
 
             <li className="footer__item">
-              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/15"}>
+              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"резиновые-комплектующие/4"}>
                 {t("комплектующие")}
               </NavLink>
             </li>
 
             <li className="footer__item">
-              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/12"}>{t("подвески")}</NavLink>
+              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"рычаги-подвески/1"}>{t("подвески")}</NavLink>
             </li>
 
             <li className="footer__item">
-              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/17"}>{t("тяги")}</NavLink>
+              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"шарниры-и-рулевые-тяги/6"}>{t("тяги")}</NavLink>
             </li>
 
             <li className="footer__item">
-              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"rychagi-podveski/13"}>{t("опоры")}</NavLink>
+              <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"шаровые-опоры/2"}>{t("опоры")}</NavLink>
             </li>
           </ul>
 

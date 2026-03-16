@@ -142,8 +142,6 @@
 
 // export default memo(Accardion);
 
-
-
 import React, { useState, useEffect, memo } from "react";
 import "./accardion.scss";
 import { ACCARDION, ACCARDIONEN } from "../../static";
@@ -201,8 +199,8 @@ const Accardion = () => {
 
               <div
                 className={`accardion__content ${activeIndex === index ? "accardion__content--open" : ""
-                  }`}
-              >
+                  }`}>
+
                 <div className="accardion__content-inner">
                   <p className="accardion__content__name">{el?.name}</p>
                   <p className="accardion__content__title">{el?.title}</p>
@@ -213,6 +211,7 @@ const Accardion = () => {
                     {el?.number}
                   </a>
                 </div>
+                
               </div>
             </li>
           ))}
