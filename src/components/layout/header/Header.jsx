@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import { NavLink } from "react-router-dom";
 import icon from "../../../assets/img/logo.png";
 import { FiSearch } from "react-icons/fi";
@@ -15,7 +16,7 @@ const Header = () => {
   const [hide, setHide] = useState(false);
   const [hideSearch, setHideSearch] = useState(null);
   const dropdownRef = useRef(null);
-  const currentLang = i18n.language || "rus";  
+  const currentLang = i18n.language || "eng";  
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
@@ -190,3 +191,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
