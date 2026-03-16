@@ -16,7 +16,7 @@ const Header = () => {
   const [hide, setHide] = useState(false);
   const [hideSearch, setHideSearch] = useState(null);
   const dropdownRef = useRef(null);
-  const currentLang = i18n.language || "eng";  
+  const currentLang = i18n.language || "eng";
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
@@ -59,9 +59,9 @@ const Header = () => {
               <NavLink
                 onClick={() => setHide(false)}
                 className="header__nav__item-link"
-                to="/razdel"
+                to="/company"
               >
-                {t("Каталог")}
+                {t("Компании")}
               </NavLink>
             </li>
 
@@ -69,9 +69,9 @@ const Header = () => {
               <NavLink
                 onClick={() => setHide(false)}
                 className="header__nav__item-link"
-                to="/company"
+                to="/razdel"
               >
-                {t("Компании")}
+                {t("Каталог")}
               </NavLink>
             </li>
 

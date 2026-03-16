@@ -1,16 +1,16 @@
-import flag1 from "../assets/partner/flag1.png";
-import flag2 from "../assets/partner/flag2.png";
-import flag3 from "../assets/partner/flag6.png";
+import flag1 from "../assets/partner/flag1.webp";
+import flag2 from "../assets/partner/flag2.webp";
+import flag3 from "../assets/partner/flag6.webp";
 
-import icon1 from "../assets/partner/icon1.png";
-import icon2 from "../assets/partner/icon2.png";
-import icon3 from "../assets/partner/icon3.png";
-import icon4 from "../assets/partner/icon6.png";
+import icon1 from "../assets/partner/icon1.webp";
+import icon2 from "../assets/partner/icon2.webp";
+import icon3 from "../assets/partner/icon3.webp";
+import icon4 from "../assets/partner/icon6.webp";
 
-import img1 from "../assets/partner/img1.png";
-import img2 from "../assets/partner/img2.png";
-import img3 from "../assets/partner/img3.png";
-import img4 from "../assets/partner/img6.png";
+import img1 from "../assets/partner/img1.webp";
+import img2 from "../assets/partner/img2.webp";
+import img3 from "../assets/partner/img3.webp";
+import img4 from "../assets/partner/img6.webp";
 
 import navost from "../assets/img/new.jpg";
 import result from "../assets/img/filter.jpg";
