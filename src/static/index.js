@@ -484,7 +484,7 @@ export const newsData = [
         title: 'Автомеханика Астана',
         location: 'Астана, Казахстан',
         description: '"Автомеханика Астана" играет ключевую роль в соединении автомобильных рынков Центральной Азии. TRT использовала эту платформу для расширения сотрудничества в Казахстане и соседних странах, представляя инновационные решения, адаптированные к региональному рыночному спросу. Деловые переговоры были сосредоточены на оптимизации логистики, развитии цепочек поставок и долгосрочном партнерстве в области дистрибуции.',
-        images: [Aone, Atwo, Athree, Afour],
+        images: [Aone, Atwo, Athree],
         position: 'left'
       },
       {
@@ -569,7 +569,7 @@ export const newsDataEn = [
         title: 'Automechanika Astana',
         location: 'Astana, Kazakhstan',
         description: 'Automechanika Astana plays a key role in connecting Central Asian automotive markets. TRT used this platform to expand cooperation within Kazakhstan and neighboring countries, presenting innovative solutions tailored to regional market demand. Business negotiations focused on logistics optimization, supply chain development, and long-term distribution partnerships.',
-        images: [Aone, Atwo, Athree, Afour],
+        images: [Aone, Atwo, Athree],
         position: 'left'
       },
       {

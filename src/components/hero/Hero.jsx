@@ -5,7 +5,6 @@ import poster from "../../assets/img/preview.webp";
 import { FaAngleRight } from "react-icons/fa6";
 // import video1 from "../../assets/video/video.mp4";
 import video1 from "../../assets/video/bgvideo.mp4";
-// import video1 from "../../assets/video/trtbg.mp4";
 import { NavLink } from "react-router-dom";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import AnimatedStats from "../animatedState/AnimatedStats";
@@ -13,6 +12,7 @@ import { useTranslation } from "react-i18next";
 
 const SplitText = ({ text, delay = 0 }) => {
   const words = text.split(" ");
+  
   return (
     <>
       {words.map((word, wi) => (
@@ -50,7 +50,7 @@ const MagneticBtn = ({ children }) => {
     x.set((e.clientX - (rect.left + rect.width / 2)) * 0.3);
     y.set((e.clientY - (rect.top + rect.height / 2)) * 0.3);
   };
-  33
+
   const onLeave = () => { x.set(0); y.set(0); };
 
   return (
@@ -148,7 +148,6 @@ const Hero = () => {
                   <SplitText text={t("Глобальные стандарты качества")} delay={0.3} />
                 </h2>
               )}
-
             </div>
 
             <motion.div className="hero__overlay__right"

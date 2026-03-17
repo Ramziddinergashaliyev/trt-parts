@@ -54,7 +54,7 @@ const Company = () => {
               <span>
                 {t("trttext")}
               </span>
-              
+
               <br />
               <span>
                 {t("трудятся")}

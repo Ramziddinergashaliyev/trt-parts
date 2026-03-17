@@ -166,6 +166,7 @@ const Accardion = () => {
 
   return (
     <div className="accardion">
+
       <video
         className="accardion__video-bg"
         autoPlay
@@ -178,6 +179,7 @@ const Accardion = () => {
       </video>
 
       <div className="accardion__list">
+
         <h3 className="accardion__title">{t("Дистрибьюторы")}</h3>
 
         <ul className="accardion__list-info container">
@@ -211,12 +213,14 @@ const Accardion = () => {
                     {el?.number}
                   </a>
                 </div>
-                
+
               </div>
             </li>
           ))}
         </ul>
+
       </div>
+
     </div>
   );
 };
