@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 
 const SplitText = ({ text, delay = 0 }) => {
   const words = text.split(" ");
-  
+
   return (
     <>
       {words.map((word, wi) => (
@@ -89,7 +89,7 @@ const Grain = () => {
   }, []);
 
   return <canvas ref={ref} className="hero__grain" />;
-}; 4
+};
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
