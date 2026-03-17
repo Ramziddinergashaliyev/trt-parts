@@ -70,11 +70,11 @@
 // export default App;
 
 
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
 import Leazy from "./components/leazy/Leazy";
 
+// Lazy pages
 const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
 const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
 const Layout = lazy(() => import("./components/layout/Layout"));
@@ -93,39 +93,35 @@ const News = lazy(() => import("./pages/news/News"));
 const NewsSingle = lazy(() => import("./pages/newsSingle/newsSingle"));
 const NotFound = lazy(() => import("./pages/notfound/Notfound"));
 
-// ✅ Error Boundary class
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError() {
-    return { hasError: false };
+    return { hasError: true };
   }
+
   componentDidCatch(error, info) {
     console.log("Error:", error, info);
   }
+
   render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong</div>;
+    }
     return this.props.children;
   }
 }
 
 const AppRoutes = () => {
   const location = useLocation();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  if (loading) return <Leazy />;
 
   return (
-    <ErrorBoundary key={location.pathname}>  {/* ✅ key muhim! */}
+    <ErrorBoundary key={location.pathname}>
       <Suspense fallback={<Leazy />}>
-        <Routes>
+        <Routes location={location}>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/razdel" element={<Razdel />} />
@@ -141,7 +137,7 @@ const AppRoutes = () => {
             <Route path="/new" element={<NewsPage />} />
             <Route path="/filterResults" element={<FilterResults />} />
             <Route path="/:categoryName/:id" element={<CatalogPage />} />
-            <Route path='/news-single/:id' element={<NewsSingle />} />
+            <Route path="/news-single/:id" element={<NewsSingle />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
@@ -150,21 +146,13 @@ const AppRoutes = () => {
   );
 };
 
-const App = () => {
-  return (
-    <>
-      <AppRoutes />
-      <ToastContainer />
-    </>
-  );
-};
+export default AppRoutes;
 
-export default App;
 
-// import React, { lazy, Suspense } from "react"; 
-// import { Routes, Route } from "react-router-dom";
+// import React, { lazy, Suspense, useEffect, useState } from "react";
+// import { Routes, Route, useLocation } from "react-router-dom";
 // import { ToastContainer } from 'react-toastify';
-// import Leazy from "./components/leazy/Leazy";  
+// import Leazy from "./components/leazy/Leazy";
 
 // const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
 // const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
@@ -184,9 +172,36 @@ export default App;
 // const NewsSingle = lazy(() => import("./pages/newsSingle/newsSingle"));
 // const NotFound = lazy(() => import("./pages/notfound/Notfound"));
 
-// const App = () => {
+// class ErrorBoundary extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { hasError: false };
+//   }
+//   static getDerivedStateFromError() {
+//     return { hasError: false };
+//   }
+//   componentDidCatch(error, info) {
+//     console.log("Error:", error, info);
+//   }
+//   render() {
+//     return this.props.children;
+//   }
+// }
+
+// const AppRoutes = () => {
+//   const location = useLocation();
+//   const [loading, setLoading] = useState(false);
+
+//   useEffect(() => {
+//     setLoading(true);
+//     const timer = setTimeout(() => setLoading(false), 500);
+//     return () => clearTimeout(timer);
+//   }, [location.pathname]);
+
+//   if (loading) return <Leazy />;
+
 //   return (
-//     <>
+//     <ErrorBoundary key={location.pathname}> 
 //       <Suspense fallback={<Leazy />}>
 //         <Routes>
 //           <Route element={<Layout />}>
@@ -209,7 +224,14 @@ export default App;
 //           </Route>
 //         </Routes>
 //       </Suspense>
+//     </ErrorBoundary>
+//   );
+// };
 
+// const App = () => {
+//   return (
+//     <>
+//       <AppRoutes />
 //       <ToastContainer />
 //     </>
 //   );

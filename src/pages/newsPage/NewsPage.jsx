@@ -72,7 +72,6 @@ const NewsPage = () => {
             ))}
           </div>
 
-
           <div className="news__btn">
             {visibleCount < posts.length && (
               <button className="news__btn-ewe" onClick={loadMore}>

@@ -39,4 +39,3 @@ const Application = ({ data }) => {
 };
 
 export default Application;
-
