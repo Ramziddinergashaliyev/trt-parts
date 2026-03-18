@@ -87,4 +87,5 @@ const CatalogCard = () => {
     </>
   );
 };
+
 export default CatalogCard;

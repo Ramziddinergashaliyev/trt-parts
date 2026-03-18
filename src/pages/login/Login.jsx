@@ -24,7 +24,6 @@ const Login = () => {
       alert("Iltimos, foydalanuvchi nomi va parolni to‘ldiring.");
       return;
     }
-
     navigate("/admin/manageProduct");
   };
 
@@ -56,7 +55,7 @@ const Login = () => {
             <p>Parol</p>
             <span>Parolni unutdingizmi?</span>
           </div>
-          
+
           <input
             value={value.password}
             onChange={handleChange}
@@ -73,7 +72,7 @@ const Login = () => {
         </div>
 
         <button type="submit">Tizimga kirish</button>
-        
+
       </form>
     </div>
   );

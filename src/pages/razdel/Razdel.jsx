@@ -34,7 +34,6 @@ const Razdel = () => {
             {t("aboutText")}
           </h2>
         </section>
-
       </div>
 
     </section>

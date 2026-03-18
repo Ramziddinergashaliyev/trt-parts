@@ -18,6 +18,15 @@
   }
 }
 
+.tab-cloude {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
+}
+
 .tab {
   padding: 10px 5px;
   cursor: pointer;
