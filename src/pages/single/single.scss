@@ -119,7 +119,7 @@
       width: 16px;
       height: 10px;
     }
-  }  
+  }
 
   &__card__imgs {
     display: flex;
@@ -240,38 +240,29 @@
 
     .thumbnail-wrapper {
       flex-direction: row;
-      gap: 10px;
+      gap: 0;
     }
 
     .scroll-button {
-      width: 40px;
-      height: auto;
-      flex-shrink: 0;
-
-      svg {
-        transform: rotate(90deg);
-      }
-
-      &-up svg {
-        transform: rotate(-90deg);
-      }
-
-      &-down svg {
-        transform: rotate(90deg);
-      }
+      display: none;
     }
 
     &__card__imgs {
       max-height: none;
+      max-width: 400px;
       overflow-y: hidden;
       overflow-x: auto;
       flex-direction: row;
       gap: 10px;
-      padding-bottom: 10px;
+      padding-bottom: 6px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
 
       .thumbnail {
-        width: 100px !important;
-        height: 100px;
+        width: 90px !important;
+        height: 90px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
       }
     }
 
@@ -295,6 +286,18 @@
     &__like__title {
       font-size: 28px;
       padding: 10px 0;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__card__imgs {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    &__card__imgs {
+      max-width: 250px;
     }
   }
 

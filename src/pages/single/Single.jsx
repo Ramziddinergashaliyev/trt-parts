@@ -206,5 +206,4 @@ const Single = () => {
 
 };
 
-
 export default memo(Single);

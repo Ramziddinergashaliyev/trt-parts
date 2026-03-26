@@ -42,7 +42,7 @@ const SearchProduct = () => {
             Результат поиска:
           </h2>
         </div>
-
+        
         {isLoading ? (
           <Loading />
         ) : data && data.length > 0 ? (

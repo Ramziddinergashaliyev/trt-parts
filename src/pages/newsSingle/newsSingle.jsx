@@ -28,6 +28,7 @@ const NewsSingle = () => {
         } else {
             navigate('/news')
         }
+
     }, [id, navigate, fullData])
 
     useEffect(() => {
@@ -169,8 +170,7 @@ const NewsSingle = () => {
                                     slidesPerView: 3,
                                 },
                             }}
-                            className="article-swiper"
-                        >
+                            className="article-swiper">
                             {news.image?.map((el, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="article-image-slide">
