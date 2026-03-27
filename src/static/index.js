@@ -279,14 +279,14 @@ export const ACCARDION = [
   {
     id: 1,
     country: "Украина",
-    name: "ТОВ “ПЕТОЛАВТО”",
+    name: 'ТОВ "ПЕТОЛАВТО"',
     title: "Пироговский путь, 34; Киев, 03083, Украина",
     number: "+380(50)3146633",
   },
   {
     id: 2,
     country: "Таджикистан",
-    name: "ООО “ТОСОЛ-ПЛЮС”",
+    name: 'ООО "ТОСОЛ-ПЛЮС"',
     title:
       "Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4",
     number: "+992 92 707 49 86",
@@ -294,38 +294,45 @@ export const ACCARDION = [
   {
     id: 3,
     country: "Казахстан",
-    name: "TOO “Tanauto Kazakhstan”",
+    name: 'TOO "Tanauto Kazakhstan"',
     title: "Республика Казахстан, 050050, г. Алматы, пр. Райымбека д.169 А",
     number: "+7 727 347 00 26",
   },
   {
     id: 4,
     country: "Туркменистан",
-    name: "ИП “Нурыев Гуванч Тагандурдыевич”",
+    name: 'ИП "Нурыев Гуванч Тагандурдыевич"',
     title: "Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур",
     number: "+993 65 551008",
   },
   {
     id: 5,
     country: "ОАЭ",
-    name: "ООО “Dynatrade Auto Service”",
+    name: 'ООО "Dynatrade Auto Service"',
     title: "Nad Al Hamar, напротив Belhasa Driving Center, Дубай, Объединённые Арабские Эмираты",
     number: "+971 50 646 7009",
-  }
+  },
+  {
+    id: 6,
+    country: "Туркменистан",
+    name: 'ИП "Демирдаг"',
+    title: "Туркменистан, Мары велаят, Векилбазар этрап, Акгонур генешлик",
+    number: "+99361070725",
+  },
 ];
 
 export const ACCARDIONEN = [
   {
     id: 1,
     country: "Ukraine",
-    name: "LLC “PETOLAVTO”",
+    name: 'LLC "PETOLAVTO"',
     title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
     number: "+380(50)3146633",
   },
   {
     id: 2,
     country: "Tajikistan",
-    name: "LLC “TOSOL-PLUS”",
+    name: 'LLC "TOSOL-PLUS"',
     title:
       "Tajikistan, Sughd region, J. Rasulov district, Mekhrobod settlement, I. Nurmatov street 45/4",
     number: "+992 92 707 49 86",
@@ -333,24 +340,31 @@ export const ACCARDIONEN = [
   {
     id: 3,
     country: "Kazakhstan",
-    name: "TOO “Tanauto Kazakhstan”",
+    name: 'TOO "Tanauto Kazakhstan"',
     title: "Republic of Kazakhstan, 050050, Almaty, 169 A Raiymbek Ave.",
     number: "+7 727 347 00 26",
   },
   {
     id: 4,
     country: "Turkmenistan",
-    name: "IP “Nuryev Guvanch Tagandurdyevich”",
+    name: 'IE "Nuryev Guvanch Tagandurdyevich"',
     title: "Turkmenistan, Mary velayat, Vekilbazar Etrap, Akgonur",
     number: "+993 65 551008",
   },
   {
     id: 5,
     country: "UAE",
-    name: "LLC “Dynatrade Auto Service”",
+    name: 'LLC "Dynatrade Auto Service"',
     title: "Nad Al Hamar, Opposite Belhasa Driving Center, Dubai, United Arab Emirates",
     number: "+971 50 646 7009",
-  }
+  },
+  {
+    id: 6,
+    country: "Turkmenistan",
+    name: 'IE "Demirdag"',
+    title: "Turkmenistan, Mary velayat, Vekilbazar etrap, Akgonur geneshlyk",
+    number: "+99361070725",
+  },
 ];
 
 export const SERVICERU = [
