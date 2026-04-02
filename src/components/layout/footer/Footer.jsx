@@ -45,6 +45,12 @@ const Footer = () => {
               </NavLink>
             </li>
 
+            <li className="footer__item">
+              <NavLink to="/maksud" className="footer__item-link">
+                Test
+              </NavLink>
+            </li>
+
           </ul>
 
           <ul className="footer__list">
