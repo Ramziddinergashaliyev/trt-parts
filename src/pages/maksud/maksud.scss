@@ -21,593 +21,6 @@
 //     }
 // }
 
-// @keyframes avatarPop {
-//     0% {
-//         opacity: 0;
-//         transform: translateX(-50%) scale(0.6);
-//     }
-
-//     70% {
-//         transform: translateX(-50%) scale(1.06);
-//     }
-
-//     100% {
-//         opacity: 1;
-//         transform: translateX(-50%) scale(1);
-//     }
-// }
-
-// @keyframes fadeUp {
-//     from {
-//         opacity: 0;
-//         transform: translateY(22px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes btnIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(16px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes shimmer {
-//     0% {
-//         background-position: -200% center;
-//     }
-
-//     100% {
-//         background-position: 200% center;
-//     }
-// }
-
-
-// .card {
-//     width: 100%;
-//     height: 100dvh;
-//     overflow: hidden;
-//     display: flex;
-//     flex-direction: column;
-//     background: $white;
-//     font-family: 'Open Sans', sans-serif;
-
-//     &__hero {
-//         position: relative;
-//         flex: 0 0 44%;
-//         overflow: visible;
-//         animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-//     }
-
-//     &__hero-bg {
-//         position: absolute;
-//         inset: 0;
-//         background: url('../../assets/maksud/bg-trt.webp');
-//         background-repeat: no-repeat;
-//         background-size: cover;
-//         background-position: top;
-//         z-index: 0;
-//     }
-
-//     &__hero-fade {
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         height: 60%;
-//         background: linear-gradient(to bottom, transparent 0%, $white 100%);
-//         z-index: 1;
-//         pointer-events: none;
-//     }
-
-//     &__avatar {
-//         position: absolute;
-//         bottom: 35%;
-//         left: 50%;
-//         transform: translateX(-50%);
-//         z-index: 2;
-//         width: 220px;
-//         filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.22));
-//         animation: avatarPop 0.7s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-//         img {
-//             width: 100%;
-//             height: auto;
-//             display: block;
-//             object-fit: contain;
-//         }
-//     }
-
-//     // ── Info ──────────────────────────────────────────────
-//     &__info {
-//         flex: 0 0 auto;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         padding-top: clamp(48px, 13%, 68px);
-//         padding-bottom: 6px;
-//         animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
-//     }
-
-//     &__name {
-//         font-family: 'Roboto Condensed', sans-serif;
-//         font-size: clamp(1.4rem, 5.5vw, 2rem);
-//         font-weight: 400;
-//         color: $text-dark;
-//         letter-spacing: 0.01em;
-//         position: relative;
-//         padding-bottom: 5px;
-
-//         // Animated underline
-//         &::after {
-//             content: '';
-//             display: block;
-//             width: 0%;
-//             height: 2px;
-//             background: $text-dark;
-//             margin-top: 4px;
-//             animation: underlineGrow 0.6s 0.5s ease forwards;
-//         }
-//     }
-
-//     &__role {
-//         font-family: 'Roboto Condensed', sans-serif;
-//         font-size: clamp(1.25rem, 4.8vw, 1.7rem);
-//         font-weight: 700;
-//         color: $text-dark;
-//         letter-spacing: 0.08em;
-//         margin-top: 2px;
-//     }
-
-//     // ── Actions ───────────────────────────────────────────
-//     &__actions {
-//         flex: 1 1 auto;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         gap: clamp(8px, 2.2vh, 13px);
-//         padding: 6px 22px 14px;
-
-//         // Staggered button animations
-//         .card__btn,
-//         .card__divider {
-//             animation: btnIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-//             @for $i from 1 through 6 {
-//                 &:nth-child(#{$i}) {
-//                     animation-delay: #{0.35 + $i * 0.07}s;
-//                 }
-//             }
-//         }
-//     }
-
-//     // ── Button ────────────────────────────────────────────
-//     &__btn {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         gap: 10px;
-//         width: 100%;
-//         max-width: 480px;
-//         padding: clamp(12px, 3.2vh, 17px) 18px;
-//         border-radius: 6px;
-//         background: $blue;
-//         color: $white;
-//         font-family: 'Roboto Condensed', sans-serif;
-//         font-size: clamp(1rem, 3.8vw, 1.25rem);
-//         font-weight: 400;
-//         letter-spacing: 0.03em;
-//         text-decoration: none;
-//         cursor: pointer;
-//         border: none;
-//         outline: none;
-//         position: relative;
-//         overflow: hidden;
-//         -webkit-tap-highlight-color: transparent;
-//         box-shadow: 0 3px 10px rgba(0, 170, 223, 0.3);
-//         transition:
-//             background 0.18s ease,
-//             box-shadow 0.18s ease,
-//             transform 0.12s ease;
-
-//         svg {
-//             width: 19px;
-//             height: 19px;
-//             flex-shrink: 0;
-//         }
-
-//         // Shimmer ripple on hover
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             inset: 0;
-//             background: linear-gradient(120deg,
-//                     transparent 20%,
-//                     rgba(255, 255, 255, 0.28) 50%,
-//                     transparent 80%);
-//             background-size: 200% auto;
-//             opacity: 0;
-//             transition: opacity 0.2s;
-//         }
-
-//         &:hover {
-//             background: $blue-dark;
-//             box-shadow: 0 5px 18px rgba(0, 144, 196, 0.4);
-
-//             &::before {
-//                 opacity: 1;
-//                 animation: shimmer 0.65s linear;
-//             }
-//         }
-
-//         &:active {
-//             background: $blue-press;
-//             transform: scale(0.97);
-//             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-//         }
-//     }
-
-//     // ── Divider ───────────────────────────────────────────
-//     &__divider {
-//         display: flex;
-//         align-items: center;
-//         gap: 10px;
-//         width: 100%;
-//         max-width: 480px;
-//         color: $text-muted;
-
-//         span {
-//             flex: 1;
-//             height: 1px;
-//             background: $divider;
-//             display: block;
-//         }
-
-//         svg {
-//             flex-shrink: 0;
-//             color: $text-muted;
-//         }
-//     }
-// }
-
-// @keyframes underlineGrow {
-//     to {
-//         width: 100%;
-//     }
-// }
-
-// @media (max-width: 380px) {
-//     .card {
-//         &__actions {
-//             padding: 4px 16px 10px;
-//             gap: 7px;
-//         }
-//     }
-// }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@500;600&display=swap');
-
-$blue: #00aadf;
-$blue-dark: #0090c4;
-$blue-press: #007aaa;
-$white: #ffffff;
-$text-dark: #111111;
-$text-muted: #999999;
-$divider: #cccccc;
-
-
-@keyframes heroIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(22px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes btnIn {
-    from {
-        opacity: 0;
-        transform: translateY(16px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% center;
-    }
-
-    100% {
-        background-position: 200% center;
-    }
-}
-
-
-.card {
-    width: 100%;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    background: $white;
-    font-family: 'Open Sans', sans-serif;
-
-    &__hero {
-        position: relative;
-        width: 100%;
-        height: 50vw;
-        max-height: 380px;
-        min-height: 220px;
-        overflow: hidden;
-        flex-shrink: 0;
-        animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-    }
-
-    &__hero-bg {
-        position: absolute;
-        inset: 0;
-        background: url('../../assets/maksud/bg-trt.webp');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
-        z-index: 0;
-    }
-
-    &__hero-fade {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 70%;
-        background: linear-gradient(to bottom,
-                transparent 0%,
-                rgba(255, 255, 255, 0.35) 35%,
-                rgba(255, 255, 255, 0.75) 65%,
-                #ffffff 100%);
-        z-index: 1;
-        pointer-events: none;
-    }
-
-    &__avatar {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-
-        -webkit-mask-image: linear-gradient(to bottom,
-                black 0%,
-                black 55%,
-                rgba(0, 0, 0, 0.6) 75%,
-                transparent 100%);
-        mask-image: linear-gradient(to bottom,
-                black 0%,
-                black 55%,
-                rgba(0, 0, 0, 0.6) 75%,
-                transparent 100%);
-
-        img {
-            width: 230px;
-            height: auto;
-            display: block;
-            object-fit: contain;
-            object-position: bottom;
-        }
-    }
-
-    &__info {
-        flex: 0 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: clamp(12px, 4vw, 24px);
-        padding-bottom: 6px;
-        animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
-    }
-
-    &__name {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 32px;
-        font-weight: 400;
-        color: #333;
-        letter-spacing: 0.04em;
-        position: relative;
-        padding-bottom: 8px;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 0%;
-            height: 2px;
-            background: $text-dark;
-            margin-top: 8px;
-            animation: underlineGrow 0.6s 0.5s ease forwards;
-        }
-    }
-
-    &__role {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 22px;
-        font-weight: 500;
-        color: $text-dark;
-        letter-spacing: 0.08em;
-        margin-top: 2px;
-    }
-
-    &__actions {
-        flex: 1 1 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 18px;
-        padding: 40px 20px;
-
-        .card__btn,
-        .card__divider {
-            animation: btnIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-            @for $i from 1 through 6 {
-                &:nth-child(#{$i}) {
-                    animation-delay: #{0.35 + $i * 0.07}s;
-                }
-            }
-        }
-    }
-
-    &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        max-width: 480px;
-        padding: clamp(15px, 3.8vh, 21px) 18px;
-        border-radius: 6px;
-        background: $blue;
-        color: $white;
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: clamp(1.15rem, 4.4vw, 1.45rem);
-        font-weight: 400;
-        letter-spacing: 0.03em;
-        text-decoration: none;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        position: relative;
-        overflow: hidden;
-        -webkit-tap-highlight-color: transparent;
-        box-shadow: 0 3px 10px rgba(0, 170, 223, 0.3);
-        transition:
-            background 0.18s ease,
-            box-shadow 0.18s ease,
-            transform 0.12s ease;
-
-        svg {
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(120deg,
-                    transparent 20%,
-                    rgba(255, 255, 255, 0.28) 50%,
-                    transparent 80%);
-            background-size: 200% auto;
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-
-        &:hover {
-            background: $blue-dark;
-            box-shadow: 0 5px 18px rgba(0, 144, 196, 0.4);
-
-            &::before {
-                opacity: 1;
-                animation: shimmer 0.65s linear;
-            }
-        }
-
-        &:active {
-            background: $blue-press;
-            transform: scale(0.97);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        }
-    }
-
-    &__divider {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        max-width: 480px;
-        color: $text-muted;
-
-        span {
-            flex: 1;
-            height: 1px;
-            background: $divider;
-            display: block;
-        }
-
-        svg {
-            flex-shrink: 0;
-            color: $text-muted;
-        }
-    }
-}
-
-@keyframes underlineGrow {
-    to {
-        width: 100%;
-    }
-}
-
-@media (max-width: 380px) {
-    .card {
-        &__actions {
-            padding: 12px 16px 10px;
-            gap: 7px;
-        }
-    }
-}
-
-
-// @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@500;600&display=swap');
-
-// $blue: #00aadf;
-// $blue-dark: #0090c4;
-// $blue-press: #007aaa;
-// $white: #ffffff;
-// $text-dark: #111111;
-// $text-muted: #999999;
-// $divider: #cccccc;
-
-// @keyframes heroIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-20px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
 // @keyframes fadeUp {
 //     from {
 //         opacity: 0;
@@ -647,7 +60,7 @@ $divider: #cccccc;
 //     min-height: 100dvh;
 //     display: flex;
 //     flex-direction: column;
-//     background: $white;
+//     // background: $white;
 //     font-family: 'Open Sans', sans-serif;
 
 //     &__hero {
@@ -664,26 +77,27 @@ $divider: #cccccc;
 //     &__hero-bg {
 //         position: absolute;
 //         inset: 0;
-//         background: url('../../assets/maksud/bg-trt.webp');
+//         background: url('../../assets/maksud/bg-trt1.webp');
 //         background-repeat: no-repeat;
 //         background-size: cover;
 //         background-position: center top;
 //         z-index: 0;
 //     }
 
-//     &__hero-fade {
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         height: 60%;
-//         background: linear-gradient(to bottom,
-//                 transparent 0%,
-//                 rgba(255, 255, 255, 0.55) 45%,
-//                 #ffffff 100%);
-//         z-index: 1;
-//         pointer-events: none;
-//     }
+//     // &__hero-fade {
+//     //     position: absolute;
+//     //     bottom: 0;
+//     //     left: 0;
+//     //     right: 0;
+//     //     height: 70%;
+//     //     background: linear-gradient(to bottom,
+//     //             transparent 0%,
+//     //             rgba(255, 255, 255, 0.35) 35%,
+//     //             rgba(255, 255, 255, 0.75) 65%,
+//     //             #ffffff 100%);
+//     //     z-index: 1;
+//     //     pointer-events: none;
+//     // }
 
 //     &__avatar {
 //         position: absolute;
@@ -691,10 +105,20 @@ $divider: #cccccc;
 //         left: 50%;
 //         transform: translateX(-50%);
 //         z-index: 2;
-//         width: clamp(140px, 42%, 220px);
+
+//         -webkit-mask-image: linear-gradient(to bottom,
+//                 black 0%,
+//                 black 55%,
+//                 rgba(0, 0, 0, 0.6) 75%,
+//                 transparent 100%);
+//         mask-image: linear-gradient(to bottom,
+//                 black 0%,
+//                 black 55%,
+//                 rgba(0, 0, 0, 0.6) 75%,
+//                 transparent 100%);
 
 //         img {
-//             width: 100%;
+//             width: 230px;
 //             height: auto;
 //             display: block;
 //             object-fit: contain;
@@ -702,7 +126,6 @@ $divider: #cccccc;
 //         }
 //     }
 
-//     // ── Info ──────────────────────────────────────────────
 //     &__info {
 //         flex: 0 0 auto;
 //         display: flex;
@@ -715,12 +138,12 @@ $divider: #cccccc;
 
 //     &__name {
 //         font-family: 'Roboto Condensed', sans-serif;
-//         font-size: clamp(1.55rem, 6vw, 2.1rem);
+//         font-size: 32px;
 //         font-weight: 400;
-//         color: $text-dark;
-//         letter-spacing: 0.01em;
+//         color: #333;
+//         letter-spacing: 0.04em;
 //         position: relative;
-//         padding-bottom: 5px;
+//         padding-bottom: 8px;
 
 //         &::after {
 //             content: '';
@@ -728,29 +151,28 @@ $divider: #cccccc;
 //             width: 0%;
 //             height: 2px;
 //             background: $text-dark;
-//             margin-top: 4px;
+//             margin-top: 8px;
 //             animation: underlineGrow 0.6s 0.5s ease forwards;
 //         }
 //     }
 
 //     &__role {
 //         font-family: 'Roboto Condensed', sans-serif;
-//         font-size: clamp(1.3rem, 5vw, 1.8rem);
-//         font-weight: 700;
+//         font-size: 22px;
+//         font-weight: 500;
 //         color: $text-dark;
 //         letter-spacing: 0.08em;
 //         margin-top: 2px;
 //     }
 
-//     // ── Actions ───────────────────────────────────────────
 //     &__actions {
 //         flex: 1 1 auto;
 //         display: flex;
 //         flex-direction: column;
 //         justify-content: flex-start;
 //         align-items: center;
-//         gap: clamp(8px, 2.2vh, 13px);
-//         padding: clamp(16px, 4vw, 28px) 22px clamp(16px, 4vw, 24px);
+//         gap: 18px;
+//         padding: 40px 20px;
 
 //         .card__btn,
 //         .card__divider {
@@ -764,7 +186,6 @@ $divider: #cccccc;
 //         }
 //     }
 
-//     // ── Button ────────────────────────────────────────────
 //     &__btn {
 //         display: flex;
 //         align-items: center;
@@ -865,3 +286,279 @@ $divider: #cccccc;
 //         }
 //     }
 // }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@500;600&display=swap');
+
+$red: #e53935;
+$red-dark: #c62828;
+$red-press: #b71c1c;
+$white: #ffffff;
+$text-dark: #111111;
+$text-muted: #999999;
+$divider: #cccccc;
+
+
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes btnIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+.card {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+
+    &__hero {
+        position: relative;
+        width: 100%;
+        height: 55vw;
+        max-height: 420px;
+        min-height: 240px;
+        overflow: hidden;
+        flex-shrink: 0;
+        animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    &__hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../assets/maksud/bg-trt1.webp') no-repeat center center;
+        background-size: cover;
+        z-index: 0;
+    }
+
+    &__avatar {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        -webkit-mask-image: linear-gradient(to bottom,
+                black 0%,
+                black 55%,
+                rgba(0, 0, 0, 0.6) 75%,
+                transparent 100%);
+        mask-image: linear-gradient(to bottom,
+                black 0%,
+                black 55%,
+                rgba(0, 0, 0, 0.6) 75%,
+                transparent 100%);
+
+        img {
+            width: 230px;
+            height: auto;
+            display: none;
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+
+    &__info {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: clamp(12px, 4vw, 24px);
+        padding-bottom: 6px;
+        animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    &__name {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        color: #333;
+        letter-spacing: 0.04em;
+        position: relative;
+        padding-bottom: 8px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: $text-dark;
+            margin-top: 8px;
+            animation: underlineGrow 0.6s 0.5s ease forwards;
+        }
+    }
+
+    &__role {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        color: $text-dark;
+        letter-spacing: 0.08em;
+        margin-top: 2px;
+    }
+
+    &__actions {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 18px;
+        padding: 40px 20px;
+
+        .card__btn,
+        .card__divider {
+            animation: btnIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{0.35 + $i * 0.07}s;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 480px;
+        padding: clamp(15px, 3.8vh, 21px) 18px;
+        border-radius: 6px;
+        background: $red;
+        color: $white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: clamp(1.15rem, 4.4vw, 1.45rem);
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: 0 3px 10px rgba(229, 57, 53, 0.3);
+        transition:
+            background 0.18s ease,
+            box-shadow 0.18s ease,
+            transform 0.12s ease;
+
+        svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                    transparent 20%,
+                    rgba(255, 255, 255, 0.28) 50%,
+                    transparent 80%);
+            background-size: 200% auto;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        &:hover {
+            background: $red-dark;
+            box-shadow: 0 5px 18px rgba(198, 40, 40, 0.4);
+
+            &::before {
+                opacity: 1;
+                animation: shimmer 0.65s linear;
+            }
+        }
+
+        &:active {
+            background: $red-press;
+            transform: scale(0.97);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &__divider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 480px;
+        color: $text-muted;
+
+        span {
+            flex: 1;
+            height: 1px;
+            background: $divider;
+            display: block;
+        }
+
+        svg {
+            flex-shrink: 0;
+            color: $text-muted;
+        }
+    }
+}
+
+@keyframes underlineGrow {
+    to {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .card {
+        &__actions {
+            padding: 12px 16px 10px;
+            gap: 7px;
+        }
+    }
+}
