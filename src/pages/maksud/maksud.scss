@@ -436,12 +436,12 @@ $divider: #cccccc;
 
     &__name {
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: clamp(1.55rem, 6vw, 2.1rem);
+        font-size: 32px;
         font-weight: 400;
-        color: $text-dark;
-        letter-spacing: 0.01em;
+        color: #333;
+        letter-spacing: 0.04em;
         position: relative;
-        padding-bottom: 5px;
+        padding-bottom: 8px;
 
         &::after {
             content: '';
@@ -449,15 +449,15 @@ $divider: #cccccc;
             width: 0%;
             height: 2px;
             background: $text-dark;
-            margin-top: 4px;
+            margin-top: 8px;
             animation: underlineGrow 0.6s 0.5s ease forwards;
         }
     }
 
     &__role {
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: clamp(1.3rem, 5vw, 1.8rem);
-        font-weight: 700;
+        font-size: 22px;
+        font-weight: 500;
         color: $text-dark;
         letter-spacing: 0.08em;
         margin-top: 2px;
@@ -469,8 +469,8 @@ $divider: #cccccc;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: clamp(8px, 2.2vh, 13px);
-        padding: clamp(16px, 4vw, 28px) 22px clamp(16px, 4vw, 24px);
+        gap: 18px;
+        padding: 40px 20px;
 
         .card__btn,
         .card__divider {
