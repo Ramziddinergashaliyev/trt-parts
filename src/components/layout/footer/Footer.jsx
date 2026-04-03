@@ -45,11 +45,11 @@ const Footer = () => {
               </NavLink>
             </li>
 
-            <li className="footer__item">
+            {/* <li className="footer__item">
               <NavLink to="/kamron" className="footer__item-link">
                 Test
               </NavLink>
-            </li>
+            </li> */}
 
           </ul>
 

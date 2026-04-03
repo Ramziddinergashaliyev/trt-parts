@@ -52,7 +52,7 @@ const App = () => {
       <Suspense fallback={<Leazy />}>
         <Routes location={location}>
           <Route path="/maksud" element={<Maksud />} />
-          <Route path="/kamron" element={<Kamron />} />
+          <Route path="/kamron-erkinov/" element={<Kamron />} />
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/razdel" element={<Razdel />} />
