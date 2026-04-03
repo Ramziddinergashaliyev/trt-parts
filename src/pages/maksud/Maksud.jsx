@@ -1,7 +1,6 @@
 import React from 'react'
 
 import img from "../../assets/maksud/max.png"
-import logo from "../../assets/icons/logo.png"
 import './maksud.scss'
 
 const Maksud = () => {
