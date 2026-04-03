@@ -71,7 +71,7 @@
 
 import React from 'react'
 
-import img from "../../assets/maksud/m.webp"
+import img from "../../assets/maksud/m1.webp"
 import './maksud.scss'
 
 const Maksud = () => {
