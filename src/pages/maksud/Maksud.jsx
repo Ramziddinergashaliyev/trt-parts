@@ -69,7 +69,6 @@
 
 // export default Maksud
 
-
 import React from 'react'
 
 import img from "../../assets/maksud/m.webp"
