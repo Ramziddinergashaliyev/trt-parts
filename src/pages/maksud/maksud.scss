@@ -80,7 +80,7 @@ $white: #ffffff;
         inset: 0;
         background: url(../../assets/maksud/bg1.webp) no-repeat 50% calc(50% - 20px);
         background-size: cover;
-        opacity: 0.4;
+        opacity: 0.2;
 
         &::after {
             content: '';
@@ -98,7 +98,7 @@ $white: #ffffff;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 80px;
+        padding-top: 30px;
         padding-bottom: 0;
         animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
@@ -173,11 +173,11 @@ $white: #ffffff;
     }
 
     &__logo-img {
-        height: clamp(32px, 6dvh, 52px);
+        height: 80px;
         width: auto;
         object-fit: contain;
         filter: brightness(0) invert(1);
-        opacity: 0.92;
+        // opacity: 0.92;
         transition: opacity 0.2s ease;
 
         &:hover {

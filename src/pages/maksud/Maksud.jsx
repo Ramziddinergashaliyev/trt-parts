@@ -85,7 +85,6 @@ const Maksud = () => {
                 <div className="card__hero-bg" />
             </div>
 
-            {/* ✅ YANGI: Logo header */}
             <div className="card__logo-bar">
                 <img src={logo} alt="TRT Parts" className="card__logo-img" />
             </div>
