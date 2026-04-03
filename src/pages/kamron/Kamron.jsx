@@ -1,10 +1,9 @@
 import React from 'react'
 
 import img from "../../assets/maksud/m1.webp"
-import logo from "../../assets/icons/logo.png"
-import './maksud.scss'
+import './kamron.scss'
 
-const Maksud = () => {
+const Kamron = () => {
     return (
         <div className="card">
 
@@ -69,4 +68,4 @@ const Maksud = () => {
     )
 }
 
-export default Maksud
+export default Kamron

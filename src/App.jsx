@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Leazy from "./components/leazy/Leazy";
 import Maksud from "./pages/maksud/Maksud";
+import Kamron from "./pages/kamron/Kamron";
 
 const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
 const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
@@ -51,6 +52,7 @@ const App = () => {
       <Suspense fallback={<Leazy />}>
         <Routes location={location}>
           <Route path="/maksud" element={<Maksud />} />
+          <Route path="/kamron" element={<Kamron />} />
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/razdel" element={<Razdel />} />
