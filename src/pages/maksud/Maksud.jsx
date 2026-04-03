@@ -1,6 +1,6 @@
 import React from 'react'
 
-import img from "../../assets/maksud/max.png"
+import img from "../../assets/maksud/m1.webp"
 import './maksud.scss'
 
 const Maksud = () => {

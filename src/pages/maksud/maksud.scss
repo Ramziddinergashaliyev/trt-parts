@@ -119,12 +119,13 @@ $white: #ffffff;
         // }
 
         img {
-            width: 100%;
+            width: 260px;
             height: 260px;
             object-fit: contain;
             object-position: top center;
             display: block;
-            // border: 2px solid #aaa2;
+            border-radius: 50%;
+            border-bottom: 2px solid #aaa2;
         }
     }
 
