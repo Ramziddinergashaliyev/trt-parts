@@ -8,7 +8,6 @@
 // $text-muted: #999999;
 // $divider: #cccccc;
 
-
 // @keyframes heroIn {
 //     from {
 //         opacity: 0;
@@ -61,7 +60,6 @@
 //     }
 // }
 
-
 // .card {
 //     width: 100%;
 //     min-height: 100dvh;
@@ -69,15 +67,12 @@
 //     flex-direction: column;
 //     font-family: 'Open Sans', sans-serif;
 //     position: relative;
+//     background: #111111;
 
 //     &__hero {
-//         position: relative;
-//         width: 100%;
-//         height: 100dvh;
-//         min-height: 100dvh;
-//         max-height: none;
-//         overflow: hidden;
-//         flex-shrink: 0;
+//         position: fixed;
+//         inset: 0;
+//         z-index: 0;
 //         animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 //     }
 
@@ -88,91 +83,65 @@
 //         height: 100%;
 //         background: url(../../assets/maksud/bg.webp) no-repeat center center;
 //         background-size: cover;
+//         // background-position: calc(50% - 30px) center;
+//         background-position: calc(50% - 20px) calc(50% - 40px);
+//         opacity: 0.4;
 //         z-index: 0;
 
 //         &::after {
 //             content: '';
 //             position: absolute;
 //             inset: 0;
-//             background: linear-gradient(to top,
-//                     rgba(255, 255, 255, 0.0) 0%,
-//                     rgba(255, 255, 255, 0.0) 25%,
-//                     rgba(255, 255, 255, 0.20) 50%,
-//                     rgba(255, 255, 255, 0.55) 72%,
-//                     rgba(255, 255, 255, 0.85) 100%);
-//             backdrop-filter: blur(5px);
-//             -webkit-backdrop-filter: blur(5px);
-//             -webkit-mask-image: linear-gradient(to top,
-//                     transparent 0%,
-//                     transparent 25%,
-//                     black 65%,
-//                     black 100%);
-//             mask-image: linear-gradient(to top,
-//                     transparent 0%,
-//                     transparent 25%,
-//                     black 65%,
-//                     black 100%);
+//             background: rgba(0, 0, 0, 0.45);
 //             z-index: 1;
 //             pointer-events: none;
 //         }
 //     }
 
-//     &__avatar {
-//         position: absolute;
-//         bottom: 0;
-//         left: 50%;
-//         transform: translateX(-50%);
-//         z-index: 2;
-
-//         -webkit-mask-image: linear-gradient(to bottom,
-//                 black 0%,
-//                 black 55%,
-//                 rgba(0, 0, 0, 0.6) 75%,
-//                 transparent 100%);
-//         mask-image: linear-gradient(to bottom,
-//                 black 0%,
-//                 black 55%,
-//                 rgba(0, 0, 0, 0.6) 75%,
-//                 transparent 100%);
-
-//         img {
-//             width: 230px;
-//             height: auto;
-//             display: block;
-//             object-fit: contain;
-//             object-position: bottom;
-//         }
-//     }
-
 //     &__info {
-//         position: absolute;
-//         top: clamp(20px, 6vw, 48px);
-//         left: 0;
-//         right: 0;
+//         position: relative;
 //         z-index: 10;
 //         display: flex;
 //         flex-direction: column;
 //         align-items: center;
+//         padding-top: 150px;
 //         padding-bottom: 6px;
 //         animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+//     }
+
+//     &__avatar {
+//         display: flex;
+//         justify-content: center;
+//         margin-bottom: 18px;
+
+//         img {
+//             width: 190px;
+//             height: 190px;
+//             object-fit: cover;
+//             object-position: top center;
+//             border-radius: 50%;
+//             border: 3px solid rgba(255, 255, 255, 0.15);
+//             display: block;
+//         }
 //     }
 
 //     &__name {
 //         font-family: 'Roboto Condensed', sans-serif;
 //         font-size: 32px;
 //         font-weight: 400;
-//         color: #333;
+//         color: #ffffff;
 //         letter-spacing: 0.04em;
 //         position: relative;
-//         padding-bottom: 8px;
+//         padding-bottom: 4px;
+//         text-align: center;
 
 //         &::after {
 //             content: '';
 //             display: block;
 //             width: 0%;
 //             height: 2px;
-//             background: $text-dark;
-//             margin-top: 8px;
+//             background: #ffffff;
+//             margin-top: 4px;
 //             animation: underlineGrow 0.6s 0.5s ease forwards;
 //         }
 //     }
@@ -181,22 +150,20 @@
 //         font-family: 'Roboto Condensed', sans-serif;
 //         font-size: 22px;
 //         font-weight: 500;
-//         color: $text-dark;
+//         color: rgba(255, 255, 255, 0.75);
 //         letter-spacing: 0.08em;
 //         margin-top: 2px;
+//         text-align: center;
 //     }
 
 //     &__actions {
-//         position: absolute;
-//         bottom: 40px;
-//         left: 0;
-//         right: 0;
+//         position: relative;
 //         z-index: 10;
 //         display: flex;
 //         flex-direction: column;
 //         align-items: center;
-//         gap: 18px;
-//         padding: 0 20px;
+//         gap: 10px;
+//         padding: 22px 30px 40px;
 
 //         .card__btn,
 //         .card__divider {
@@ -280,18 +247,18 @@
 //         gap: 10px;
 //         width: 100%;
 //         max-width: 480px;
-//         color: $text-muted;
+//         color: rgba(255, 255, 255, 0.4);
 
 //         span {
 //             flex: 1;
 //             height: 1px;
-//             background: $divider;
+//             background: rgba(255, 255, 255, 0.2);
 //             display: block;
 //         }
 
 //         svg {
 //             flex-shrink: 0;
-//             color: $text-muted;
+//             color: rgba(255, 255, 255, 0.4);
 //         }
 //     }
 // }
@@ -299,9 +266,8 @@
 // @media (max-width: 380px) {
 //     .card {
 //         &__actions {
-//             bottom: 20px;
 //             gap: 10px;
-//             padding: 0 14px;
+//             padding: 24px 14px 20px;
 //         }
 //     }
 // }
@@ -312,9 +278,6 @@ $red: #e53935;
 $red-dark: #c62828;
 $red-press: #b71c1c;
 $white: #ffffff;
-$text-dark: #111111;
-$text-muted: #999999;
-$divider: #cccccc;
 
 @keyframes heroIn {
     from {
@@ -368,6 +331,7 @@ $divider: #cccccc;
     }
 }
 
+
 .card {
     width: 100%;
     min-height: 100dvh;
@@ -375,37 +339,50 @@ $divider: #cccccc;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     position: relative;
+
+    // Qora fon — scroll pastga borganda ham ko'rinadi
     background: #111111;
 
+    // ── Background rasm: fixed, viewport qoplaydi ──────────────────────────
     &__hero {
         position: fixed;
         inset: 0;
         z-index: 0;
+        pointer-events: none;
         animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     &__hero-bg {
         position: absolute;
         inset: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../../assets/maksud/bg.webp) no-repeat center center;
+        background: url(../../assets/maksud/bg.webp) no-repeat calc(50% - 20px) calc(50% - 40px);
         background-size: cover;
-        // background-position: calc(50% - 30px) center;
-        background-position: calc(50% - 20px) calc(50% - 40px);
         opacity: 0.4;
-        z-index: 0;
 
         &::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.45);
-            z-index: 1;
+            background: rgba(0, 0, 0, 0.50);
             pointer-events: none;
         }
     }
 
+    // ── Scroll pastiga tushganda fixed bg tugagach ko'rinadigan ───────────
+    // qora gradient — silliq o'tish uchun
+    &::after {
+        content: '';
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: linear-gradient(to bottom, transparent, #111111);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    // ── Info ──────────────────────────────────────────────────────────────
     &__info {
         position: relative;
         z-index: 10;
@@ -464,6 +441,7 @@ $divider: #cccccc;
         text-align: center;
     }
 
+    // ── Actions ───────────────────────────────────────────────────────────
     &__actions {
         position: relative;
         z-index: 10;
