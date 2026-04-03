@@ -1,8 +1,8 @@
 // @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@500;600&display=swap');
 
-// $blue: #00aadf;
-// $blue-dark: #0090c4;
-// $blue-press: #007aaa;
+// $red: #e53935;
+// $red-dark: #c62828;
+// $red-press: #b71c1c;
 // $white: #ffffff;
 // $text-dark: #111111;
 // $text-muted: #999999;
@@ -55,20 +55,27 @@
 //     }
 // }
 
+// @keyframes underlineGrow {
+//     to {
+//         width: 100%;
+//     }
+// }
+
+
 // .card {
 //     width: 100%;
 //     min-height: 100dvh;
 //     display: flex;
 //     flex-direction: column;
-//     // background: $white;
 //     font-family: 'Open Sans', sans-serif;
+//     position: relative;
 
 //     &__hero {
 //         position: relative;
 //         width: 100%;
-//         height: 50vw;
-//         max-height: 380px;
-//         min-height: 220px;
+//         height: 100dvh;
+//         min-height: 100dvh;
+//         max-height: none;
 //         overflow: hidden;
 //         flex-shrink: 0;
 //         animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -77,27 +84,38 @@
 //     &__hero-bg {
 //         position: absolute;
 //         inset: 0;
-//         background: url('../../assets/maksud/bg-trt1.webp');
-//         background-repeat: no-repeat;
+//         width: 100%;
+//         height: 100%;
+//         background: url(../../assets/maksud/bg.webp) no-repeat center center;
 //         background-size: cover;
-//         background-position: center top;
 //         z-index: 0;
-//     }
 
-//     // &__hero-fade {
-//     //     position: absolute;
-//     //     bottom: 0;
-//     //     left: 0;
-//     //     right: 0;
-//     //     height: 70%;
-//     //     background: linear-gradient(to bottom,
-//     //             transparent 0%,
-//     //             rgba(255, 255, 255, 0.35) 35%,
-//     //             rgba(255, 255, 255, 0.75) 65%,
-//     //             #ffffff 100%);
-//     //     z-index: 1;
-//     //     pointer-events: none;
-//     // }
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             inset: 0;
+//             background: linear-gradient(to top,
+//                     rgba(255, 255, 255, 0.0) 0%,
+//                     rgba(255, 255, 255, 0.0) 25%,
+//                     rgba(255, 255, 255, 0.20) 50%,
+//                     rgba(255, 255, 255, 0.55) 72%,
+//                     rgba(255, 255, 255, 0.85) 100%);
+//             backdrop-filter: blur(5px);
+//             -webkit-backdrop-filter: blur(5px);
+//             -webkit-mask-image: linear-gradient(to top,
+//                     transparent 0%,
+//                     transparent 25%,
+//                     black 65%,
+//                     black 100%);
+//             mask-image: linear-gradient(to top,
+//                     transparent 0%,
+//                     transparent 25%,
+//                     black 65%,
+//                     black 100%);
+//             z-index: 1;
+//             pointer-events: none;
+//         }
+//     }
 
 //     &__avatar {
 //         position: absolute;
@@ -127,11 +145,14 @@
 //     }
 
 //     &__info {
-//         flex: 0 0 auto;
+//         position: absolute;
+//         top: clamp(20px, 6vw, 48px);
+//         left: 0;
+//         right: 0;
+//         z-index: 10;
 //         display: flex;
 //         flex-direction: column;
 //         align-items: center;
-//         padding-top: clamp(12px, 4vw, 24px);
 //         padding-bottom: 6px;
 //         animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
 //     }
@@ -166,13 +187,16 @@
 //     }
 
 //     &__actions {
-//         flex: 1 1 auto;
+//         position: absolute;
+//         bottom: 40px;
+//         left: 0;
+//         right: 0;
+//         z-index: 10;
 //         display: flex;
 //         flex-direction: column;
-//         justify-content: flex-start;
 //         align-items: center;
 //         gap: 18px;
-//         padding: 40px 20px;
+//         padding: 0 20px;
 
 //         .card__btn,
 //         .card__divider {
@@ -195,7 +219,7 @@
 //         max-width: 480px;
 //         padding: clamp(15px, 3.8vh, 21px) 18px;
 //         border-radius: 6px;
-//         background: $blue;
+//         background: $red;
 //         color: $white;
 //         font-family: 'Roboto Condensed', sans-serif;
 //         font-size: clamp(1.15rem, 4.4vw, 1.45rem);
@@ -208,7 +232,7 @@
 //         position: relative;
 //         overflow: hidden;
 //         -webkit-tap-highlight-color: transparent;
-//         box-shadow: 0 3px 10px rgba(0, 170, 223, 0.3);
+//         box-shadow: 0 3px 10px rgba(229, 57, 53, 0.3);
 //         transition:
 //             background 0.18s ease,
 //             box-shadow 0.18s ease,
@@ -234,8 +258,8 @@
 //         }
 
 //         &:hover {
-//             background: $blue-dark;
-//             box-shadow: 0 5px 18px rgba(0, 144, 196, 0.4);
+//             background: $red-dark;
+//             box-shadow: 0 5px 18px rgba(198, 40, 40, 0.4);
 
 //             &::before {
 //                 opacity: 1;
@@ -244,7 +268,7 @@
 //         }
 
 //         &:active {
-//             background: $blue-press;
+//             background: $red-press;
 //             transform: scale(0.97);
 //             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 //         }
@@ -272,22 +296,15 @@
 //     }
 // }
 
-// @keyframes underlineGrow {
-//     to {
-//         width: 100%;
-//     }
-// }
-
 // @media (max-width: 380px) {
 //     .card {
 //         &__actions {
-//             padding: 12px 16px 10px;
-//             gap: 7px;
+//             bottom: 20px;
+//             gap: 10px;
+//             padding: 0 14px;
 //         }
 //     }
 // }
-
-
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@500;600&display=swap');
 
@@ -346,6 +363,12 @@ $divider: #cccccc;
     }
 }
 
+@keyframes underlineGrow {
+    to {
+        width: 100%;
+    }
+}
+
 
 .card {
     width: 100%;
@@ -353,15 +376,13 @@ $divider: #cccccc;
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
+    background: #111111;
 
     &__hero {
-        position: relative;
-        width: 100%;
-        height: 55vw;
-        max-height: 420px;
-        min-height: 240px;
-        overflow: hidden;
-        flex-shrink: 0;
+        position: fixed;
+        inset: 0;
+        z-index: 0;
         animation: heroIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
@@ -370,63 +391,65 @@ $divider: #cccccc;
         inset: 0;
         width: 100%;
         height: 100%;
-        background: url('../../assets/maksud/bg-trt1.webp') no-repeat center center;
+        background: url(../../assets/maksud/bg.webp) no-repeat center center;
         background-size: cover;
+        background-position: calc(50% - 30px) center;
+        opacity: 0.2;
         z-index: 0;
-    }
 
-    &__avatar {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-
-        -webkit-mask-image: linear-gradient(to bottom,
-                black 0%,
-                black 55%,
-                rgba(0, 0, 0, 0.6) 75%,
-                transparent 100%);
-        mask-image: linear-gradient(to bottom,
-                black 0%,
-                black 55%,
-                rgba(0, 0, 0, 0.6) 75%,
-                transparent 100%);
-
-        img {
-            width: 230px;
-            height: auto;
-            display: none;
-            object-fit: contain;
-            object-position: bottom;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+            pointer-events: none;
         }
     }
 
     &__info {
-        flex: 0 0 auto;
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: clamp(12px, 4vw, 24px);
+        padding-top: clamp(48px, 10vh, 90px);
         padding-bottom: 6px;
         animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    &__avatar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.15);
+            display: block;
+        }
     }
 
     &__name {
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 32px;
         font-weight: 400;
-        color: #333;
+        color: #ffffff;
         letter-spacing: 0.04em;
         position: relative;
         padding-bottom: 8px;
+        text-align: center;
 
         &::after {
             content: '';
             display: block;
             width: 0%;
             height: 2px;
-            background: $text-dark;
+            background: #ffffff;
             margin-top: 8px;
             animation: underlineGrow 0.6s 0.5s ease forwards;
         }
@@ -436,19 +459,20 @@ $divider: #cccccc;
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 22px;
         font-weight: 500;
-        color: $text-dark;
+        color: rgba(255, 255, 255, 0.75);
         letter-spacing: 0.08em;
         margin-top: 2px;
+        text-align: center;
     }
 
     &__actions {
-        flex: 1 1 auto;
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
         gap: 18px;
-        padding: 40px 20px;
+        padding: 32px 20px 40px;
 
         .card__btn,
         .card__divider {
@@ -532,33 +556,27 @@ $divider: #cccccc;
         gap: 10px;
         width: 100%;
         max-width: 480px;
-        color: $text-muted;
+        color: rgba(255, 255, 255, 0.4);
 
         span {
             flex: 1;
             height: 1px;
-            background: $divider;
+            background: rgba(255, 255, 255, 0.2);
             display: block;
         }
 
         svg {
             flex-shrink: 0;
-            color: $text-muted;
+            color: rgba(255, 255, 255, 0.4);
         }
-    }
-}
-
-@keyframes underlineGrow {
-    to {
-        width: 100%;
     }
 }
 
 @media (max-width: 380px) {
     .card {
         &__actions {
-            padding: 12px 16px 10px;
-            gap: 7px;
+            gap: 10px;
+            padding: 24px 14px 20px;
         }
     }
 }
