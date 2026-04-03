@@ -361,7 +361,8 @@ body,
     &__hero-bg {
         position: absolute;
         inset: 0;
-        background: url(../../assets/maksud/bg.webp) no-repeat calc(50% - 20px) calc(50% - 40px);
+        // background: url(../../assets/maksud/bg.webp) no-repeat calc(50% - 20px) calc(50% - 40px);
+        background: url(../../assets/maksud/bg1.png) no-repeat 50% calc(50% - 20px);
         background-size: cover;
         opacity: 0.4;
 
