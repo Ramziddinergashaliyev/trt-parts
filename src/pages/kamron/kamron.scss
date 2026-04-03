@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@500;600&display=swap');
+
+$red: #e53935;
+$red-dark: #c62828;
+$red-press: #b71c1c;
+$white: #ffffff;
+
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes btnIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes underlineGrow {
+    to {
+        width: 100%;
+    }
+}
+
+.kamron {
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    background: #111111;
+
+    &__hero {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    &__hero-bg {
+        position: absolute;
+        inset: 0;
+        background: url(../../assets/maksud/bg1.webp) no-repeat 50% calc(50% - 20px);
+        background-size: cover;
+        opacity: 0.4;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.50);
+            pointer-events: none;
+        }
+    }
+
+    &__info {
+        position: relative;
+        z-index: 10;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 0;
+        animation: fadeUp 0.5s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    &__avatar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: clamp(8px, 1.5dvh, 18px);
+
+        img {
+            width: 280px;
+            height: 260px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            border-radius: 50%;
+            border-bottom: 2px solid #aaa2;
+        }
+    }
+
+    &__name {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: clamp(22px, 4.5dvh, 32px);
+        font-weight: 400;
+        color: #ffffff;
+        letter-spacing: 0.04em;
+        position: relative;
+        padding-bottom: 4px;
+        text-align: center;
+        margin: 0;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: #ffffff;
+            margin-top: 4px;
+            animation: underlineGrow 0.6s 0.5s ease forwards;
+        }
+    }
+
+    &__role {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: clamp(14px, 3dvh, 22px);
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.75);
+        letter-spacing: 0.08em;
+        margin: clamp(2px, 0.5dvh, 6px) 0 0;
+        text-align: center;
+    }
+
+    &__actions {
+        position: relative;
+        z-index: 10;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 30px 30px clamp(16px, 3.5dvh, 40px);
+
+        .kamron__btn,
+        .kamron__divider {
+            animation: btnIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+            @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{0.35 + $i * 0.07}s;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 480px;
+        padding: clamp(12px, 1.8dvh, 18px) 18px;
+        border-radius: 6px;
+        background: $red;
+        color: $white;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: 0 3px 10px rgba(229, 57, 53, 0.3);
+        transition:
+            background 0.18s ease,
+            box-shadow 0.18s ease,
+            transform 0.12s ease;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                    transparent 20%,
+                    rgba(255, 255, 255, 0.28) 50%,
+                    transparent 80%);
+            background-size: 200% auto;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        &:hover {
+            background: $red-dark;
+            box-shadow: 0 5px 18px rgba(198, 40, 40, 0.4);
+
+            &::before {
+                opacity: 1;
+                animation: shimmer 0.65s linear;
+            }
+        }
+
+        &:active {
+            background: $red-press;
+            transform: scale(0.97);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &__divider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 480px;
+        color: rgba(255, 255, 255, 0.4);
+
+        span {
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            display: block;
+        }
+
+        svg {
+            flex-shrink: 0;
+            color: rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .kamron {
+        &__actions {
+            padding: 0 14px clamp(12px, 3dvh, 24px);
+        }
+    }
+}
