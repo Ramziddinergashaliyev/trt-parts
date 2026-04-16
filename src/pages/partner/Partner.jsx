@@ -44,7 +44,7 @@ const Partner = () => {
                   height="40"
                 />
               </div>
-              
+
             </div>
 
             <div className="partner__card-img">

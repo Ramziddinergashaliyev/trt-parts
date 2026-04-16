@@ -16,7 +16,7 @@ const Razdel = () => {
     <section className="razdel" aria-labelledby="razdelTitle">
 
       <div className="razdel__bg" aria-hidden="true"></div>
-      
+
       <div className="container">
 
         <header className="razdel__info">

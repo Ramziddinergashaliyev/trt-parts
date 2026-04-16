@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 
 const FilterSearch = () => {
   const { t } = useTranslation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

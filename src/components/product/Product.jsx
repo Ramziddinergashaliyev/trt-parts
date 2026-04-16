@@ -51,7 +51,7 @@ const Product = ({ product, isTrue }) => {
           <button type="button" aria-label="Mahsulotni tahrirlash">
             <IoCreateOutline />
           </button>
-          
+
           <button type="button" onClick={handleDelete} aria-label="Mahsulotni o‘chirish">
             <AiOutlineDelete />
           </button>
@@ -67,7 +67,7 @@ const Product = ({ product, isTrue }) => {
         </p>
 
         <p className="result__card__info-title">{product?.trtCode}</p>
-      
+
       </div>
     </div>
   );

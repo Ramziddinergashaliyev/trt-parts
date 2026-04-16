@@ -275,49 +275,163 @@ export const Catalog = [
   }
 ];
 
+// export const ACCARDION = [
+//   {
+//     id: 1,
+//     country: "Украина",
+//     name: 'ТОВ "ПЕТОЛАВТО"',
+//     title: "Пироговский путь, 34; Киев, 03083, Украина",
+//     number: "+380(50)3146633",
+//   },
+//   {
+//     id: 2,
+//     country: "Таджикистан",
+//     name: 'ООО "ТОСОЛ-ПЛЮС"',
+//     title:
+//       "Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4",
+//     number: "+992 92 707 49 86",
+//   },
+//   {
+//     id: 3,
+//     country: "Казахстан",
+//     name: 'TOO "Tanauto Kazakhstan"',
+//     title: "Республика Казахстан, 050050, г. Алматы, пр. Райымбека д.169 А",
+//     number: "+7 727 347 00 26",
+//   },
+//   {
+//     id: 4,
+//     country: "Туркменистан",
+//     name: 'ИП "Нурыев Гуванч Тагандурдыевич"',
+//     title: "Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур",
+//     number: "+993 65 551008",
+//   },
+//   {
+//     id: 5,
+//     country: "ОАЭ",
+//     name: 'ООО "Dynatrade Auto Service"',
+//     title: "Nad Al Hamar, напротив Belhasa Driving Center, Дубай, Объединённые Арабские Эмираты",
+//     number: "+971 50 646 7009",
+//   },
+//   {
+//     id: 6,
+//     country: "Туркменистан",
+//     name: 'ИП "Демирдаг"',
+//     title: "Туркменистан, Мары велаят, Векилбазар этрап, Акгонур генешлик",
+//     number: "+99361070725",
+//   },
+// ];
+
+// export const ACCARDIONEN = [
+//   {
+//     id: 1,
+//     country: "Ukraine",
+//     name: 'LLC "PETOLAVTO"',
+//     title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
+//     number: "+380(50)3146633",
+//   },
+//   {
+//     id: 2,
+//     country: "Tajikistan",
+//     name: 'LLC "TOSOL-PLUS"',
+//     title:
+//       "Tajikistan, Sughd region, J. Rasulov district, Mekhrobod settlement, I. Nurmatov street 45/4",
+//     number: "+992 92 707 49 86",
+//   },
+//   {
+//     id: 3,
+//     country: "Kazakhstan",
+//     name: 'TOO "Tanauto Kazakhstan"',
+//     title: "Republic of Kazakhstan, 050050, Almaty, 169 A Raiymbek Ave.",
+//     number: "+7 727 347 00 26",
+//   },
+//   {
+//     id: 4,
+//     country: "Turkmenistan",
+//     name: 'IE "Nuryev Guvanch Tagandurdyevich"',
+//     title: "Turkmenistan, Mary velayat, Vekilbazar Etrap, Akgonur",
+//     number: "+993 65 551008",
+//   },
+//   {
+//     id: 5,
+//     country: "UAE",
+//     name: 'LLC "Dynatrade Auto Service"',
+//     title: "Nad Al Hamar, Opposite Belhasa Driving Center, Dubai, United Arab Emirates",
+//     number: "+971 50 646 7009",
+//   },
+//   {
+//     id: 6,
+//     country: "Turkmenistan",
+//     name: 'IE "Demirdag"',
+//     title: "Turkmenistan, Mary velayat, Vekilbazar etrap, Akgonur geneshlyk",
+//     number: "+99361070725",
+//   },
+// ];
+
 export const ACCARDION = [
   {
     id: 1,
     country: "Украина",
-    name: 'ТОВ "ПЕТОЛАВТО"',
-    title: "Пироговский путь, 34; Киев, 03083, Украина",
-    number: "+380(50)3146633",
+    distributors: [
+      {
+        name: 'ТОВ "ПЕТОЛАВТО"',
+        title: "Пироговский путь, 34; Киев, 03083, Украина",
+        number: "+380(50)3146633",
+      },
+      {
+        name: 'ТОВ "ПРОДЕТАЛЬ"',
+        title: "ул. Ремонтная, 13, г. Киев, 02099, Украина",
+        number: "+38(093)8665418",
+      }
+    ]
   },
   {
     id: 2,
     country: "Таджикистан",
-    name: 'ООО "ТОСОЛ-ПЛЮС"',
-    title:
-      "Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4",
-    number: "+992 92 707 49 86",
+    distributors: [
+      {
+        name: 'ООО "ТОСОЛ-ПЛЮС"',
+        title: "Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4",
+        number: "+992 92 707 49 86",
+      }
+    ]
   },
   {
     id: 3,
     country: "Казахстан",
-    name: 'TOO "Tanauto Kazakhstan"',
-    title: "Республика Казахстан, 050050, г. Алматы, пр. Райымбека д.169 А",
-    number: "+7 727 347 00 26",
+    distributors: [
+      {
+        name: 'TOO "Tanauto Kazakhstan"',
+        title: "Республика Казахстан, 050050, г. Алматы, пр. Райымбека д.169 А",
+        number: "+7 727 347 00 26",
+      }
+    ]
   },
   {
     id: 4,
     country: "Туркменистан",
-    name: 'ИП "Нурыев Гуванч Тагандурдыевич"',
-    title: "Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур",
-    number: "+993 65 551008",
+    distributors: [
+      {
+        name: 'ИП "Нурыев Гуванч Тагандурдыевич"',
+        title: "Туркменистан, Марыйский велаят, Векилбазар Этрап, Акгонур",
+        number: "+993 65 551008",
+      },
+      {
+        name: 'ИП "Демирдаг"',
+        title: "Туркменистан, Мары велаят, Векилбазар этрап, Акгонур генешлик",
+        number: "+99361070725",
+      }
+    ]
   },
   {
     id: 5,
     country: "ОАЭ",
-    name: 'ООО "Dynatrade Auto Service"',
-    title: "Nad Al Hamar, напротив Belhasa Driving Center, Дубай, Объединённые Арабские Эмираты",
-    number: "+971 50 646 7009",
-  },
-  {
-    id: 6,
-    country: "Туркменистан",
-    name: 'ИП "Демирдаг"',
-    title: "Туркменистан, Мары велаят, Векилбазар этрап, Акгонур генешлик",
-    number: "+99361070725",
+    distributors: [
+      {
+        name: 'ООО "Dynatrade Auto Service"',
+        title: "Nad Al Hamar, напротив Belhasa Driving Center, Дубай, Объединённые Арабские Эмираты",
+        number: "+971 50 646 7009",
+      }
+    ]
   },
 ];
 
@@ -325,47 +439,70 @@ export const ACCARDIONEN = [
   {
     id: 1,
     country: "Ukraine",
-    name: 'LLC "PETOLAVTO"',
-    title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
-    number: "+380(50)3146633",
+    distributors: [
+      {
+        name: 'LLC "PETOLAVTO"',
+        title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
+        number: "+380(50)3146633",
+      },
+      {
+        name: 'LLC "PRODETAL"',
+        title: "str. Remontna, 13. Kyiv 02099, Ukraine",
+        number: "+38(093)8665418",
+      }
+    ]
   },
   {
     id: 2,
     country: "Tajikistan",
-    name: 'LLC "TOSOL-PLUS"',
-    title:
-      "Tajikistan, Sughd region, J. Rasulov district, Mekhrobod settlement, I. Nurmatov street 45/4",
-    number: "+992 92 707 49 86",
+    distributors: [
+      {
+        name: 'LLC "TOSOL-PLUS"',
+        title: "Tajikistan, Sughd region, J. Rasulov district, Mekhrobod settlement, I. Nurmatov street 45/4",
+        number: "+992 92 707 49 86",
+      }
+    ]
   },
   {
     id: 3,
     country: "Kazakhstan",
-    name: 'TOO "Tanauto Kazakhstan"',
-    title: "Republic of Kazakhstan, 050050, Almaty, 169 A Raiymbek Ave.",
-    number: "+7 727 347 00 26",
+    distributors: [
+      {
+        name: 'TOO "Tanauto Kazakhstan"',
+        title: "Republic of Kazakhstan, 050050, Almaty, 169 A Raiymbek Ave.",
+        number: "+7 727 347 00 26",
+      }
+    ]
   },
   {
     id: 4,
     country: "Turkmenistan",
-    name: 'IE "Nuryev Guvanch Tagandurdyevich"',
-    title: "Turkmenistan, Mary velayat, Vekilbazar Etrap, Akgonur",
-    number: "+993 65 551008",
+    distributors: [
+      {
+        name: 'IE "Nuryev Guvanch Tagandurdyevich"',
+        title: "Turkmenistan, Mary velayat, Vekilbazar Etrap, Akgonur",
+        number: "+993 65 551008",
+      },
+      {
+        name: 'IE "Demirdag"',
+        title: "Turkmenistan, Mary velayat, Vekilbazar etrap, Akgonur geneshlyk",
+        number: "+99361070725",
+      }
+    ]
   },
   {
     id: 5,
     country: "UAE",
-    name: 'LLC "Dynatrade Auto Service"',
-    title: "Nad Al Hamar, Opposite Belhasa Driving Center, Dubai, United Arab Emirates",
-    number: "+971 50 646 7009",
-  },
-  {
-    id: 6,
-    country: "Turkmenistan",
-    name: 'IE "Demirdag"',
-    title: "Turkmenistan, Mary velayat, Vekilbazar etrap, Akgonur geneshlyk",
-    number: "+99361070725",
+    distributors: [
+      {
+        name: 'LLC "Dynatrade Auto Service"',
+        title: "Nad Al Hamar, Opposite Belhasa Driving Center, Dubai, United Arab Emirates",
+        number: "+971 50 646 7009",
+      }
+    ]
   },
 ];
+
 
 export const SERVICERU = [
   {

@@ -21,7 +21,7 @@ const NotFound = () => {
         transition={{ delay: 0.4 }}
         className="notfound__title"
       >
-       Страница не найдена
+        Страница не найдена
       </motion.h2>
     </div>
   );

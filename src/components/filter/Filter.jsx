@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 const uniqueOptions = (arr) => {
   const seen = new Set();
-  
+
   return arr?.filter((opt) => {
     if (!opt.value || seen.has(opt.value)) return false;
     seen.add(opt.value);
@@ -82,7 +82,7 @@ const Filter = () => {
           <div className="filter__top__left">
             <p className="filter__top__left-title">{t("search_products")}</p>
           </div>
-          
+
           <div className="filter__top__icon">
             <img className="filter__top__icon-img" src={img} alt="settings" />
           </div>
@@ -151,7 +151,7 @@ const Filter = () => {
               </button>
 
             </div>
-            
+
           </div>
 
         </form>

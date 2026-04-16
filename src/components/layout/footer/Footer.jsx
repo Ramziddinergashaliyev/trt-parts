@@ -45,12 +45,6 @@ const Footer = () => {
               </NavLink>
             </li>
 
-            {/* <li className="footer__item">
-              <NavLink to="/kamron" className="footer__item-link">
-                Test
-              </NavLink>
-            </li> */}
-
           </ul>
 
           <ul className="footer__list">
@@ -148,6 +142,7 @@ const Footer = () => {
             <p className="footer__bottom-info-text footer__bottom-info-text-one">
               {t("TRT")}
             </p>
+
             <p className="footer__bottom-info-text">
               {t("2025")}
             </p>

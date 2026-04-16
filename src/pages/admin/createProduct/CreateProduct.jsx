@@ -101,7 +101,7 @@ const CreateProduct = () => {
         <button className="create__product__form__btn" type="submit">
           Создать
         </button>
-        
+
       </form>
     </div>
   );

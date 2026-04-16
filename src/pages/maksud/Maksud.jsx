@@ -16,7 +16,7 @@ const Maksud = () => {
                 <div className="card__avatar">
                     <img src={img} alt="Ism FAMILIYA" />
                 </div>
-                                          
+
                 <h1 className="card__name">Otajonov Makhsud</h1>
                 <p className="card__role">Head of Marketing Department</p>
             </div>
