@@ -20,7 +20,6 @@ const Product = ({ product, isTrue }) => {
     try {
       await deleteProduct(product?.id).unwrap();
     } catch (error) {
-      console.error("O‘chirishda xatolik:", error);
       toast.error("Произошла ошибка. Повторите попытку позже.");
     }
   };

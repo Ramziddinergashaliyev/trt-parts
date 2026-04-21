@@ -387,12 +387,10 @@ const Hero = () => {
         <Grain />
 
         <div className="hero__slide">
-          {/* Poster preview */}
           <div className={`hero__preview${videoLoaded ? " hero__preview--hidden" : ""}`}>
             <img src={poster} alt="preview" />
           </div>
 
-          {/* Background video */}
           <video
             className="hero__slide__video"
             autoPlay muted loop playsInline preload="auto" poster={poster}
@@ -403,13 +401,10 @@ const Hero = () => {
             {t("Ваш браузер")}
           </video>
 
-          {/* Particles */}
           <Particles />
 
-          {/* Scan line */}
           <ScanLine />
 
-          {/* Geometric accent */}
           <svg className="hero__geo" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="160" cy="160" r="130" strokeWidth="0.6" fill="none" />
             <circle cx="160" cy="160" r="90" strokeWidth="0.6" fill="none" />
@@ -418,22 +413,9 @@ const Hero = () => {
             <line x1="160" y1="30" x2="160" y2="290" strokeWidth="0.6" />
           </svg>
 
-          {/* Floating badge */}
-          <motion.div
-            className="hero__badge"
-            initial={{ opacity: 0, y: -12, scale: 0.88 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.7, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <span className="hero__badge-dot" />
-            <span className="hero__badge-text">GLOBAL SUPPLIER</span>
-          </motion.div>
-
-          {/* Overlay */}
           <div className="hero__overlay container">
             <div className="hero__overlay__left">
 
-              {/* Label */}
               <motion.div className="hero__overlay__left-label-wrap"
                 initial={{ clipPath: "inset(0 100% 0 0)" }}
                 animate={{ clipPath: "inset(0 0% 0 0)" }}
@@ -441,14 +423,12 @@ const Hero = () => {
                 <p className="hero__overlay__left-text">{t("АВТОЗАПЧАСТИ")}</p>
               </motion.div>
 
-              {/* Title */}
               {ready && (
                 <h2 className="hero__overlay__left-title">
                   <SplitText text={t("Глобальные стандарты качества")} delay={0.35} />
                 </h2>
               )}
 
-              {/* Red accent rule */}
               <motion.span
                 className="hero__overlay__left-rule"
                 initial={{ scaleX: 0 }}
@@ -457,7 +437,6 @@ const Hero = () => {
               />
             </div>
 
-            {/* Right side */}
             <motion.div className="hero__overlay__right"
               initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -482,7 +461,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Bottom section */}
         <div className="hero__bottom">
           <div className="hero__bottom__left container">
             <p className="hero__bottom__left-text">{t("Полный")}</p>

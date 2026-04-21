@@ -141,7 +141,6 @@
 //   }
 // }
 
-
 .prinsp {
   padding: 60px 0;
 
@@ -164,26 +163,11 @@
       color: #d00101;
       position: relative;
     }
-
-    span::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: #d00101;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: 0.4s;
-    }
   }
 
   &__left:hover span::after {
     transform: scaleX(1);
   }
-
-  /* BUTTON */
 
   &__btn {
     display: flex;
@@ -216,6 +200,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    height: 62px;
   }
 
   &__btn:hover &__btn-text {
@@ -226,8 +211,6 @@
   &__btn:hover &__btn-icon {
     transform: translateX(6px);
   }
-
-  /* RESPONSIVE */
 
   @media (max-width: 900px) {
     &__top {
