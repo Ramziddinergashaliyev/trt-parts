@@ -415,7 +415,7 @@ const Single = () => {
             </motion.div>
 
             <motion.div
-              className="detail__card__info container"
+              className="detail__card__info"
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -462,7 +462,7 @@ const Single = () => {
         <Tabs activeTab={activeTab} onTabClick={setActiveTab} />
 
         <div className="tab-content">
-          <div className="tab-content-text container">
+          <div className="tab-content-text">
             {activeTab === "reviews" && <Characteristics data={data} />}
             {activeTab === "Application" && <Application data={data} />}
             {activeTab === "Information" && <Information data={data} />}

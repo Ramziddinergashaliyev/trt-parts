@@ -3,7 +3,7 @@ import "./information.scss";
 
 const Information = ({ data }) => {
   return (
-    <div className="information">
+    <div className="information container">
       {data?.oem?.map((el) => (
         <div className="information__card">
           <p className="information__card-text">OEM</p>

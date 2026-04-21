@@ -10,7 +10,7 @@ const Application = ({ data }) => {
   );
 
   return (
-    <div className="application">
+    <div className="application container">
       {Array.from({ length: maxLength }).map((_, index) => (
         <div className="application__card" key={index}>
 

@@ -9,7 +9,7 @@ const Characteristics = ({ data }) => {
   const currentLang = i18n.language;
 
   return (
-    <div className="characteristic">
+    <div className="characteristic container">
       <table className="characteristic__table">
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Марка")}</th>
