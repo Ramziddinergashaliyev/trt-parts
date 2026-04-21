@@ -231,7 +231,6 @@
 //   }
 // }
 
-// accardion.scss
 .accardion {
   position: relative;
   overflow: hidden;
@@ -344,7 +343,7 @@
     background-color: white;
 
     &--open {
-      max-height: 400px; // 2 ta kompaniya uchun kattaroq
+      max-height: 400px;
       padding: 0;
     }
 
@@ -360,7 +359,6 @@
       opacity: 0;
       transition: transform 0.4s ease 0s, opacity 0.7s ease 0s;
 
-      // 2 ta kompaniya orasidagi chiziq
       &--bordered {
         border-bottom: 1px solid #eee;
         margin-bottom: 4px;
@@ -431,7 +429,7 @@
     }
 
     &__content--open {
-      max-height: 380px; // mobilda ham kattaroq
+      max-height: 380px;
     }
 
     &__content__name {

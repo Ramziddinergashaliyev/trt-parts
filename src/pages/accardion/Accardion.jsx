@@ -83,8 +83,6 @@
 
 // export default memo(Accardion);
 
-
-// Accardion.jsx
 import React, { useState, useEffect, memo } from "react";
 import "./accardion.scss";
 import { ACCARDION, ACCARDIONEN } from "../../static";

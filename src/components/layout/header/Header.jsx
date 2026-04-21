@@ -9,6 +9,7 @@ import eng from "../../../assets/icons/english.png";
 import { MdClose } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { RiMenuFill } from "react-icons/ri";
+
 import "./header.scss";
 
 const Header = () => {
