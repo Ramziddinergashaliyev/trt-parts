@@ -224,7 +224,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "./single.scss";
 
-/* ─── Lightbox ─────────────────────────────────────────────────── */
 const Lightbox = ({ src, onClose }) => {
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -245,7 +244,6 @@ const Lightbox = ({ src, onClose }) => {
       transition={{ duration: 0.25 }}
       onClick={onClose}
     >
-      {/* Close button — top-right corner */}
       <motion.button
         className="lightbox__close"
         onClick={onClose}
@@ -260,7 +258,6 @@ const Lightbox = ({ src, onClose }) => {
         </svg>
       </motion.button>
 
-      {/* Image box — click inside does NOT close */}
       <motion.div
         className="lightbox__box"
         onClick={(e) => e.stopPropagation()}
@@ -275,7 +272,6 @@ const Lightbox = ({ src, onClose }) => {
   );
 };
 
-/* ─── Scroll arrow button ──────────────────────────────────────── */
 const ScrollBtn = ({ direction, disabled, onClick }) => (
   <button
     className={`scroll-btn${disabled ? " disabled" : ""}`}
@@ -291,7 +287,6 @@ const ScrollBtn = ({ direction, disabled, onClick }) => (
   </button>
 );
 
-/* ─── Main page ────────────────────────────────────────────────── */
 const Single = () => {
   const { id } = useParams();
   const { data, isLoading, error } = useGetProductByIdQuery(id);
@@ -338,7 +333,6 @@ const Single = () => {
 
   return (
     <>
-      {/* ── Lightbox (rendered outside normal flow) ─────────── */}
       <AnimatePresence>
         {lightboxSrc && <Lightbox src={lightboxSrc} onClose={closeLightbox} />}
       </AnimatePresence>
@@ -346,7 +340,6 @@ const Single = () => {
       <div className="detail">
         <div className="container">
 
-          {/* Breadcrumb */}
           <motion.nav
             className="detail__breadcrumb"
             initial={{ opacity: 0, y: -6 }}
@@ -360,14 +353,12 @@ const Single = () => {
 
           <div className="detail__cards">
 
-            {/* LEFT — image gallery */}
             <motion.div
               className="detail__card__img"
               initial={{ opacity: 0, x: -28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              {/* Thumbnail column */}
               <div className="thumbnail-wrapper">
                 {images.length > 4 && <ScrollBtn direction="up" disabled={!canScrollUp} onClick={scrollUp} />}
                 <div className="detail__card__imgs" ref={thumbRef}>
@@ -390,7 +381,6 @@ const Single = () => {
                 {images.length > 4 && <ScrollBtn direction="down" disabled={!canScrollDown} onClick={scrollDown} />}
               </div>
 
-              {/* Main image — click = open lightbox */}
               <div
                 className="detail__img"
                 onClick={openLightbox}
@@ -411,7 +401,6 @@ const Single = () => {
                   />
                 </AnimatePresence>
 
-                {/* Zoom hint */}
                 <div className="detail__img__hint">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
@@ -425,9 +414,8 @@ const Single = () => {
               </div>
             </motion.div>
 
-            {/* RIGHT — product info */}
             <motion.div
-              className="detail__card__info"
+              className="detail__card__info container"
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -471,7 +459,6 @@ const Single = () => {
           </div>
         </div>
 
-        {/* Tabs */}
         <Tabs activeTab={activeTab} onTabClick={setActiveTab} />
 
         <div className="tab-content">
