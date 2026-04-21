@@ -1,123 +1,251 @@
+// .vapros {
+//   background: url(../../assets/img/bigcar.webp) no-repeat center center;
+//   background-size: cover;
+//   height: 650px;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   &__cards {
+//     display: flex;
+//     align-items: flex-end;
+//     justify-content: flex-end;
+//   }
+
+//   &__card {
+//     background: rgba(255, 255, 255, 1);
+//     padding: 70px 50px;
+//     width: 600px;
+//     border-radius: 8px;
+
+//     &__top {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       padding-bottom: 20px;
+
+//       &__left {
+//         font-size: 28px;
+//         font-weight: 400;
+//         line-height: 33.6px;
+//         text-align: left;
+//         text-underline-position: from-font;
+//         text-decoration-skip-ink: none;
+//         color: rgba(0, 0, 0, 1);
+
+//         span {
+//           color: rgb(208, 1, 1);
+//         }
+//       }
+//     }
+
+//     &__info {
+//       &-text {
+//         font-size: 16px;
+//         font-weight: 400;
+//         line-height: 22.4px;
+//         text-align: left;
+//         color: rgba(0, 0, 0, 0.5);
+//         padding: 10px 0px 30px 0px;
+//       }
+//     }
+
+//     &__btns {
+//       display: flex;
+//       align-self: center;
+//       border-radius: 6px;
+//       overflow: hidden;
+//       transition: 0.5s;
+
+//       &-white {
+//         padding: 20px 51px;
+//         background: rgba(255, 255, 255, 1);
+//         border: 1px solid #aaa4;
+//         border-right: none;
+//         font-size: 16px;
+//         font-weight: 400;
+//         line-height: 16px;
+//         text-align: left;
+//       }
+
+//       &-red {
+//         border-radius: 0px 4px 4px 0px;
+//         padding: 21px;
+//         background: rgb(208, 1, 1);
+//         border: 1px solid rgb(208, 1, 1);
+//         color: white;
+
+//         svg {
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//         }
+//       }
+//     }
+
+//     &__btns:hover {
+//       transform: scale(1.01);
+//       transform: 0.3s;
+//     }
+
+//     &__btns:hover .vapros__card__btns-white {
+//       border: 1px solid rgb(208, 1, 1);
+//       color: rgb(208, 1, 1);
+//       transition: 0.5s;
+//     }
+//   }
+
+//   &__card:hover {
+//     box-shadow: 1px 1px 10px gray;
+//     transform: scale(1.02);
+//     transition: 0.3s;
+//   }
+
+//   @media (max-width: 500px) {
+//     &__card {
+//       padding: 20px;
+
+//       &__top__left {
+//         font-size: 20px;
+//         line-height: 24px;
+//       }
+
+//       .vapros__card__btns-white {
+//         padding: 10px !important;
+//       }
+
+//       .vapros__card__btns-red {
+//         padding: 10px !important;
+//       }
+//     }
+//   }
+// }
+
+
 .vapros {
-  background: url(../../assets/img/bigcar.webp) no-repeat center center;
-  background-size: cover;
+  position: relative;
   height: 650px;
-  width: 100%;
+  background: url(../../assets/img/bigcar.webp) no-repeat center;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  &__cards {
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  &__container {
+    position: relative;
     display: flex;
-    align-items: flex-end;
     justify-content: flex-end;
   }
 
   &__card {
-    background: rgba(255, 255, 255, 1);
-    padding: 70px 50px;
     width: 600px;
-    border-radius: 8px;
+    background: #fff;
+    padding: 60px;
+    border-radius: 10px;
+    z-index: 2;
+    transition: all 0.4s ease;
 
-    &__top {
+    &:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.3;
+
+    span {
+      color: #d00101;
+    }
+  }
+
+  &__icon img {
+    width: 50px;
+    transition: 0.5s;
+  }
+
+  &__card:hover &__icon img {
+    transform: rotate(15deg) scale(1.1);
+  }
+
+  &__text {
+    margin: 20px 0 35px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    span {
+      padding: 18px 45px;
+      border: 1px solid #ddd;
+      border-right: none;
+      background: #fff;
+      color: #000;
+      transition: 0.3s;
+    }
+
+    &-icon {
+      background: #d00101;
+      color: #fff;
+      padding: 18px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding-bottom: 20px;
-
-      &__left {
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 33.6px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        color: rgba(0, 0, 0, 1);
-
-        span {
-          color: rgb(208, 1, 1);
-        }
-      }
+      justify-content: center;
+      transition: 0.3s;
     }
 
-    &__info {
-      &-text {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22.4px;
-        text-align: left;
-        color: rgba(0, 0, 0, 0.5);
-        padding: 10px 0px 30px 0px;
-      }
+    &:hover span {
+      color: #d00101;
+      border-color: #d00101;
     }
 
-    &__btns {
-      display: flex;
-      align-self: center;
-      border-radius: 6px;
-      overflow: hidden;
-      transition: 0.5s;
-
-      &-white {
-        padding: 20px 51px;
-        background: rgba(255, 255, 255, 1);
-        border: 1px solid #aaa4;
-        border-right: none;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 16px;
-        text-align: left;
-      }
-
-      &-red {
-        border-radius: 0px 4px 4px 0px;
-        padding: 21px;
-        background: rgb(208, 1, 1);
-        border: 1px solid rgb(208, 1, 1);
-        color: white;
-
-        svg {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-    }
-
-    &__btns:hover {
-      transform: scale(1.01);
-      transform: 0.3s;
-    }
-
-    &__btns:hover .vapros__card__btns-white {
-      border: 1px solid rgb(208, 1, 1);
-      color: rgb(208, 1, 1);
-      transition: 0.5s;
+    &:hover .vapros__btn-icon {
+      transform: translateX(5px);
     }
   }
 
-  &__card:hover {
-    box-shadow: 1px 1px 10px gray;
-    transform: scale(1.02);
-    transition: 0.3s;
-  }
+  @media (max-width: 768px) {
+    &__container {
+      justify-content: center;
+    }
 
-  @media (max-width: 500px) {
     &__card {
-      padding: 20px;
+      width: 90%;
+      padding: 30px;
+    }
 
-      &__top__left {
-        font-size: 20px;
-        line-height: 24px;
-      }
+    &__title {
+      font-size: 22px;
+    }
 
-      .vapros__card__btns-white {
-        padding: 10px !important;
-      }
+    &__btn span {
+      padding: 12px 20px;
+    }
 
-      .vapros__card__btns-red {
-        padding: 10px !important;
-      }
+    &__btn-icon {
+      padding: 12px;
     }
   }
 }

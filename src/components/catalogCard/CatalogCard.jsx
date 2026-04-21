@@ -90,7 +90,6 @@
 
 // export default CatalogCard;
 
-
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
@@ -106,7 +105,7 @@ const CatalogCard = () => {
 
   if (isLoading) {
     return (
-      <div className="catalog">
+      <div className="catalog-bg">
         <div className="catalog__grid">
           {Array(6)
             .fill(0)

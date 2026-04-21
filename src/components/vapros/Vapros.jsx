@@ -1,50 +1,106 @@
-import React from "react";
+// import React from "react";
+// import icons from "../../assets/icons/vapros.svg";
+// import { FaAngleRight } from "react-icons/fa6";
+// import { NavLink } from "react-router-dom";
+// import { useTranslation } from "react-i18next";
+
+// import "./vapros.scss";
+
+// const Vapros = () => {
+//   const { t } = useTranslation();
+
+//   return (
+//     <div className="vapros">
+//       <div className="vapros__cards container">
+//         <div
+//           className="vapros__card"
+//           data-aos="flip-left"
+//           data-aos-easing="ease-out-cubic"
+//           data-aos-duration="1000"
+//         >
+
+//           <div className="vapros__card__top">
+//             <h3 className="vapros__card__top__left">
+//               {t("have_questions")} <br />
+//               <span>{t("or_suggestions")}</span>
+//             </h3>
+//             <img src={icons} alt="Vapros-icons" />
+//           </div>
+
+//           <div className="vapros__card__info">
+//             <p className="vapros__card__info-text">
+//               {t("leave_request_instruction")}
+//             </p>
+//           </div>
+
+//           <NavLink to={"contact"} className="vapros__card__btns">
+//             <button className="vapros__card__btns-white">
+//               {t("contact_us")}
+//             </button>
+//             <span className="vapros__card__btns-red">
+//               <FaAngleRight />
+//             </span>
+//           </NavLink>
+
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Vapros;
+
+
+import React, { useEffect } from "react";
 import icons from "../../assets/icons/vapros.svg";
 import { FaAngleRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "./vapros.scss";
 
 const Vapros = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const { t } = useTranslation();
 
   return (
-    <div className="vapros">
-      <div className="vapros__cards container">
+    <section className="vapros">
+      <div className="vapros__overlay"></div>
+
+      <div className="vapros__container container">
         <div
           className="vapros__card"
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
+          data-aos="fade-up"
           data-aos-duration="1000"
         >
-
           <div className="vapros__card__top">
-            <h3 className="vapros__card__top__left">
+            <h3 className="vapros__title">
               {t("have_questions")} <br />
               <span>{t("or_suggestions")}</span>
             </h3>
-            <img src={icons} alt="Vapros-icons" />
+
+            <div className="vapros__icon">
+              <img src={icons} alt="icon" />
+            </div>
           </div>
 
-          <div className="vapros__card__info">
-            <p className="vapros__card__info-text">
-              {t("leave_request_instruction")}
-            </p>
-          </div>
+          <p className="vapros__text">
+            {t("leave_request_instruction")}
+          </p>
 
-          <NavLink to={"contact"} className="vapros__card__btns">
-            <button className="vapros__card__btns-white">
-              {t("contact_us")}
-            </button>
-            <span className="vapros__card__btns-red">
+          <NavLink to="/contact" className="vapros__btn">
+            <span>{t("contact_us")}</span>
+            <div className="vapros__btn-icon">
               <FaAngleRight />
-            </span>
+            </div>
           </NavLink>
-
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
