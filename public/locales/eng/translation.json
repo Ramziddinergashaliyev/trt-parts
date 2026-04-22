@@ -91,8 +91,8 @@
   "Ваш браузер": "Your browser does not support this video format.",
   "Произошла ошибка": "An error has occurred. Please try again.",
   "Read more": "Read more",
-  "Latest":"Latest",
-  "News":"News",
+  "Latest": "Latest",
+  "News": "News",
   "All News": "All news",
   "видео": "Our latest videos",
   "канал": "YouTube channel",
@@ -101,9 +101,6 @@
   "Домашняя": "Home",
   "Новости": "News",
   "РАЗДЕЛ": "SECTION",
-  "Ошибка при загрузке результатов.": "Error loading results."
-
-
-
-
+  "Ошибка при загрузке результатов.": "Error loading results.",
+  "Увеличить": "Enlarge"
 }
