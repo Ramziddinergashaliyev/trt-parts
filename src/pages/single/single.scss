@@ -799,7 +799,6 @@
 //   color: $text-muted;
 // }
 
-
 $red: rgb(208, 1, 1);
 $red-alpha: rgba(208, 1, 1, 0.07);
 $red-mid: rgba(208, 1, 1, 0.18);
@@ -874,17 +873,25 @@ $muted: #aaaaaa;
     margin-bottom: 22px;
 
     span {
-      font-size: 13px;
+      font-size: 16px;
       color: $muted;
       letter-spacing: 0.3px;
 
+      &.cat {
+        font-size: 16px;
+        font-weight: 500;
+        color: $muted;
+
+      }
+
       &.sep {
-        color: #ddd;
+        color: #565656;
       }
 
       &.cur {
+        font-size: 15px;
         color: $red;
-        font-weight: 600;
+        font-weight: 500;
         max-width: 280px;
         white-space: nowrap;
         overflow: hidden;
@@ -1155,7 +1162,7 @@ $muted: #aaaaaa;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 14px 0;
+    padding: 14px 10px;
     border-bottom: 1px solid #f2f2f2;
     transition: background 0.18s;
 
@@ -1169,9 +1176,9 @@ $muted: #aaaaaa;
   }
 
   &__info-label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
-    color: $muted;
+    color: gray;
     letter-spacing: 0.8px;
     text-transform: uppercase;
     flex-shrink: 0;

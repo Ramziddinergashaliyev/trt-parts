@@ -80,7 +80,6 @@
 
 // export default NewsCard;
 
-
 import React from 'react';
 import './newsCard.scss';
 import { newsData, newsDataEn } from '../../static';

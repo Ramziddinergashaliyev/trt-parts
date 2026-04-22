@@ -9,7 +9,7 @@ import NewsCard from "../../components/newsCard/NewsCard";
 import YoutubeCard from "../../components/youtubecard/YoutubeCard";
 
 const Home = () => {
-  
+
   useEffect(() => {
     window.scroll(0, 0);
   });

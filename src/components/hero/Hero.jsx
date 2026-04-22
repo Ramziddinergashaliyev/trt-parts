@@ -214,7 +214,6 @@ import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motio
 import AnimatedStats from "../animatedState/AnimatedStats";
 import { useTranslation } from "react-i18next";
 
-/* ─── Split Text ─────────────────────────────────────────────── */
 const SplitText = ({ text, delay = 0 }) => {
   const words = text.split(" ");
   return (
@@ -243,7 +242,6 @@ const SplitText = ({ text, delay = 0 }) => {
   );
 };
 
-/* ─── Magnetic Button ─────────────────────────────────────────── */
 const MagneticBtn = ({ children }) => {
   const ref = useRef(null);
   const x = useMotionValue(0);
@@ -266,7 +264,6 @@ const MagneticBtn = ({ children }) => {
   );
 };
 
-/* ─── Grain Canvas ────────────────────────────────────────────── */
 const Grain = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -292,7 +289,6 @@ const Grain = () => {
   return <canvas ref={ref} className="hero__grain" />;
 };
 
-/* ─── Particle Canvas ─────────────────────────────────────────── */
 const Particles = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -340,7 +336,6 @@ const Particles = () => {
   return <canvas ref={ref} className="hero__particles" />;
 };
 
-/* ─── Scan Line ───────────────────────────────────────────────── */
 const ScanLine = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -360,7 +355,6 @@ const ScanLine = () => {
   return <div ref={ref} className="hero__scanline" />;
 };
 
-/* ─── Hero ────────────────────────────────────────────────────── */
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -487,7 +481,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Red line */}
       <motion.div
         className="hero__line"
         initial={{ scaleX: 0 }}

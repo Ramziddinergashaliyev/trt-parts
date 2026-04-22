@@ -489,7 +489,6 @@
 //   transform-origin: left;
 // }
 
-
 .hero {
   width: 100%;
   background-color: #0a0a0a;
@@ -497,7 +496,6 @@
   position: relative;
   overflow: hidden;
 
-  /* ── Grain overlay ─────────────────────────────────────── */
   &__grain {
     position: fixed;
     inset: 0;
@@ -509,7 +507,6 @@
     mix-blend-mode: overlay;
   }
 
-  /* ── Particle canvas ───────────────────────────────────── */
   &__particles {
     position: absolute;
     inset: 0;
@@ -519,7 +516,6 @@
     pointer-events: none;
   }
 
-  /* ── Scan line ─────────────────────────────────────────── */
   &__scanline {
     position: absolute;
     left: 0;
@@ -532,7 +528,6 @@
     will-change: top;
   }
 
-  /* ── Geometric SVG accent ──────────────────────────────── */
   &__geo {
     position: absolute;
     right: 60px;
@@ -553,7 +548,6 @@
     }
   }
 
-  /* ── Floating badge ────────────────────────────────────── */
   &__badge {
     position: absolute;
     top: 28px;
@@ -589,7 +583,6 @@
     }
   }
 
-  /* ── Poster preview ────────────────────────────────────── */
   &__preview {
     position: absolute;
     inset: 0;
@@ -609,7 +602,6 @@
     }
   }
 
-  /* ── Slide (video wrapper) ─────────────────────────────── */
   &__slide {
     height: 100%;
     position: relative;
@@ -639,7 +631,6 @@
     }
   }
 
-  /* ── Overlay content ───────────────────────────────────── */
   &__overlay {
     padding: calc(100vh - 55vh) 0 30px 0;
     width: 85%;
@@ -759,7 +750,6 @@
     }
   }
 
-  /* ── Bottom section ────────────────────────────────────── */
   &__bottom {
     display: flex;
     align-items: center;
@@ -840,7 +830,6 @@
     }
   }
 
-  /* ── Responsive ────────────────────────────────────────── */
   @media (max-width: 1665px) {
     &__overlay__left-title {
       font-size: 58px;

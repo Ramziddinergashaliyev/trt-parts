@@ -277,11 +277,13 @@ const Filter = () => {
   const trtOptions = uniqueOptions(
     data?.map((p) => ({ value: p.trtCode, label: p.trtCode }))
   );
+
   const oemOptions = uniqueOptions(
     data?.flatMap((p) =>
       Array.isArray(p.oem) ? p.oem.map((o) => ({ value: o, label: o })) : []
     )
   );
+
   const markaOptions = uniqueOptions(
     data?.flatMap((p) =>
       Array.isArray(p.carName)
@@ -289,6 +291,7 @@ const Filter = () => {
         : []
     )
   );
+
   const modelOptions = uniqueOptions(
     data?.flatMap((p) =>
       Array.isArray(p.model) ? p.model.map((m) => ({ value: m, label: m })) : []

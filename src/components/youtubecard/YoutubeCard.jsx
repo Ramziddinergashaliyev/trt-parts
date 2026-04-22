@@ -113,7 +113,6 @@ const YoutubeCard = () => {
     <section className="yt">
       <div className="container">
 
-        {/* ── Header ─────────────────────────────────────────── */}
         <div className="yt__head">
           <div className="yt__head-left">
             <div className="yt__icon">
@@ -136,7 +135,6 @@ const YoutubeCard = () => {
           </a>
         </div>
 
-        {/* ── Video Grid ─────────────────────────────────────── */}
         <div className="yt__grid">
           {videos.map((video, index) => (
             <div
@@ -152,7 +150,6 @@ const YoutubeCard = () => {
               aria-label={`Видео ${index + 1}`}
             >
               <div className="yt-card__media">
-                {/* Thumbnail */}
                 <img
                   src={`https://img.youtube.com/vi/${video.videoId}/maxresdefault.jpg`}
                   alt={`Видео ${index + 1}`}
@@ -162,25 +159,20 @@ const YoutubeCard = () => {
                   }}
                 />
 
-                {/* Dark gradient overlay */}
                 <div className="yt-card__gradient" />
 
-                {/* Play button */}
                 <div className={`yt-card__play${hovered === video.id ? " active" : ""}`}>
                   <div className="yt-card__play-ring" />
                   <FaPlay />
                 </div>
 
-                {/* YouTube badge */}
                 <div className="yt-card__badge">
                   <FaYoutube />
                   YouTube
                 </div>
 
-                {/* Big italic number */}
                 <span className="yt-card__num">0{index + 1}</span>
 
-                {/* Hover bottom line */}
                 <span className="yt-card__line" />
               </div>
             </div>

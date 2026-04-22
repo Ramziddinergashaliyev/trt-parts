@@ -346,7 +346,7 @@ const Single = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <span>{t("Каталог")}</span>
+            <span className="cat">{t("Каталог")}</span>
             <span className="sep">/</span>
             <span className="cur">{displayName}</span>
           </motion.nav>
@@ -423,36 +423,42 @@ const Single = () => {
               <h3 className="detail__title">{displayName}</h3>
 
               <ul className="detail__card__info-list">
+
                 {data?.trtCode && (
                   <li className="detail__card__info-item">
                     <span className="detail__info-label">{t("TRT-код")}</span>
                     <span className="detail__info-val">{data.trtCode}</span>
                   </li>
                 )}
+
                 {data?.carName && (
                   <li className="detail__card__info-item">
                     <span className="detail__info-label">{t("Марка")}</span>
                     <span className="detail__info-val">{data.carName[0]}</span>
                   </li>
                 )}
+
                 {data?.model?.length > 0 && (
                   <li className="detail__card__info-item">
                     <span className="detail__info-label">{t("Модель")}</span>
                     <span className="detail__info-val">{data.model[0]}</span>
                   </li>
                 )}
+
                 {data?.oem?.length > 0 && (
                   <li className="detail__card__info-item">
                     <span className="detail__info-label">{t("OEM")}</span>
                     <span className="detail__info-val">{data.oem[0]}</span>
                   </li>
                 )}
+
                 {data?.years && (
                   <li className="detail__card__info-item">
                     <span className="detail__info-label">{t("Год")}</span>
                     <span className="detail__info-val">{data.years[0]}</span>
                   </li>
                 )}
+
               </ul>
             </motion.div>
 

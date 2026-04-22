@@ -60,7 +60,6 @@ const Contact = () => {
 
             <address className="contact__left__information">
               <p className="contact__left__information-text">{t("nomer")}</p>
-
               <a
                 className="contact__left__information-number"
                 href="tel:+998712032030"
