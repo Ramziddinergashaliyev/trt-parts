@@ -215,7 +215,9 @@ import { useTranslation } from "react-i18next";
 
 const SplitText = ({ text, delay = 0 }) => {
   const words = text.split(" ");
+
   return (
+    
     <>
       {words.map((word, wi) => (
         <span key={wi} className="split-word">
@@ -395,8 +397,6 @@ const Hero = () => {
           </video>
 
           <Particles />
-
-          <ScanLine />
 
           <svg className="hero__geo" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="160" cy="160" r="130" strokeWidth="0.6" fill="none" />
