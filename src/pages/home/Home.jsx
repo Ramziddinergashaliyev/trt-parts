@@ -22,7 +22,7 @@ const Home = () => {
       <Auto />
       <Prinsp />
       <Catalog />
-      <Car />
+      {/* <Car /> */}
       <NewsCard />
       <YoutubeCard />
       <Vapros />
