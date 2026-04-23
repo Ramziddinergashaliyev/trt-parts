@@ -429,7 +429,7 @@ const PARTS = [
         label: "TORMOZ DISKI",
         info: "Tormoz diski g'ildirak bilan birgalikda aylanadi. Tormoz parokasi diskni qisib, harakatni sekinlashtiradi. Ventillatsion teshiklar haddan tashqari qizishni oldini oladi.",
         image: brakeImg,
-        pos: { top: "75%", left: "36%" },
+        pos: { top: "65%", left: "23.4%" },
         size: 95,
     },
     {
@@ -493,15 +493,13 @@ export default function Car() {
                             return (
                                 <div
                                     key={p.id}
-                                    className={`pcars__placed${isActive ? " is-active" : ""
-                                        }`}
+                                    className={`pcars__placed${isActive ? " is-active" : ""}`}
                                     style={{
                                         top: p.pos.top,
                                         left: p.pos.left,
                                         width: `${p.size}px`,
                                     }}
-                                    aria-hidden={!isActive}
-                                >
+                                    aria-hidden={!isActive}>
                                     <img src={p.image} alt={p.name} loading="lazy" />
                                     <span className="pcars__placed-tag">{p.label}</span>
                                 </div>
