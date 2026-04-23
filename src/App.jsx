@@ -59,7 +59,8 @@ const App = () => {
             <Route path="/company" element={<Company />} />
             <Route path="/partner" element={<Partner />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/single/:id" element={<Single />} />
+            {/* <Route path="/single/:id" element={<Single />} /> */}
+            <Route path="/single/:slug" element={<Single />} />
             <Route path="/filter" element={<FilterSearch />} />
             <Route path="/news" element={<News />} />
             <Route path="/result" element={<Result />} />

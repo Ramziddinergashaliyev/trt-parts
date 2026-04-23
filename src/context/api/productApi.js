@@ -60,7 +60,7 @@ export const productApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Product"],
     }),
-    
+
   }),
 });
 
