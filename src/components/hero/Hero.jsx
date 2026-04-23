@@ -217,7 +217,6 @@ const SplitText = ({ text, delay = 0 }) => {
   const words = text.split(" ");
 
   return (
-    
     <>
       {words.map((word, wi) => (
         <span key={wi} className="split-word">
@@ -292,6 +291,7 @@ const Grain = () => {
 
 const Particles = () => {
   const ref = useRef(null);
+
   useEffect(() => {
     const c = ref.current;
     const ctx = c.getContext("2d");
@@ -334,11 +334,13 @@ const Particles = () => {
     window.addEventListener("resize", init);
     return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", init); };
   }, []);
+
   return <canvas ref={ref} className="hero__particles" />;
 };
 
 const ScanLine = () => {
   const ref = useRef(null);
+
   useEffect(() => {
     const el = ref.current;
     let y = -2;
@@ -351,6 +353,7 @@ const ScanLine = () => {
       raf = requestAnimationFrame(anim);
     };
     anim();
+
     return () => cancelAnimationFrame(raf);
   }, []);
   return <div ref={ref} className="hero__scanline" />;
@@ -421,13 +424,6 @@ const Hero = () => {
                   <SplitText text={t("Глобальные стандарты качества")} delay={0.35} />
                 </h2>
               )}
-
-              <motion.span
-                className="hero__overlay__left-rule"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1.0, delay: 1.2, ease: [0.77, 0, 0.175, 1] }}
-              />
             </div>
 
             <motion.div className="hero__overlay__right"

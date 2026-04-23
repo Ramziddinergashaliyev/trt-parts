@@ -281,7 +281,7 @@ $red-mid: rgba(208, 1, 1, 0.15);
 $text-dark: #111;
 $text-mid: #666;
 $text-muted: #bbb;
-$border: #e8e8e8;
+$border: #d4d4d4;
 $bg-soft: #fafafa;
 $white: #ffffff;
 
@@ -335,11 +335,11 @@ $white: #ffffff;
     }
 
     &-eyebrow {
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 500;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: $text-muted;
+      color: rgba(66, 66, 66, 0.703);
       position: relative;
       padding-left: 20px;
 
@@ -357,8 +357,8 @@ $white: #ffffff;
 
     &-title {
       font-family: 'Syne', sans-serif;
-      font-size: 34px;
-      font-weight: 700;
+      font-size: 42px;
+      font-weight: 600;
       color: $text-dark;
       letter-spacing: -0.5px;
       line-height: 1;
@@ -401,17 +401,6 @@ $white: #ffffff;
     @include fade-up(0.1s);
     position: relative;
     overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, $red 0%, rgba(208, 1, 1, 0.2) 60%, transparent 100%);
-      border-radius: 16px 16px 0 0;
-    }
   }
 
   &__fields {
@@ -441,11 +430,12 @@ $white: #ffffff;
   }
 
   &__label {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: $text-mid;
+    padding-bottom: 10px;
   }
 
   &__footer {
@@ -455,7 +445,7 @@ $white: #ffffff;
   }
 
   &__hint {
-    font-size: 13px;
+    font-size: 14px;
     color: $text-muted;
     margin: 0;
     transition: color 0.2s;
