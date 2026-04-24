@@ -1,366 +1,681 @@
-// @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+//1-variant
+// @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
 
-// .section-root {
-//     background: #f5f5f3;
+// $bg: #f8f7f4;
+// $ink: #0d0d0d;
+// $muted: #666;
+// $line: #e8e6e1;
+// $accent: #c0392b;
+// $accent-soft: #fff9f8;
+
+// .pcars {
+//     font-family: "Barlow", sans-serif;
+//     color: #1a1a1a;
 //     min-height: 100vh;
-//     font-family: 'DM Sans', sans-serif;
-//     padding: 60px 40px;
-// }
+//     padding: 50px 0;
 
-// .section-header {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     margin-bottom: 48px;
-// }
-
-// .section-label {
-//     font-family: 'Rajdhani', sans-serif;
-//     font-size: 11px;
-//     letter-spacing: 4px;
-//     text-transform: uppercase;
-//     color: #c0392b;
-//     font-weight: 600;
-//     margin-bottom: 10px;
-// }
-
-// .section-title {
-//     font-family: 'Rajdhani', sans-serif;
-//     font-size: 52px;
-//     font-weight: 700;
-//     color: #111;
-//     line-height: 1;
-//     letter-spacing: -1px;
-// }
-
-// .section-subtitle {
-//     font-size: 15px;
-//     color: #666;
-//     font-weight: 300;
-//     margin-top: 10px;
-//     letter-spacing: 0.3px;
-// }
-
-// .main-layout {
-//     display: grid;
-//     grid-template-columns: 1fr 340px;
-//     gap: 40px;
-//     align-items: start;
-// }
-
-// .car-stage {
-//     position: relative;
-//     background: #fff;
-//     border-radius: 24px;
-//     border: 1px solid #e5e5e5;
-//     overflow: hidden;
-//     padding: 40px 20px 20px;
-//     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.06);
-// }
-
-// .car-stage::before {
-//     content: '';
-//     position: absolute;
-//     inset: 0;
-//     background: radial-gradient(ellipse at 50% 20%, rgba(192, 57, 43, 0.03) 0%, transparent 70%);
-//     pointer-events: none;
-// }
-
-// .car-wrapper {
-//     position: relative;
-//     width: 100%;
-// }
-
-// .hotspot {
-//     position: absolute;
-//     transform: translate(-50%, -50%);
-//     cursor: pointer;
-//     z-index: 10;
-//     transition: all 0.2s ease;
-// }
-
-// .hotspot-ring {
-//     position: relative;
-//     width: 28px;
-//     height: 28px;
-// }
-
-// .hotspot-ring::before {
-//     content: '';
-//     position: absolute;
-//     inset: 0;
-//     border-radius: 50%;
-//     border: 2px solid;
-//     animation: pulse-ring 2s ease-out infinite;
-// }
-
-// .hotspot-dot {
-//     position: absolute;
-//     inset: 6px;
-//     border-radius: 50%;
-//     border: 2px solid white;
-//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-//     transition: transform 0.2s ease, box-shadow 0.2s ease;
-// }
-
-// .hotspot:hover .hotspot-dot,
-// .hotspot.active .hotspot-dot {
-//     transform: scale(1.25);
-//     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-// }
-
-// .hotspot-label {
-//     position: absolute;
-//     bottom: calc(100% + 6px);
-//     left: 50%;
-//     transform: translateX(-50%);
-//     background: #111;
-//     color: white;
-//     font-size: 10px;
-//     font-weight: 500;
-//     white-space: nowrap;
-//     padding: 3px 8px;
-//     border-radius: 4px;
-//     letter-spacing: 0.5px;
-//     opacity: 0;
-//     pointer-events: none;
-//     transition: opacity 0.2s;
-// }
-
-// .hotspot:hover .hotspot-label {
-//     opacity: 1;
-// }
-
-// .hotspot-label::after {
-//     content: '';
-//     position: absolute;
-//     top: 100%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     border: 4px solid transparent;
-//     border-top-color: #111;
-// }
-
-// @keyframes pulse-ring {
-//     0% {
-//         transform: scale(0.9);
-//         opacity: 0.9;
+//     &__label {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 11px;
+//         font-weight: 700;
+//         letter-spacing: 3px;
+//         text-transform: uppercase;
+//         color: $accent;
+//         margin-bottom: 0.5rem;
 //     }
 
-//     70% {
-//         transform: scale(1.6);
+//     &__title {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 52px;
+//         font-weight: 700;
+//         line-height: 1;
+//         color: $ink;
+//         margin-bottom: 0.3rem;
+//     }
+
+//     &__sub {
+//         font-size: 15px;
+//         color: $muted;
+//         margin-bottom: 1.5rem;
+//     }
+
+//     // Stage: the main visualization box
+//     &__stage {
+//         position: relative;
+//         background: #fff;
+//         border: 1px solid $line;
+//         border-radius: 16px;
+//         padding: 1.5rem;
+//         margin-bottom: 2rem;
+//         overflow: hidden;
+//         min-height: 500px;
+//     }
+
+//     &__stage-bg {
+//         position: absolute;
+//         inset: 0;
+//         background: radial-gradient(ellipse at 50% 60%, #f5f3ee 0%, #fff 70%);
+//         border-radius: 16px;
+//         pointer-events: none;
+//     }
+
+//     // Car image centered in stage
+//     &__car {
+//         position: relative;
+//         z-index: 2;
+//         max-width: 820px;
+//         margin: 60px auto 0;
+//         aspect-ratio: 16 / 9;
+
+//         img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: contain;
+//             display: block;
+//             user-select: none;
+//             pointer-events: none;
+//         }
+//     }
+
+//     // Annotation label boxes
+//     &__annotation {
+//         position: absolute;
+//         z-index: 10;
+//         pointer-events: none;
+//         opacity: 0;
+//         transform: translateY(6px);
+//         transition: opacity 0.35s ease, transform 0.35s ease;
+//         max-width: 160px;
+
+//         &.is-active {
+//             opacity: 1;
+//             transform: translateY(0);
+//         }
+
+//         &.is-top {
+
+//             // box opens downward
+//             .pcars__ann-label {
+//                 border-bottom: none;
+//                 border-radius: 4px 4px 0 0;
+//             }
+
+//             .pcars__ann-desc {
+//                 border-radius: 0 0 4px 4px;
+//             }
+//         }
+
+//         &.is-bottom {
+//             // box opens upward — translate up so bottom aligns at boxPos.top
+//             transform: translateY(-100%) translateY(6px);
+
+//             &.is-active {
+//                 transform: translateY(-100%) translateY(0);
+//             }
+//         }
+//     }
+
+//     &__ann-label {
+//         display: block;
+//         background: $accent;
+//         color: #fff;
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 11px;
+//         font-weight: 700;
+//         letter-spacing: 1.5px;
+//         text-transform: uppercase;
+//         padding: 4px 10px;
+//         border-radius: 4px 4px 0 0;
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+
+//         // Animate in width from 0
+//         max-width: 0;
+//         transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+
+//         .pcars__annotation.is-active & {
+//             max-width: 200px;
+//         }
+//     }
+
+//     &__ann-desc {
+//         display: block;
+//         background: $ink;
+//         color: #e8e8e8;
+//         font-size: 11px;
+//         line-height: 1.5;
+//         padding: 6px 10px;
+//         border-radius: 0 0 4px 4px;
+//         opacity: 0;
+//         transform: translateY(-4px);
+//         transition: opacity 0.3s ease 0.45s, transform 0.3s ease 0.45s;
+//         max-width: 160px;
+
+//         .pcars__annotation.is-active & {
+//             opacity: 1;
+//             transform: translateY(0);
+//         }
+//     }
+
+//     // Bottom part cards
+//     &__row {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+//         gap: 12px;
+//     }
+
+//     &__card {
+//         background: #fff;
+//         border: 1.5px solid $line;
+//         border-radius: 14px;
+//         padding: 1rem 0.8rem;
+//         cursor: pointer;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-start;
+//         gap: 6px;
+//         text-align: left;
+//         font-family: inherit;
+//         transition: all 0.25s ease;
+//         position: relative;
+//         overflow: hidden;
+
+//         &:hover {
+//             border-color: $accent;
+//             transform: translateY(-3px);
+//             box-shadow: 0 8px 24px rgba($accent, 0.12);
+//         }
+
+//         &.is-active {
+//             border-color: $accent;
+//             background: $accent-soft;
+//             box-shadow: 0 0 0 3px rgba($accent, 0.12);
+
+//             &::after {
+//                 content: "";
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 right: 0;
+//                 height: 3px;
+//                 background: $accent;
+//             }
+//         }
+//     }
+
+//     &__name {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 15px;
+//         font-weight: 700;
+//         color: $ink;
+//         letter-spacing: 0.3px;
+
+//         .pcars__card.is-active & {
+//             color: $accent;
+//         }
+//     }
+
+//     &__cardsub {
+//         font-size: 11px;
+//         color: $muted;
+//         line-height: 1.4;
+//         animation: fadeSlideIn 0.3s ease both;
+//     }
+
+//     &__learn {
+//         font-size: 11px;
+//         font-weight: 600;
+//         color: $accent;
+//         letter-spacing: 0.5px;
+//         margin-top: 2px;
+//     }
+// }
+
+// @keyframes fadeSlideIn {
+//     from {
+//         opacity: 0;
+//         transform: translateY(-4px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// .pcars__line-svg {
+//     path {
+//         stroke-dashoffset: attr(stroke-dasharray);
+//         transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+// }
+
+
+// 2-variant
+
+// @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
+
+// $bg: #f8f7f4;
+// $ink: #0d0d0d;
+// $muted: #666;
+// $line: #e8e6e1;
+// $accent: #c0392b;
+// $accent-soft: #fff9f8;
+
+// .pcars {
+//     font-family: "Barlow", sans-serif;
+//     color: #1a1a1a;
+//     min-height: 100vh;
+//     padding: 50px 0px;
+
+//     &__label {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 11px;
+//         font-weight: 700;
+//         letter-spacing: 3px;
+//         text-transform: uppercase;
+//         color: $accent;
+//         margin-bottom: 0.5rem;
+//     }
+
+//     &__title {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 52px;
+//         font-weight: 700;
+//         line-height: 1;
+//         color: $ink;
+//         margin-bottom: 0.3rem;
+//     }
+
+//     &__sub {
+//         font-size: 15px;
+//         color: $muted;
+//         margin-bottom: 1.5rem;
+//     }
+
+//     &__stage {
+//         position: relative;
+//         background: #fff;
+//         border: 1px solid $line;
+//         border-radius: 16px;
+//         padding: 2rem;
+//         margin-bottom: 2rem;
+//         overflow: hidden;
+//         min-height: 460px;
+//     }
+
+//     &__stage-bg {
+//         position: absolute;
+//         inset: 0;
+//         background: radial-gradient(ellipse at 50% 60%, #f5f3ee 0%, #fff 70%);
+//         border-radius: 16px;
+//     }
+
+//     &__car {
+//         position: relative;
+//         z-index: 2;
+//         max-width: 820px;
+//         margin: 0 auto;
+//         aspect-ratio: 16 / 9;
+
+//         img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: contain;
+//             display: block;
+//             user-select: none;
+//             pointer-events: none;
+//         }
+//     }
+
+//     /* ---- annotation overlay ---- */
+//     &__annotation {
+//         position: absolute;
+//         pointer-events: none;
+//         z-index: 10;
+//         opacity: 0;
+//         transition: opacity 0.4s ease;
+
+//         &.is-active {
+//             opacity: 1;
+//         }
+//     }
+
+//     &__ann-svg {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         overflow: visible;
+//         pointer-events: none;
+//     }
+
+//     /* The label box that appears at end of line */
+//     &__ann-box {
+//         position: absolute;
+//         background: #fff;
+//         border: 1.5px solid $accent;
+//         border-radius: 10px;
+//         padding: 10px 14px;
+//         min-width: 160px;
+//         max-width: 220px;
+//         box-shadow: 0 8px 32px rgba($accent, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+//         transform: scale(0.85) translateY(6px);
+//         transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.15s,
+//             opacity 0.35s ease 0.1s;
 //         opacity: 0;
 //     }
 
-//     100% {
-//         transform: scale(1.6);
+//     &__annotation.is-active &__ann-box {
+//         transform: scale(1) translateY(0);
+//         opacity: 1;
+//     }
+
+//     &__ann-title {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 13px;
+//         font-weight: 700;
+//         letter-spacing: 2px;
+//         text-transform: uppercase;
+//         color: $accent;
+//         margin-bottom: 4px;
+//         display: flex;
+//         align-items: center;
+//         gap: 6px;
+
+//         &::before {
+//             content: "";
+//             display: inline-block;
+//             width: 6px;
+//             height: 6px;
+//             background: $accent;
+//             border-radius: 50%;
+//             flex-shrink: 0;
+//         }
+//     }
+
+//     &__ann-desc {
+//         font-size: 12px;
+//         line-height: 1.55;
+//         color: $muted;
+//     }
+
+//     /* SVG line animation */
+//     &__ann-line {
+//         stroke: $accent;
+//         stroke-width: 1.5;
+//         fill: none;
+//         stroke-dasharray: 200;
+//         stroke-dashoffset: 200;
+//         transition: stroke-dashoffset 0.5s ease 0.05s;
+//     }
+
+//     &__ann-dot {
+//         fill: $accent;
+//         transform-origin: center;
 //         opacity: 0;
+//         transition: opacity 0.2s ease 0.5s;
+//     }
+
+//     &__annotation.is-active &__ann-line {
+//         stroke-dashoffset: 0;
+//     }
+
+//     &__annotation.is-active &__ann-dot {
+//         opacity: 1;
+//     }
+
+//     /* ---- part cards ---- */
+//     &__row {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+//         gap: 14px;
+//     }
+
+//     &__card {
+//         background: #fff;
+//         border: 1.5px solid $line;
+//         border-radius: 14px;
+//         padding: 1.2rem 1rem;
+//         cursor: pointer;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 10px;
+//         text-align: center;
+//         font-family: inherit;
+//         transition: all 0.25s ease;
+//         position: relative;
+//         overflow: hidden;
+
+//         &:hover {
+//             border-color: $accent;
+//             transform: translateY(-3px);
+//             box-shadow: 0 8px 24px rgba($accent, 0.12);
+//         }
+
+//         &.is-active {
+//             border-color: $accent;
+//             background: $accent-soft;
+//             box-shadow: 0 0 0 3px rgba($accent, 0.12);
+
+//             &::after {
+//                 content: "";
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 right: 0;
+//                 height: 3px;
+//                 background: $accent;
+//             }
+
+//             .pcars__icon {
+//                 background: #fff0ee;
+//             }
+//         }
+//     }
+
+//     &__icon {
+//         width: 80px;
+//         height: 80px;
+//         background: #f5f3ee;
+//         border-radius: 10px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         transition: background 0.2s;
+
+//         img {
+//             width: 64px;
+//             height: 64px;
+//             object-fit: contain;
+//         }
+//     }
+
+//     &__name {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 16px;
+//         font-weight: 700;
+//         color: $ink;
+//         letter-spacing: 0.3px;
+//     }
+
+//     &__cardsub {
+//         font-size: 11px;
+//         color: #999;
+//     }
+
+//     &__learn {
+//         font-size: 11px;
+//         font-weight: 600;
+//         color: $accent;
+//         letter-spacing: 0.5px;
+//         margin-top: 2px;
 //     }
 // }
 
-// .parts-grid {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 0;
-// }
 
-// .part-card {
-//     display: flex;
-//     align-items: center;
-//     gap: 14px;
-//     padding: 16px 20px;
-//     background: #fff;
-//     border: 1px solid #eee;
-//     border-bottom: none;
-//     cursor: pointer;
-//     transition: all 0.2s ease;
-//     position: relative;
-//     overflow: hidden;
-// }
-
-// .part-card:first-child {
-//     border-radius: 16px 16px 0 0;
-// }
-
-// .part-card:last-child {
-//     border-radius: 0 0 16px 16px;
-//     border-bottom: 1px solid #eee;
-// }
-
-// .part-card::before {
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     bottom: 0;
-//     width: 3px;
-//     background: var(--part-color);
-//     transform: scaleY(0);
-//     transition: transform 0.2s ease;
-// }
-
-// .part-card:hover::before,
-// .part-card.active::before {
-//     transform: scaleY(1);
-// }
-
-// .part-card:hover,
-// .part-card.active {
-//     background: #fafafa;
-//     padding-left: 24px;
-//     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
-// }
-
-// .part-card.active {
-//     background: #fff;
-// }
-
-// .part-icon-wrap {
-//     width: 38px;
-//     height: 38px;
-//     border-radius: 10px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: 18px;
-//     flex-shrink: 0;
-//     background: var(--part-bg);
-//     transition: transform 0.2s ease;
-// }
-
-// .part-card:hover .part-icon-wrap,
-// .part-card.active .part-icon-wrap {
-//     transform: scale(1.08);
-// }
-
-// .part-info {
-//     flex: 1;
-//     min-width: 0;
-// }
-
-// .part-name {
-//     font-family: 'Rajdhani', sans-serif;
-//     font-size: 14px;
-//     font-weight: 600;
-//     color: #111;
-//     letter-spacing: 0.3px;
-// }
-
-// .part-uz {
-//     font-size: 11px;
-//     color: #999;
-//     font-weight: 300;
-//     margin-top: 1px;
-// }
-
-// .part-arrow {
-//     font-size: 12px;
-//     color: #ccc;
-//     transition: color 0.2s, transform 0.2s;
-//     flex-shrink: 0;
-// }
-
-// .part-card:hover .part-arrow,
-// .part-card.active .part-arrow {
-//     color: var(--part-color);
-//     transform: translateX(3px);
-// }
-
-// .detail-panel {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background: #111;
-//     color: white;
-//     padding: 20px 28px;
-//     transform: translateY(100%);
-//     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-//     border-top: 3px solid var(--active-color, #c0392b);
-//     z-index: 20;
-// }
-
-// .detail-panel.visible {
-//     transform: translateY(0);
-// }
-
-// .detail-panel-header {
-//     display: flex;
-//     align-items: center;
-//     gap: 12px;
-//     margin-bottom: 8px;
-// }
-
-// .detail-panel-icon {
-//     font-size: 22px;
-// }
-
-// .detail-panel-title {
-//     font-family: 'Rajdhani', sans-serif;
-//     font-size: 18px;
-//     font-weight: 700;
-//     letter-spacing: 0.5px;
-// }
-
-// .detail-panel-desc {
-//     font-size: 13px;
-//     color: rgba(255, 255, 255, 0.65);
-//     font-weight: 300;
-//     line-height: 1.5;
-// }
-
-// .detail-close {
-//     position: absolute;
-//     top: 16px;
-//     right: 16px;
-//     width: 28px;
-//     height: 28px;
-//     border-radius: 50%;
-//     background: rgba(255, 255, 255, 0.1);
-//     border: none;
-//     color: white;
-//     cursor: pointer;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: 14px;
-//     transition: background 0.2s;
-// }
-
-// .detail-close:hover {
-//     background: rgba(255, 255, 255, 0.2);
-// }
-
-// .section-divider {
-//     width: 48px;
-//     height: 3px;
-//     background: #c0392b;
-//     margin-top: 18px;
-// }
+//3-variant
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
 
-$bg: #f8f7f4;
 $ink: #0d0d0d;
-$muted: #666;
-$line: #e8e6e1;
-$accent: #c0392b;
-$accent-soft: #fff9f8;
+$surface: #ffffff;
+$muted: #888;
+$border: #e8e6e1;
+$red: #c0392b;
+$red-soft: rgba(192, 57, 43, 0.08);
+$red-glow: rgba(192, 57, 43, 0.16);
+
+@keyframes dotPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    55% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(-50%, -50%) scale(0.85);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.55);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(192, 57, 43, 0);
+    }
+}
+
+@keyframes labelReveal {
+    from {
+        max-width: 0;
+        opacity: 0;
+    }
+
+    to {
+        max-width: 210px;
+        opacity: 1;
+    }
+}
+
+@keyframes descIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes annDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes annUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    from {
+        background-position: -200% center;
+    }
+
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardDescIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 120px;
+    }
+}
+
+// Line draw — L-bend chiziq chiqadi
+@keyframes lineDraw {
+    from {
+        stroke-dashoffset: var(--len, 300);
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.pcars__svg-path {
+    stroke-dashoffset: var(--len, 300);
+
+    &.active {
+        animation: lineDraw 0.38s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+}
 
 .pcars {
     font-family: "Barlow", sans-serif;
-    color: #1a1a1a;
-    min-height: 100vh;
-    padding: 50px 0px;
+    padding: 48px 20px;
 
     &__label {
+        display: block;
         font-family: "Barlow Condensed", sans-serif;
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 3px;
         text-transform: uppercase;
-        color: $accent;
-        margin-bottom: 0.5rem;
+        color: $red;
+        margin-bottom: 6px;
     }
 
     &__title {
@@ -369,204 +684,564 @@ $accent-soft: #fff9f8;
         font-weight: 700;
         line-height: 1;
         color: $ink;
-        margin-bottom: 0.3rem;
+        margin-bottom: 4px;
     }
 
     &__sub {
-        font-size: 15px;
-        color: $muted;
-        margin-bottom: 1.5rem;
-    }
-
-    &__info {
-        background: $ink;
-        color: #fff;
-        border-radius: 10px;
-        padding: 0.9rem 1.2rem;
-        margin-bottom: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        min-height: 52px;
-        transition: all 0.3s ease;
-    }
-
-    &__dot {
-        width: 8px;
-        height: 8px;
-        background: $accent;
-        border-radius: 50%;
-        flex-shrink: 0;
-    }
-
-    &__info-text {
         font-size: 13px;
-        line-height: 1.5;
-        color: #e8e8e8;
+        color: $muted;
+        margin-bottom: 20px;
     }
 
     &__stage {
         position: relative;
-        background: #fff;
-        border: 1px solid $line;
         border-radius: 16px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        overflow: hidden;
-        min-height: 460px;
+        margin-bottom: 18px;
+        padding: 16px 0 16px;
+        overflow: visible;
     }
 
-    &__stage-bg {
+    &__lines {
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse at 50% 60%, #f5f3ee 0%, #fff 70%);
-        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 6;
+        overflow: visible;
     }
 
-    &__car {
+    &__car-img {
+        display: block;
+        width: 100%;
+        height: auto;
         position: relative;
         z-index: 2;
-        max-width: 820px;
-        margin: 0 auto;
-        aspect-ratio: 16 / 9;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-            user-select: none;
-            pointer-events: none;
-        }
-    }
-
-    &__placed {
-        position: absolute;
-        transform: translate(-50%, -50%) scale(0.6);
-        opacity: 0;
         pointer-events: none;
-        transition: opacity 0.45s ease, transform 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.25));
-
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
-
-        &.is-active {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
+        user-select: none;
     }
 
-    &__placed-tag {
+    &__dot {
         position: absolute;
-        bottom: -22px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: $ink;
-        color: #fff;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        padding: 3px 8px;
-        border-radius: 4px;
-        white-space: nowrap;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $red;
+        transform: translate(-50%, -50%) scale(0);
+        pointer-events: none;
+        z-index: 11;
         opacity: 0;
-        transition: opacity 0.25s ease 0.15s;
+
+        &.is-on {
+            animation:
+                dotPop 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+                dotPulse 1.5s ease 0.5s infinite;
+        }
     }
 
-    &__placed.is-active &__placed-tag {
-        opacity: 1;
+    &__ann {
+        position: absolute;
+        pointer-events: none;
+        z-index: 10;
+        opacity: 0;
+        max-width: 170px;
+
+        &--top {
+            &.is-on {
+                animation: annDown 0.32s ease 0.12s both;
+            }
+        }
+
+        &--bot {
+            transform: translateY(-100%);
+
+            &.is-on {
+                animation: annUp 0.32s ease 0.12s both;
+                transform: translateY(-100%);
+            }
+        }
+
+        &-label {
+            display: block;
+            background: $red;
+            color: #fff;
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 3px 3px 0 0;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 0;
+            opacity: 0;
+
+            .is-on & {
+                animation: labelReveal 0.44s cubic-bezier(0.4, 0, 0.2, 1) 0.26s both;
+            }
+        }
+
+        &-desc {
+            display: block;
+            background: #111;
+            color: #ddd;
+            font-size: 11px;
+            line-height: 1.55;
+            padding: 6px 10px;
+            border-radius: 0 0 3px 3px;
+            opacity: 0;
+            min-width: 150px;
+
+            .is-on & {
+                animation: descIn 0.3s ease 0.62s both;
+            }
+        }
     }
 
     &__row {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+        gap: 10px;
     }
 
     &__card {
-        background: #fff;
-        border: 1.5px solid $line;
+        background: $surface;
+        border: 1.5px solid $border;
         border-radius: 14px;
-        padding: 1.2rem 1rem;
+        padding: 12px 11px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        text-align: center;
-        font-family: inherit;
-        transition: all 0.25s ease;
+        align-items: flex-start;
+        gap: 5px;
+        font-family: "Barlow", sans-serif;
+        text-align: left;
         position: relative;
         overflow: hidden;
+        transition: border-color .22s, box-shadow .22s, transform .22s, background .22s;
+        animation: cardIn 0.4s ease calc(var(--i, 0) * 55ms) both;
+
+        &-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, $red 40%, #e74c3c 60%, transparent 100%);
+            background-size: 200% auto;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
 
         &:hover {
-            border-color: $accent;
+            border-color: $red;
             transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba($accent, 0.12);
-        }
+            box-shadow: 0 8px 22px $red-glow;
 
-        &.is-active {
-            border-color: $accent;
-            background: $accent-soft;
-            box-shadow: 0 0 0 3px rgba($accent, 0.12);
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 3px;
-                background: $accent;
-            }
-
-            .pcars__icon {
-                background: #fff0ee;
+            .pcars__card-bar {
+                opacity: 0.45;
+                animation: shimmer 1.2s linear infinite;
             }
         }
-    }
 
-    &__icon {
-        width: 80px;
-        height: 80px;
-        background: #f5f3ee;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background 0.2s;
+        &.is-on {
+            border-color: $red;
+            background: #fff9f8;
+            box-shadow: 0 0 0 3px $red-soft;
 
-        img {
-            width: 64px;
-            height: 64px;
-            object-fit: contain;
+            .pcars__card-bar {
+                opacity: 1;
+                animation: shimmer 1.8s linear infinite;
+            }
         }
-    }
 
-    &__name {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        color: $ink;
-        letter-spacing: 0.3px;
-    }
+        &-name {
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: $ink;
+            letter-spacing: 0.3px;
+            transition: color 0.2s;
 
-    &__cardsub {
-        font-size: 11px;
-        color: #999;
-    }
+            .is-on & {
+                color: $red;
+            }
+        }
 
-    &__learn {
-        font-size: 11px;
-        font-weight: 600;
-        color: $accent;
-        letter-spacing: 0.5px;
-        margin-top: 2px;
+        &-desc {
+            font-size: 11px;
+            color: $muted;
+            line-height: 1.45;
+            overflow: hidden;
+            animation: cardDescIn 0.35s ease both;
+        }
+
+        &-hint {
+            font-size: 10px;
+            font-weight: 600;
+            color: $red;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
     }
 }
+
+// @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
+
+// $ink: #0d0d0d;
+// $surface: #ffffff;
+// $muted: #888;
+// $border: #e8e6e1;
+// $red: #c0392b;
+// $red-soft: rgba(192, 57, 43, 0.08);
+// $red-glow: rgba(192, 57, 43, 0.16);
+
+// @keyframes dotPop {
+//     0% {
+//         transform: translate(-50%, -50%) scale(0);
+//         opacity: 0;
+//     }
+
+//     55% {
+//         transform: translate(-50%, -50%) scale(1.6);
+//         opacity: 1;
+//     }
+
+//     75% {
+//         transform: translate(-50%, -50%) scale(0.85);
+//     }
+
+//     100% {
+//         transform: translate(-50%, -50%) scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes dotPulse {
+
+//     0%,
+//     100% {
+//         box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.55);
+//     }
+
+//     50% {
+//         box-shadow: 0 0 0 10px rgba(192, 57, 43, 0);
+//     }
+// }
+
+// @keyframes labelReveal {
+//     from {
+//         max-width: 0;
+//         opacity: 0;
+//     }
+
+//     to {
+//         max-width: 210px;
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes descIn {
+//     from {
+//         opacity: 0;
+//         transform: translateY(-6px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes annDown {
+//     from {
+//         opacity: 0;
+//         transform: translateY(-10px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes annUp {
+//     from {
+//         opacity: 0;
+//         transform: translateY(10px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes shimmer {
+//     from {
+//         background-position: -200% center;
+//     }
+
+//     to {
+//         background-position: 200% center;
+//     }
+// }
+
+// @keyframes cardIn {
+//     from {
+//         opacity: 0;
+//         transform: translateY(18px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes cardDescIn {
+//     from {
+//         opacity: 0;
+//         transform: translateY(-4px);
+//         max-height: 0;
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//         max-height: 120px;
+//     }
+// }
+
+// .pcars__svg-path {
+//     transition: stroke-dashoffset 0s linear;
+
+//     &.active {
+//         transition: stroke-dashoffset 0.72s cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+// }
+
+// .pcars {
+//     font-family: "Barlow", sans-serif;
+//     padding: 48px 20px;
+
+//     &__label {
+//         display: block;
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 11px;
+//         font-weight: 700;
+//         letter-spacing: 3px;
+//         text-transform: uppercase;
+//         color: $red;
+//         margin-bottom: 6px;
+//     }
+
+//     &__title {
+//         font-family: "Barlow Condensed", sans-serif;
+//         font-size: 52px;
+//         font-weight: 700;
+//         line-height: 1;
+//         color: $ink;
+//         margin-bottom: 4px;
+//     }
+
+//     &__sub {
+//         font-size: 13px;
+//         color: $muted;
+//         margin-bottom: 20px;
+//     }
+
+//     &__stage {
+//         position: relative;
+//         border-radius: 16px;
+//         margin-bottom: 18px;
+//         padding: 56px 0 56px;
+//         overflow: visible;
+//     }
+
+//     &__lines {
+//         position: absolute;
+//         inset: 0;
+//         width: 100%;
+//         height: 100%;
+//         pointer-events: none;
+//         z-index: 6;
+//         overflow: visible;
+//     }
+
+//     &__car-img {
+//         display: block;
+//         width: 100%;
+//         height: auto;
+//         position: relative;
+//         z-index: 2;
+//         pointer-events: none;
+//         user-select: none;
+//     }
+
+//     &__dot {
+//         position: absolute;
+//         width: 10px;
+//         height: 10px;
+//         border-radius: 50%;
+//         background: $red;
+//         transform: translate(-50%, -50%) scale(0);
+//         pointer-events: none;
+//         z-index: 11;
+//         opacity: 0;
+
+//         &.is-on {
+//             animation:
+//                 dotPop 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+//                 dotPulse 1.5s ease 0.5s infinite;
+//         }
+//     }
+
+//     &__ann {
+//         position: absolute;
+//         pointer-events: none;
+//         z-index: 10;
+//         opacity: 0;
+//         max-width: 170px;
+
+//         &--top {
+//             &.is-on {
+//                 animation: annDown 0.32s ease 0.12s both;
+//             }
+//         }
+
+//         &--bot {
+//             transform: translateY(-100%);
+
+//             &.is-on {
+//                 animation: annUp 0.32s ease 0.12s both;
+//                 transform: translateY(-100%);
+//             }
+//         }
+
+//         &-label {
+//             display: block;
+//             background: $red;
+//             color: #fff;
+//             font-family: "Barlow Condensed", sans-serif;
+//             font-size: 10px;
+//             font-weight: 700;
+//             letter-spacing: 1.5px;
+//             text-transform: uppercase;
+//             padding: 4px 10px;
+//             border-radius: 3px 3px 0 0;
+//             white-space: nowrap;
+//             overflow: hidden;
+//             max-width: 0;
+//             opacity: 0;
+
+//             .is-on & {
+//                 animation: labelReveal 0.44s cubic-bezier(0.4, 0, 0.2, 1) 0.26s both;
+//             }
+//         }
+
+//         &-desc {
+//             display: block;
+//             background: #111;
+//             color: #ddd;
+//             font-size: 11px;
+//             line-height: 1.55;
+//             padding: 6px 10px;
+//             border-radius: 0 0 3px 3px;
+//             opacity: 0;
+//             min-width: 150px;
+
+//             .is-on & {
+//                 animation: descIn 0.3s ease 0.62s both;
+//             }
+//         }
+//     }
+
+//     &__row {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+//         gap: 10px;
+//     }
+
+//     &__card {
+//         background: $surface;
+//         border: 1.5px solid $border;
+//         border-radius: 14px;
+//         padding: 12px 11px;
+//         cursor: pointer;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-start;
+//         gap: 5px;
+//         font-family: "Barlow", sans-serif;
+//         text-align: left;
+//         position: relative;
+//         overflow: hidden;
+//         transition: border-color .22s, box-shadow .22s, transform .22s, background .22s;
+//         animation: cardIn 0.4s ease calc(var(--i, 0) * 55ms) both;
+
+//         &-bar {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             right: 0;
+//             height: 3px;
+//             background: linear-gradient(90deg, transparent 0%, $red 40%, #e74c3c 60%, transparent 100%);
+//             background-size: 200% auto;
+//             opacity: 0;
+//             transition: opacity 0.2s;
+//         }
+
+//         &:hover {
+//             border-color: $red;
+//             transform: translateY(-3px);
+//             box-shadow: 0 8px 22px $red-glow;
+
+//             .pcars__card-bar {
+//                 opacity: 0.45;
+//                 animation: shimmer 1.2s linear infinite;
+//             }
+//         }
+
+//         &.is-on {
+//             border-color: $red;
+//             background: #fff9f8;
+//             box-shadow: 0 0 0 3px $red-soft;
+
+//             .pcars__card-bar {
+//                 opacity: 1;
+//                 animation: shimmer 1.8s linear infinite;
+//             }
+//         }
+
+//         &-name {
+//             font-family: "Barlow Condensed", sans-serif;
+//             font-size: 13px;
+//             font-weight: 700;
+//             color: $ink;
+//             letter-spacing: 0.3px;
+//             transition: color 0.2s;
+
+//             .is-on & {
+//                 color: $red;
+//             }
+//         }
+
+//         &-desc {
+//             font-size: 11px;
+//             color: $muted;
+//             line-height: 1.45;
+//             overflow: hidden;
+//             animation: cardDescIn 0.35s ease both;
+//         }
+
+//         &-hint {
+//             font-size: 10px;
+//             font-weight: 600;
+//             color: $red;
+//             letter-spacing: 0.5px;
+//             margin-top: 2px;
+//         }
+//     }
+// }

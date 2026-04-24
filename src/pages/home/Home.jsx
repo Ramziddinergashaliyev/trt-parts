@@ -7,6 +7,7 @@ import Filter from "../../components/filter/Filter";
 import Catalog from "../../components/katalog/Catalog";
 import NewsCard from "../../components/newsCard/NewsCard";
 import YoutubeCard from "../../components/youtubecard/YoutubeCard";
+import ProductsShowcase from "../../components/productsShowcase.jsx/ProductsShowcase";
 import Car from "../../components/car/Car";
 
 const Home = () => {
@@ -22,7 +23,8 @@ const Home = () => {
       <Auto />
       <Prinsp />
       <Catalog />
-      {/* <Car /> */}
+      <Car />
+      {/* <ProductsShowcase /> */}
       <NewsCard />
       <YoutubeCard />
       <Vapros />
