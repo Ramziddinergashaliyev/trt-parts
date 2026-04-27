@@ -74,8 +74,6 @@
 
 // export default memo(Product);
 
-
-
 import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
 import "./product.scss";
@@ -135,6 +133,7 @@ const Product = ({ product, isTrue }) => {
           <button type="button" aria-label="Mahsulotni tahrirlash">
             <IoCreateOutline />
           </button>
+
           <button
             type="button"
             onClick={handleDelete}
