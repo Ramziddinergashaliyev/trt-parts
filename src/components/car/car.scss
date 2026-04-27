@@ -203,7 +203,7 @@ $accent-soft: #fff9f8;
         background: #fff;
         border: 1.5px solid $line;
         border-radius: 8px;
-        padding: 14px 12px;
+        padding: 14px 2px;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -269,14 +269,13 @@ $accent-soft: #fff9f8;
     }
 
     &__name {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 15px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 500;
         color: $ink;
-        letter-spacing: 0.5px;
         text-transform: uppercase;
     }
 }
+
 
 //3-variant
 
