@@ -9,6 +9,7 @@ import NewsCard from "../../components/newsCard/NewsCard";
 import YoutubeCard from "../../components/youtubecard/YoutubeCard";
 import ProductsShowcase from "../../components/productsShowcase.jsx/ProductsShowcase";
 import Car from "../../components/car/Car";
+import Anime from "../../components/anime/Anime";
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
       <Catalog />
       <Car />
       {/* <ProductsShowcase /> */}
+      {/* <Anime /> */}
       <NewsCard />
       <YoutubeCard />
       <Vapros />

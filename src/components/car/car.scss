@@ -1,43 +1,15 @@
-// 2-variant
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap");
 
-$bg: #f8f7f4;
-$ink: #0d0d0d;
-$muted: #666;
-$line: #e8e6e1;
-$accent: #c0392b;
-$accent-soft: #fff9f8;
+$red: #E8201A;
+$red-soft: #FFF2F1;
+$red-border: #FFCCC7;
+$ink: #111111;
+$muted: #888888;
+$line: #E8E8E8;
+$bg: #F7F7F7;
+$white: #FFFFFF;
 
-@keyframes floatPart {
-
-    0%,
-    100% {
-        transform: translateY(0px) scale(1);
-    }
-
-    50% {
-        transform: translateY(-7px) scale(1.03);
-    }
-}
-
-@keyframes popIn {
-    0% {
-        transform: scale(0.7) translateY(10px);
-        opacity: 0;
-    }
-
-    70% {
-        transform: scale(1.05) translateY(-2px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1) translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeSlideUp {
+@keyframes fadeUp {
     from {
         opacity: 0;
         transform: translateY(18px);
@@ -49,960 +21,331 @@ $accent-soft: #fff9f8;
     }
 }
 
+@keyframes cardIn {
+    0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.86);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.04);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes imgReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.97) translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes imgSwitch {
+    from {
+        opacity: 0;
+        transform: scale(0.975);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-130%) skewX(-12deg);
+    }
+
+    100% {
+        transform: translateX(250%) skewX(-12deg);
+    }
+}
+
+@keyframes hintFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
 .pcars {
-    font-family: "Barlow", sans-serif;
+    font-family: "DM Sans", system-ui, sans-serif;
     color: $ink;
+    background: $bg;
     min-height: 100vh;
-    padding: 50px 0;
+    padding: 40px 20px 36px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 
-    &__stage {
-        position: relative;
-        border-radius: 20px;
-        padding-bottom: 20px;
-        overflow: hidden;
-        min-height: 460px;
+    &--mounted {
+        opacity: 1;
     }
 
-    &__stage-bg {
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(ellipse at 50% 60%, #f5f3ee 0%, #fff 70%);
-        border-radius: 20px;
-    }
-
-    &__car {
-        position: relative;
-        z-index: 2;
-        max-width: 90%;
+    &__inner {
         margin: 0 auto;
-        aspect-ratio: 16 / 9;
+        display: flex;
+        flex-direction: column;
+    }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-            user-select: none;
+    // ── CAROUSEL ──
+    &__carousel-wrap {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 28px;
+
+        .pcars--mounted & {
+            animation: fadeUp .55s cubic-bezier(.22, 1, .36, 1) .12s both;
+        }
+    }
+
+    &__nav {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid $line;
+        background: $white;
+        color: $ink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border-color .2s, background .2s, color .2s, transform .2s, opacity .2s;
+
+        &:hover:not(:disabled) {
+            border-color: $red;
+            background: $red-soft;
+            color: $red;
+            transform: scale(1.12);
+        }
+
+        &:disabled {
+            opacity: .2;
+            cursor: default;
+        }
+    }
+
+    &__track-outer {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            z-index: 2;
             pointer-events: none;
         }
-    }
 
-    &__annotation {
-        pointer-events: none;
-        z-index: 10;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, $white, transparent);
+        }
 
-        &.is-active {
-            opacity: 1;
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, $white, transparent);
         }
     }
 
-    &__ann-svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow: visible;
-        pointer-events: none;
+    &__track {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 4px 0 12px;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
-    &__ann-box {
-        position: absolute;
-        background: #fff;
-        border: 2px solid $accent;
-        border-radius: 16px;
-        padding: 14px 16px 14px;
-        width: 175px;
-        box-shadow:
-            0 16px 48px rgba($accent, 0.18),
-            0 4px 16px rgba(0, 0, 0, 0.08);
-        opacity: 0;
-        transform: scale(0.75) translateY(12px);
-        transition: none;
+    &__spacer {
+        flex-shrink: 0;
+        width: calc(50% - 80px);
     }
 
-    &__annotation.is-active &__ann-box {
-        animation: popIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.15s forwards;
+    &__card {
+        flex-shrink: 0;
+        width: 150px;
+        min-width: 130px;
+        max-width: 180px;
+        border-radius: 20px;
+        padding: 18px 12px 14px;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        scroll-snap-align: center;
+        border: 1px solid $line;
+        background: $white;
+        transition:
+            transform .45s cubic-bezier(.34, 1.48, .64, 1),
+            opacity .35s ease,
+            border-color .25s,
+            box-shadow .3s;
+
+        .pcars--mounted & {
+            animation: cardIn .52s cubic-bezier(.22, 1, .36, 1) calc(var(--i) * .055s + .18s) both;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, transparent 36%, rgba(255, 255, 255, .65) 50%, transparent 64%);
+            transform: translateX(-130%) skewX(-12deg);
+            pointer-events: none;
+        }
+
+        &.is-active::after {
+            animation: shimmer .55s ease forwards;
+        }
+
+        &:not(.is-active) {
+            opacity: .38;
+            transform: scale(.87) translateY(6px);
+        }
+
+        &:hover:not(.is-active) {
+            opacity: .62;
+            transform: scale(.91) translateY(3px);
+        }
+
+        &.is-active {
+            border-color: $red;
+            background: $red-soft;
+            box-shadow:
+                0 0 0 3px rgba($red, .09),
+                0 10px 28px rgba($red, .13);
+            transform: scale(1.07) translateY(-4px);
+            opacity: 1;
+
+            .pcars__card-img img {
+                transform: scale(1.14);
+            }
+
+            .pcars__dot {
+                background: $red;
+                transform: scale(1.9);
+                box-shadow: 0 0 0 3px rgba($red, .2);
+            }
+        }
     }
 
-    &__ann-img-wrap {
-        width: 100%;
-        height: 115px;
+    &__card-img {
+        height: 96px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 10px;
-    }
 
-    &__ann-img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        display: block;
-        filter: drop-shadow(0 4px 12px rgba($accent, 0.2));
-
-        .pcars__annotation.is-active & {
-            animation: floatPart 3s ease-in-out 0.6s infinite;
+        img {
+            max-width: 80px;
+            max-height: 80px;
+            object-fit: contain;
+            display: block;
+            transition: transform .45s cubic-bezier(.34, 1.48, .64, 1);
         }
     }
 
-    &__ann-title {
-        font-family: "Barlow Condensed", sans-serif;
+    &__card h4 {
         font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: $accent;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            background: $accent;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
+        font-weight: 500;
+        color: $ink;
+        margin: 0 0 3px;
+        line-height: 1.3;
     }
 
-    &__ann-line {
-        stroke: $accent;
-        stroke-width: 1.5;
-        fill: none;
-        stroke-dasharray: 300;
-        stroke-dashoffset: 300;
-        transition: stroke-dashoffset 0.5s ease 0.05s;
-    }
-
-    &__ann-dot {
-        fill: $accent;
-        opacity: 0;
-        transition: opacity 0.2s ease 0.5s;
-    }
-
-    &__annotation.is-active &__ann-line {
-        stroke-dashoffset: 0;
-    }
-
-    &__annotation.is-active &__ann-dot {
-        opacity: 1;
-    }
-
-    &__row {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 12px;
-    }
-
-    &__card {
-        background: #fff;
-        border: 1.5px solid $line;
-        border-radius: 8px;
-        padding: 14px 2px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        font-family: inherit;
-        transition: all 0.25s ease;
-        position: relative;
-        overflow: hidden;
-        animation: fadeSlideUp 0.4s ease both;
-
-        @for $i from 1 through 6 {
-            &:nth-child(#{$i}) {
-                animation-delay: #{($i - 1) * 0.07}s;
-            }
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 0;
-            background: $accent;
-            transition: height 0.25s ease;
-        }
-
-        &:hover {
-            border-color: $accent;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba($accent, 0.12);
-        }
-
-        &.is-active {
-            border-color: $accent;
-            background: $accent-soft;
-            box-shadow: 0 0 0 3px rgba($accent, 0.12);
-
-            &::after {
-                height: 3px;
-            }
-
-            .pcars__dot {
-                background: $accent;
-                transform: scale(1.4);
-            }
-        }
+    &__card p {
+        font-size: 10.5px;
+        font-weight: 400;
+        color: $muted;
+        margin: 0;
     }
 
     &__dot {
-        width: 7px;
-        height: 7px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
         background: $line;
-        flex-shrink: 0;
-        transition: background 0.25s, transform 0.3s;
+        margin: 9px auto 0;
+        transition: background .3s, transform .4s cubic-bezier(.34, 1.48, .64, 1), box-shadow .3s;
     }
 
-    &__card:hover &__dot {
-        background: $accent;
-        transform: scale(1.4);
+    // ── STAGE ──
+    &__stage {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 520px;
+
+        .pcars--mounted & {
+            animation: imgReveal .65s cubic-bezier(.22, 1, .36, 1) .3s both;
+        }
     }
 
-    &__name {
-        font-size: 14px;
-        font-weight: 500;
-        color: $ink;
-        text-transform: uppercase;
+    &__stage-img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        user-select: none;
+        pointer-events: none;
+        border-radius: 28px;
+        animation: imgSwitch .36s cubic-bezier(.22, 1, .36, 1) both;
+
+        &.is-switching {
+            opacity: 0;
+            transform: scale(0.975);
+            transition: opacity .18s ease, transform .18s ease;
+        }
+    }
+
+    &__hint {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        margin-top: 18px;
+        font-size: 11.5px;
+        font-weight: 400;
+        color: $muted;
+
+        .pcars--mounted & {
+            animation:
+                fadeUp .5s cubic-bezier(.22, 1, .36, 1) .55s both,
+                hintFloat 2.6s ease-in-out 1.1s infinite;
+        }
+
+        svg {
+            opacity: .4;
+        }
     }
 }
-
-
-//3-variant
-
-// @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
-
-// $ink: #0d0d0d;
-// $surface: #ffffff;
-// $muted: #888;
-// $border: #e8e6e1;
-// $red: #c0392b;
-// $red-soft: rgba(192, 57, 43, 0.08);
-// $red-glow: rgba(192, 57, 43, 0.16);
-
-// @keyframes dotPop {
-//     0% {
-//         transform: translate(-50%, -50%) scale(0);
-//         opacity: 0;
-//     }
-
-//     55% {
-//         transform: translate(-50%, -50%) scale(1.6);
-//         opacity: 1;
-//     }
-
-//     75% {
-//         transform: translate(-50%, -50%) scale(0.85);
-//     }
-
-//     100% {
-//         transform: translate(-50%, -50%) scale(1);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes dotPulse {
-
-//     0%,
-//     100% {
-//         box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.55);
-//     }
-
-//     50% {
-//         box-shadow: 0 0 0 10px rgba(192, 57, 43, 0);
-//     }
-// }
-
-// @keyframes labelReveal {
-//     from {
-//         max-width: 0;
-//         opacity: 0;
-//     }
-
-//     to {
-//         max-width: 210px;
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes descIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-6px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes annDown {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-10px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes annUp {
-//     from {
-//         opacity: 0;
-//         transform: translateY(10px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes shimmer {
-//     from {
-//         background-position: -200% center;
-//     }
-
-//     to {
-//         background-position: 200% center;
-//     }
-// }
-
-// @keyframes cardIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(18px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes cardDescIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-4px);
-//         max-height: 0;
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//         max-height: 120px;
-//     }
-// }
-
-// @keyframes lineDraw {
-//     from {
-//         stroke-dashoffset: var(--len, 300);
-//     }
-
-//     to {
-//         stroke-dashoffset: 0;
-//     }
-// }
-
-// .pcars__svg-path {
-//     stroke-dashoffset: var(--len, 300);
-
-//     &.active {
-//         animation: lineDraw 0.38s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-//     }
-// }
-
-// .pcars {
-//     font-family: "Barlow", sans-serif;
-//     padding: 48px 20px;
-
-//     &__label {
-//         display: block;
-//         font-family: "Barlow Condensed", sans-serif;
-//         font-size: 11px;
-//         font-weight: 700;
-//         letter-spacing: 3px;
-//         text-transform: uppercase;
-//         color: $red;
-//         margin-bottom: 6px;
-//     }
-
-//     &__title {
-//         font-family: "Barlow Condensed", sans-serif;
-//         font-size: 52px;
-//         font-weight: 700;
-//         line-height: 1;
-//         color: $ink;
-//         margin-bottom: 4px;
-//     }
-
-//     &__sub {
-//         font-size: 13px;
-//         color: $muted;
-//         margin-bottom: 20px;
-//     }
-
-//     &__stage {
-//         position: relative;
-//         border-radius: 16px;
-//         margin-bottom: 18px;
-//         padding: 16px 0 16px;
-//         overflow: visible;
-//     }
-
-//     &__lines {
-//         position: absolute;
-//         inset: 0;
-//         width: 100%;
-//         height: 100%;
-//         pointer-events: none;
-//         z-index: 6;
-//         overflow: visible;
-//     }
-
-//     &__car-img {
-//         display: block;
-//         width: 100%;
-//         height: auto;
-//         position: relative;
-//         z-index: 2;
-//         pointer-events: none;
-//         user-select: none;
-//     }
-
-//     &__dot {
-//         position: absolute;
-//         width: 10px;
-//         height: 10px;
-//         border-radius: 50%;
-//         background: $red;
-//         transform: translate(-50%, -50%) scale(0);
-//         pointer-events: none;
-//         z-index: 11;
-//         opacity: 0;
-
-//         &.is-on {
-//             animation:
-//                 dotPop 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
-//                 dotPulse 1.5s ease 0.5s infinite;
-//         }
-//     }
-
-//     &__ann {
-//         position: absolute;
-//         pointer-events: none;
-//         z-index: 10;
-//         opacity: 0;
-//         max-width: 170px;
-
-//         &--top {
-//             &.is-on {
-//                 animation: annDown 0.32s ease 0.12s both;
-//             }
-//         }
-
-//         &--bot {
-//             transform: translateY(-100%);
-
-//             &.is-on {
-//                 animation: annUp 0.32s ease 0.12s both;
-//                 transform: translateY(-100%);
-//             }
-//         }
-
-//         &-label {
-//             display: block;
-//             background: $red;
-//             color: #fff;
-//             font-family: "Barlow Condensed", sans-serif;
-//             font-size: 10px;
-//             font-weight: 700;
-//             letter-spacing: 1.5px;
-//             text-transform: uppercase;
-//             padding: 4px 10px;
-//             border-radius: 3px 3px 0 0;
-//             white-space: nowrap;
-//             overflow: hidden;
-//             max-width: 0;
-//             opacity: 0;
-
-//             .is-on & {
-//                 animation: labelReveal 0.44s cubic-bezier(0.4, 0, 0.2, 1) 0.26s both;
-//             }
-//         }
-
-//         &-desc {
-//             display: block;
-//             background: #111;
-//             color: #ddd;
-//             font-size: 11px;
-//             line-height: 1.55;
-//             padding: 6px 10px;
-//             border-radius: 0 0 3px 3px;
-//             opacity: 0;
-//             min-width: 150px;
-
-//             .is-on & {
-//                 animation: descIn 0.3s ease 0.62s both;
-//             }
-//         }
-//     }
-
-//     &__row {
-//         display: grid;
-//         grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-//         gap: 10px;
-//     }
-
-//     &__card {
-//         background: $surface;
-//         border: 1.5px solid $border;
-//         border-radius: 14px;
-//         padding: 12px 11px;
-//         cursor: pointer;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-start;
-//         gap: 5px;
-//         font-family: "Barlow", sans-serif;
-//         text-align: left;
-//         position: relative;
-//         overflow: hidden;
-//         transition: border-color .22s, box-shadow .22s, transform .22s, background .22s;
-//         animation: cardIn 0.4s ease calc(var(--i, 0) * 55ms) both;
-
-//         &-bar {
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             right: 0;
-//             height: 3px;
-//             background: linear-gradient(90deg, transparent 0%, $red 40%, #e74c3c 60%, transparent 100%);
-//             background-size: 200% auto;
-//             opacity: 0;
-//             transition: opacity 0.2s;
-//         }
-
-//         &:hover {
-//             border-color: $red;
-//             transform: translateY(-3px);
-//             box-shadow: 0 8px 22px $red-glow;
-
-//             .pcars__card-bar {
-//                 opacity: 0.45;
-//                 animation: shimmer 1.2s linear infinite;
-//             }
-//         }
-
-//         &.is-on {
-//             border-color: $red;
-//             background: #fff9f8;
-//             box-shadow: 0 0 0 3px $red-soft;
-
-//             .pcars__card-bar {
-//                 opacity: 1;
-//                 animation: shimmer 1.8s linear infinite;
-//             }
-//         }
-
-//         &-name {
-//             font-family: "Barlow Condensed", sans-serif;
-//             font-size: 13px;
-//             font-weight: 700;
-//             color: $ink;
-//             letter-spacing: 0.3px;
-//             transition: color 0.2s;
-
-//             .is-on & {
-//                 color: $red;
-//             }
-//         }
-
-//         &-desc {
-//             font-size: 11px;
-//             color: $muted;
-//             line-height: 1.45;
-//             overflow: hidden;
-//             animation: cardDescIn 0.35s ease both;
-//         }
-
-//         &-hint {
-//             font-size: 10px;
-//             font-weight: 600;
-//             color: $red;
-//             letter-spacing: 0.5px;
-//             margin-top: 2px;
-//         }
-//     }
-// }
-
-// @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;700&display=swap");
-
-// $ink: #0d0d0d;
-// $surface: #ffffff;
-// $muted: #888;
-// $border: #e8e6e1;
-// $red: #c0392b;
-// $red-soft: rgba(192, 57, 43, 0.08);
-// $red-glow: rgba(192, 57, 43, 0.16);
-
-// @keyframes dotPop {
-//     0% {
-//         transform: translate(-50%, -50%) scale(0);
-//         opacity: 0;
-//     }
-
-//     55% {
-//         transform: translate(-50%, -50%) scale(1.6);
-//         opacity: 1;
-//     }
-
-//     75% {
-//         transform: translate(-50%, -50%) scale(0.85);
-//     }
-
-//     100% {
-//         transform: translate(-50%, -50%) scale(1);
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes dotPulse {
-
-//     0%,
-//     100% {
-//         box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.55);
-//     }
-
-//     50% {
-//         box-shadow: 0 0 0 10px rgba(192, 57, 43, 0);
-//     }
-// }
-
-// @keyframes labelReveal {
-//     from {
-//         max-width: 0;
-//         opacity: 0;
-//     }
-
-//     to {
-//         max-width: 210px;
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes descIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-6px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes annDown {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-10px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes annUp {
-//     from {
-//         opacity: 0;
-//         transform: translateY(10px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes shimmer {
-//     from {
-//         background-position: -200% center;
-//     }
-
-//     to {
-//         background-position: 200% center;
-//     }
-// }
-
-// @keyframes cardIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(18px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
-
-// @keyframes cardDescIn {
-//     from {
-//         opacity: 0;
-//         transform: translateY(-4px);
-//         max-height: 0;
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateY(0);
-//         max-height: 120px;
-//     }
-// }
-
-// .pcars__svg-path {
-//     transition: stroke-dashoffset 0s linear;
-
-//     &.active {
-//         transition: stroke-dashoffset 0.72s cubic-bezier(0.4, 0, 0.2, 1);
-//     }
-// }
-
-// .pcars {
-//     font-family: "Barlow", sans-serif;
-//     padding: 48px 20px;
-
-//     &__label {
-//         display: block;
-//         font-family: "Barlow Condensed", sans-serif;
-//         font-size: 11px;
-//         font-weight: 700;
-//         letter-spacing: 3px;
-//         text-transform: uppercase;
-//         color: $red;
-//         margin-bottom: 6px;
-//     }
-
-//     &__title {
-//         font-family: "Barlow Condensed", sans-serif;
-//         font-size: 52px;
-//         font-weight: 700;
-//         line-height: 1;
-//         color: $ink;
-//         margin-bottom: 4px;
-//     }
-
-//     &__sub {
-//         font-size: 13px;
-//         color: $muted;
-//         margin-bottom: 20px;
-//     }
-
-//     &__stage {
-//         position: relative;
-//         border-radius: 16px;
-//         margin-bottom: 18px;
-//         padding: 56px 0 56px;
-//         overflow: visible;
-//     }
-
-//     &__lines {
-//         position: absolute;
-//         inset: 0;
-//         width: 100%;
-//         height: 100%;
-//         pointer-events: none;
-//         z-index: 6;
-//         overflow: visible;
-//     }
-
-//     &__car-img {
-//         display: block;
-//         width: 100%;
-//         height: auto;
-//         position: relative;
-//         z-index: 2;
-//         pointer-events: none;
-//         user-select: none;
-//     }
-
-//     &__dot {
-//         position: absolute;
-//         width: 10px;
-//         height: 10px;
-//         border-radius: 50%;
-//         background: $red;
-//         transform: translate(-50%, -50%) scale(0);
-//         pointer-events: none;
-//         z-index: 11;
-//         opacity: 0;
-
-//         &.is-on {
-//             animation:
-//                 dotPop 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
-//                 dotPulse 1.5s ease 0.5s infinite;
-//         }
-//     }
-
-//     &__ann {
-//         position: absolute;
-//         pointer-events: none;
-//         z-index: 10;
-//         opacity: 0;
-//         max-width: 170px;
-
-//         &--top {
-//             &.is-on {
-//                 animation: annDown 0.32s ease 0.12s both;
-//             }
-//         }
-
-//         &--bot {
-//             transform: translateY(-100%);
-
-//             &.is-on {
-//                 animation: annUp 0.32s ease 0.12s both;
-//                 transform: translateY(-100%);
-//             }
-//         }
-
-//         &-label {
-//             display: block;
-//             background: $red;
-//             color: #fff;
-//             font-family: "Barlow Condensed", sans-serif;
-//             font-size: 10px;
-//             font-weight: 700;
-//             letter-spacing: 1.5px;
-//             text-transform: uppercase;
-//             padding: 4px 10px;
-//             border-radius: 3px 3px 0 0;
-//             white-space: nowrap;
-//             overflow: hidden;
-//             max-width: 0;
-//             opacity: 0;
-
-//             .is-on & {
-//                 animation: labelReveal 0.44s cubic-bezier(0.4, 0, 0.2, 1) 0.26s both;
-//             }
-//         }
-
-//         &-desc {
-//             display: block;
-//             background: #111;
-//             color: #ddd;
-//             font-size: 11px;
-//             line-height: 1.55;
-//             padding: 6px 10px;
-//             border-radius: 0 0 3px 3px;
-//             opacity: 0;
-//             min-width: 150px;
-
-//             .is-on & {
-//                 animation: descIn 0.3s ease 0.62s both;
-//             }
-//         }
-//     }
-
-//     &__row {
-//         display: grid;
-//         grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-//         gap: 10px;
-//     }
-
-//     &__card {
-//         background: $surface;
-//         border: 1.5px solid $border;
-//         border-radius: 14px;
-//         padding: 12px 11px;
-//         cursor: pointer;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-start;
-//         gap: 5px;
-//         font-family: "Barlow", sans-serif;
-//         text-align: left;
-//         position: relative;
-//         overflow: hidden;
-//         transition: border-color .22s, box-shadow .22s, transform .22s, background .22s;
-//         animation: cardIn 0.4s ease calc(var(--i, 0) * 55ms) both;
-
-//         &-bar {
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             right: 0;
-//             height: 3px;
-//             background: linear-gradient(90deg, transparent 0%, $red 40%, #e74c3c 60%, transparent 100%);
-//             background-size: 200% auto;
-//             opacity: 0;
-//             transition: opacity 0.2s;
-//         }
-
-//         &:hover {
-//             border-color: $red;
-//             transform: translateY(-3px);
-//             box-shadow: 0 8px 22px $red-glow;
-
-//             .pcars__card-bar {
-//                 opacity: 0.45;
-//                 animation: shimmer 1.2s linear infinite;
-//             }
-//         }
-
-//         &.is-on {
-//             border-color: $red;
-//             background: #fff9f8;
-//             box-shadow: 0 0 0 3px $red-soft;
-
-//             .pcars__card-bar {
-//                 opacity: 1;
-//                 animation: shimmer 1.8s linear infinite;
-//             }
-//         }
-
-//         &-name {
-//             font-family: "Barlow Condensed", sans-serif;
-//             font-size: 13px;
-//             font-weight: 700;
-//             color: $ink;
-//             letter-spacing: 0.3px;
-//             transition: color 0.2s;
-
-//             .is-on & {
-//                 color: $red;
-//             }
-//         }
-
-//         &-desc {
-//             font-size: 11px;
-//             color: $muted;
-//             line-height: 1.45;
-//             overflow: hidden;
-//             animation: cardDescIn 0.35s ease both;
-//         }
-
-//         &-hint {
-//             font-size: 10px;
-//             font-weight: 600;
-//             color: $red;
-//             letter-spacing: 0.5px;
-//             margin-top: 2px;
-//         }
-//     }
-// }

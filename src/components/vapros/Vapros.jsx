@@ -50,7 +50,6 @@
 
 // export default Vapros;
 
-
 import React, { useEffect } from "react";
 import icons from "../../assets/icons/vapros.svg";
 import { FaAngleRight } from "react-icons/fa6";

@@ -11,6 +11,7 @@ const Characteristics = ({ data }) => {
   return (
     <div className="characteristic container">
       <table className="characteristic__table">
+
         <tr className="characteristic__row">
           <th className="characteristic__row__text">{t("Марка")}</th>
           <td className="characteristic__row__desc">{data?.carName[0]}</td>
