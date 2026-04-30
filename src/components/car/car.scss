@@ -1,4 +1,359 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap");
+
+// $red: #E8201A;
+// $red-soft: #FFF2F1;
+// $red-border: #FFCCC7;
+// $ink: #111111;
+// $muted: #888888;
+// $line: #E8E8E8;
+// $bg: #F7F7F7;
+// $white: #FFFFFF;
+
+// @keyframes fadeUp {
+//     from {
+//         opacity: 0;
+//         transform: translateY(18px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// @keyframes cardIn {
+//     0% {
+//         opacity: 0;
+//         transform: translateY(22px) scale(0.86);
+//     }
+
+//     60% {
+//         opacity: 1;
+//         transform: translateY(-3px) scale(1.04);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateY(0) scale(1);
+//     }
+// }
+
+// @keyframes imgReveal {
+//     from {
+//         opacity: 0;
+//         transform: scale(0.97) translateY(12px);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: scale(1) translateY(0);
+//     }
+// }
+
+// @keyframes imgSwitch {
+//     from {
+//         opacity: 0;
+//         transform: scale(0.975);
+//     }
+
+//     to {
+//         opacity: 1;
+//         transform: scale(1);
+//     }
+// }
+
+// @keyframes shimmer {
+//     0% {
+//         transform: translateX(-130%) skewX(-12deg);
+//     }
+
+//     100% {
+//         transform: translateX(250%) skewX(-12deg);
+//     }
+// }
+
+// @keyframes hintFloat {
+
+//     0%,
+//     100% {
+//         transform: translateY(0);
+//     }
+
+//     50% {
+//         transform: translateY(-4px);
+//     }
+// }
+
+// .pcars {
+//     font-family: "DM Sans", system-ui, sans-serif;
+//     color: $ink;
+//     background: $bg;
+//     min-height: 100vh;
+//     padding: 40px 20px 36px;
+//     box-sizing: border-box;
+//     opacity: 0;
+//     transition: opacity 0.4s ease;
+
+//     &--mounted {
+//         opacity: 1;
+//     }
+
+//     &__inner {
+//         margin: 0 auto;
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     &__carousel-wrap {
+//         display: flex;
+//         align-items: center;
+//         gap: 6px;
+//         margin-bottom: 28px;
+
+//         .pcars--mounted & {
+//             animation: fadeUp .55s cubic-bezier(.22, 1, .36, 1) .12s both;
+//         }
+//     }
+
+//     &__nav {
+//         flex-shrink: 0;
+//         width: 36px;
+//         height: 36px;
+//         border-radius: 50%;
+//         border: 1px solid $line;
+//         background: $white;
+//         color: $ink;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         cursor: pointer;
+//         transition: border-color .2s, background .2s, color .2s, transform .2s, opacity .2s;
+
+//         &:hover:not(:disabled) {
+//             border-color: $red;
+//             background: $red-soft;
+//             color: $red;
+//             transform: scale(1.12);
+//         }
+
+//         &:disabled {
+//             opacity: .2;
+//             cursor: default;
+//         }
+//     }
+
+//     &__track-outer {
+//         flex: 1;
+//         overflow: hidden;
+//         position: relative;
+
+//         &::before,
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             top: 0;
+//             bottom: 0;
+//             width: 30px;
+//             z-index: 2;
+//             pointer-events: none;
+//         }
+
+//         &::before {
+//             left: 0;
+//             background: linear-gradient(to right, $white, transparent);
+//         }
+
+//         &::after {
+//             right: 0;
+//             background: linear-gradient(to left, $white, transparent);
+//         }
+//     }
+
+//     &__track {
+//         display: flex;
+//         gap: 10px;
+//         overflow-x: auto;
+//         padding: 4px 0 12px;
+//         scrollbar-width: none;
+//         scroll-snap-type: x mandatory;
+//         -webkit-overflow-scrolling: touch;
+
+//         &::-webkit-scrollbar {
+//             display: none;
+//         }
+//     }
+
+//     &__spacer {
+//         flex-shrink: 0;
+//         width: calc(50% - 80px);
+//     }
+
+//     &__card {
+//         flex-shrink: 0;
+//         width: 150px;
+//         min-width: 130px;
+//         max-width: 180px;
+//         border-radius: 20px;
+//         padding: 18px 12px 14px;
+//         text-align: center;
+//         cursor: pointer;
+//         position: relative;
+//         overflow: hidden;
+//         scroll-snap-align: center;
+//         border: 1px solid $line;
+//         background: $white;
+//         transition:
+//             transform .45s cubic-bezier(.34, 1.48, .64, 1),
+//             opacity .35s ease,
+//             border-color .25s,
+//             box-shadow .3s;
+
+//         .pcars--mounted & {
+//             animation: cardIn .52s cubic-bezier(.22, 1, .36, 1) calc(var(--i) * .055s + .18s) both;
+//         }
+
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             inset: 0;
+//             background: linear-gradient(105deg, transparent 36%, rgba(255, 255, 255, .65) 50%, transparent 64%);
+//             transform: translateX(-130%) skewX(-12deg);
+//             pointer-events: none;
+//         }
+
+//         &.is-active::after {
+//             animation: shimmer .55s ease forwards;
+//         }
+
+//         &:not(.is-active) {
+//             opacity: .38;
+//             transform: scale(.87) translateY(6px);
+//         }
+
+//         &:hover:not(.is-active) {
+//             opacity: .62;
+//             transform: scale(.91) translateY(3px);
+//         }
+
+//         &.is-active {
+//             border-color: $red;
+//             background: $red-soft;
+//             box-shadow:
+//                 0 0 0 3px rgba($red, .09),
+//                 0 10px 28px rgba($red, .13);
+//             transform: scale(1.07) translateY(-4px);
+//             opacity: 1;
+
+//             .pcars__card-img img {
+//                 transform: scale(1.14);
+//             }
+
+//             .pcars__dot {
+//                 background: $red;
+//                 transform: scale(1.9);
+//                 box-shadow: 0 0 0 3px rgba($red, .2);
+//             }
+//         }
+//     }
+
+//     &__card-img {
+//         height: 96px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         margin-bottom: 10px;
+
+//         img {
+//             max-width: 80px;
+//             max-height: 80px;
+//             object-fit: contain;
+//             display: block;
+//             transition: transform .45s cubic-bezier(.34, 1.48, .64, 1);
+//         }
+//     }
+
+//     &__card h4 {
+//         font-size: 12px;
+//         font-weight: 500;
+//         color: $ink;
+//         margin: 0 0 3px;
+//         line-height: 1.3;
+//     }
+
+//     &__card p {
+//         font-size: 10.5px;
+//         font-weight: 400;
+//         color: $muted;
+//         margin: 0;
+//     }
+
+//     &__dot {
+//         width: 5px;
+//         height: 5px;
+//         border-radius: 50%;
+//         background: $line;
+//         margin: 9px auto 0;
+//         transition: background .3s, transform .4s cubic-bezier(.34, 1.48, .64, 1), box-shadow .3s;
+//     }
+
+//     &__stage {
+//         position: relative;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         min-height: 520px;
+
+//         .pcars--mounted & {
+//             animation: imgReveal .65s cubic-bezier(.22, 1, .36, 1) .3s both;
+//         }
+//     }
+
+//     &__stage-img {
+//         width: 100%;
+//         max-width: 100%;
+//         object-fit: contain;
+//         display: block;
+//         margin: 0 auto;
+//         user-select: none;
+//         pointer-events: none;
+//         border-radius: 28px;
+//         animation: imgSwitch .36s cubic-bezier(.22, 1, .36, 1) both;
+
+//         &.is-switching {
+//             opacity: 0;
+//             transform: scale(0.975);
+//             transition: opacity .18s ease, transform .18s ease;
+//         }
+//     }
+
+//     &__hint {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 7px;
+//         margin-top: 18px;
+//         font-size: 11.5px;
+//         font-weight: 400;
+//         color: $muted;
+
+//         .pcars--mounted & {
+//             animation:
+//                 fadeUp .5s cubic-bezier(.22, 1, .36, 1) .55s both,
+//                 hintFloat 2.6s ease-in-out 1.1s infinite;
+//         }
+
+//         svg {
+//             opacity: .4;
+//         }
+//     }
+// }
+
+
+
+
+// car.scss
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap");
 
 $red: #E8201A;
 $red-soft: #FFF2F1;
@@ -12,7 +367,7 @@ $white: #FFFFFF;
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(18px);
+        transform: translateY(28px);
     }
 
     to {
@@ -24,12 +379,12 @@ $white: #FFFFFF;
 @keyframes cardIn {
     0% {
         opacity: 0;
-        transform: translateY(22px) scale(0.86);
+        transform: translateY(30px) scale(0.85);
     }
 
     60% {
         opacity: 1;
-        transform: translateY(-3px) scale(1.04);
+        transform: translateY(-5px) scale(1.02);
     }
 
     100% {
@@ -38,49 +393,65 @@ $white: #FFFFFF;
     }
 }
 
-@keyframes imgReveal {
-    from {
+@keyframes imageZoomIn {
+    0% {
         opacity: 0;
-        transform: scale(0.97) translateY(12px);
+        transform: scale(0.85) rotate(-2deg);
+        filter: blur(10px);
     }
 
-    to {
+    30% {
+        opacity: 0.5;
+        transform: scale(0.95) rotate(-1deg);
+        filter: blur(5px);
+    }
+
+    100% {
         opacity: 1;
-        transform: scale(1) translateY(0);
+        transform: scale(1) rotate(0);
+        filter: blur(0);
     }
 }
 
-@keyframes imgSwitch {
-    from {
-        opacity: 0;
-        transform: scale(0.975);
+@keyframes imageZoomOut {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+        filter: blur(0);
     }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
+    100% {
+        opacity: 0;
+        transform: scale(0.85) rotate(2deg);
+        filter: blur(10px);
     }
 }
 
 @keyframes shimmer {
     0% {
-        transform: translateX(-130%) skewX(-12deg);
+        transform: translateX(-150%) skewX(-15deg);
     }
 
     100% {
-        transform: translateX(250%) skewX(-12deg);
+        transform: translateX(250%) skewX(-15deg);
     }
 }
 
-@keyframes hintFloat {
+@keyframes pulseGlow {
 
     0%,
     100% {
-        transform: translateY(0);
+        box-shadow: 0 0 0 0 rgba($red, 0.4);
     }
 
     50% {
-        transform: translateY(-4px);
+        box-shadow: 0 0 0 8px rgba($red, 0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -88,11 +459,17 @@ $white: #FFFFFF;
     font-family: "DM Sans", system-ui, sans-serif;
     color: $ink;
     background: $bg;
-    min-height: 100vh;
-    padding: 40px 20px 36px;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
     box-sizing: border-box;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
     &--mounted {
         opacity: 1;
@@ -102,44 +479,61 @@ $white: #FFFFFF;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        max-width: 1400px;
+        padding: 0 24px;
+        height: 100%;
+        justify-content: center;
+        gap: 10px;
     }
 
-    // ── CAROUSEL ──
     &__carousel-wrap {
         display: flex;
         align-items: center;
-        gap: 6px;
-        margin-bottom: 28px;
+        gap: 12px;
 
         .pcars--mounted & {
-            animation: fadeUp .55s cubic-bezier(.22, 1, .36, 1) .12s both;
+            animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
         }
     }
 
     &__nav {
         flex-shrink: 0;
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        border: 1px solid $line;
+        border: 1.5px solid $line;
         background: $white;
         color: $ink;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: border-color .2s, background .2s, color .2s, transform .2s, opacity .2s;
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 10;
+
+        svg {
+            transition: transform 0.2s;
+        }
 
         &:hover:not(:disabled) {
             border-color: $red;
             background: $red-soft;
             color: $red;
-            transform: scale(1.12);
+            transform: scale(1.15);
+
+            svg {
+                transform: scale(1.1);
+            }
+        }
+
+        &:active:not(:disabled) {
+            transform: scale(0.95);
         }
 
         &:disabled {
-            opacity: .2;
-            cursor: default;
+            opacity: 0.25;
+            cursor: not-allowed;
         }
     }
 
@@ -147,6 +541,7 @@ $white: #FFFFFF;
         flex: 1;
         overflow: hidden;
         position: relative;
+        border-radius: 32px;
 
         &::before,
         &::after {
@@ -154,30 +549,31 @@ $white: #FFFFFF;
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 30px;
+            width: 60px;
             z-index: 2;
             pointer-events: none;
         }
 
         &::before {
             left: 0;
-            background: linear-gradient(to right, $white, transparent);
+            background: linear-gradient(to right, $bg, transparent);
         }
 
         &::after {
             right: 0;
-            background: linear-gradient(to left, $white, transparent);
+            background: linear-gradient(to left, $bg, transparent);
         }
     }
 
     &__track {
         display: flex;
-        gap: 10px;
+        gap: 12px;
         overflow-x: auto;
-        padding: 4px 0 12px;
+        padding: 22px 0px 22px;
         scrollbar-width: none;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
             display: none;
@@ -186,166 +582,309 @@ $white: #FFFFFF;
 
     &__spacer {
         flex-shrink: 0;
-        width: calc(50% - 80px);
+        width: calc(50% - 100px);
+
+        @media (max-width: 768px) {
+            width: calc(50% - 70px);
+        }
+
+        @media (max-width: 480px) {
+            width: calc(50% - 50px);
+        }
     }
 
     &__card {
         flex-shrink: 0;
-        width: 150px;
-        min-width: 130px;
+        width: 160px;
+        min-width: 140px;
         max-width: 180px;
-        border-radius: 20px;
-        padding: 18px 12px 14px;
+        border-radius: 24px;
+        padding: 10px 12px 11px;
         text-align: center;
         cursor: pointer;
         position: relative;
         overflow: hidden;
         scroll-snap-align: center;
-        border: 1px solid $line;
+        border: 1.5px solid $line;
         background: $white;
-        transition:
-            transform .45s cubic-bezier(.34, 1.48, .64, 1),
-            opacity .35s ease,
-            border-color .25s,
-            box-shadow .3s;
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+        @media (max-width: 768px) {
+            width: 130px;
+            min-width: 120px;
+            padding: 16px 12px 14px;
+        }
 
         .pcars--mounted & {
-            animation: cardIn .52s cubic-bezier(.22, 1, .36, 1) calc(var(--i) * .055s + .18s) both;
+            animation: cardIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--i) * 0.07s + 0.2s) both;
         }
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        //     background: radial-gradient(circle at 50% 0%, rgba($red, 0.05), transparent);
+        //     opacity: 0;
+        //     transition: opacity 0.3s;
+        // }
 
         &::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(105deg, transparent 36%, rgba(255, 255, 255, .65) 50%, transparent 64%);
-            transform: translateX(-130%) skewX(-12deg);
+            background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60%);
+            transform: translateX(-150%) skewX(-15deg);
             pointer-events: none;
         }
 
         &.is-active::after {
-            animation: shimmer .55s ease forwards;
+            animation: shimmer 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
         &:not(.is-active) {
-            opacity: .38;
-            transform: scale(.87) translateY(6px);
-        }
+            opacity: 0.45;
+            transform: scale(0.88) translateY(10px);
 
-        &:hover:not(.is-active) {
-            opacity: .62;
-            transform: scale(.91) translateY(3px);
+            &:hover {
+                opacity: 0.7;
+                transform: scale(0.92) translateY(5px);
+                border-color: $red-border;
+            }
         }
 
         &.is-active {
             border-color: $red;
             background: $red-soft;
-            box-shadow:
-                0 0 0 3px rgba($red, .09),
-                0 10px 28px rgba($red, .13);
-            transform: scale(1.07) translateY(-4px);
+            box-shadow: 0 12px 32px rgba($red, 0.18);
+            transform: scale(1.08) translateY(-6px);
             opacity: 1;
 
             .pcars__card-img img {
-                transform: scale(1.14);
+                transform: scale(1.18);
             }
 
             .pcars__dot {
                 background: $red;
-                transform: scale(1.9);
-                box-shadow: 0 0 0 3px rgba($red, .2);
+                transform: scale(2.2);
+                box-shadow: 0 0 0 4px rgba($red, 0.25);
+                animation: pulseGlow 1.5s infinite;
+            }
+
+            &::before {
+                opacity: 1;
             }
         }
     }
 
     &__card-img {
-        height: 96px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
+
+        @media (max-width: 768px) {
+            height: 80px;
+            margin-bottom: 10px;
+        }
 
         img {
             max-width: 80px;
             max-height: 80px;
             object-fit: contain;
             display: block;
-            transition: transform .45s cubic-bezier(.34, 1.48, .64, 1);
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            @media (max-width: 768px) {
+                max-width: 65px;
+                max-height: 65px;
+            }
         }
     }
 
     &__card h4 {
-        font-size: 12px;
-        font-weight: 500;
+        font-size: 13px;
+        font-weight: 600;
         color: $ink;
-        margin: 0 0 3px;
+        margin: 0 0 8px;
         line-height: 1.3;
-    }
 
-    &__card p {
-        font-size: 10.5px;
-        font-weight: 400;
-        color: $muted;
-        margin: 0;
+        @media (max-width: 768px) {
+            font-size: 11px;
+        }
     }
 
     &__dot {
-        width: 5px;
-        height: 5px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background: $line;
-        margin: 9px auto 0;
-        transition: background .3s, transform .4s cubic-bezier(.34, 1.48, .64, 1), box-shadow .3s;
+        margin: 0 auto;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    // ── STAGE ──
     &__stage {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 520px;
+        min-height: 0;
+        flex: 1.2;
+        background: linear-gradient(135deg, rgba($red, 0.02), transparent);
+        border-radius: 48px;
+        overflow: hidden;
 
         .pcars--mounted & {
-            animation: imgReveal .65s cubic-bezier(.22, 1, .36, 1) .3s both;
+            animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+        }
+
+        @media (max-width: 768px) {
+            border-radius: 32px;
+            flex: 1;
+        }
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        position: relative;
+
+        &.is-loading {
+            .pcars__stage-img {
+                animation: imageZoomOut 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+        }
+
+        &.is-animating {
+            .pcars__stage-img.is-visible {
+                animation: imageZoomIn 0.5s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+            }
         }
     }
 
     &__stage-img {
-        width: 100%;
-        max-width: 100%;
+        width: auto;
+        max-width: 85%;
+        height: auto;
+        max-height: 540px;
         object-fit: contain;
         display: block;
         margin: 0 auto;
         user-select: none;
         pointer-events: none;
-        border-radius: 28px;
-        animation: imgSwitch .36s cubic-bezier(.22, 1, .36, 1) both;
+        border-radius: 32px;
+        transition: opacity 0.2s;
 
-        &.is-switching {
+        @media (max-width: 768px) {
+            max-height: 350px;
+            max-width: 90%;
+            border-radius: 24px;
+        }
+
+        @media (max-width: 480px) {
+            max-height: 280px;
+        }
+
+        &.is-hidden {
             opacity: 0;
-            transform: scale(0.975);
-            transition: opacity .18s ease, transform .18s ease;
+            visibility: hidden;
+        }
+
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
-    &__hint {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 7px;
-        margin-top: 18px;
-        font-size: 11.5px;
-        font-weight: 400;
-        color: $muted;
+    &__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
 
-        .pcars--mounted & {
-            animation:
-                fadeUp .5s cubic-bezier(.22, 1, .36, 1) .55s both,
-                hintFloat 2.6s ease-in-out 1.1s infinite;
+    &__spinner {
+        width: 48px;
+        height: 48px;
+        border: 3px solid $line;
+        border-top-color: $red;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pcars {
+        &__inner {
+            gap: clamp(15px, 4vh, 35px);
+            padding: 0 20px;
         }
 
-        svg {
-            opacity: .4;
+        &__nav {
+            width: 38px;
+            height: 38px;
+        }
+
+        &__track-outer {
+
+            &::before,
+            &::after {
+                width: 40px;
+            }
+        }
+
+        &__stage-img {
+            max-height: 420px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .pcars {
+        &__inner {
+            padding: 0 16px;
+            gap: 20px;
+        }
+
+        &__carousel-wrap {
+            gap: 8px;
+        }
+
+        &__nav {
+            width: 36px;
+            height: 36px;
+        }
+
+        &__track-outer {
+
+            &::before,
+            &::after {
+                width: 30px;
+            }
+        }
+
+        &__card {
+            width: 110px;
+            min-width: 100px;
+            padding: 12px 8px 10px;
+            border-radius: 18px;
+        }
+
+        &__stage-img {
+            max-height: 300px;
+        }
+    }
+}
+
+@media (hover: none) {
+    .pcars {
+        &__card:not(.is-active) {
+            opacity: 0.5;
+            transform: scale(0.88);
         }
     }
 }
