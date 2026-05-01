@@ -469,16 +469,6 @@
       color: rgb(208, 1, 1);
       position: relative;
       display: inline-block;
-
-      // &::after {
-      //   content: '';
-      //   position: absolute;
-      //   bottom: -8px;
-      //   left: 0;
-      //   height: 2px;
-      //   background: linear-gradient(90deg, rgb(208, 1, 1), transparent);
-      //   animation: lineExpand 0.9s ease 0.9s both;
-      // }
     }
 
     &__desc {
@@ -919,8 +909,6 @@
     }
   }
 }
-
-
 
 // @keyframes fadeInUp {
 //   from {

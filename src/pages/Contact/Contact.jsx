@@ -172,7 +172,6 @@ const initialState = {
   comment: "",
 };
 
-// Simple hook for scroll-triggered animations
 const useScrollReveal = () => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -202,7 +201,7 @@ const Contact = () => {
   const { ref: leftRef, isVisible: leftVisible } = useScrollReveal();
   const { ref: rightRef, isVisible: rightVisible } = useScrollReveal();
   const [focusedField, setFocusedField] = useState(null);
-  const [submitState, setSubmitState] = useState("idle"); // idle | loading | done
+  const [submitState, setSubmitState] = useState("idle");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -239,7 +238,6 @@ const Contact = () => {
       <div className="container">
         <div className="contact__info">
 
-          {/* LEFT SIDE */}
           <section
             ref={leftRef}
             className={`contact__left${leftVisible ? " contact__left--visible" : ""}`}
@@ -277,7 +275,6 @@ const Contact = () => {
             </address>
           </section>
 
-          {/* RIGHT SIDE - FORM */}
           <section
             ref={rightRef}
             className={`contact__right${rightVisible ? " contact__right--visible" : ""}`}
@@ -321,6 +318,7 @@ const Contact = () => {
                   required
                 />
               </label>
+
               <label className={focusedField === "comment" ? "label--active" : ""}>
                 <textarea
                   name="comment"

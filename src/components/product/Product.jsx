@@ -93,11 +93,13 @@ const Product = ({ product, isTrue }) => {
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Вы хотите удалить продукт?");
     if (!confirmDelete) return;
+
     try {
       await deleteProduct(product?.id).unwrap();
     } catch (error) {
       toast.error("Произошла ошибка. Повторите попытку позже.");
     }
+
   };
 
   const name =

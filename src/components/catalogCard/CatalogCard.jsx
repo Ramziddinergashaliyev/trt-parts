@@ -92,6 +92,7 @@ const CatalogCard = () => {
                     <FaArrowRight />
                   </span>
                 </div>
+
                 <div className="catalogCard__box-info">
                   <h3 className="catalogCard__box-info-title">
                     {currentLang === "rus"

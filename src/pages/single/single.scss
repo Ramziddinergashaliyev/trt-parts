@@ -897,7 +897,9 @@ $muted: #aaaaaa;
         overflow: hidden;
         text-overflow: ellipsis;
       }
+
     }
+
   }
 
   &__cards {
@@ -915,6 +917,7 @@ $muted: #aaaaaa;
       grid-template-columns: 1fr;
       gap: 36px;
     }
+
   }
 
   &__card__img {
@@ -934,6 +937,7 @@ $muted: #aaaaaa;
     @media (max-width: 550px) {
       grid-template-columns: 1fr;
     }
+
   }
 
   .thumbnail-wrapper {
@@ -1004,6 +1008,7 @@ $muted: #aaaaaa;
       padding-bottom: 4px;
       scroll-snap-type: x mandatory;
     }
+
   }
 
   .thumbnail {

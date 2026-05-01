@@ -196,10 +196,12 @@ const selectStyles = {
       backgroundColor: "#f5f5f5",
     },
   }),
+
   valueContainer: (base) => ({
     ...base,
     padding: "0 14px",
   }),
+
   placeholder: (base) => ({
     ...base,
     color: "#bbb",
@@ -207,6 +209,7 @@ const selectStyles = {
     fontFamily: "'Outfit', sans-serif",
     fontWeight: 400,
   }),
+
   singleValue: (base) => ({
     ...base,
     color: "#222",
@@ -214,13 +217,16 @@ const selectStyles = {
     fontFamily: "'Outfit', sans-serif",
     fontWeight: 500,
   }),
+
   input: (base) => ({
     ...base,
     color: "#222",
     fontSize: "14px",
     fontFamily: "'Outfit', sans-serif",
   }),
+
   indicatorSeparator: () => ({ display: "none" }),
+
   dropdownIndicator: (base, state) => ({
     ...base,
     color: state.isFocused ? "#d00101" : "#bbb",
@@ -229,12 +235,14 @@ const selectStyles = {
     padding: "0 12px",
     "&:hover": { color: "#d00101" },
   }),
+
   clearIndicator: (base) => ({
     ...base,
     color: "#ccc",
     padding: "0 8px",
     "&:hover": { color: "#d00101" },
   }),
+
   menu: (base) => ({
     ...base,
     borderRadius: "10px",
@@ -243,10 +251,12 @@ const selectStyles = {
     overflow: "hidden",
     zIndex: 99,
   }),
+
   menuList: (base) => ({
     ...base,
     padding: "6px",
   }),
+
   option: (base, state) => ({
     ...base,
     borderRadius: "7px",
@@ -263,6 +273,7 @@ const selectStyles = {
     padding: "10px 12px",
     "&:active": { backgroundColor: "rgba(208,1,1,0.1)" },
   }),
+
 };
 
 const Filter = () => {
@@ -309,6 +320,7 @@ const Filter = () => {
           model: model?.value || "",
         },
       });
+      
     } else {
       toast.info("Заполните хотя бы одно поле");
     }
@@ -327,6 +339,7 @@ const Filter = () => {
               Найти <span>деталь</span>
             </h2>
           </div>
+
           <div className="filter__header-accent" aria-hidden="true">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
               <circle cx="21" cy="21" r="13" stroke="#d00101" strokeWidth="2.5" />
@@ -396,6 +409,7 @@ const Filter = () => {
                 ? `Выбрано фильтров: ${[oem, trt, brand, model].filter(Boolean).length}`
                 : "Заполните хотя бы одно поле"}
             </p>
+
             <button
               type="submit"
               className={`filter__btn ${hasValue ? "filter__btn--active" : ""}`}
