@@ -3,12 +3,15 @@ import { FaArrowRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useGetCategoriesQuery } from "../../context/api/categoryApi";
 import { useTranslation } from "react-i18next";
+import CategoryLoading from "../categoryLoading/CategoryLoading";
 import "./catalogCard.scss";
 
 const CatalogCard = () => {
-  const { data } = useGetCategoriesQuery();
+  const { data, isLoading } = useGetCategoriesQuery();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
+
+  if (isLoading) return <CategoryLoading />;
 
   return data ? (
     <div className="catalogCard">

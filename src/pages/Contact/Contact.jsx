@@ -122,11 +122,13 @@ const Contact = () => {
             className={`contact__right${rightVisible ? " contact__right--visible" : ""}`}
             aria-labelledby="form-heading"
           >
+
             <h2 id="form-heading" className="contact__right__title">
               {t("Форма для связи")}
             </h2>
 
             <form className="contact__right__form" onSubmit={handleSubmit}>
+
               <label className={focusedField === "name" ? "label--active" : ""}>
                 <input
                   type="text"
@@ -135,19 +137,6 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   onFocus={() => setFocusedField("name")}
-                  onBlur={() => setFocusedField(null)}
-                  required
-                />
-              </label>
-
-              <label className={focusedField === "email" ? "label--active" : ""}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder={t("Электронная почта")}
-                  value={formData.email}
-                  onChange={handleChange}
-                  onFocus={() => setFocusedField("email")}
                   onBlur={() => setFocusedField(null)}
                   required
                 />
@@ -170,6 +159,19 @@ const Contact = () => {
                   onBlur={() => setFocusedField(null)}
                   pattern="^\+?\d{9,15}$"
                   inputMode="numeric"
+                  required
+                />
+              </label>
+
+              <label className={focusedField === "email" ? "label--active" : ""}>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder={t("Электронная почта")}
+                  value={formData.email}
+                  onChange={handleChange}
+                  onFocus={() => setFocusedField("email")}
+                  onBlur={() => setFocusedField(null)}
                   required
                 />
               </label>
