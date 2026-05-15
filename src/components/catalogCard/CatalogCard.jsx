@@ -16,6 +16,7 @@ const CatalogCard = () => {
   return data ? (
     <div className="catalogCard">
       <div className="catalogCard__box" data-aos="zoom-in-down">
+
         {data?.slice(0, 6)?.map((item) => (
           <NavLink
             key={item.id}
@@ -46,6 +47,7 @@ const CatalogCard = () => {
             </div>
           </NavLink>
         ))}
+
       </div>
     </div>
   ) : (
