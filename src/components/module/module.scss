@@ -1,0 +1,67 @@
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: #aaa1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: overlay 0.3s forwards;
+    z-index: 1100;
+}
+
+@keyframes overlay {
+    to {
+        opacity: 1;
+    }
+}
+
+.model {
+    position: relative;
+    width: 500px;
+    max-height: 90vh;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%) scale(0.9);
+    border-radius: 10px;
+    padding: 30px;
+    opacity: 1;
+    animation: model 0.3s forwards;
+    overflow: auto;
+    z-index: 1200;
+
+    &__btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        color: red;
+    }
+}
+
+@keyframes model {
+    to {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .model {
+        width: 80% !important;
+        padding: 20px 15px;
+
+        &__btn {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            border: none;
+            background-color: transparent;
+            color: red;
+        }
+    }
+}

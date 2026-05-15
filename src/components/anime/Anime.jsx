@@ -136,6 +136,7 @@ export default function Anime() {
                                 <div className="feature-icon-wrap">
                                     <img src={f.icon} alt={f.label} className="feature-icon" />
                                 </div>
+
                                 <div>
                                     <div className="feature-label">{f.label}</div>
                                     <div className="feature-sub">{f.sub}</div>

@@ -117,6 +117,7 @@ export default function ProductsShowcase() {
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <section className="sc">
         <div aria-hidden className="sc__glow" />
+
         <div className="sc__wrap">
 
           <div className="sc__eyebrow">
@@ -127,12 +128,14 @@ export default function ProductsShowcase() {
           <div className="sc__stage">
 
             <div className="sc__left">
+
               <div key={`meta-${active.id}-${animKey}`} className="sc__top-meta anim-slide-left">
                 <span className="sc__cat">◆ {active.category}</span>
                 <span className="sc__origin">{active.origin}</span>
               </div>
 
               <div className="sc__canvas">
+
                 {PRODUCTS.map((p, i) => (
                   <div
                     key={p.id}
@@ -151,6 +154,7 @@ export default function ProductsShowcase() {
               </div>
 
               <div className="sc__progress">
+
                 {PRODUCTS.map((p, i) => (
                   <button
                     key={p.id}
@@ -164,11 +168,13 @@ export default function ProductsShowcase() {
                     } />
                   </button>
                 ))}
+
               </div>
             </div>
 
             <div className="sc__right">
               <div>
+
                 <div key={`title-${active.id}-${animKey}`} className="anim-slide-bottom">
                   <h3 className="sc__name">{active.name}</h3>
                   <p className="sc__tagline">{active.tagline}</p>
@@ -182,6 +188,7 @@ export default function ProductsShowcase() {
                     </div>
                   ))}
                 </dl>
+
               </div>
 
               <div className="sc__catalog">
@@ -204,6 +211,7 @@ export default function ProductsShowcase() {
             </div>
 
           </div>
+
         </div>
       </section>
     </>

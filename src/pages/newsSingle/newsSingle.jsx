@@ -196,4 +196,3 @@ const NewsSingle = () => {
 }
 
 export default NewsSingle
-

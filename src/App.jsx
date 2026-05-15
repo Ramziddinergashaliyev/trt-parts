@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Leazy from "./components/leazy/Leazy";
 import Maksud from "./pages/maksud/Maksud";
 import Kamron from "./pages/kamron/Kamron";
+import FormCatalog from "./pages/formCatalog/FormCatalog";
+import AddCatalog from "./pages/addCatalog/AddCatalog";
 
 const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
 const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
@@ -50,16 +52,17 @@ const App = () => {
   return (
     <ErrorBoundary key={location.pathname}>
       <Suspense fallback={<Leazy />}>
+
         <Routes location={location}>
           <Route path="/maksud" element={<Maksud />} />
           <Route path="/kamron-erkinov/" element={<Kamron />} />
+
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/razdel" element={<Razdel />} />
             <Route path="/company" element={<Company />} />
             <Route path="/partner" element={<Partner />} />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/single/:id" element={<Single />} /> */}
             <Route path="/single/:slug" element={<Single />} />
             <Route path="/filter" element={<FilterSearch />} />
             <Route path="/news" element={<News />} />
@@ -67,12 +70,15 @@ const App = () => {
             <Route path="/accardion" element={<Accardion />} />
             <Route path="/search" element={<SearchProduct />} />
             <Route path="/new" element={<NewsPage />} />
+            <Route path="/form-catalog" element={<FormCatalog />} />
+            <Route path="/addCatalog" element={<AddCatalog />} />
             <Route path="/filterResults" element={<FilterResults />} />
             <Route path="/:categoryName/:id" element={<CatalogPage />} />
             <Route path="/news-single/:id" element={<NewsSingle />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+
       </Suspense>
     </ErrorBoundary>
   );

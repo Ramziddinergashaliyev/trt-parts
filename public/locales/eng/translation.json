@@ -25,7 +25,7 @@
   "about_company": "About Company",
   "catalog": "CATALOG",
   "catalog_heading": "Sections of the provided <1>products</1>",
-  "download_pdf": "Download PDF file",
+  "download_pdf": "Download Catalog",
   "about_product": "About products",
   "left_text": "We are proud to offer a wide range of high-quality auto parts developed using advanced technologies and innovative materials.",
   "right_text": "Our products include replacement parts for cars and trucks, designed to provide optimum performance and durability.",
@@ -102,5 +102,6 @@
   "Новости": "News",
   "РАЗДЕЛ": "SECTION",
   "Ошибка при загрузке результатов.": "Error loading results.",
-  "Увеличить": "Enlarge"
+  "Увеличить": "Enlarge",
+  "Электронная почта":"E-mail"
 }

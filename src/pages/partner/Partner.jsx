@@ -24,6 +24,7 @@ const Partner = () => {
           <article key={el?.id} className="partner__card">
 
             <div className="partner__card__top">
+
               <div className="partner__card__top-left">
                 <img
                   src={el?.flag}
