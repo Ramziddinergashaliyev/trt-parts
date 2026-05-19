@@ -51,7 +51,7 @@ const PARTS = [
         floatImage: 'https://static.codia.ai/s/image_4ca23f41-1351-4e3d-b58f-43967021dc47.png',
         dotColor: '#2563eb',
         position: { top: '65%', left: '78%' },
-    },
+    }
 ];
 
 const FEATURES = [
@@ -69,7 +69,7 @@ const FEATURES = [
         icon: 'https://static.codia.ai/s/image_ae73c0d2-e2f1-4584-887d-24a05842ea5e.png',
         label: 'High Performance',
         sub: 'Built for maximum durability',
-    },
+    }
 ];
 
 const TAG_ICONS = [

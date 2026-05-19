@@ -5,6 +5,7 @@ import { newsData, newsDataEn } from '../../static'
 import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -134,6 +135,7 @@ const NewsSingle = () => {
                     <span className="breadcrumb-current">{news?.category}</span>
                 </div>
 
+
                 <article className="news-article">
                     <div className="article-header">
                         <h1 className="article-title">{news.title}</h1>
@@ -161,6 +163,7 @@ const NewsSingle = () => {
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true
                             }}
+
                             loop={true}
                             breakpoints={{
                                 640: {
@@ -170,6 +173,7 @@ const NewsSingle = () => {
                                     slidesPerView: 3,
                                 },
                             }}
+
                             className="article-swiper">
                             {news.image?.map((el, index) => (
                                 <SwiperSlide key={index}>

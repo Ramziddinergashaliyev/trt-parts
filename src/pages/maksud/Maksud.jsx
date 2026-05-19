@@ -19,6 +19,7 @@ const Maksud = () => {
 
                 <h1 className="card__name">Otajonov Makhsud</h1>
                 <p className="card__role">Head of Marketing Department</p>
+
             </div>
 
             <div className="card__actions">

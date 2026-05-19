@@ -106,12 +106,21 @@ const AddCatalog = () => {
     return (
         <div className="catalog-page">
             <div className="catalog-topbar">
+
                 <div className="catalog-topbar__left">
                     <h2 className="catalog-topbar__left-title">Parts catalog</h2>
                 </div>
-                <button className="btn-add" onClick={() => setIsOpen(true)}>
-                    + Add product
-                </button>
+
+                <div className="catalog-topbar-btns">
+                    <button className="btn-add" onClick={() => setIsOpen(true)}>
+                        + Import Excel
+                    </button>
+
+                    <button className="btn-add" onClick={() => setIsOpen(true)}>
+                        + Add Product
+                    </button>
+                </div>
+
             </div>
 
             <FilterCatalog />
@@ -119,6 +128,7 @@ const AddCatalog = () => {
             {isOpen && (
                 <Module close={setIsOpen} width={550} bg={"#aaa9"}>
                     <form onSubmit={handleSubmit} className="modal">
+
                         <div className="modal__header">
                             <h3 className="modal__header-title">Add new product</h3>
                         </div>
@@ -139,6 +149,7 @@ const AddCatalog = () => {
                                                 <button type="button" onClick={() => removeTag(i, oemList, setOemList)}>×</button>
                                             </span>
                                         ))}
+
                                         <input
                                             value={oemInput}
                                             onChange={(e) => setOemInput(e.target.value)}
@@ -157,6 +168,7 @@ const AddCatalog = () => {
                                     <label>LEMFÖRDER №</label>
                                     <input name="lemforderNo" value={formData.lemforderNo} onChange={handleChange} placeholder="12152 05" />
                                 </div>
+
                             </div>
 
                             <div className="modal__grid">

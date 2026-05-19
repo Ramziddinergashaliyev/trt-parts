@@ -2,7 +2,6 @@ import React from "react";
 import "./categoryLoading.scss";
 
 const CategoryLoading = () => {
-
     return (
         <div className="categoryLoading">
             <div className="categoryLoading__wrapper">
