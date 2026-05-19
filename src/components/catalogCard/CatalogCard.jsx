@@ -94,9 +94,9 @@ const CatalogCard = () => {
                 backgroundImage: `url(${item?.images})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "top right",
-                backgroundSize: index === 6
-                  ? (isWide ? "500px auto" : "550px auto")
-                  : (isWide ? "300px auto" : "350px auto"),
+                backgroundSize: index === isWide
+                  ? (6 ? "500px auto" : "550px auto")
+                  : (6 ? "300px auto" : "350px auto"),
               }}
               className="catalogCard__box-item">
 
