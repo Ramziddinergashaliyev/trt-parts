@@ -419,7 +419,7 @@
 
     &-item {
       position: relative;
-      height: 320px;
+      height: 300px;
       border-radius: var(--cc-radius);
       overflow: hidden;
       background-color: var(--cc-card) !important;
@@ -436,10 +436,8 @@
         box-shadow .45s ease,
         border-color .32s ease,
         background-size 1.2s ease;
-
-      background-size: 350px auto;
+      background-size: 330px auto;
       animation: slide-up 0.5s ease forwards;
-      /* ✅ media dan oldin */
 
       &.large {
         background-size: 550px auto;
@@ -506,8 +504,6 @@
           letter-spacing: .3px;
         }
       }
-
-      animation: slide-up 0.5s ease forwards;
     }
 
     &-item-card {
