@@ -75,7 +75,7 @@ const CatalogCard = () => {
   const [isWide, setIsWide] = useState(window.innerWidth > 1460);
 
   useEffect(() => {
-    const handleResize = () => setIsWide(window.innerWidth > 1500);
+    const handleResize = () => setIsWide(window.innerWidth > 1460);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
