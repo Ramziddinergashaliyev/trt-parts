@@ -149,7 +149,7 @@ const CatalogCard = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "top right",
               }}
-              className={`catalogCard__box-item${index === 6 ? " large" : ""}`}>
+              className={`catalogCard__box-item${index === 3 || index === 0 || index === 6 ? " large" : ""}`}>
 
               <div className="catalogCard__box-item-card">
                 <div className="catalogCard__box-item-card-link">
