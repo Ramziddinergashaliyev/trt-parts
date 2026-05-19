@@ -139,7 +139,7 @@ const CatalogCard = () => {
     <div className="catalogCard">
       <div className="catalogCard__box" data-aos="zoom-in-down">
 
-        {data?.slice(0, 9)?.map((item, index) => (
+        {data?.slice(0, 6)?.map((item, index) => (
           <NavLink
             key={item.id}
             to={`/${(currentLang === "rus" ? item?.translations?.ru?.name : item?.translations?.en?.name)?.toLowerCase().replace(/\s+/g, '-')}/${item?.id}`}>
