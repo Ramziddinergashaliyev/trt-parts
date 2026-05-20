@@ -502,8 +502,8 @@
 
       img {
         width: 100%;
-        height: 90%;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
         object-position: center;
         display: block;
         transition: transform .45s cubic-bezier(.22, 1, .36, 1);
