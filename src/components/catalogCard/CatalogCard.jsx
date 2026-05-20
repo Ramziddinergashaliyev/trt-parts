@@ -120,7 +120,6 @@
 
 // export default CatalogCard;
 
-
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
@@ -140,115 +139,43 @@ const CatalogCard = () => {
     <div className="catalogCard">
       <div className="catalogCard__box" data-aos="zoom-in-down">
 
-        {data?.slice(0, 9)?.map((item, index) => {
-          const name =
-            currentLang === "rus"
-              ? item?.translations?.ru?.name
-              : item?.translations?.en?.name;
+        {data?.slice(0, 9)?.map((item, index) => (
+          <NavLink
+            key={item.id}
+            to={`/${(currentLang === "rus" ? item?.translations?.ru?.name : item?.translations?.en?.name)?.toLowerCase().replace(/\s+/g, '-')}/${item?.id}`}>
+            <div
+              style={{
+                backgroundImage: `url(${item?.images})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "top right",
+              }}
+              className={`catalogCard__box-item${index === 3 || index === 0 || index === 6 ? " large" : ""}`}>
 
-          const slug = name?.toLowerCase().replace(/\s+/g, "-");
-
-          return (
-            <NavLink key={item.id} to={`/${slug}/${item?.id}`}>
-              <div
-                className={`catalogCard__box-item${index === 0 || index === 3 || index === 6 ? " large" : ""
-                  }`}
-              >
-                {/* Arrow tugmasi — yuqori o'ng burchak */}
-                <div className="catalogCard__box-item-card">
-                  <div className="catalogCard__box-item-card-link">
+              <div className="catalogCard__box-item-card">
+                <div className="catalogCard__box-item-card-link">
+                  <span className="catalogCard__box-item-card-link-btn">
                     <FaArrowRight />
-                  </div>
+                  </span>
                 </div>
 
-                {/* RASM ZONE */}
-                <div className="catalogCard__box-image">
-                  <img
-                    src={item?.images}
-                    alt={name}
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* MATN ZONE */}
-                <div className="catalogCard__box-footer">
-                  <div className="catalogCard__box-info">
-                    <h3 className="catalogCard__box-info-title">{name}</h3>
-                  </div>
+                <div className="catalogCard__box-info">
+                  <h3 className="catalogCard__box-info-title">
+                    {currentLang === "rus"
+                      ? item?.translations?.ru?.name
+                      : item?.translations?.en?.name}
+                  </h3>
                 </div>
               </div>
-            </NavLink>
-          );
-        })}
+
+            </div>
+          </NavLink>
+        ))}
 
       </div>
     </div>
   ) : (
-    <p style={{ textAlign: "center", fontSize: "22px", fontWeight: "500" }}>
-      проблема с сервером
-    </p>
+    <p style={{ textAlign: "center", fontSize: "22px", fontWeight: "500" }}>проблема с сервером</p>
   );
 };
 
 export default CatalogCard;
-
-
-// import React from "react";
-// import { FaArrowRight } from "react-icons/fa6";
-// import { NavLink } from "react-router-dom";
-// import { useGetCategoriesQuery } from "../../context/api/categoryApi";
-// import { useTranslation } from "react-i18next";
-// import CategoryLoading from "../categoryLoading/CategoryLoading";
-// import "./catalogCard.scss";
-
-// const CatalogCard = () => {
-//   const { data, isLoading } = useGetCategoriesQuery();
-//   const { i18n } = useTranslation();
-//   const currentLang = i18n.language;
-
-//   if (isLoading) return <CategoryLoading />;
-
-//   return data ? (
-//     <div className="catalogCard">
-//       <div className="catalogCard__box" data-aos="zoom-in-down">
-
-//         {data?.slice(0, 9)?.map((item, index) => (
-//           <NavLink
-//             key={item.id}
-//             to={`/${(currentLang === "rus" ? item?.translations?.ru?.name : item?.translations?.en?.name)?.toLowerCase().replace(/\s+/g, '-')}/${item?.id}`}>
-//             <div
-//               style={{
-//                 backgroundImage: `url(${item?.images})`,
-//                 backgroundRepeat: "no-repeat",
-//                 backgroundPosition: "top right",
-//               }}
-//               className={`catalogCard__box-item${index === 3 || index === 0 || index === 6 ? " large" : ""}`}>
-
-//               <div className="catalogCard__box-item-card">
-//                 <div className="catalogCard__box-item-card-link">
-//                   <span className="catalogCard__box-item-card-link-btn">
-//                     <FaArrowRight />
-//                   </span>
-//                 </div>
-
-//                 <div className="catalogCard__box-info">
-//                   <h3 className="catalogCard__box-info-title">
-//                     {currentLang === "rus"
-//                       ? item?.translations?.ru?.name
-//                       : item?.translations?.en?.name}
-//                   </h3>
-//                 </div>
-//               </div>
-
-//             </div>
-//           </NavLink>
-//         ))}
-
-//       </div>
-//     </div>
-//   ) : (
-//     <p style={{ textAlign: "center", fontSize: "22px", fontWeight: "500" }}>проблема с сервером</p>
-//   );
-// };
-
-// export default CatalogCard;
