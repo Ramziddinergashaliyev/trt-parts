@@ -147,7 +147,6 @@ const CatalogCard = () => {
               style={{
                 backgroundImage: `url(${item?.images})`,
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: "top right",
               }}
               className={`catalogCard__box-item${index === 3 || index === 0 || index === 6 ? " large" : ""}`}>
 
@@ -170,7 +169,6 @@ const CatalogCard = () => {
             </div>
           </NavLink>
         ))}
-
       </div>
     </div>
   ) : (
