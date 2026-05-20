@@ -436,11 +436,10 @@
         box-shadow .45s ease,
         border-color .32s ease,
         background-size 1.2s ease;
-      background-size: 330px auto;
+      background-size: 300px auto;
       animation: slide-up 0.5s ease forwards;
 
       @media (max-width:1500px) {
-        height: 300px;
         padding: 10px;
       }
 
@@ -449,8 +448,6 @@
       }
 
       @media (max-width: 1500px) {
-        background-size: 300px auto;
-
         &.large {
           background-size: 500px auto;
         }
