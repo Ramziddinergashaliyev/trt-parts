@@ -419,7 +419,7 @@
 
     &-item {
       position: relative;
-      height: 340px;
+      height: 330px;
       border-radius: var(--cc-radius);
       overflow: hidden;
       background-color: var(--cc-card) !important;
@@ -438,6 +438,11 @@
         background-size 1.2s ease;
       background-size: 350px auto;
       animation: slide-up 0.5s ease forwards;
+
+      @media (max-width:1500px) {
+        height: 300px;
+        padding: 10px;
+      }
 
       &.large {
         background-size: 600px auto;
