@@ -147,7 +147,7 @@ const CatalogCard = () => {
               style={{
                 backgroundImage: `url(${item?.images})`,
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: `${index === 4 ? "top left" : index === 2 ? "top center" : "top right"}`,
+                backgroundPosition: `${index === 4 ? "top left" : index === 1 ? "top center" : "top right"}`,
               }}
               className={`catalogCard__box-item${index === 3 || index === 0 || index === 6 ? " large" : ""}`}>
 
