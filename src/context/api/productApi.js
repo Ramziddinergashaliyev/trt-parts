@@ -17,6 +17,15 @@ export const productApi = api.injectEndpoints({
       providesTags: ["Product"],
     }),
 
+    // SearchProducts: build.query({
+    //   query: (params) => ({
+    //     url: "/products",
+    //     method: "GET",
+    //     params,
+    //   }),
+    //   invalidatesTags: ["Product"],
+    // }),
+
     SearchProducts: build.query({
       query: (params) => ({
         url: "/products",
@@ -60,7 +69,6 @@ export const productApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Product"],
     }),
-
   }),
 });
 

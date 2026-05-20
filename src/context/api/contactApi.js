@@ -10,7 +10,6 @@ export const contactApi = api.injectEndpoints({
       }),
       invalidatesTags: ["Contact"],
     }),
-    
   }),
 });
 
