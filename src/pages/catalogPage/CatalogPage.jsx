@@ -27,6 +27,7 @@ const CatalogPage = () => {
                 ? data?.translations?.ru?.name
                 : data?.translations?.en?.name}
             </h3>
+
             <div>
               <ProductItem data={data?.parts} />
             </div>

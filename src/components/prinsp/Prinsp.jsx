@@ -14,8 +14,7 @@ const Prinsp = () => {
       <div
         className="prinsp__top"
         data-aos="fade-up"
-        data-aos-duration="1000"
-      >
+        data-aos-duration="1000">
         <div className="prinsp__left">
           <h2 className="prinsp__title">
             {t("quality_title")} <br />

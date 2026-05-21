@@ -152,7 +152,6 @@
 
 // export default Header;
 
-
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import icon from "../../../assets/img/logo.png";
@@ -215,7 +214,6 @@ const Header = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -363,7 +361,7 @@ const Header = () => {
             ) : (
               <>
                 <ul className="header__search-list">
-                  {data.slice(0, 6).map((product) => {
+                  {data.map((product) => {
                     const name =
                       getProductName(product) || product?.translations?.en?.name || "";
                     const slug = toSlug(name, product.id);
@@ -381,18 +379,6 @@ const Header = () => {
                     );
                   })}
                 </ul>
-                {data.length > 6 && (
-                  <button
-                    type="button"
-                    className="header__search-all"
-                    onClick={() => {
-                      navigate(`/search?value=${encodeURIComponent(trimmedValue)}`);
-                      closeSearch();
-                    }}
-                  >
-                    {t("Результат поиска:")} ({data.length})
-                  </button>
-                )}
               </>
             )}
           </div>

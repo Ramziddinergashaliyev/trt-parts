@@ -6,6 +6,7 @@ import Loading from "../../../components/loading/Loading";
 
 const ManageProduct = () => {
   const { data } = useGetProductsQuery();
+
   return (
     <div className="manageProduct">
       <h3 className="manageProduct__title">Продукты</h3>

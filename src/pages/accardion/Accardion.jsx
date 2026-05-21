@@ -30,9 +30,7 @@ const Accardion = () => {
         playsInline
         preload="metadata"
       >
-
         <source src={bgVideo} type="video/webm" />
-
       </video>
 
       <div className="accardion__list">

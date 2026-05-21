@@ -135,7 +135,6 @@ const NewsSingle = () => {
                     <span className="breadcrumb-current">{news?.category}</span>
                 </div>
 
-
                 <article className="news-article">
                     <div className="article-header">
                         <h1 className="article-title">{news.title}</h1>
