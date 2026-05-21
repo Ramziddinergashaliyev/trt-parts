@@ -103,5 +103,14 @@
   "РАЗДЕЛ": "SECTION",
   "Ошибка при загрузке результатов.": "Error loading results.",
   "Увеличить": "Enlarge",
-  "Электронная почта": "E-mail"
+  "Электронная почта": "E-mail",
+  "Загрузка...": "Loading...",
+  "Ничего не найдено": "Nothing found",
+  "catalog_parts": "Parts Catalog",
+  "find": "Find",
+  "part": "a Part",
+  "search_placeholder": "Search...",
+  "fill_one_field": "Fill in at least one field",
+  "selected_filters": "Selected filters:",
+  "find_spare_part": "Find Spare Part"
 }

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useGetProductsQuery } from "../../context/api/productApi";
 import { toast } from "react-toastify";
 import "./filter.scss";
+import { useTranslation } from "react-i18next";
 
 const uniqueOptions = (arr) => {
   const seen = new Set();
@@ -112,6 +113,7 @@ const selectStyles = {
 
 const Filter = () => {
   const { data } = useGetProductsQuery();
+  const { t } = useTranslation()
   const navigate = useNavigate();
 
   const [oem, setOem] = useState(null);
@@ -168,9 +170,9 @@ const Filter = () => {
 
         <div className="filter__header">
           <div className="filter__header-left">
-            <span className="filter__header-eyebrow">Каталог запчастей</span>
+            <span className="filter__header-eyebrow">{t("catalog_parts")}</span>
             <h2 className="filter__header-title">
-              Найти <span>деталь</span>
+              {t("find")} <span>{t("part")}</span>
             </h2>
           </div>
 
@@ -187,49 +189,49 @@ const Filter = () => {
         <form className="filter__form" onSubmit={handleSearch}>
           <div className="filter__fields">
             <div className="filter__field">
-              <label className="filter__label">OEM номер</label>
+              <label className="filter__label">{t("oem_number")}</label>
               <Select
                 options={oemOptions}
                 value={oem}
                 onChange={setOem}
                 isClearable
-                placeholder="Поиск..."
+                placeholder={t("search_placeholder")}
                 styles={selectStyles}
               />
             </div>
 
             <div className="filter__field">
-              <label className="filter__label">TRT код</label>
+              <label className="filter__label">{t("trt_code")}</label>
               <Select
                 options={trtOptions}
                 value={trt}
                 onChange={setTrt}
                 isClearable
-                placeholder="Поиск..."
+                placeholder={t("search_placeholder")}
                 styles={selectStyles}
               />
             </div>
 
             <div className="filter__field">
-              <label className="filter__label">Марка</label>
+              <label className="filter__label">{t("brand")}</label>
               <Select
                 options={markaOptions}
                 value={brand}
                 onChange={setBrand}
                 isClearable
-                placeholder="Поиск..."
+                placeholder={t("search_placeholder")}
                 styles={selectStyles}
               />
             </div>
 
             <div className="filter__field">
-              <label className="filter__label">Модель</label>
+              <label className="filter__label">{("model")}</label>
               <Select
                 options={modelOptions}
                 value={model}
                 onChange={setModel}
                 isClearable
-                placeholder="Поиск..."
+                placeholder={t("search_placeholder")}
                 styles={selectStyles}
               />
             </div>
@@ -239,8 +241,9 @@ const Filter = () => {
           <div className="filter__footer">
             <p className="filter__hint">
               {hasValue
-                ? `Выбрано фильтров: ${[oem, trt, brand, model].filter(Boolean).length}`
-                : "Заполните хотя бы одно поле"}
+                ? `${t("selected_filters")} ${[oem, trt, brand, model].filter(Boolean).length
+                }`
+                : t("fill_one_field")}
             </p>
 
             <button
@@ -251,7 +254,7 @@ const Filter = () => {
                 <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.2" />
                 <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
               </svg>
-              Найти запчасть
+              {t("find_spare_part")}
             </button>
           </div>
         </form>

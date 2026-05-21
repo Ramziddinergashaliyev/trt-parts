@@ -355,9 +355,9 @@ const Header = () => {
         {showResults && (
           <div className="header__search-results container">
             {isSearching ? (
-              <p className="header__search-status">Загрузка...</p>
+              <p className="header__search-status">{t("Загрузка...")}</p>
             ) : isError || !data?.length ? (
-              <p className="header__search-status">Ничего не найдено</p>
+              <p className="header__search-status">{t("Ничего не найдено")}</p>
             ) : (
               <>
                 <ul className="header__search-list">
