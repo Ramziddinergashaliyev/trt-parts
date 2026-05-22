@@ -1,6 +1,8 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 import "./filterCatalog.scss";
 import { useGetCatalogQuery } from "../../context/api/catalogApi";
+import { filterCatalogItems } from "../../utils/catalogSearch";
+import { exportCatalogExcel, exportCatalogPdf } from "../../utils/catalogExport";
 
 const SearchIcon = () => (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden>
@@ -111,40 +113,42 @@ export default function FilterCatalog() {
     const [modalPhoto, setModalPhoto] = useState(null);
 
     const { data = [], isLoading, isError } = useGetCatalogQuery();
+    const [exporting, setExporting] = useState(false);
+
+    const filteredData = useMemo(
+        () => filterCatalogItems(data, search),
+        [data, search],
+    );
+
+    useEffect(() => {
+        setPage(1);
+    }, [search, brand, type]);
 
     const handlePreview = useCallback(({ src, trt }) => setModalPhoto({ src, trt }), []);
 
-    const totalPages = Math.max(1, Math.ceil(data.length / PAGE_SIZE));
+    const totalPages = Math.max(1, Math.ceil(filteredData.length / PAGE_SIZE));
     const safePage = Math.min(page, totalPages);
-    const pageData = data.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
+    const pageData = filteredData.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
 
-    const exportCSV = useCallback(() => {
-        const headers = ["TRT No", "OEM No", "CTR No", "LEMFÖRDER", "EN Name", "Contents", "RU Name", "Car", "Model", "Years", "Weight KG"];
+    const handleExportExcel = useCallback(async () => {
+        if (!filteredData.length) return;
+        setExporting(true);
+        try {
+            await exportCatalogExcel(filteredData);
+        } finally {
+            setExporting(false);
+        }
+    }, [filteredData]);
 
-        const rows = data.map(p => [
-            p.trtNo,
-            Array.isArray(p.oemNo) ? p.oemNo.join(" / ") : p.oemNo,
-            p.ctrNo,
-            p.lemforderNo,
-            p.englishName,
-            p.contents,
-            p.russianName,
-            Array.isArray(p.carName) ? p.carName.join(", ") : p.carName,
-            Array.isArray(p.model) ? p.model.join(", ") : p.model,
-            Array.isArray(p.years) ? p.years.join(", ") : p.years,
-            p.weightPerPcKg,
-        ]);
-
-        const csv = [headers, ...rows].map(r => r.map(v => `"${v ?? ""}"`).join(",")).join("\n");
-        const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
-        const url = URL.createObjectURL(blob);
-        const a = Object.assign(document.createElement("a"), { href: url, download: "parts_catalog.csv" });
-        a.click();
-        URL.revokeObjectURL(url);
-
-    }, [data]);
-
-    const exportPDF = useCallback(() => window.print(), []);
+    const handleExportPdf = useCallback(async () => {
+        if (!filteredData.length) return;
+        setExporting(true);
+        try {
+            await exportCatalogPdf(filteredData);
+        } finally {
+            setExporting(false);
+        }
+    }, [filteredData]);
 
     return (
         <div className="fc">
@@ -159,16 +163,30 @@ export default function FilterCatalog() {
                     </div>
                     <div>
                         <h1 className="fc-title">Parts Catalog</h1>
-                        <span className="fc-subtitle">{data.length} total parts</span>
+                        <span className="fc-subtitle">
+                            {search.trim()
+                                ? `${filteredData.length} of ${data.length} parts`
+                                : `${data.length} total parts`}
+                        </span>
                     </div>
                 </div>
 
                 <div className="fc-actions">
-                    <button className="fc-btn fc-btn--excel" onClick={exportCSV} title="Download CSV">
-                        <ExcelIcon /> <span>Excel</span>
+                    <button
+                        className="fc-btn fc-btn--excel"
+                        onClick={handleExportExcel}
+                        disabled={exporting || !filteredData.length}
+                        title="Download Excel"
+                    >
+                        <ExcelIcon /> <span>{exporting ? "..." : "Excel"}</span>
                     </button>
-                    <button className="fc-btn fc-btn--pdf" onClick={exportPDF} title="Print">
-                        <PdfIcon /> <span>PDF</span>
+                    <button
+                        className="fc-btn fc-btn--pdf"
+                        onClick={handleExportPdf}
+                        disabled={exporting || !filteredData.length}
+                        title="Download PDF"
+                    >
+                        <PdfIcon /> <span>{exporting ? "..." : "PDF"}</span>
                     </button>
                 </div>
             </header>
@@ -181,7 +199,7 @@ export default function FilterCatalog() {
                         id="fc-search"
                         className="fc-search"
                         type="search"
-                        placeholder="TRT, OEM, name, car, CTR..."
+                        placeholder="TRT, OEM, CTR, LEMFÖRDER, name, car, model, years, KG..."
                         value={search}
                         onChange={e => setSearch(e.target.value)}
                         autoComplete="off"
@@ -189,27 +207,13 @@ export default function FilterCatalog() {
                     />
                 </label>
 
-                <select className="fc-select" value={brand} onChange={e => setBrand(e.target.value)} aria-label="Select brand">
-                    <option value="">All Brands</option>
-                </select>
-
-                <select className="fc-select" value={type} onChange={e => setType(e.target.value)} aria-label="Select type">
-                    <option value="">All Types</option>
-                </select>
-
-                {(search || brand || type) && (
-                    <button className="fc-reset" onClick={() => { setSearch(""); setBrand(""); setType(""); }} title="Clear filters">
-                        <ResetIcon /> Reset
-                    </button>
-                )}
-
                 <div className="fc-counter" aria-live="polite">
-                    <b>{data.length}</b>
+                    <b>{filteredData.length}</b>
                 </div>
             </div>
 
             <div className="fc-table-wrap" role="region" aria-label="Parts table" tabIndex={0}>
-                <table className="fc-table" aria-rowcount={data.length + 1}>
+                <table className="fc-table" aria-rowcount={filteredData.length + 1}>
                     <colgroup>
                         {COLUMNS.map(c => <col key={c.key} style={{ width: c.width }} />)}
                     </colgroup>
@@ -250,7 +254,7 @@ export default function FilterCatalog() {
                                 </td>
                             </tr>
                         ) : pageData.map((p, i) => (
-                            <tr key={p.id ?? p.trtNo} style={{ "--row-i": i }}>
+                            <tr key={`${p.id ?? "row"}-${i}`} style={{ "--row-i": i }}>
                                 <td><span className="trt-pill">{p.trtNo}</span></td>
 
                                 <td className="cell-oem">
@@ -339,7 +343,7 @@ export default function FilterCatalog() {
                     </button>
 
                     <span className="pg-info">
-                        {(safePage - 1) * PAGE_SIZE + 1}–{Math.min(safePage * PAGE_SIZE, data.length)} / {data.length}
+                        {(safePage - 1) * PAGE_SIZE + 1}–{Math.min(safePage * PAGE_SIZE, filteredData.length)} / {filteredData.length}
                     </span>
                 </div>
             )}

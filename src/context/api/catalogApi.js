@@ -19,11 +19,30 @@ export const catalogApi = api.injectEndpoints({
             invalidatesTags: ["Catalog"],
         }),
 
+        // SearchCatalog: build.query({
+        //     query: (params) => ({
+        //         url: "/products",
+        //         method: "GET",
+        //         params,
+        //     }),
+        //     invalidatesTags: ["Catalog"],
+        // }),
+
+        SearchCatalog: build.query({
+            query: (params) => ({
+                url: "/catalog/products/filter",
+                method: "GET",
+                params,
+            }),
+            providesTags: ["Catalog"],
+        }),
+
         createExcelCatalog: build.mutation({
             query: (body) => ({
                 url: "/catalog/products/import/excel",
                 method: "POST",
                 body,
+                formData: true,
             }),
             invalidatesTags: ["Catalog"],
         }),
@@ -50,6 +69,7 @@ export const catalogApi = api.injectEndpoints({
 export const {
     useGetCatalogQuery,
     useCreateCatalogMutation,
+    useSearchCatalogQuery,
     useCreateExcelCatalogMutation,
     useDeleteCatalogMutation,
     useUpdateCatalogMutation
