@@ -361,8 +361,10 @@
 //     );
 // }
 
+
 import React, { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import "./filterCatalog.scss";
+
 import { useGetCatalogQuery } from "../../context/api/catalogApi";
 import { filterCatalogItems } from "../../utils/catalogSearch";
 import { exportCatalogExcel, exportCatalogPdf } from "../../utils/catalogExport";
@@ -514,6 +516,7 @@ function EditModal({ item, onClose, onSave }) {
     return (
         <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal aria-label="Edit item">
             <div className="modal-box modal-box--edit" onClick={e => e.stopPropagation()}>
+
                 <div className="modal-head">
                     <div className="modal-head-icon modal-head-icon--edit">
                         <EditIcon />
@@ -524,6 +527,7 @@ function EditModal({ item, onClose, onSave }) {
                     </div>
                     <button className="modal-close" onClick={onClose} aria-label="Close">×</button>
                 </div>
+
                 <div className="modal-body">
                     <div className="edit-grid">
                         {fields.map(({ key, label }) => (
@@ -538,6 +542,7 @@ function EditModal({ item, onClose, onSave }) {
                         ))}
                     </div>
                 </div>
+
                 <div className="modal-footer">
                     <button className="modal-btn modal-btn--cancel" onClick={onClose}>Cancel</button>
                     <button className="modal-btn modal-btn--save" onClick={handleSave}>Save Changes</button>
@@ -645,6 +650,7 @@ export default function FilterCatalog() {
     const { data: rawData = [], isLoading, isError } = useGetCatalogQuery();
     const [localData, setLocalData] = useState([]);
     const [exporting, setExporting] = useState(false);
+    const [exportingPDF, setExportingPDF] = useState(false);
 
     useEffect(() => {
         setLocalData(rawData);
@@ -680,7 +686,7 @@ export default function FilterCatalog() {
 
     const handleExportPdf = useCallback(async () => {
         if (!filteredData.length) return;
-        setExporting(true);
+        setExportingPDF(true);
         try { await exportCatalogPdf(filteredData); }
         finally { setExporting(false); }
     }, [filteredData]);
@@ -707,10 +713,10 @@ export default function FilterCatalog() {
                 </div>
                 <div className="fc-actions">
                     <button className="fc-btn fc-btn--excel" onClick={handleExportExcel} disabled={exporting || !filteredData.length} title="Download Excel">
-                        <ExcelIcon /> <span>{exporting ? "..." : "Excel"}</span>
+                        <ExcelIcon /> <span>{exporting ? "Saving..." : "Excel"}</span>
                     </button>
-                    <button className="fc-btn fc-btn--pdf" onClick={handleExportPdf} disabled={exporting || !filteredData.length} title="Download PDF">
-                        <PdfIcon /> <span>{exporting ? "..." : "PDF"}</span>
+                    <button className="fc-btn fc-btn--pdf" onClick={handleExportPdf} disabled={exportingPDF || !filteredData.length} title="Download PDF">
+                        <PdfIcon /> <span>{exportingPDF ? "Saving..." : "PDF"}</span>
                     </button>
                 </div>
             </header>
