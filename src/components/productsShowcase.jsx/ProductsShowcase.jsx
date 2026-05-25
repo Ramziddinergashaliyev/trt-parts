@@ -115,6 +115,7 @@ export default function ProductsShowcase() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
+
       <section className="sc">
         <div aria-hidden className="sc__glow" />
 
@@ -139,8 +140,7 @@ export default function ProductsShowcase() {
                 {PRODUCTS.map((p, i) => (
                   <div
                     key={p.id}
-                    className={`sc__img-wrap${i === activeIdx ? " is-active" : ""}`}
-                  >
+                    className={`sc__img-wrap${i === activeIdx ? " is-active" : ""}`}>
                     <img
                       src={IMAGES[i]}
                       alt={p.name}
