@@ -150,7 +150,6 @@ export default function ProductsShowcase() {
                 ))}
 
                 <div aria-hidden className="sc__vignette" />
-
               </div>
 
               <div className="sc__progress">

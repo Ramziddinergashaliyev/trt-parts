@@ -3,6 +3,7 @@ import CatalogCard from "../../components/catalogCard/CatalogCard";
 import { useTranslation } from "react-i18next";
 
 import "./razdel.scss";
+import { FaArrowRight } from "react-icons/fa6";
 
 const Razdel = () => {
 
@@ -23,6 +24,11 @@ const Razdel = () => {
           <h1 className="razdel__info__title" id="razdelTitle">
             {t("category")}
           </h1>
+
+          <button className="razdel__info__btn" onClick={() => { }}>
+            Full Catalog
+            <FaArrowRight />
+          </button>
         </header>
 
         <CatalogCard />

@@ -2,7 +2,34 @@
   background: rgba(245, 245, 245, 1);
 
   &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-top: 40px;
+
+    &__btn {
+      background: rgb(208, 1, 1);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 16px 28px;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: .5px;
+      width: 220px;
+      font-weight: 400;
+      line-height: 16px;
+      cursor: pointer;
+      transition: background 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      &:hover {
+        background: rgb(255, 0, 0);
+      }
+    }
 
     &__text {
       font-size: 14px;
@@ -17,7 +44,6 @@
       font-weight: 400;
       line-height: 35.2px;
       text-align: left;
-      padding-top: 14px;
       color: rgb(208, 1, 1);
     }
   }

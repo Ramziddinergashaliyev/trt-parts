@@ -58,7 +58,7 @@ export const catalogApi = api.injectEndpoints({
         updateCatalog: build.mutation({
             query: ({ id, body }) => ({
                 url: `/catalog/products/${id}`,
-                method: "PUT",
+                method: "PATCH",
                 body,
             }),
             invalidatesTags: ["Catalog"],
