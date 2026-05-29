@@ -10,8 +10,7 @@ function Module({ children, width, close, bg }) {
                 onClick={() => close(false)}
                 className="overlay"
             ></div>
-
-            <div style={{ width }} className="model">
+                <div style={{ width }} className="model">
                 <button onClick={() => close(false)} className="model__btn">
                     <IoMdClose />
                 </button>
