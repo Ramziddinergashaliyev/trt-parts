@@ -1,6 +1,7 @@
 import React, { memo, useEffect } from "react";
 import CatalogCard from "../../components/catalogCard/CatalogCard";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 import "./razdel.scss";
 import { FaArrowRight } from "react-icons/fa6";
@@ -25,10 +26,10 @@ const Razdel = () => {
             {t("category")}
           </h1>
 
-          <button className="razdel__info__btn" onClick={() => { }}>
+          <NavLink to="/full-catalog" className="razdel__info__btn">
             Full Catalog
             <FaArrowRight />
-          </button>
+          </NavLink>
         </header>
 
         <CatalogCard />

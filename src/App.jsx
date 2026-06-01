@@ -5,6 +5,7 @@ import Maksud from "./pages/maksud/Maksud";
 import Kamron from "./pages/kamron/Kamron";
 import FormCatalog from "./pages/formCatalog/FormCatalog";
 import AddCatalog from "./pages/addCatalog/AddCatalog";
+import PopupModal from "./components/popupModal/PopupModal";
 
 const CatalogPage = lazy(() => import("./pages/catalogPage/CatalogPage"));
 const FilterResults = lazy(() => import("./pages/filterResults/FilterResults"));
@@ -70,7 +71,7 @@ const App = () => {
             <Route path="/accardion" element={<Accardion />} />
             <Route path="/search" element={<SearchProduct />} />
             <Route path="/new" element={<NewsPage />} />
-            <Route path="/form-catalog" element={<FormCatalog />} />
+            <Route path="/full-catalog" element={<FormCatalog />} />
             <Route path="/addCatalog" element={<AddCatalog />} />
             <Route path="/filterResults" element={<FilterResults />} />
             <Route path="/:categoryName/:id" element={<CatalogPage />} />
@@ -78,6 +79,8 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
+
+        <PopupModal delay={6000} />
 
       </Suspense>
     </ErrorBoundary>

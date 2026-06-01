@@ -1,10 +1,13 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import armBg from "../../assets/car/a-bg.webp";
-import ballBg from "../../assets/car/b-bg.webp";
-import roadBg from "../../assets/car/t-bg.webp";
-import rubberBg from "../../assets/car/r-bg.webp";
-import stbBg from "../../assets/car/s-bg.webp";
-import rackBg from "../../assets/car/rk-bg.webp";
+import armBg from "../../assets/car/arm.webp";
+import ballBg from "../../assets/car/ball.webp";
+import roadBg from "../../assets/car/road.webp";
+import rubberBg from "../../assets/car/rubber.webp";
+import stbBg from "../../assets/car/stab.webp";
+import rackBg from "../../assets/car/end.webp";
+import steeringBg from "../../assets/car/steering.webp";
+import pumpBg from "../../assets/car/pump.webp";
+import discBg from "../../assets/car/disk.webp";
 
 import arm from "../../assets/car/a.webp";
 import ball from "../../assets/car/b.webp";
@@ -12,6 +15,9 @@ import road from "../../assets/car/t.webp";
 import rubber from "../../assets/car/r.webp";
 import stb from "../../assets/car/s.webp";
 import rack from "../../assets/car/rk.webp";
+import steering from "../../assets/car/stee.webp";
+import pumpTop from "../../assets/car/pumpTop.webp";
+import disc from "../../assets/car/disc.webp";
 
 import "./car.scss";
 
@@ -22,6 +28,9 @@ const PARTS = [
     { id: "rubber", name: "Rubber Elements", image: rubber, bgImage: rubberBg },
     { id: "stab-link", name: "Stabilizer Link", image: stb, bgImage: stbBg },
     { id: "rack-end", name: "Rack End", image: rack, bgImage: rackBg },
+    { id: "steering", name: "Steering Rack", image: steering, bgImage: steeringBg },
+    { id: "pump", name: "Hydraulic Pump", image: pumpTop, bgImage: pumpBg },
+    { id: "brake-disc", name: "Brake disc", image: disc, bgImage: discBg },
 ];
 
 export default function Car() {

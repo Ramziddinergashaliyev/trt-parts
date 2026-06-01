@@ -26,4 +26,3 @@ const AnimatedStats = ({ endValue, text, start = 11800, speed = 1 }) => {
 };
 
 export default AnimatedStats;
-

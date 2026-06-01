@@ -16,19 +16,15 @@ import "./single.scss";
 
 const Lightbox = ({ src, onClose }) => {
   useEffect(() => {
-
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
     };
-
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
-
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-
   }, [onClose]);
 
   return (
@@ -59,6 +55,7 @@ const Lightbox = ({ src, onClose }) => {
             stroke="white" strokeWidth="2.2" strokeLinecap="round"
           />
         </svg>
+
       </motion.button>
 
       <motion.div
@@ -80,8 +77,7 @@ const ScrollBtn = ({ direction, disabled, onClick }) => (
     className={`scroll-btn${disabled ? " disabled" : ""}`}
     onClick={onClick}
     disabled={disabled}
-    aria-label={direction === "up" ? "Вверх" : "Вниз"}
-  >
+    aria-label={direction === "up" ? "Вверх" : "Вниз"}>
     <svg width="13" height="8" viewBox="0 0 13 8" fill="none">
       {direction === "up" ? (
         <path d="M6.5 0L13 8H0L6.5 0Z" fill="currentColor" />

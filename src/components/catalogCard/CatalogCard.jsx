@@ -134,7 +134,7 @@ const CatalogCard = () => {
   const currentLang = i18n.language;
 
   if (isLoading) return <CategoryLoading />;
-
+  
   return data ? (
     <div className="catalogCard">
       <div className="catalogCard__box" data-aos="zoom-in-down">
