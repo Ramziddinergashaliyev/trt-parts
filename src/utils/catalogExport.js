@@ -47,6 +47,7 @@ const fetchImageDataUrl = async (url) => {
     reader.onerror = () => resolve(null);
     reader.readAsDataURL(blob);
   });
+  
 };
 
 export async function exportCatalogExcel(items) {

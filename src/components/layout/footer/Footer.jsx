@@ -84,6 +84,17 @@ const Footer = () => {
             <li className="footer__item">
               <NavLink className="footer__item-link" to={"/news"}>{t("news")}</NavLink>
             </li>
+            <li className="footer__item__information">
+              <a
+                href="https://www.instagram.com/trt_official_global"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram sahifasiga o‘tish">
+                <span>
+                  <FaInstagram />
+                </span>
+              </a>
+            </li>
 
           </ul>
 
@@ -116,17 +127,7 @@ const Footer = () => {
               </a>
             </li>
 
-            <li className="footer__item__information">
-              <a
-                href="https://www.instagram.com/trt_official_global"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram sahifasiga o‘tish">
-                <span>
-                  <FaInstagram />
-                </span>
-              </a>
-            </li>
+
 
           </ul>
 

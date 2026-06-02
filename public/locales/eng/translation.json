@@ -42,7 +42,7 @@
   "рулевой": "Tie Rod End",
   "комплектующие": "Rubber Components",
   "тяги": "RackEnd",
-  "МАТЕРИАЛЫ": "MATERIALS",
+  "МАТЕРИАЛЫ": "NEWS & MEDIA",
   "news": "News",
   "КОНТАКТЫ": "CONTACTS",
   "nomer": "Phone number",
@@ -113,5 +113,5 @@
   "fill_one_field": "Fill in at least one field",
   "selected_filters": "Selected filters:",
   "find_spare_part": "Find Spare Part",
-  "Full Catalog":"Full Catalog"
+  "Full": "Full Catalog"
 }
