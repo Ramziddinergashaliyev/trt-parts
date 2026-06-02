@@ -311,9 +311,7 @@ const AddCatalog = () => {
                                             placeholder="DAEWOO Nexia"
                                         />
                                     </div>
-
                                 </div>
-
                             </div>
 
                             <div className="modal__grid">
