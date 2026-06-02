@@ -217,10 +217,13 @@ const AddCatalog = () => {
                                 style={{ display: "none" }}
                                 onChange={handleExcelInputChange}
                             />
+
                             <span className="import-dropzone__icon">
                                 <MdOutlineCloudUpload />
                             </span>
+
                             <p className="import-dropzone__title">Drop your file here</p>
+
                             <p className="import-dropzone__hint">
                                 or <span className="import-dropzone__link">browse from computer</span>
                             </p>
