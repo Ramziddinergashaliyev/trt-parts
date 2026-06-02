@@ -27,7 +27,7 @@ const Razdel = () => {
           </h1>
 
           <NavLink to="/full-catalog" className="razdel__info__btn">
-            Full Catalog
+            {t("Full Catalog")}
             <FaArrowRight />
           </NavLink>
         </header>
