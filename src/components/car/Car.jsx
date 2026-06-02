@@ -213,10 +213,10 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import armBg from "../../assets/car/arm.webp";
 import ballBg from "../../assets/car/ball.webp";
-import roadBg from "../../assets/car/road.webp";
+import roadBg from "../../assets/car/tie.webp";
 import rubberBg from "../../assets/car/rubber.webp";
-import stbBg from "../../assets/car/stab.webp";
-import rackBg from "../../assets/car/end.webp";
+import stbBg from "../../assets/car/link.webp";
+import rackBg from "../../assets/car/rack.webp";
 import steeringBg from "../../assets/car/steering.webp";
 import pumpBg from "../../assets/car/pump.webp";
 import discBg from "../../assets/car/disk.webp";
@@ -416,7 +416,6 @@ export default function Car() {
                         style={imgStyle(slotB)}
                     />
                 </div>
-
             </div>
         </section>
     );
