@@ -233,6 +233,7 @@ const Hero = () => {
                   <button className="hero__overlay__right-btns-white">
                     {t("Связаться с нами")}
                   </button>
+
                   <span className="hero__overlay__right-btns-red">
                     <FaAngleRight />
                   </span>

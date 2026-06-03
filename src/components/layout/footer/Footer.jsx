@@ -11,6 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+
       <div className="container">
 
         <nav className="footer__nav">
@@ -73,6 +74,7 @@ const Footer = () => {
             <li className="footer__item">
               <NavLink className="footer__item-link" style={{ cursor: "pointer" }} to={"шаровые-опоры/2"}>{t("опоры")}</NavLink>
             </li>
+
           </ul>
 
           <ul className="footer__list">
@@ -84,6 +86,7 @@ const Footer = () => {
             <li className="footer__item">
               <NavLink className="footer__item-link" to={"/news"}>{t("news")}</NavLink>
             </li>
+
             <li className="footer__item__information">
               <a
                 href="https://www.instagram.com/trt_official_global"
@@ -127,8 +130,6 @@ const Footer = () => {
               </a>
             </li>
 
-
-
           </ul>
 
         </nav>
@@ -152,6 +153,7 @@ const Footer = () => {
         </div>
 
       </div>
+
     </footer>
   );
 };

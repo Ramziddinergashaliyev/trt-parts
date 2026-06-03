@@ -197,6 +197,7 @@ export default function Anime() {
                                 onClick={() => handleSelectPart(part)}
                             >
                                 <img src={part.floatImage} alt={part.name} className="callout-img" />
+
                                 <div className="callout-label">
                                     <span className="callout-name">{part.name}</span>
                                     <button className="callout-btn">
@@ -206,9 +207,11 @@ export default function Anime() {
                                         </svg>
                                     </button>
                                 </div>
+
                                 <div className="callout-dot">
                                     <span className="dot-pulse" />
                                 </div>
+
                                 <div className="callout-line" />
                             </div>
                         ))}

@@ -134,6 +134,7 @@ function PhotoCell({ trt, photo, onPreview }) {
             </div>
         );
     }
+
     return (
         <div className="foto-cell">
             <button
@@ -260,6 +261,7 @@ function DeleteModal({ item, onClose, onConfirm }) {
                     </div>
                     <button className="modal-close" onClick={onClose} aria-label="Close">×</button>
                 </div>
+
                 <div className="modal-body modal-body--center">
                     <div className="delete-warning-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
@@ -271,6 +273,7 @@ function DeleteModal({ item, onClose, onConfirm }) {
                     <p className="delete-text">Are you sure you want to delete <b>{item.trtNo}</b>?</p>
                     <p className="delete-subtext">{item.englishName} — this action cannot be undone.</p>
                 </div>
+
                 <div className="modal-footer">
                     <button className="modal-btn modal-btn--cancel" onClick={onClose}>Cancel</button>
                     <button
@@ -531,6 +534,7 @@ export default function FilterCatalog({ hide }) {
                     <button className="pg-btn" onClick={() => setPage(p => Math.max(1, p - 1))} disabled={safePage === 1} aria-label="Previous page">
                         <ChevronLeft />
                     </button>
+
                     <div className="pg-pages">
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map(n => {
                             const show = n === 1 || n === totalPages || Math.abs(n - safePage) <= 1;
@@ -546,9 +550,11 @@ export default function FilterCatalog({ hide }) {
                             );
                         })}
                     </div>
+
                     <button className="pg-btn" onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={safePage === totalPages} aria-label="Next page">
                         <ChevronRight />
                     </button>
+
                     <span className="pg-info">
                         {(safePage - 1) * pageSize + 1}–
                         {Math.min(safePage * pageSize, filteredData.length)}

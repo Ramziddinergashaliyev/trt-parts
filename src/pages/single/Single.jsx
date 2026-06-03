@@ -19,12 +19,15 @@ const Lightbox = ({ src, onClose }) => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
     };
+
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
+
   }, [onClose]);
 
   return (
@@ -178,6 +181,7 @@ const Single = () => {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="thumbnail-wrapper">
+
                 {images.length > 4 && (
                   <ScrollBtn
                     direction="up"
@@ -185,6 +189,7 @@ const Single = () => {
                     onClick={scrollUp}
                   />
                 )}
+
                 <div className="detail__card__imgs" ref={thumbRef}>
                   {hasImages ? (
                     images.map((src, i) => (
