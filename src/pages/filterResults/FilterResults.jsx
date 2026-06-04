@@ -4,9 +4,9 @@ import { useSearchAllProductsQuery } from "../../context/api/productApi";
 import ProductItem from "../../components/productItem/ProductItem";
 import Filter from "../../components/filter/Filter";
 import Loading from "../../components/loading/Loading";
+import { useTranslation } from "react-i18next";
 
 import "./filterResults.scss";
-import { useTranslation } from "react-i18next";
 
 const FilterResults = () => {
   const location = useLocation();
