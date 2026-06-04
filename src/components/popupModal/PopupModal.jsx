@@ -10,7 +10,7 @@ const initialState = {
     comment: "",
 };
 
-export default function PopupModal({ delay = 6000 }) {
+export default function PopupModal({ delay = 10000 }) {
     const [show, setShow] = useState(false);
     const [done, setDone] = useState(false);
     const { formData, setFormData, handleChange } = useGetValue(initialState);

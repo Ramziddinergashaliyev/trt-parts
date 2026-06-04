@@ -80,7 +80,7 @@ const App = () => {
           </Route>
         </Routes>
 
-        <PopupModal delay={6000} />
+        <PopupModal delay={10000} />
 
       </Suspense>
     </ErrorBoundary>
