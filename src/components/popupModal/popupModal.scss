@@ -184,3 +184,13 @@ $red: #cc0000;
         opacity: 1;
     }
 }
+
+.pm-error-box {
+    background-color: #fff0f0;
+    color: #cc0000;
+    border: 1px solid #ffcccc;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}

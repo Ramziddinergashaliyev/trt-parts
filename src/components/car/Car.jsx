@@ -140,56 +140,58 @@ export default function Car() {
         <section className={`pcars${mounted ? " pcars--mounted" : ""}`}>
             <div className="pcars__inner">
 
-                <div className="pcars__carousel-wrap">
-                    <button
-                        className="pcars__nav pcars__nav--prev"
-                        onClick={() => handleGoTo(Math.max(0, activeIdx - 1))}
-                        disabled={activeIdx === 0 || isAnimating}
-                        aria-label="Previous part"
-                    >
-                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                            <path d="M11 13.5L6.5 9L11 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
+                <div className="container">
+                    <div className="pcars__carousel-wrap">
+                        <button
+                            className="pcars__nav pcars__nav--prev"
+                            onClick={() => handleGoTo(Math.max(0, activeIdx - 1))}
+                            disabled={activeIdx === 0 || isAnimating}
+                            aria-label="Previous part"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
+                                <path d="M11 13.5L6.5 9L11 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
 
-                    <div className="pcars__track-outer">
-                        <div className="pcars__track" ref={trackRef} onScroll={handleScroll}>
-                            <div className="pcars__spacer" />
-                            {PARTS.map((part, i) => (
-                                <div
-                                    key={part.id}
-                                    className={`pcars__card${activeIdx === i ? " is-active" : ""}`}
-                                    style={{ "--i": i }}
-                                    onClick={() => handleGoTo(i)}
-                                    role="button"
-                                    tabIndex={0}
-                                    onKeyDown={(e) => {
-                                        if (e.key === "Enter" || e.key === " ") {
-                                            e.preventDefault();
-                                            handleGoTo(i);
-                                        }
-                                    }}
-                                >
-                                    <div className="pcars__card-img">
-                                        <img src={part.image} alt={part.name} loading="lazy" />
+                        <div className="pcars__track-outer">
+                            <div className="pcars__track" ref={trackRef} onScroll={handleScroll}>
+                                <div className="pcars__spacer" />
+                                {PARTS.map((part, i) => (
+                                    <div
+                                        key={part.id}
+                                        className={`pcars__card${activeIdx === i ? " is-active" : ""}`}
+                                        style={{ "--i": i }}
+                                        onClick={() => handleGoTo(i)}
+                                        role="button"
+                                        tabIndex={0}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter" || e.key === " ") {
+                                                e.preventDefault();
+                                                handleGoTo(i);
+                                            }
+                                        }}
+                                    >
+                                        <div className="pcars__card-img">
+                                            <img src={part.image} alt={part.name} loading="lazy" />
+                                        </div>
+                                        <h4>{part.name}</h4>
                                     </div>
-                                    <h4>{part.name}</h4>
-                                </div>
-                            ))}
-                            <div className="pcars__spacer" />
+                                ))}
+                                <div className="pcars__spacer" />
+                            </div>
                         </div>
-                    </div>
 
-                    <button
-                        className="pcars__nav pcars__nav--next"
-                        onClick={() => handleGoTo(Math.min(PARTS.length - 1, activeIdx + 1))}
-                        disabled={activeIdx === PARTS.length - 1 || isAnimating}
-                        aria-label="Next part"
-                    >
-                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                            <path d="M7 4.5L11.5 9L7 13.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
+                        <button
+                            className="pcars__nav pcars__nav--next"
+                            onClick={() => handleGoTo(Math.min(PARTS.length - 1, activeIdx + 1))}
+                            disabled={activeIdx === PARTS.length - 1 || isAnimating}
+                            aria-label="Next part"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
+                                <path d="M7 4.5L11.5 9L7 13.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="pcars__stage">

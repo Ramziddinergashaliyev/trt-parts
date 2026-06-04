@@ -60,12 +60,6 @@ $white: #FFFFFF;
     }
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .pcars {
     font-family: "DM Sans", system-ui, sans-serif;
     color: $ink;
@@ -94,11 +88,26 @@ $white: #FFFFFF;
         gap: 10px;
     }
 
+    &__container {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+        box-sizing: border-box;
+
+        @media (max-width: 1024px) {
+            padding: 0 24px;
+        }
+
+        @media (max-width: 640px) {
+            padding: 0 16px;
+        }
+    }
+
     &__carousel-wrap {
         display: flex;
         align-items: center;
         gap: 12px;
-        flex-shrink: 0;
 
         .pcars--mounted & {
             animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
@@ -149,7 +158,7 @@ $white: #FFFFFF;
         flex: 1;
         overflow: hidden;
         position: relative;
-        border-radius: 32px;
+        border-radius: 24px;
 
         &::before,
         &::after {
@@ -164,12 +173,12 @@ $white: #FFFFFF;
 
         &::before {
             left: 0;
-            background: linear-gradient(to right, $bg, transparent);
+            background: linear-gradient(to right, $white, transparent);
         }
 
         &::after {
             right: 0;
-            background: linear-gradient(to left, $bg, transparent);
+            background: linear-gradient(to left, $white, transparent);
         }
     }
 
@@ -366,13 +375,10 @@ $white: #FFFFFF;
 
 @media (max-width: 640px) {
     .pcars {
-        &__inner {
-            padding: 12px 16px;
-            gap: 10px;
-        }
-
         &__carousel-wrap {
             gap: 8px;
+            padding: 6px;
+            border-radius: 24px;
         }
 
         &__nav {

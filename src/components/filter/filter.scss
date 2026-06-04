@@ -50,6 +50,7 @@ $white: #ffffff;
 
   &__header {
     @include flex-between;
+
     margin-bottom: 40px;
     @include fade-up(0s);
 

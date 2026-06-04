@@ -1,17 +1,26 @@
 import { useState, useEffect } from "react";
 import "./popupModal.scss";
+import { useGetValue } from "../../hooks/useGetValue";
+import { useCreateContactMutation } from "../../context/api/contactApi";
 
-export default function PopupModal({ delay = 60000 }) {
+const initialState = {
+    name: "",
+    phone: "",
+    email: "",
+    comment: "",
+};
+
+export default function PopupModal({ delay = 6000 }) {
     const [show, setShow] = useState(false);
     const [done, setDone] = useState(false);
-    const [form, setForm] = useState({ name: "", phone: "", email: "", comment: "" });
-    const [errors, setErrors] = useState({});
+    const { formData, setFormData, handleChange } = useGetValue(initialState);
+    const [createMassage, { isLoading, isError, error }] = useCreateContactMutation();
 
     useEffect(() => {
         if (sessionStorage.getItem("popup_shown")) return;
         const t = setTimeout(() => setShow(true), delay);
         return () => clearTimeout(t);
-    }, []);
+    }, [delay]);
 
     if (!show) return null;
 
@@ -20,21 +29,16 @@ export default function PopupModal({ delay = 60000 }) {
         setShow(false);
     };
 
-    const change = (e) => {
-        setForm(f => ({ ...f, [e.target.name]: e.target.value }));
-        setErrors(er => ({ ...er, [e.target.name]: "" }));
-    };
-
-    const submit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const err = {};
-        if (!form.name.trim()) err.name = "Введите имя";
-        if (!form.phone.trim()) err.phone = "Введите номер";
-        if (!form.email.trim()) err.email = "Введите почту";
-        else if (!/\S+@\S+\.\S+/.test(form.email)) err.email = "Неверный формат почты";
-        if (Object.keys(err).length) { setErrors(err); return; }
-        setDone(true);
-        setTimeout(close, 2500);
+        try {
+            await createMassage(formData).unwrap();
+            setFormData(initialState);
+            setDone(true);
+            setTimeout(close, 2500);
+        } catch (err) {
+            console.error("Xatolik:", err);
+        }
     };
 
     return (
@@ -49,33 +53,38 @@ export default function PopupModal({ delay = 60000 }) {
                         <p>Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</p>
                     </div>
                 ) : (
-                    <form onSubmit={submit} noValidate>
+                    <form onSubmit={handleSubmit}>
                         <h2 className="pm-title">Форма обратной связи</h2>
 
                         <div className="pm-field">
-                            <input className={`pm-input ${errors.name ? "error" : ""}`}
-                                name="name" value={form.name} onChange={change} placeholder="Имя" />
-                            {errors.name && <span className="pm-err">{errors.name}</span>}
+                            <input className="pm-input"
+                                name="name" value={formData.name} onChange={handleChange} placeholder="Имя" />
                         </div>
 
                         <div className="pm-field">
-                            <input className={`pm-input ${errors.phone ? "error" : ""}`}
-                                name="phone" value={form.phone} onChange={change} placeholder="Номер" />
-                            {errors.phone && <span className="pm-err">{errors.phone}</span>}
+                            <input className="pm-input"
+                                name="phone" value={formData.phone} onChange={handleChange} placeholder="Номер" />
                         </div>
 
                         <div className="pm-field">
-                            <input className={`pm-input ${errors.email ? "error" : ""}`}
-                                name="email" type="email" value={form.email} onChange={change} placeholder="Электронная почта" />
-                            {errors.email && <span className="pm-err">{errors.email}</span>}
+                            <input className="pm-input"
+                                name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Электронная почта" />
                         </div>
 
                         <div className="pm-field">
                             <textarea className="pm-input pm-textarea"
-                                name="comment" value={form.comment} onChange={change} placeholder="Комментарий" rows={4} />
+                                name="comment" value={formData.comment} onChange={handleChange} placeholder="Комментарий" rows={4} />
                         </div>
 
-                        <button type="submit" className="pm-btn">Оставить заявку →</button>
+                        {isError && (
+                            <div className="pm-error-box">
+                                ⚠️ {error?.data?.message || "Xatolik yuz berdi. Qaytadan urinib ko'ring."}
+                            </div>
+                        )}
+
+                        <button className="pm-btn" disabled={isLoading}>
+                            {isLoading ? "Отправка..." : "Оставить заявку →"}
+                        </button>
                     </form>
                 )}
             </div>

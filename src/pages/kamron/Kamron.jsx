@@ -58,7 +58,6 @@ const Kamron = () => {
                     </svg>
                     Web site
                 </a>
-
             </div>
         </div>
     )

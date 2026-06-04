@@ -278,7 +278,6 @@ const AddCatalog = () => {
                                     <label>LEMFÖRDER №</label>
                                     <input name="lemforderNo" value={formData.lemforderNo} onChange={handleChange} placeholder="12152 05" />
                                 </div>
-
                             </div>
 
                             <div className="modal__grid">
@@ -359,7 +358,6 @@ const AddCatalog = () => {
 
                                     </div>
                                 </div>
-
                             </div>
 
                             <div className="modal__grid">
