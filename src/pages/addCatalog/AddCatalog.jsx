@@ -29,10 +29,8 @@ const AddCatalog = () => {
     const [importError, setImportError] = useState("");
     const [importStatus, setImportStatus] = useState("");
     const excelInputRef = useRef(null);
-
     const [photoFile, setPhotoFile] = useState(null);
     const [photoPreview, setPhotoPreview] = useState(null);
-
     const [oemList, setOemList] = useState([]);
     const [oemInput, setOemInput] = useState("");
     const [carNameList, setCarNameList] = useState([]);
@@ -210,6 +208,7 @@ const AddCatalog = () => {
                                 }
                             }}
                         >
+
                             <input
                                 ref={excelInputRef}
                                 type="file"
@@ -245,6 +244,7 @@ const AddCatalog = () => {
 
                         <div className="modal__body">
                             <div className="modal__grid">
+
                                 <div className="field">
                                     <label>TRT №</label>
                                     <input name="trtNo" value={formData.trtNo} onChange={handleChange} placeholder="R8000" />
@@ -306,6 +306,7 @@ const AddCatalog = () => {
                                                 <button type="button" onClick={() => removeTag(i, carNameList, setCarNameList)}>×</button>
                                             </span>
                                         ))}
+
                                         <input
                                             value={carNameInput}
                                             onChange={(e) => setCarNameInput(e.target.value)}

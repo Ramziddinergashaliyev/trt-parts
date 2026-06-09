@@ -9,6 +9,7 @@ const Admin = () => {
   return (
     <div className={`admin ${close ? "admin__close" : ""}`}>
       <Sidebar />
+
       <div>
         <Menu setClose={setClose} />
         <Outlet />

@@ -13,4 +13,3 @@ const Leazy = () => {
 };
 
 export default Leazy;
-

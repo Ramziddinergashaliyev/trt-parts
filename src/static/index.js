@@ -77,6 +77,15 @@ import Dtwo from "../assets/news/dubai/two.webp"
 import Dthree from "../assets/news/dubai/three.webp"
 import Dfour from "../assets/news/dubai/four.webp"
 
+
+import uzb1 from "../assets/news/uzb/one.webp"
+import uzb2 from "../assets/news/uzb/two.webp"
+import uzb3 from "../assets/news/uzb/three.webp"
+import uzb4 from "../assets/news/uzb/four.webp"
+import uzb5 from "../assets/news/uzb/fife.webp"
+import uzb6 from "../assets/news/uzb/six.webp"
+import uzb7 from "../assets/news/uzb/seven.webp"
+
 export const PARTNER = [
   {
     id: 1,
@@ -503,7 +512,6 @@ export const ACCARDIONEN = [
   },
 ];
 
-
 export const SERVICERU = [
   {
     id: 1,
@@ -685,7 +693,38 @@ export const newsData = [
         position: 'left'
       }
     ]
-  }
+  },
+  {
+    id: 5,
+    category: "Новости",
+    world: [""],
+    title: "TRT на Международной ярмарке в Багдаде 2026",
+    description: [
+      "ООО \"TRT JV TECHNOLOGIES REAL TIME\" принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак.",
+    ],
+
+    date: "1-7 февраль, 2026",
+    img: iraq,
+    image: [],
+    sections: [
+      {
+        texts: [
+          "В рамках выставки TRT демонстрирует свои высококачественные автомобильные компоненты иракским импортерам, дистрибьюторам и представителям местного рынка.",
+          "Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.",
+          "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами.",
+        ],
+        images: [uzb1, uzb2, uzb3, uzb7, uzb5, uzb6, uzb4],
+      },
+      {
+        texts: [
+          "Обсуждения были сосредоточены на анализе рынка автомобилей Ирака, высоко востребованных сегментах компонентов, возможностях логистики и дистрибуции.",
+          "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.",
+          "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков и укреплению узбекско-иракских торгово-экономических отношений.",
+        ],
+        images: [iraq, iraq, iraq, iraq, iraq, iraq, iraq],
+      },
+    ],
+  },
 ]
 
 export const newsDataEn = [
@@ -770,5 +809,35 @@ export const newsDataEn = [
         position: 'left'
       }
     ]
-  }
+  },
+  {
+    id: 5,
+    category: "News",
+    world: [""],
+    title: "TRT at Baghdad International Fair 2026",
+    description: [
+      "TRT JV LLC \"TECHNOLOGIES OF REAL TIME\" is participating in the Baghdad International Fair 2026, currently being held in Baghdad, the capital of the Republic of Iraq.",
+    ],
+    date: "1-7 February, 2026",
+    img: iraq,
+    image: [],
+    sections: [
+      {
+        texts: [
+          "Within the framework of the exhibition, TRT is showcasing its high-quality automotive components to Iraqi importers, distributors, and local market representatives.",
+          "The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT's international presence.",
+          "During the exhibition, TRT representatives held a series of productive negotiations with potential partners.",
+        ],
+        images: [uzb1, uzb2, uzb3, uzb7, uzb5, uzb6, uzb4],
+      },
+      {
+        texts: [
+          "Discussions focused on the analysis of the Iraqi automotive market, high-demand automotive component segments, and logistics and distribution opportunities.",
+          "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.",
+          "Participation in the Baghdad International Fair 2026 highlights TRT's commitment to expanding export markets and strengthening Uzbekistan–Iraq trade and economic relations.",
+        ],
+        images: [iraq, iraq, iraq, iraq, iraq, iraq, iraq],
+      },
+    ],
+  },
 ]
