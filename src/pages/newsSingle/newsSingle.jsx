@@ -278,6 +278,7 @@ const NewsSingle = () => {
                                     ))}
                                 </div>
                             </div>
+
                             <div className="location-text-block animate-from-right">
                                 <h2 className="location-title">{location.title}</h2>
                                 <p className="location-subtitle">📍 {location.location}</p>

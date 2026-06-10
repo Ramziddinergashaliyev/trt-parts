@@ -86,6 +86,15 @@ import uzb5 from "../assets/news/uzb/fife.webp"
 import uzb6 from "../assets/news/uzb/six.webp"
 import uzb7 from "../assets/news/uzb/seven.webp"
 
+import bottom1 from "../assets/news/uzb/bottom/one.webp"
+import bottom2 from "../assets/news/uzb/bottom/two.webp"
+import bottom3 from "../assets/news/uzb/bottom/three.webp"
+import bottom4 from "../assets/news/uzb/bottom/four.webp"
+import bottom5 from "../assets/news/uzb/bottom/fife.webp"
+import bottom6 from "../assets/news/uzb/bottom/six.webp"
+import bottom7 from "../assets/news/uzb/bottom/seven.webp"
+import ak from "../assets/news/uzb/bottom/ak.webp"
+
 export const PARTNER = [
   {
     id: 1,
@@ -713,7 +722,7 @@ export const newsData = [
           "Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.",
           "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами.",
         ],
-        images: [uzb1, uzb2, uzb3, uzb7, uzb5, uzb6, uzb4],
+        images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
       },
       {
         texts: [
@@ -721,7 +730,7 @@ export const newsData = [
           "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.",
           "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков и укреплению узбекско-иракских торгово-экономических отношений.",
         ],
-        images: [iraq, iraq, iraq, iraq, iraq, iraq, iraq],
+        images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
       },
     ],
   },
@@ -828,7 +837,7 @@ export const newsDataEn = [
           "The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT's international presence.",
           "During the exhibition, TRT representatives held a series of productive negotiations with potential partners.",
         ],
-        images: [uzb1, uzb2, uzb3, uzb7, uzb5, uzb6, uzb4],
+        images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
       },
       {
         texts: [
@@ -836,7 +845,7 @@ export const newsDataEn = [
           "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.",
           "Participation in the Baghdad International Fair 2026 highlights TRT's commitment to expanding export markets and strengthening Uzbekistan–Iraq trade and economic relations.",
         ],
-        images: [iraq, iraq, iraq, iraq, iraq, iraq, iraq],
+        images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
       },
     ],
   },
