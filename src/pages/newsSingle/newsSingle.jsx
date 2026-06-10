@@ -200,7 +200,6 @@
 
 // export default NewsSingle
 
-
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './newsSingle.scss'

@@ -1164,6 +1164,10 @@
         grid-template-rows: 340px 340px;
         gap: 15px;
 
+        // @media (max-width:1500px) {
+        //     grid-template-rows: 301px 301px;
+        // }
+
         @media (max-width: 900px) {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
