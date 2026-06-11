@@ -20,8 +20,8 @@
 //     const fullData = i18n?.language === "rus" ? newsData : newsDataEn
 
 //     useEffect(() => {
-//         window.scrollTo(0, 0)
 
+//         window.scrollTo(0, 0)
 //         const foundNews = fullData.find(item => item.id === parseInt(id))
 
 //         if (foundNews) {
@@ -33,6 +33,7 @@
 //     }, [id, navigate, fullData])
 
 //     useEffect(() => {
+
 //         const observerCallback = (entries) => {
 //             entries.forEach((entry) => {
 //                 if (entry.isIntersecting) {
@@ -56,9 +57,11 @@
 //                 observerRef.current.disconnect()
 //             }
 //         }
+
 //     }, [news])
 
 //     const renderLocationSections = () => {
+
 //         if (!news.locationData) {
 //             return news.fullContent?.map((text, index) => (
 //                 <p key={index} className="article-text">{text}</p>
@@ -93,7 +96,9 @@
 //             } else {
 //                 return (
 //                     <div key={location.id} className="location-section scroll-animate" data-direction="left">
+
 //                         <div className="location-content-wrapper layout-left">
+
 //                             <div className="location-text-block animate-from-left">
 //                                 <h2 className="location-title">{location.title}</h2>
 //                                 <p className="location-subtitle">📍 {location.location}</p>
@@ -109,6 +114,7 @@
 //                                     ))}
 //                                 </div>
 //                             </div>
+
 //                         </div>
 //                     </div>
 //                 )
@@ -120,6 +126,57 @@
 //         return (
 //             <div className="loading-container">
 //                 <div className="loading-spinner"></div>
+//             </div>
+//         )
+//     }
+
+//     if (parseInt(id) === 5) {
+//         return (
+//             <div className="news-single-page">
+//                 <div className="news-single-container container">
+//                     <div className="breadcrumb">
+//                         <span onClick={() => navigate('/')} className="breadcrumb-item">{t("Домашняя")}</span>
+//                         <span className="breadcrumb-divider">/</span>
+//                         <span onClick={() => navigate('/news')} className="breadcrumb-item">{t("Новости")}</span>
+//                         <span className="breadcrumb-divider">/</span>
+//                         <span className="breadcrumb-current">{news?.category}</span>
+//                     </div>
+
+//                     <article className="news-article">
+//                         <div className="article-header">
+//                             <h1 className="article-title">{news.title}</h1>
+//                         </div>
+
+//                         <div className="article-content-top">
+//                             {news.description?.map((el, index) => (
+//                                 <p key={index} className="article-lead">{el}</p>
+//                             ))}
+//                         </div>
+
+//                         <div className="article-content">
+//                             <div className="article-content-info">
+//                                 {news.sections?.map((section, sectionIndex) => (
+//                                     <div key={sectionIndex} className="special-section">
+//                                         <div className="special-section-texts">
+//                                             {section.texts.map((text, i) => (
+//                                                 <p key={i} className="article-text">{text}</p>
+//                                             ))}
+//                                         </div>
+//                                         {section.images?.length > 0 && (
+//                                             <div className={`special-section-images ${sectionIndex === 1 ? 'special-section-images--second' : ''}`}>
+//                                                 {section.images.map((img, i) => (
+//                                                     <div key={i} className="special-image-item">
+//                                                         <img src={img} alt={`section-${sectionIndex}-${i}`} />
+//                                                     </div>
+//                                                 ))}
+//                                             </div>
+//                                         )}
+//                                     </div>
+//                                 ))}
+//                             </div>
+//                         </div>
+//                     </article>
+//                 </div>
 //             </div>
 //         )
 //     }
@@ -141,13 +198,9 @@
 //                     </div>
 
 //                     <div className="article-content-top">
-//                         {
-//                             news.description?.map((el, index) => (
-//                                 <p key={index} className="article-lead">
-//                                     {el}
-//                                 </p>
-//                             ))
-//                         }
+//                         {news.description?.map((el, index) => (
+//                             <p key={index} className="article-lead">{el}</p>
+//                         ))}
 //                     </div>
 
 //                     <div className="news-article-bottom">
@@ -162,18 +215,13 @@
 //                                 disableOnInteraction: false,
 //                                 pauseOnMouseEnter: true
 //                             }}
-
 //                             loop={true}
 //                             breakpoints={{
-//                                 640: {
-//                                     slidesPerView: 2,
-//                                 },
-//                                 1024: {
-//                                     slidesPerView: 3,
-//                                 },
+//                                 640: { slidesPerView: 2 },
+//                                 1024: { slidesPerView: 3 },
 //                             }}
-
-//                             className="article-swiper">
+//                             className="article-swiper"
+//                         >
 //                             {news.image?.map((el, index) => (
 //                                 <SwiperSlide key={index}>
 //                                     <div className="article-image-slide">
@@ -200,7 +248,7 @@
 
 // export default NewsSingle
 
-import React, { useEffect, useState, useRef, useCallback } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './newsSingle.scss'
 import { newsData, newsDataEn } from '../../static'
@@ -264,7 +312,7 @@ const NewsSingle = () => {
             ))
         }
 
-        return news.locationData.map((location, index) => {
+        return news.locationData.map((location) => {
             if (location.position === 'right') {
                 return (
                     <div key={location.id} className="location-section scroll-animate" data-direction="right">
@@ -348,9 +396,13 @@ const NewsSingle = () => {
                                 {news.sections?.map((section, sectionIndex) => (
                                     <div key={sectionIndex} className="special-section">
                                         <div className="special-section-texts">
-                                            {section.texts.map((text, i) => (
-                                                <p key={i} className="article-text">{text}</p>
-                                            ))}
+                                            {section.texts.map((item, i) =>
+                                                item.type === "heading" ? (
+                                                    <h2 key={i} className="section-heading">{item.text}</h2>
+                                                ) : (
+                                                    <p key={i} className="article-text">{item.text}</p>
+                                                )
+                                            )}
                                         </div>
                                         {section.images?.length > 0 && (
                                             <div className={`special-section-images ${sectionIndex === 1 ? 'special-section-images--second' : ''}`}>

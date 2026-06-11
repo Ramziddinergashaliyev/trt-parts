@@ -69,3 +69,4 @@ const SearchProduct = () => {
 };
 
 export default memo(SearchProduct);
+

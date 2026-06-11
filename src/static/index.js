@@ -85,6 +85,7 @@ import uzb4 from "../assets/news/uzb/four.webp"
 import uzb5 from "../assets/news/uzb/fife.webp"
 import uzb6 from "../assets/news/uzb/six.webp"
 import uzb7 from "../assets/news/uzb/seven.webp"
+import main from "../assets/news/uzb/main.webp"
 
 import bottom1 from "../assets/news/uzb/bottom/one.webp"
 import bottom2 from "../assets/news/uzb/bottom/two.webp"
@@ -709,26 +710,27 @@ export const newsData = [
     world: [""],
     title: "TRT на Международной ярмарке в Багдаде 2026",
     description: [
-      "ООО \"TRT JV TECHNOLOGIES REAL TIME\" принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак.",
+      "TRT JV LLC “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания(aftermarket) и профессионалов отрасли со всего Узбекистана.",
     ],
-
-    date: "1-7 февраль, 2026",
-    img: iraq,
+    date: "5 мая 2026 г",
+    img: main,
     image: [],
     sections: [
       {
         texts: [
-          "В рамках выставки TRT демонстрирует свои высококачественные автомобильные компоненты иракским импортерам, дистрибьюторам и представителям местного рынка.",
-          "Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.",
-          "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами.",
+          { type: "heading", text: "Обзор мероприятия & Экскурсия по заводу" },
+          { type: "paragraph", text: "Главной целью встречи стало укрепление сотрудничества с партнерами, обмен техническими знаниями, а также ознакомление участников с продукцией TRT, стандартами производства и системами контроля качества. Семинар также послужил отличной платформой для обмена опытом и обсуждения последних тенденций на рынке автокомпонентов." },
+          { type: "paragraph", text: "После презентационной части для участников была организована экскурсия по производственным мощностям завода TRT. Гости получили возможность лично понаблюдать за всем циклом производства — от обработки сырья до выпуска готовой продукции." },
+          { type: "paragraph", text: "В ходе экскурсии специалисты TRT продемонстрировали процесс изготовления ключевых компонентов подвески и рулевого управления, включая рычаги управления, шаровые опоры, наконечники рулевых тяг, рулевые тяги, стойки стабилизатора и резинометаллические изделия. Посетителей ознакомили с современными производственными технологиями, процедурами проверки качества и методами лабораторных испытаний, которые обеспечивают высокую надежность и долговечность продукции TRT." },
         ],
         images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
       },
       {
         texts: [
-          "Обсуждения были сосредоточены на анализе рынка автомобилей Ирака, высоко востребованных сегментах компонентов, возможностях логистики и дистрибуции.",
-          "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.",
-          "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков и укреплению узбекско-иракских торгово-экономических отношений.",
+          { type: "heading", text: "Техническая сессия и Q&A (Вопросы и ответы)" },
+          { type: "paragraph", text: "Семинар завершился интерактивной технической сессией и открытой дискуссией, которую провели инженеры и продуктовые специалисты TRT." },
+          { type: "paragraph", text: "Участники поделились своим практическим опытом использования продукции TRT в автомастерских и точках продаж, оставили ценные отзывы, а также обсудили текущие вызовы рынка и актуальные запросы автовладельцев. Этот открытый диалог позволил гостям углубить свои технические знания, а компании TRT — еще лучше понять потребности профессионалов автобизнеса." },
+          { type: "paragraph", text: "Прошедшее мероприятие в очередной раз подчеркнуло стремление TRT к инновациям, качеству и долгосрочному партнерству, укрепив доверие, которое сервисные центры, дилеры и специалисты авторынка оказывают бренду TRT." },
         ],
         images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
       },
@@ -823,27 +825,27 @@ export const newsDataEn = [
     id: 5,
     category: "News",
     world: [""],
-    title: "TRT at Baghdad International Fair 2026",
-    description: [
-      "TRT JV LLC \"TECHNOLOGIES OF REAL TIME\" is participating in the Baghdad International Fair 2026, currently being held in Baghdad, the capital of the Republic of Iraq.",
-    ],
-    date: "1-7 February, 2026",
-    img: iraq,
+    title: "TRT Hosts Technical Seminar for Automotive Professionals",
+    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” successfully organized a Technical Seminar and Factory Tour for automotive service masters, spare parts dealers, aftermarket distributors, and industry professionals from across Uzbekistan."],
+    date: "5 May, 2026",
+    img: main,
     image: [],
     sections: [
       {
         texts: [
-          "Within the framework of the exhibition, TRT is showcasing its high-quality automotive components to Iraqi importers, distributors, and local market representatives.",
-          "The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT's international presence.",
-          "During the exhibition, TRT representatives held a series of productive negotiations with potential partners.",
+          { type: "heading", text: "Overview & Factory Tour" },
+          { type: "paragraph", text: "The event was created to strengthen cooperation with industry partners, share technical knowledge, and provide participants with a deeper understanding of TRT products, manufacturing standards, and quality control systems. The seminar also served as a valuable platform for exchanging experiences and discussing the latest developments in the automotive aftermarket sector." },
+          { type: "paragraph", text: "Following the overview presentation, participants were invited on a guided tour of TRT's production facilities. Guests had the opportunity to observe the manufacturing process firsthand, from raw materials to finished products." },
+          { type: "paragraph", text: "During the tour, TRT specialists demonstrated the production of key suspension and steering components, including control arms, ball joints, tie rod ends, rack ends, stabilizer links, and rubber-metal parts. Attendees were introduced to modern manufacturing technologies, quality inspection procedures, and testing methods that ensure the reliability and durability of TRT products." },
         ],
         images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
       },
       {
         texts: [
-          "Discussions focused on the analysis of the Iraqi automotive market, high-demand automotive component segments, and logistics and distribution opportunities.",
-          "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.",
-          "Participation in the Baghdad International Fair 2026 highlights TRT's commitment to expanding export markets and strengthening Uzbekistan–Iraq trade and economic relations.",
+          { type: "heading", text: "Technical Session & Q&A" },
+          { type: "paragraph", text: "The seminar concluded with an interactive technical session and question-and-answer discussion led by TRT engineers and product specialists." },
+          { type: "paragraph", text: "Participants shared their experiences using TRT products in workshops and retail markets, provided valuable feedback, and discussed current industry challenges and customer requirements. The open dialogue allowed guests to gain deeper technical knowledge while enabling TRT to better understand the needs of automotive professionals." },
+          { type: "paragraph", text: "The event highlighted TRT's commitment to innovation, quality, and long-term partnerships, while reinforcing the trust that service centers, dealers, and aftermarket professionals place in TRT products." },
         ],
         images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
       },
