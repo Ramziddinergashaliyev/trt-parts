@@ -175,8 +175,8 @@
         }
 
         .article-lead {
-            font-size: 19px;
-            line-height: 30px;
+            font-size: 17px;
+            line-height: 28px;
             color: #333;
             font-weight: 400;
             opacity: 0;
@@ -432,11 +432,12 @@
             }
 
             .article-text {
-                font-size: 19px;
-                line-height: 30px;
+                font-size: 17px;
+                line-height: 28px;
                 color: #333;
                 font-weight: 400;
-                text-align: justify;
+                opacity: 0;
+                animation: fadeInUp 0.6s ease forwards;
                 transition: all 0.3s ease;
 
                 @media (max-width: 768px) {
