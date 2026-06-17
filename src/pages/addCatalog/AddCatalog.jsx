@@ -168,7 +168,6 @@ const AddCatalog = () => {
     return (
         <div className="catalog-page">
             <div className="catalog-topbar">
-
                 <div className="catalog-topbar__left">
                     <h2 className="catalog-topbar__left-title">Parts catalog</h2>
                 </div>
@@ -182,7 +181,6 @@ const AddCatalog = () => {
                         + Add Product
                     </button>
                 </div>
-
             </div>
 
             <FilterCatalog />
