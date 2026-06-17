@@ -41,6 +41,7 @@ const Accardion = () => {
 
           {currentList?.map((el, index) => (
             <li key={el?.id} className="accardion__item">
+
               <div
                 className="accardion__header"
                 onClick={() => toggleAccordion(index)}>
@@ -76,6 +77,7 @@ const Accardion = () => {
                   </div>
                 ))}
               </div>
+
             </li>
           ))}
         </ul>
