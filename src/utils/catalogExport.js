@@ -1,6 +1,8 @@
 import ExcelJS from "exceljs";
 import html2pdf from "html2pdf.js";
 
+const PDF_ROWS_PER_CHUNK = 25;
+
 const formatList = (value) => {
   if (Array.isArray(value)) return value.filter(Boolean).join(", ");
   if (value === null || value === undefined) return "";
@@ -47,7 +49,128 @@ const fetchImageDataUrl = async (url) => {
     reader.onerror = () => resolve(null);
     reader.readAsDataURL(blob);
   });
-  
+};
+
+const chunkItems = (items, size) => {
+  const chunks = [];
+  for (let i = 0; i < items.length; i += size) {
+    chunks.push(items.slice(i, i + size));
+  }
+  return chunks;
+};
+
+const PDF_STYLES = `
+  .catalog-export { font-family: Arial, sans-serif; color: #111; padding: 16px; background: #fff; }
+  .catalog-export h1 { color: #b71c1c; margin: 0 0 4px; font-size: 20px; }
+  .catalog-export p { margin: 0 0 12px; color: #666; font-size: 11px; }
+  .catalog-export table { width: 100%; border-collapse: collapse; font-size: 9px; }
+  .catalog-export th, .catalog-export td { border: 1px solid #ddd; padding: 5px; vertical-align: top; color: #111; }
+  .catalog-export th { background: #b71c1c; color: #fff; }
+  .catalog-export tr:nth-child(even) { background: #fafafa; }
+  .catalog-export .photo { width: 64px; height: 48px; object-fit: contain; display: block; }
+  .catalog-export .photo-cell { text-align: center; width: 72px; }
+`;
+
+const TABLE_HEADER = `
+  <thead>
+    <tr>
+      <th>TRT №</th>
+      <th>OEM №</th>
+      <th>CTR №</th>
+      <th>LEMFÖRDER</th>
+      <th>EN Name</th>
+      <th>Contents</th>
+      <th>RU Name</th>
+      <th>Car</th>
+      <th>Model</th>
+      <th>Years</th>
+      <th>Photo</th>
+      <th>KG</th>
+    </tr>
+  </thead>
+`;
+
+const buildTableRows = async (items) => {
+  const rows = await Promise.all(
+    items.map(async (item) => {
+      const dataUrl = await fetchImageDataUrl(item.photo);
+      const photoCell = dataUrl
+        ? `<img src="${dataUrl}" alt="${escapeHtml(item.trtNo)}" class="photo" />`
+        : "—";
+
+      return `
+        <tr>
+          <td>${escapeHtml(item.trtNo)}</td>
+          <td>${escapeHtml(formatList(item.oemNo))}</td>
+          <td>${escapeHtml(item.ctrNo)}</td>
+          <td>${escapeHtml(item.lemforderNo)}</td>
+          <td>${escapeHtml(item.englishName)}</td>
+          <td>${escapeHtml(item.contents)}</td>
+          <td>${escapeHtml(item.russianName)}</td>
+          <td>${escapeHtml(formatList(item.carName))}</td>
+          <td>${escapeHtml(formatList(item.model))}</td>
+          <td>${escapeHtml(formatList(item.years))}</td>
+          <td class="photo-cell">${photoCell}</td>
+          <td>${escapeHtml(item.weightPerPcKg ?? "")}</td>
+        </tr>
+      `;
+    }),
+  );
+
+  return rows.join("");
+};
+
+const buildChunkHtml = async (chunkItems, chunkIndex, totalItems) => {
+  const rowsHtml = await buildTableRows(chunkItems);
+  const isFirstChunk = chunkIndex === 0;
+
+  const titleBlock = isFirstChunk
+    ? `
+        <h1>TRT Parts Catalog</h1>
+        <p>Exported: ${escapeHtml(new Date().toLocaleString())} | Total: ${totalItems}</p>
+      `
+    : "";
+
+  return `
+    <div class="catalog-export">
+      ${titleBlock}
+      <table>
+        ${isFirstChunk ? TABLE_HEADER : ""}
+        <tbody>${rowsHtml}</tbody>
+      </table>
+    </div>
+  `;
+};
+
+const waitForImages = (root) => {
+  const images = [...root.querySelectorAll("img")];
+  return Promise.all(
+    images.map(
+      (img) =>
+        new Promise((resolve) => {
+          if (img.complete && img.naturalWidth > 0) {
+            resolve();
+            return;
+          }
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+          setTimeout(resolve, 8000);
+        }),
+    ),
+  );
+};
+
+const PDF_OPTIONS = {
+  margin: [0.15, 0.15, 0.15, 0.15],
+  image: { type: "jpeg", quality: 0.92 },
+  html2canvas: {
+    scale: 1.5,
+    useCORS: true,
+    logging: false,
+    backgroundColor: "#ffffff",
+  },
+  jsPDF: { unit: "in", format: "a3", orientation: "landscape" },
+  pagebreak: { mode: ["css", "legacy"] },
 };
 
 export async function exportCatalogExcel(items) {
@@ -125,140 +248,56 @@ export async function exportCatalogExcel(items) {
   URL.revokeObjectURL(url);
 }
 
-const buildPrintableHtml = async (items) => {
-  const rows = await Promise.all(
-    items.map(async (item) => {
-      const dataUrl = await fetchImageDataUrl(item.photo);
-      const photoCell = dataUrl
-        ? `<img src="${dataUrl}" alt="${escapeHtml(item.trtNo)}" class="photo" />`
-        : "—";
-
-      return `
-        <tr>
-          <td>${escapeHtml(item.trtNo)}</td>
-          <td>${escapeHtml(formatList(item.oemNo))}</td>
-          <td>${escapeHtml(item.ctrNo)}</td>
-          <td>${escapeHtml(item.lemforderNo)}</td>
-          <td>${escapeHtml(item.englishName)}</td>
-          <td>${escapeHtml(item.contents)}</td>
-          <td>${escapeHtml(item.russianName)}</td>
-          <td>${escapeHtml(formatList(item.carName))}</td>
-          <td>${escapeHtml(formatList(item.model))}</td>
-          <td>${escapeHtml(formatList(item.years))}</td>
-          <td class="photo-cell">${photoCell}</td>
-          <td>${escapeHtml(item.weightPerPcKg ?? "")}</td>
-        </tr>
-      `;
-    }),
-  );
-
-  return `
-    <div class="catalog-export">
-      <h1>TRT Parts Catalog</h1>
-      <p>Exported: ${escapeHtml(new Date().toLocaleString())} | Total: ${items.length}</p>
-      <table>
-        <thead>
-          <tr>
-            <th>TRT №</th>
-            <th>OEM №</th>
-            <th>CTR №</th>
-            <th>LEMFÖRDER</th>
-            <th>EN Name</th>
-            <th>Contents</th>
-            <th>RU Name</th>
-            <th>Car</th>
-            <th>Model</th>
-            <th>Years</th>
-            <th>Photo</th>
-            <th>KG</th>
-          </tr>
-        </thead>
-        <tbody>${rows.join("")}</tbody>
-      </table>
-    </div>
-  `;
-};
-
-const waitForImages = (root) => {
-  const images = [...root.querySelectorAll("img")];
-  return Promise.all(
-    images.map(
-      (img) =>
-        new Promise((resolve) => {
-          if (img.complete && img.naturalWidth > 0) {
-            resolve();
-            return;
-          }
-          img.onload = () => resolve();
-          img.onerror = () => resolve();
-          setTimeout(resolve, 8000);
-        }),
-    ),
-  );
-};
-
 export async function exportCatalogPdf(items) {
+  if (!items.length) return;
+
+  const chunks = chunkItems(items, PDF_ROWS_PER_CHUNK);
   const wrapper = document.createElement("div");
   wrapper.style.cssText = [
     "position: fixed",
     "left: 0",
     "top: 0",
-    "z-index: -1",
-    "opacity: 0.01",
-    "pointer-events: none",
     "width: 1600px",
     "background: #ffffff",
     "color: #111111",
+    "pointer-events: none",
+    "z-index: 99999",
+    "transform: translateX(-10000px)",
   ].join(";");
 
-  wrapper.innerHTML = `
-    <style>
-      .catalog-export { font-family: Arial, sans-serif; color: #111; padding: 16px; background: #fff; }
-      .catalog-export h1 { color: #b71c1c; margin: 0 0 4px; font-size: 20px; }
-      .catalog-export p { margin: 0 0 12px; color: #666; font-size: 11px; }
-      .catalog-export table { width: 100%; border-collapse: collapse; font-size: 9px; }
-      .catalog-export th, .catalog-export td { border: 1px solid #ddd; padding: 5px; vertical-align: top; color: #111; }
-      .catalog-export th { background: #b71c1c; color: #fff; }
-      .catalog-export tr:nth-child(even) { background: #fafafa; }
-      .catalog-export .photo { width: 64px; height: 48px; object-fit: contain; display: block; }
-      .catalog-export .photo-cell { text-align: center; width: 72px; }
-    </style>
-    ${await buildPrintableHtml(items)}
-  `;
-
+  wrapper.innerHTML = `<style>${PDF_STYLES}</style>`;
   document.body.appendChild(wrapper);
 
-  const content = wrapper.querySelector(".catalog-export") || wrapper;
+  const chunkElements = [];
 
   try {
+    for (let i = 0; i < chunks.length; i++) {
+      const chunkEl = document.createElement("div");
+      chunkEl.innerHTML = await buildChunkHtml(chunks[i], i, items.length);
+      wrapper.appendChild(chunkEl);
+      chunkElements.push(chunkEl.firstElementChild || chunkEl);
+    }
+
     await waitForImages(wrapper);
     await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
 
-    const width = Math.max(content.scrollWidth, content.offsetWidth, 1200);
-    const height = Math.max(content.scrollHeight, content.offsetHeight, 600);
+    const filename = `parts_catalog_${fileDate()}.pdf`;
+    let worker = html2pdf().set({ ...PDF_OPTIONS, filename }).from(chunkElements[0]).toPdf();
 
-    await html2pdf()
-      .set({
-        margin: [0.15, 0.15, 0.15, 0.15],
-        filename: `parts_catalog_${fileDate()}.pdf`,
-        image: { type: "jpeg", quality: 0.92 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          logging: false,
-          backgroundColor: "#ffffff",
-          width,
-          height,
-          windowWidth: width,
-          windowHeight: height,
-          scrollX: 0,
-          scrollY: 0,
-        },
-        jsPDF: { unit: "in", format: "a3", orientation: "landscape" },
-        pagebreak: { mode: ["css", "legacy"] },
-      })
-      .from(content)
-      .save();
+    for (let i = 1; i < chunkElements.length; i++) {
+      const element = chunkElements[i];
+      worker = worker
+        .get("pdf")
+        .then((pdf) => {
+          pdf.addPage();
+        })
+        .from(element)
+        .toContainer()
+        .toCanvas()
+        .toPdf();
+    }
+
+    await worker.save();
   } finally {
     document.body.removeChild(wrapper);
   }

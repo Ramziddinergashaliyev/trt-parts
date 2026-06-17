@@ -66,6 +66,7 @@ const Company = () => {
         <div className="company__info">
 
           <div className="company__info__left">
+
             <h3 className="company__info__left-title reveal fade-up d1">
               {t("компании")}
             </h3>
@@ -81,6 +82,7 @@ const Company = () => {
               <br />
               <span>{t("Сотрудники")}</span>
             </p>
+
           </div>
 
           <div className="company__info__right reveal fade-left d2">

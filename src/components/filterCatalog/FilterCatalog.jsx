@@ -204,6 +204,7 @@ function EditModal({ item, onClose, onSave, onUpdate }) {
     return (
         <div className="modal-backdrop" onClick={onClose} role="dialog" aria-modal aria-label="Edit item">
             <div className="modal-box modal-box--edit" onClick={e => e.stopPropagation()}>
+
                 <div className="modal-head">
                     <div className="modal-head-icon modal-head-icon--edit"><EditIcon /></div>
                     <div>
@@ -405,6 +406,7 @@ export default function FilterCatalog({ hide }) {
                             <path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
                         </svg>
                     </div>
+
                     <div>
                         <h1 className="fc-title">Parts Catalog</h1>
                         <span className="fc-subtitle">
