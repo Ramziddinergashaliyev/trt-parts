@@ -77,7 +77,6 @@ import Dtwo from "../assets/news/dubai/two.webp"
 import Dthree from "../assets/news/dubai/three.webp"
 import Dfour from "../assets/news/dubai/four.webp"
 
-
 import uzb1 from "../assets/news/uzb/one.webp"
 import uzb2 from "../assets/news/uzb/two.webp"
 import uzb3 from "../assets/news/uzb/three.webp"
@@ -95,6 +94,13 @@ import bottom5 from "../assets/news/uzb/bottom/fife.webp"
 import bottom6 from "../assets/news/uzb/bottom/six.webp"
 import bottom7 from "../assets/news/uzb/bottom/seven.webp"
 import ak from "../assets/news/uzb/bottom/ak.webp"
+
+// 2026 Astana
+import one26 from "../assets/news26/astana/one.webp"
+import two26 from "../assets/news26/astana/two.webp"
+import three26 from "../assets/news26/astana/three.webp"
+import four26 from "../assets/news26/astana/four.webp"
+import main26 from "../assets/news26/astana/main.webp"
 
 export const PARTNER = [
   {
@@ -546,18 +552,18 @@ export const newsData = [
     category: "Новости",
     world: [""],
     title: "TRT на Международной ярмарке в Багдаде 2026",
-    description: ["ООО \"TRT JV TECHNOLOGIES REAL TIME\" принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
+    description: ["ООО «TECHNOLOGIES OF REAL TIME» принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
     date: "1-7 февраль, 2026",
     img: iraq,
     image: [iraq, iraq1],
     fullContent: ["В рамках выставки TRT демонстрирует свои высококачественные автомобильные компоненты иракским импортерам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.", "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами. Обсуждения были сосредоточены на:", "• Анализ рынка автомобилей Ирака", "• Высоко востребованные сегменты автомобильных компонентов", "• Возможности логистики и дистрибуции", "• Стратегии расширения присутствия продуктов ТРТ в Ираке", "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.", "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков, укреплению узбекско-иракских торгово-экономических отношений и поставке надежных, высокопроизводительных автомобильных решений клиентам по всему миру."]
   },
   {
-    id: 4,
+    id: 3,
     category: "Новости",
     world: ["Автомеханика Дубай", "Автомеханика Астана", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
     title: "TRT на ведущих международных автомобильных выставках 2025",
-    description: ["ООО \"TRT JV TECHNOLOGIES OF REAL TIME\" с гордостью участвует в самых престижных в мире выставках после автомобильного рынка, укрепляя свое присутствие в мире и расширяя международные партнерские отношения.", "В 2025 году TRT продемонстрировала свои высококачественные автомобильные компоненты на следующих крупных отраслевых мероприятиях:"],
+    description: ["ООО «TECHNOLOGIES OF REAL TIME» с гордостью участвует в самых престижных в мире выставках после автомобильного рынка, укрепляя свое присутствие в мире и расширяя международные партнерские отношения.", "В 2025 году TRT продемонстрировала свои высококачественные автомобильные компоненты на следующих крупных отраслевых мероприятиях:"],
     date: "2025",
     img: news3,
     image: [world6, world5, world4, world1, world2, world3],
@@ -608,6 +614,26 @@ export const newsData = [
         location: 'Шанхай, Китай',
         description: 'Automechanika Shanghai 2025, одна из крупнейших автомобильных выставок в мире, позволила TRT взаимодействовать с азиатскими производителями, поставщиками и глобальными дистрибьюторами. Участие в этой выставке подтвердило приверженность TRT технологическому прогрессу и интеграции в глобальную цепочку поставок автомобилей.',
         images: [one, four, two, three],
+        position: 'left'
+      }
+    ]
+  },
+  {
+    id: 4,
+    category: "Новости",
+    world: ["Автомеханика Астана"],
+    title: "TRT на международных автомобильных выставках 2026 года",
+    description: ["ООО «TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей (aftermarket), а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
+    date: "2026",
+    img: news3,
+    image: [main26],
+    locationData: [
+      {
+        id: 'astana',
+        title: 'Автомеханика Астана',
+        location: 'Астана, Казахстан',
+        description: 'Automechanika Astana один из ключевых выставочных проектов в сфере послепродажного обслуживания автомобилей в Центральной Азии, объединяющий профессионалов отрасли со всего региона. В ходе мероприятия компания TRT продемонстрировала свои компоненты подвески, рулевого управления и резинометаллические изделия, одновременно укрепляя партнерские отношения и расширяя свое присутствие на центральноазиатском рынке.',
+        images: [one26, two26, three26, four26],
         position: 'left'
       }
     ]
@@ -670,7 +696,7 @@ export const newsDataEn = [
     fullContent: ["Within the framework of the exhibition, TRT is showcasing its high-quality automotive components to Iraqi importers, distributors, and local market representatives. The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT’s international presence.", "During the exhibition, TRT representatives held a series of productive negotiations with potential partners. Discussions focused on:", "• Analysis of the Iraqi automotive market", "• High-demand automotive component segments", "• Logistics and distribution opportunities", "• Strategies for expanding the presence of TRT products in Iraq", "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.", "Participation in the Baghdad International Fair 2026 highlights TRT’s commitment to expanding export markets, strengthening Uzbekistan–Iraq trade and economic relations, and delivering reliable, high-performance automotive solutions to customers worldwide."]
   },
   {
-    id: 4,
+    id: 3,
     category: "News",
     world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
     title: "TRT at Leading International Automotive Exhibitions 2025",
@@ -725,6 +751,26 @@ export const newsDataEn = [
         location: 'Shanghai, China',
         description: 'Automechanika Shanghai 2025, one of the largest automotive exhibitions globally, allowed TRT to engage with Asian manufacturers, suppliers, and global distributors. Participation in this exhibition reinforced TRT’s commitment to technological advancement and integration into the global automotive supply chain.',
         images: [one, four, two, three],
+        position: 'left'
+      }
+    ]
+  },
+  {
+    id: 4,
+    category: "News",
+    world: ["Automechanika Astana"],
+    title: "TRT at International Automotive Exhibitions 2026",
+    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
+    date: "2026",
+    img: news3,
+    image: [main26],
+    locationData: [
+      {
+        id: 'astana',
+        title: 'Automechanika Astana',
+        location: 'Astana, Kazakhstan',
+        description: 'Automechanika Astana is one of Central Asia\'s key automotive aftermarket exhibitions, bringing together industry professionals from across the region.During the event, TRT showcased its suspension, steering, and rubber- metal components while strengthening partnerships and expanding its presence in the Central Asian market.',
+        images: [one26, two26, three26, four26],
         position: 'left'
       }
     ]
