@@ -540,6 +540,58 @@ export const Swipper = [
 
 export const newsData = [
   {
+    id: 4,
+    category: "Новости",
+    world: ["Автомеханика Астана"],
+    title: "Автомеханика 2026",
+    description: ["ООО «TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей (aftermarket), а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
+    date: "2026",
+    img: news3,
+    image: [main26],
+    locationData: [
+      {
+        id: 'astana',
+        title: 'Автомеханика Астана',
+        location: 'Астана, Казахстан',
+        description: 'Automechanika Astana один из ключевых выставочных проектов в сфере послепродажного обслуживания автомобилей в Центральной Азии, объединяющий профессионалов отрасли со всего региона. В ходе мероприятия компания TRT продемонстрировала свои компоненты подвески, рулевого управления и резинометаллические изделия, одновременно укрепляя партнерские отношения и расширяя свое присутствие на центральноазиатском рынке.',
+        images: [one26, fife26, three26, two26],
+        position: 'left'
+      }
+    ]
+  },
+  {
+    id: 5,
+    category: "Новости",
+    world: [""],
+    title: "TRT на Международной ярмарке в Багдаде 2026",
+    description: [
+      "TRT JV LLC “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания(aftermarket) и профессионалов отрасли со всего Узбекистана.",
+    ],
+    date: "5 мая 2026 г",
+    img: main,
+    image: [],
+    sections: [
+      {
+        texts: [
+          { type: "heading", text: "Обзор мероприятия & Экскурсия по заводу" },
+          { type: "paragraph", text: "Главной целью встречи стало укрепление сотрудничества с партнерами, обмен техническими знаниями, а также ознакомление участников с продукцией TRT, стандартами производства и системами контроля качества. Семинар также послужил отличной платформой для обмена опытом и обсуждения последних тенденций на рынке автокомпонентов." },
+          { type: "paragraph", text: "После презентационной части для участников была организована экскурсия по производственным мощностям завода TRT. Гости получили возможность лично понаблюдать за всем циклом производства — от обработки сырья до выпуска готовой продукции." },
+          { type: "paragraph", text: "В ходе экскурсии специалисты TRT продемонстрировали процесс изготовления ключевых компонентов подвески и рулевого управления, включая рычаги управления, шаровые опоры, наконечники рулевых тяг, рулевые тяги, стойки стабилизатора и резинометаллические изделия. Посетителей ознакомили с современными производственными технологиями, процедурами проверки качества и методами лабораторных испытаний, которые обеспечивают высокую надежность и долговечность продукции TRT." },
+        ],
+        images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
+      },
+      {
+        texts: [
+          { type: "heading", text: "Техническая сессия и Q&A (Вопросы и ответы)" },
+          { type: "paragraph", text: "Семинар завершился интерактивной технической сессией и открытой дискуссией, которую провели инженеры и продуктовые специалисты TRT." },
+          { type: "paragraph", text: "Участники поделились своим практическим опытом использования продукции TRT в автомастерских и точках продаж, оставили ценные отзывы, а также обсудили текущие вызовы рынка и актуальные запросы автовладельцев. Этот открытый диалог позволил гостям углубить свои технические знания, а компании TRT — еще лучше понять потребности профессионалов автобизнеса." },
+          { type: "paragraph", text: "Прошедшее мероприятие в очередной раз подчеркнуло стремление TRT к инновациям, качеству и долгосрочному партнерству, укрепив доверие, которое сервисные центры, дилеры и специалисты авторынка оказывают бренду TRT." },
+        ],
+        images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
+      },
+    ],
+  },
+  {
     id: 1,
     category: "Новости",
     world: [""],
@@ -620,22 +672,25 @@ export const newsData = [
         position: 'left'
       }
     ]
-  },
+  }
+]
+
+export const newsDataEn = [
   {
     id: 4,
-    category: "Новости",
-    world: ["Автомеханика Астана"],
-    title: "Автомеханика 2026",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей (aftermarket), а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
+    category: "News",
+    world: ["Automechanika Astana"],
+    title: "Automechanika 2026",
+    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
     date: "2026",
     img: news3,
     image: [main26],
     locationData: [
       {
         id: 'astana',
-        title: 'Автомеханика Астана',
-        location: 'Астана, Казахстан',
-        description: 'Automechanika Astana один из ключевых выставочных проектов в сфере послепродажного обслуживания автомобилей в Центральной Азии, объединяющий профессионалов отрасли со всего региона. В ходе мероприятия компания TRT продемонстрировала свои компоненты подвески, рулевого управления и резинометаллические изделия, одновременно укрепляя партнерские отношения и расширяя свое присутствие на центральноазиатском рынке.',
+        title: 'Automechanika Astana',
+        location: 'Astana, Kazakhstan',
+        description: 'Automechanika Astana is one of Central Asia\'s key automotive aftermarket exhibitions, bringing together industry professionals from across the region.During the event, TRT showcased its suspension, steering, and rubber- metal components while strengthening partnerships and expanding its presence in the Central Asian market.',
         images: [one26, fife26, three26, two26],
         position: 'left'
       }
@@ -643,39 +698,34 @@ export const newsData = [
   },
   {
     id: 5,
-    category: "Новости",
+    category: "News",
     world: [""],
-    title: "TRT на Международной ярмарке в Багдаде 2026",
-    description: [
-      "TRT JV LLC “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания(aftermarket) и профессионалов отрасли со всего Узбекистана.",
-    ],
-    date: "5 мая 2026 г",
+    title: "TRT Hosts Technical Seminar for Automotive Professionals",
+    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” successfully organized a Technical Seminar and Factory Tour for automotive service masters, spare parts dealers, aftermarket distributors, and industry professionals from across Uzbekistan."],
+    date: "5 May, 2026",
     img: main,
     image: [],
     sections: [
       {
         texts: [
-          { type: "heading", text: "Обзор мероприятия & Экскурсия по заводу" },
-          { type: "paragraph", text: "Главной целью встречи стало укрепление сотрудничества с партнерами, обмен техническими знаниями, а также ознакомление участников с продукцией TRT, стандартами производства и системами контроля качества. Семинар также послужил отличной платформой для обмена опытом и обсуждения последних тенденций на рынке автокомпонентов." },
-          { type: "paragraph", text: "После презентационной части для участников была организована экскурсия по производственным мощностям завода TRT. Гости получили возможность лично понаблюдать за всем циклом производства — от обработки сырья до выпуска готовой продукции." },
-          { type: "paragraph", text: "В ходе экскурсии специалисты TRT продемонстрировали процесс изготовления ключевых компонентов подвески и рулевого управления, включая рычаги управления, шаровые опоры, наконечники рулевых тяг, рулевые тяги, стойки стабилизатора и резинометаллические изделия. Посетителей ознакомили с современными производственными технологиями, процедурами проверки качества и методами лабораторных испытаний, которые обеспечивают высокую надежность и долговечность продукции TRT." },
+          { type: "heading", text: "Overview & Factory Tour" },
+          { type: "paragraph", text: "The event was created to strengthen cooperation with industry partners, share technical knowledge, and provide participants with a deeper understanding of TRT products, manufacturing standards, and quality control systems. The seminar also served as a valuable platform for exchanging experiences and discussing the latest developments in the automotive aftermarket sector." },
+          { type: "paragraph", text: "Following the overview presentation, participants were invited on a guided tour of TRT's production facilities. Guests had the opportunity to observe the manufacturing process firsthand, from raw materials to finished products." },
+          { type: "paragraph", text: "During the tour, TRT specialists demonstrated the production of key suspension and steering components, including control arms, ball joints, tie rod ends, rack ends, stabilizer links, and rubber-metal parts. Attendees were introduced to modern manufacturing technologies, quality inspection procedures, and testing methods that ensure the reliability and durability of TRT products." },
         ],
         images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
       },
       {
         texts: [
-          { type: "heading", text: "Техническая сессия и Q&A (Вопросы и ответы)" },
-          { type: "paragraph", text: "Семинар завершился интерактивной технической сессией и открытой дискуссией, которую провели инженеры и продуктовые специалисты TRT." },
-          { type: "paragraph", text: "Участники поделились своим практическим опытом использования продукции TRT в автомастерских и точках продаж, оставили ценные отзывы, а также обсудили текущие вызовы рынка и актуальные запросы автовладельцев. Этот открытый диалог позволил гостям углубить свои технические знания, а компании TRT — еще лучше понять потребности профессионалов автобизнеса." },
-          { type: "paragraph", text: "Прошедшее мероприятие в очередной раз подчеркнуло стремление TRT к инновациям, качеству и долгосрочному партнерству, укрепив доверие, которое сервисные центры, дилеры и специалисты авторынка оказывают бренду TRT." },
+          { type: "heading", text: "Technical Session & Q&A" },
+          { type: "paragraph", text: "The seminar concluded with an interactive technical session and question-and-answer discussion led by TRT engineers and product specialists." },
+          { type: "paragraph", text: "Participants shared their experiences using TRT products in workshops and retail markets, provided valuable feedback, and discussed current industry challenges and customer requirements. The open dialogue allowed guests to gain deeper technical knowledge while enabling TRT to better understand the needs of automotive professionals." },
+          { type: "paragraph", text: "The event highlighted TRT's commitment to innovation, quality, and long-term partnerships, while reinforcing the trust that service centers, dealers, and aftermarket professionals place in TRT products." },
         ],
         images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
       },
     ],
   },
-]
-
-export const newsDataEn = [
   {
     id: 1,
     category: "News",
@@ -757,55 +807,5 @@ export const newsDataEn = [
         position: 'left'
       }
     ]
-  },
-  {
-    id: 4,
-    category: "News",
-    world: ["Automechanika Astana"],
-    title: "Automechanika 2026",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
-    date: "2026",
-    img: news3,
-    image: [main26],
-    locationData: [
-      {
-        id: 'astana',
-        title: 'Automechanika Astana',
-        location: 'Astana, Kazakhstan',
-        description: 'Automechanika Astana is one of Central Asia\'s key automotive aftermarket exhibitions, bringing together industry professionals from across the region.During the event, TRT showcased its suspension, steering, and rubber- metal components while strengthening partnerships and expanding its presence in the Central Asian market.',
-        images: [one26, fife26, three26, two26],
-        position: 'left'
-      }
-    ]
-  },
-  {
-    id: 5,
-    category: "News",
-    world: [""],
-    title: "TRT Hosts Technical Seminar for Automotive Professionals",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” successfully organized a Technical Seminar and Factory Tour for automotive service masters, spare parts dealers, aftermarket distributors, and industry professionals from across Uzbekistan."],
-    date: "5 May, 2026",
-    img: main,
-    image: [],
-    sections: [
-      {
-        texts: [
-          { type: "heading", text: "Overview & Factory Tour" },
-          { type: "paragraph", text: "The event was created to strengthen cooperation with industry partners, share technical knowledge, and provide participants with a deeper understanding of TRT products, manufacturing standards, and quality control systems. The seminar also served as a valuable platform for exchanging experiences and discussing the latest developments in the automotive aftermarket sector." },
-          { type: "paragraph", text: "Following the overview presentation, participants were invited on a guided tour of TRT's production facilities. Guests had the opportunity to observe the manufacturing process firsthand, from raw materials to finished products." },
-          { type: "paragraph", text: "During the tour, TRT specialists demonstrated the production of key suspension and steering components, including control arms, ball joints, tie rod ends, rack ends, stabilizer links, and rubber-metal parts. Attendees were introduced to modern manufacturing technologies, quality inspection procedures, and testing methods that ensure the reliability and durability of TRT products." },
-        ],
-        images: [uzb1, uzb4, uzb3, uzb7, uzb5, uzb2, uzb6],
-      },
-      {
-        texts: [
-          { type: "heading", text: "Technical Session & Q&A" },
-          { type: "paragraph", text: "The seminar concluded with an interactive technical session and question-and-answer discussion led by TRT engineers and product specialists." },
-          { type: "paragraph", text: "Participants shared their experiences using TRT products in workshops and retail markets, provided valuable feedback, and discussed current industry challenges and customer requirements. The open dialogue allowed guests to gain deeper technical knowledge while enabling TRT to better understand the needs of automotive professionals." },
-          { type: "paragraph", text: "The event highlighted TRT's commitment to innovation, quality, and long-term partnerships, while reinforcing the trust that service centers, dealers, and aftermarket professionals place in TRT products." },
-        ],
-        images: [bottom4, bottom2, bottom5, ak, bottom3, bottom6, bottom7],
-      },
-    ],
-  },
+  }
 ]
