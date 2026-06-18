@@ -100,7 +100,10 @@ import one26 from "../assets/news26/astana/one.webp"
 import two26 from "../assets/news26/astana/two.webp"
 import three26 from "../assets/news26/astana/three.webp"
 import four26 from "../assets/news26/astana/four.webp"
+import fife26 from "../assets/news26/astana/astana2.webp"
+import six26 from "../assets/news26/astana/astana1.webp"
 import main26 from "../assets/news26/astana/main.webp"
+
 
 export const PARTNER = [
   {
@@ -633,7 +636,7 @@ export const newsData = [
         title: 'Автомеханика Астана',
         location: 'Астана, Казахстан',
         description: 'Automechanika Astana один из ключевых выставочных проектов в сфере послепродажного обслуживания автомобилей в Центральной Азии, объединяющий профессионалов отрасли со всего региона. В ходе мероприятия компания TRT продемонстрировала свои компоненты подвески, рулевого управления и резинометаллические изделия, одновременно укрепляя партнерские отношения и расширяя свое присутствие на центральноазиатском рынке.',
-        images: [one26, two26, three26, four26],
+        images: [one26, fife26, three26, two26],
         position: 'left'
       }
     ]
@@ -770,7 +773,7 @@ export const newsDataEn = [
         title: 'Automechanika Astana',
         location: 'Astana, Kazakhstan',
         description: 'Automechanika Astana is one of Central Asia\'s key automotive aftermarket exhibitions, bringing together industry professionals from across the region.During the event, TRT showcased its suspension, steering, and rubber- metal components while strengthening partnerships and expanding its presence in the Central Asian market.',
-        images: [one26, two26, three26, four26],
+        images: [one26, fife26, three26, two26],
         position: 'left'
       }
     ]

@@ -74,6 +74,7 @@ const AddCatalog = () => {
                 `Muvaffaqiyatli: ${created} ta qo'shildi${skipped ? `, ${skipped} ta o'tkazib yuborildi` : ""}`,
             );
             setTimeout(closeImportModal, 1200);
+
         } catch (err) {
             const message =
                 err?.data?.message ||
@@ -127,7 +128,7 @@ const AddCatalog = () => {
         setYearsList([]); setYearsInput("");
         setPhotoFile(null);
         setPhotoPreview(null);
-    };
+    }; 21
 
     const getFinalList = (list, input) => {
         const trimmed = input.trim();
@@ -168,6 +169,7 @@ const AddCatalog = () => {
     return (
         <div className="catalog-page">
             <div className="catalog-topbar">
+
                 <div className="catalog-topbar__left">
                     <h2 className="catalog-topbar__left-title">Parts catalog</h2>
                 </div>
