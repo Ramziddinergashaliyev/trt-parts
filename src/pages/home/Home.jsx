@@ -24,9 +24,6 @@ const Home = () => {
       <Auto />
       <Prinsp />
       <Catalog />
-      {/* <Car /> */}
-      {/* <ProductsShowcase /> */}
-      {/* <Anime /> */}
       <NewsCard />
       <YoutubeCard />
       <Vapros />
