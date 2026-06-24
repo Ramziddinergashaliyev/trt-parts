@@ -12,6 +12,7 @@ const Vapros = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   const { t } = useTranslation();
 
   return (
