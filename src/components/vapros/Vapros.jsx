@@ -29,10 +29,6 @@ const Vapros = () => {
               {t("have_questions")} <br />
               <span>{t("or_suggestions")}</span>
             </h3>
-
-            <div className="vapros__icon">
-              <img src={icons} alt="icon" />
-            </div>
           </div>
 
           <p className="vapros__text">

@@ -1,3 +1,313 @@
+// .vapros {
+//   position: relative;
+//   height: 750px;
+//   background: url(../../assets/img/bigcar.webp) no-repeat center;
+//   background-size: cover;
+//   display: flex;
+//   align-items: center;
+
+//   &__container {
+//     position: relative;
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+
+//   &__card {
+//     width: 600px;
+//     background: #fff;
+//     padding: 60px;
+//     border-radius: 10px;
+//     z-index: 2;
+//     transition: all 0.4s ease;
+
+//     &:hover {
+//       transform: translateY(-8px) scale(1.02);
+//       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+//     }
+//   }
+
+//   &__top {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   &__title {
+//     font-size: 30px;
+//     font-weight: 500;
+//     line-height: 1.3;
+
+//     span {
+//       color: #d00101;
+//     }
+//   }
+
+//   &__icon img {
+//     width: 50px;
+//     transition: 0.5s;
+//   }
+
+//   &__card:hover &__icon img {
+//     transform: rotate(15deg) scale(1.1);
+//   }
+
+//   &__text {
+//     margin: 20px 0 35px;
+//     font-size: 16px;
+//     color: #666;
+//     line-height: 1.6;
+//   }
+
+//   &__btn {
+//     display: inline-flex;
+//     align-items: center;
+//     text-decoration: none;
+//     border-radius: 6px;
+//     overflow: hidden;
+//     transition: 0.3s;
+
+//     span {
+//       padding: 18px 45px;
+//       border: 1px solid #ddd;
+//       border-right: none;
+//       background: #fff;
+//       color: #000;
+//       transition: 0.3s;
+//     }
+
+//     &-icon {
+//       background: #d00101;
+//       color: #fff;
+//       padding: 18px;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       transition: 0.3s;
+//       height: 62px;
+//     }
+
+//     &:hover span {
+//       color: #d00101;
+//       border-color: #d00101;
+//     }
+
+//     &:hover .vapros__btn-icon {
+//       transform: translateX(5px);
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     &__container {
+//       justify-content: center;
+//     }
+
+//     &__card {
+//       width: 90%;
+//       padding: 30px;
+//     }
+
+//     &__title {
+//       font-size: 22px;
+//     }
+
+//     &__btn span {
+//       padding: 12px 20px;
+//     }
+
+//     &__btn-icon {
+//       padding: 12px;
+//     }
+//   }
+// }
+
+// .vapros {
+//   position: relative;
+//   height: 750px;
+//   background: url(../../assets/img/bigcar.webp) no-repeat center;
+//   background-size: cover;
+//   display: flex;
+//   align-items: center;
+//   overflow: hidden;
+
+//   @media (max-width: 1500px) {
+//     height: 650px;
+//   }
+
+//   &__container {
+//     position: relative;
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+
+//   &__card {
+//     position: relative;
+//     width: 600px;
+//     background: rgba(255, 255, 255, 0.55);
+//     backdrop-filter: blur(15px);
+//     -webkit-backdrop-filter: blur(15px);
+//     padding: 60px;
+//     border-radius: 12px;
+//     z-index: 2;
+//     overflow: visible;
+//     transition: all 0.4s ease;
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       width: 280px;
+//       height: 280px;
+//       background: #ff0000;
+//       border-radius: 50%;
+//       filter: blur(120px);
+//       opacity: 0.45;
+//       left: -120px;
+//       bottom: -120px;
+//       z-index: -1;
+//       transition: all 0.4s ease;
+//     }
+
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       width: 220px;
+//       height: 220px;
+//       background: #ffffff;
+//       border-radius: 50%;
+//       filter: blur(100px);
+//       opacity: 0.25;
+//       right: -80px;
+//       top: -80px;
+//       z-index: -1;
+//       transition: all 0.4s ease;
+//     }
+
+//     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25),
+//     0 0 50px rgba(255, 0, 0, 0.15);
+
+//     &:hover {
+//       transform: translateY(-8px) scale(1.02);
+
+//       box-shadow:
+//         0 25px 60px rgba(0, 0, 0, 0.3),
+//         0 0 80px rgba(255, 0, 0, 0.3);
+
+//       &::before {
+//         opacity: 0.7;
+//         filter: blur(140px);
+//       }
+
+//       &::after {
+//         opacity: 0.4;
+//       }
+//     }
+//   }
+
+//   &__top {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   &__title {
+//     font-size: 30px;
+//     font-weight: 500;
+//     line-height: 1.3;
+
+//     span {
+//       color: #d00101;
+//     }
+//   }
+
+//   &__icon img {
+//     width: 50px;
+//     transition: 0.5s;
+//   }
+
+//   &__card:hover &__icon img {
+//     transform: rotate(15deg) scale(1.1);
+//   }
+
+//   &__text {
+//     margin: 20px 0 35px;
+//     font-size: 16px;
+//     color: #666;
+//     line-height: 1.6;
+//   }
+
+//   &__btn {
+//     display: inline-flex;
+//     align-items: center;
+//     text-decoration: none;
+//     border-radius: 6px;
+//     overflow: hidden;
+//     transition: 0.3s;
+
+//     span {
+//       padding: 18px 45px;
+//       border: 1px solid #ddd;
+//       border-right: none;
+//       background: #fff;
+//       color: #000;
+//       transition: 0.3s;
+//     }
+
+//     &-icon {
+//       background: #d00101;
+//       color: #fff;
+//       padding: 18px;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       transition: 0.3s;
+//       height: 62px;
+//     }
+
+//     &:hover span {
+//       color: #d00101;
+//       border-color: #d00101;
+//     }
+
+//     &:hover .vapros__btn-icon {
+//       transform: translateX(5px);
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     &__container {
+//       justify-content: center;
+//     }
+
+//     &__card {
+//       width: 90%;
+//       padding: 30px;
+
+//       &::before {
+//         width: 180px;
+//         height: 180px;
+//         left: -60px;
+//         bottom: -60px;
+//       }
+
+//       &::after {
+//         width: 150px;
+//         height: 150px;
+//       }
+//     }
+
+//     &__title {
+//       font-size: 22px;
+//     }
+
+//     &__btn span {
+//       padding: 12px 20px;
+//     }
+
+//     &__btn-icon {
+//       padding: 12px;
+//     }
+//   }
+// }
+
 .vapros {
   position: relative;
   height: 750px;
@@ -6,10 +316,8 @@
   display: flex;
   align-items: center;
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+  @media (max-width:1500px) {
+    height: 650px;
   }
 
   &__container {
@@ -20,15 +328,18 @@
 
   &__card {
     width: 600px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.615);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 60px;
     border-radius: 10px;
     z-index: 2;
+    box-shadow: 1px 1px 50px red;
     transition: all 0.4s ease;
 
     &:hover {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
     }
   }
 
