@@ -1,3 +1,298 @@
+// import React, { useEffect, useState, useRef } from 'react'
+
+// import { useParams, useNavigate } from 'react-router-dom'
+// import { newsData, newsDataEn } from '../../static'
+// import { useTranslation } from 'react-i18next'
+// import { Swiper, SwiperSlide } from 'swiper/react'
+// import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+
+// import 'swiper/css'
+// import 'swiper/css/navigation'
+// import 'swiper/css/pagination'
+
+// import './newsSingle.scss'
+
+// const NewsSingle = () => {
+//     const { id } = useParams()
+//     const navigate = useNavigate()
+//     const [news, setNews] = useState(null)
+//     const { t, i18n } = useTranslation()
+//     const observerRef = useRef(null)
+
+//     const fullData = i18n?.language === "rus" ? newsData : newsDataEn
+
+//     useEffect(() => {
+//         window.scrollTo(0, 0)
+//         const foundNews = fullData.find(item => item.id === parseInt(id))
+//         if (foundNews) {
+//             setNews(foundNews)
+//         } else {
+//             navigate('/news')
+//         }
+//     }, [id, navigate, fullData])
+
+//     useEffect(() => {
+//         const observerCallback = (entries) => {
+//             entries.forEach((entry) => {
+//                 if (entry.isIntersecting) {
+//                     entry.target.classList.add('visible')
+//                 }
+//             })
+//         }
+
+//         observerRef.current = new IntersectionObserver(observerCallback, {
+//             threshold: 0.1,
+//             rootMargin: '0px 0px -50px 0px'
+//         })
+
+//         const sections = document.querySelectorAll('.location-section')
+//         sections.forEach((section) => {
+//             observerRef.current.observe(section)
+//         })
+
+//         return () => {
+//             if (observerRef.current) {
+//                 observerRef.current.disconnect()
+//             }
+//         }
+//     }, [news])
+
+//     const renderLocationSections = () => {
+//         if (!news.locationData) {
+//             return news.fullContent?.map((text, index) => (
+//                 <p key={index} className="article-text">{text}</p>
+//             ))
+//         }
+
+//         return news.locationData.map((location) => {
+//             if (location.position === 'right') {
+//                 return (
+//                     <div key={location.id} className="location-section scroll-animate" data-direction="right">
+//                         <div className="location-content-wrapper layout-right">
+//                             <div className="location-images-block animate-from-right">
+//                                 <div className="images-grid">
+//                                     {location.images.map((img, imgIndex) => (
+//                                         <div key={imgIndex} className="image-item">
+//                                             <img src={img} alt={`${location.title} ${imgIndex + 1}`} />
+//                                         </div>
+//                                     ))}
+//                                 </div>
+//                             </div>
+
+//                             <div className="location-text-block animate-from-right">
+//                                 <h2 className="location-title">{location.title}</h2>
+//                                 <p className="location-subtitle">📍 {location.location}</p>
+//                                 <p className="location-description">{location.description}</p>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 )
+//             } else {
+//                 return (
+//                     <div key={location.id} className="location-section scroll-animate" data-direction="left">
+//                         <div className="location-content-wrapper layout-left">
+//                             <div className="location-text-block animate-from-left">
+//                                 <h2 className="location-title">{location.title}</h2>
+//                                 <p className="location-subtitle">📍 {location.location}</p>
+//                                 <p className="location-description">{location.description}</p>
+//                             </div>
+//                             <div className="location-images-block animate-from-left">
+//                                 <div className="images-grid">
+//                                     {location.images.map((img, imgIndex) => (
+//                                         <div key={imgIndex} className="image-item">
+//                                             <img src={img} alt={`${location.title} ${imgIndex + 1}`} />
+//                                         </div>
+//                                     ))}
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 )
+//             }
+//         })
+//     }
+
+//     if (!news) {
+//         return (
+//             <div className="loading-container">
+//                 <div className="loading-spinner"></div>
+//             </div>
+//         )
+//     }
+
+//     if (parseInt(id) === 5) {
+//         return (
+//             <div className="news-single-page">
+//                 <div className="news-single-container container">
+//                     <div className="breadcrumb">
+//                         <span onClick={() => navigate('/')} className="breadcrumb-item">{t("Домашняя")}</span>
+//                         <span className="breadcrumb-divider">/</span>
+//                         <span onClick={() => navigate('/news')} className="breadcrumb-item">{t("Новости")}</span>
+//                         <span className="breadcrumb-divider">/</span>
+//                         <span className="breadcrumb-current">{news?.category}</span>
+//                     </div>
+
+//                     <article className="news-article">
+//                         <div className="article-header">
+//                             <h1 className="article-title">{news.title}</h1>
+//                         </div>
+
+//                         <div className="article-content-top">
+//                             {news.description?.map((el, index) => (
+//                                 <p key={index} className="article-lead">{el}</p>
+//                             ))}
+//                         </div>
+
+//                         <div className="article-content">
+//                             <div className="article-content-info">
+//                                 {news.sections?.map((section, sectionIndex) => (
+//                                     <div key={sectionIndex} className="special-section">
+//                                         <div className="special-section-texts">
+//                                             {section.texts.map((item, i) =>
+//                                                 item.type === "heading" ? (
+//                                                     <h2 key={i} className="section-heading">{item.text}</h2>
+//                                                 ) : (
+//                                                     <p key={i} className="article-text">{item.text}</p>
+//                                                 )
+//                                             )}
+//                                         </div>
+//                                         {section.images?.length > 0 && (
+//                                             <div className={`special-section-images ${sectionIndex === 1 ? 'special-section-images--second' : ''}`}>
+//                                                 {section.images.map((img, i) => (
+//                                                     <div key={i} className="special-image-item">
+//                                                         <img src={img} alt={`section-${sectionIndex}-${i}`} />
+//                                                     </div>
+//                                                 ))}
+//                                             </div>
+//                                         )}
+//                                     </div>
+//                                 ))}
+//                             </div>
+//                         </div>
+//                     </article>
+//                 </div>
+//             </div>
+//         )
+//     }
+
+//     if (parseInt(id) === 6) {
+//         return (
+//             <div className="news-single-page">
+//                 <div className="news-single-container container">
+//                     <div className="breadcrumb">
+//                         <span onClick={() => navigate('/')} className="breadcrumb-item">{t("Домашняя")}</span>
+//                         <span className="breadcrumb-divider">/</span>
+//                         <span onClick={() => navigate('/news')} className="breadcrumb-item">{t("Новости")}</span>
+//                         <span className="breadcrumb-divider">/</span>
+//                         <span className="breadcrumb-current">{news?.category}</span>
+//                     </div>
+
+//                     <article className="news-article">
+//                         <div className="article-header">
+//                             <h1 className="article-title">{news.title}</h1>
+//                         </div>
+
+//                         <div className="article-content-top">
+//                             {news.description?.map((el, index) => (
+//                                 <p key={index} className="article-lead">{el}</p>
+//                             ))}
+//                         </div>
+
+//                         <div className="news-gallery-grid">
+//                             {news.image?.[0] && (
+//                                 <div className="gallery-main">
+//                                     <img src={news.image[0]} alt={news.title} />
+//                                 </div>
+//                             )}
+//                             {news.image?.length > 1 && (
+//                                 <div className="gallery-secondary">
+//                                     {news.image.slice(1).map((img, index) => (
+//                                         <div key={index} className="gallery-secondary-item">
+//                                             <img src={img} alt={`${news.title}-${index + 2}`} />
+//                                         </div>
+//                                     ))}
+//                                 </div>
+//                             )}
+//                         </div>
+
+//                         <div className="article-content">
+//                             <div className="article-content-info">
+//                                 {renderLocationSections()}
+//                             </div>
+//                         </div>
+//                     </article>
+//                 </div>
+//             </div>
+//         )
+//     }
+
+//     return (
+//         <div className="news-single-page">
+//             <div className="news-single-container container">
+//                 <div className="breadcrumb">
+//                     <span onClick={() => navigate('/')} className="breadcrumb-item">{t("Домашняя")}</span>
+//                     <span className="breadcrumb-divider">/</span>
+//                     <span onClick={() => navigate('/news')} className="breadcrumb-item">{t("Новости")}</span>
+//                     <span className="breadcrumb-divider">/</span>
+//                     <span className="breadcrumb-current">{news?.category}</span>
+//                 </div>
+
+//                 <article className="news-article">
+//                     <div className="article-header">
+//                         <h1 className="article-title">{news.title}</h1>
+//                     </div>
+
+//                     <div className="article-content-top">
+//                         {news.description?.map((el, index) => (
+//                             <p key={index} className="article-lead">{el}</p>
+//                         ))}
+//                     </div>
+
+//                     <div className="news-article-bottom">
+//                         <Swiper
+//                             modules={[Navigation, Pagination, Autoplay]}
+//                             spaceBetween={15}
+//                             slidesPerView={1}
+//                             navigation
+//                             pagination={{ clickable: true }}
+//                             autoplay={{
+//                                 delay: 2000,
+//                                 disableOnInteraction: false,
+//                                 pauseOnMouseEnter: true
+//                             }}
+//                             loop={true}
+//                             breakpoints={{
+//                                 640: { slidesPerView: 2 },
+//                                 1024: { slidesPerView: 3 },
+//                             }}
+//                             className="article-swiper"
+//                         >
+//                             {news.image?.map((el, index) => (
+//                                 <SwiperSlide key={index}>
+//                                     <div className="article-image-slide">
+//                                         <img src={el} alt={news.title} />
+//                                         {news.world?.[index] && (
+//                                             <p className="article-image-name-title">{news.world[index]}</p>
+//                                         )}
+//                                     </div>
+//                                 </SwiperSlide>
+//                             ))}
+//                         </Swiper>
+//                     </div>
+
+//                     <div className="article-content">
+//                         <div className="article-content-info">
+//                             {renderLocationSections()}
+//                         </div>
+//                     </div>
+//                 </article>
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default NewsSingle
+
 import React, { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { newsData, newsDataEn } from '../../static'
@@ -47,6 +342,11 @@ const NewsSingle = () => {
         const sections = document.querySelectorAll('.location-section')
         sections.forEach((section) => {
             observerRef.current.observe(section)
+        })
+
+        const galleryItems = document.querySelectorAll('.bento-gallery .bento-tile')
+        galleryItems.forEach((item) => {
+            observerRef.current.observe(item)
         })
 
         return () => {
@@ -109,6 +409,56 @@ const NewsSingle = () => {
                 )
             }
         })
+    }
+
+    // Bento-grid mosaic gallery for id:6 — asymmetric tiles, bold rounded
+    // shapes, 3D tilt on hover, staggered scale-in entrance.
+    const renderEditorialGallery = () => {
+        if (!news.image || news.image.length === 0) return null
+        const images = news.image.slice(0, 5)
+
+        const handleTiltMove = (e) => {
+            const card = e.currentTarget
+            const rect = card.getBoundingClientRect()
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            const rotateX = ((y / rect.height) - 0.5) * -10
+            const rotateY = ((x / rect.width) - 0.5) * 10
+            card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`
+        }
+
+        const handleTiltLeave = (e) => {
+            e.currentTarget.style.transform = ''
+        }
+
+        return (
+            <div className="bento-gallery">
+                <div className="bento-header">
+                    <h3 className="bento-title">{t("Фоторепортаж")}</h3>
+                    <span className="bento-badge">{images.length} {t("фото")}</span>
+                </div>
+
+                <div className="bento-grid">
+                    {images.map((img, i) => (
+                        <div
+                            key={i}
+                            className={`bento-tile bento-tile-${i + 1}`}
+                            onMouseMove={handleTiltMove}
+                            onMouseLeave={handleTiltLeave}
+                        >
+                            <div className="bento-tile-inner">
+                                <img src={img} alt={`${news.title}-${i + 1}`} />
+                                <div className="bento-overlay"></div>
+                                {news.world?.[i] && (
+                                    <span className="bento-caption">{news.world[i]}</span>
+                                )}
+                                <span className="bento-index">{String(i + 1).padStart(2, '0')}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        )
     }
 
     if (!news) {
@@ -197,22 +547,7 @@ const NewsSingle = () => {
                             ))}
                         </div>
 
-                        <div className="news-gallery-grid">
-                            {news.image?.[0] && (
-                                <div className="gallery-main">
-                                    <img src={news.image[0]} alt={news.title} />
-                                </div>
-                            )}
-                            {news.image?.length > 1 && (
-                                <div className="gallery-secondary">
-                                    {news.image.slice(1).map((img, index) => (
-                                        <div key={index} className="gallery-secondary-item">
-                                            <img src={img} alt={`${news.title}-${index + 2}`} />
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
+                        {renderEditorialGallery()}
 
                         <div className="article-content">
                             <div className="article-content-info">
