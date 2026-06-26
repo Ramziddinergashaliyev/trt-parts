@@ -575,6 +575,34 @@ export const newsData = [
     ]
   },
   {
+    id: 6,
+    category: "Новости",
+    world: [""],
+    title: "Турецкая делегация посетила производственный объект TRT",
+    description: ["ООО «TECHNOLOGIES OF REAL TIME» недавно приняло на своем производственном объекте в Узбекистане группу клиентов и представителей автомобильной промышленности из Турции."],
+    date: "18 Июнь, 2026",
+    img: turk26Main,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "В ходе визита гости были ознакомлены с продуктовым портфелем TRT, включающим компоненты подвески, рулевого управления и резинометаллические изделия. У них была возможность ознакомиться с современными производственными мощностями компании, наблюдать за ключевыми производственными процессами и получить представление о технологиях и системах контроля качества, применяемых на всех этапах производства.",
+          "В рамках программы TRT организовала комплексную экскурсию по заводу, продемонстрировав все этапы производства — от обработки сырья и прецизионной механической обработки до сборки, испытаний и финального контроля. Визит подчеркнул приверженность TRT качеству, инновациям и постоянному развитию продукции."
+        ],
+        images: [turk6, turk7, turk9, turk8, turk10]
+      },
+      {
+        heading: "",
+        texts: [
+          "Программа также включала технические презентации и интерактивные обсуждения с инженерами и представителями руководства TRT. Гости поделились своим опытом, предоставили ценные отзывы и узнали больше о производственных возможностях компании и стандартах продукции.",
+          "Визит стал отличной возможностью укрепить отношения с клиентами, повысить узнаваемость продукции и продемонстрировать приверженность TRT прозрачности, качеству и удовлетворенности клиентов.",
+          "TRT – Инженерное совершенство. Доверие по всему миру."
+        ],
+        images: [turk1, turk2, turk3, turk4, turk5]
+      }
+    ]
+  },
+  {
     id: 5,
     category: "Новости",
     world: [""],
@@ -688,34 +716,6 @@ export const newsData = [
       }
     ]
   },
-  {
-    id: 6,
-    category: "Новости",
-    world: [""],
-    title: "Турецкая делегация посетила производственный объект TRT",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» недавно приняло на своем производственном объекте в Узбекистане группу клиентов и представителей автомобильной промышленности из Турции."],
-    date: "18 Июнь, 2026",
-    img: turk26Main,
-    gallerySections: [
-      {
-        heading: "",
-        texts: [
-          "В ходе визита гости были ознакомлены с продуктовым портфелем TRT, включающим компоненты подвески, рулевого управления и резинометаллические изделия. У них была возможность ознакомиться с современными производственными мощностями компании, наблюдать за ключевыми производственными процессами и получить представление о технологиях и системах контроля качества, применяемых на всех этапах производства.",
-          "В рамках программы TRT организовала комплексную экскурсию по заводу, продемонстрировав все этапы производства — от обработки сырья и прецизионной механической обработки до сборки, испытаний и финального контроля. Визит подчеркнул приверженность TRT качеству, инновациям и постоянному развитию продукции."
-        ],
-        images: [turk6, turk7, turk9, turk8, turk10]
-      },
-      {
-        heading: "",
-        texts: [
-          "Программа также включала технические презентации и интерактивные обсуждения с инженерами и представителями руководства TRT. Гости поделились своим опытом, предоставили ценные отзывы и узнали больше о производственных возможностях компании и стандартах продукции.",
-          "Визит стал отличной возможностью укрепить отношения с клиентами, повысить узнаваемость продукции и продемонстрировать приверженность TRT прозрачности, качеству и удовлетворенности клиентов.",
-          "TRT – Инженерное совершенство. Доверие по всему миру."
-        ],
-        images: [turk1, turk2, turk3, turk4, turk5]
-      }
-    ]
-  }
 ]
 
 export const newsDataEn = [
@@ -736,6 +736,34 @@ export const newsDataEn = [
         description: 'Automechanika Astana is one of Central Asia\'s key automotive aftermarket exhibitions, bringing together industry professionals from across the region.During the event, TRT showcased its suspension, steering, and rubber- metal components while strengthening partnerships and expanding its presence in the Central Asian market.',
         images: [one26, fife26, three26, two26],
         position: 'left'
+      }
+    ]
+  },
+  {
+    id: 6,
+    category: "News",
+    world: [""],
+    title: "Turkish Delegation  Visit TRT Manufacturing Facility",
+    description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» recently welcomed a group of clients and automotive industry representatives from Türkiye to its manufacturing facility in Uzbekistan."],
+    date: "18 June, 2026",
+    img: turk26Main,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "During the visit, guests were introduced to TRT’s product portfolio, including suspension, steering, and rubber-metal components. They had the opportunity to explore the company’s modern production facilities, observe key manufacturing processes, and gain insight into the technologies and quality control systems implemented throughout production.",
+          "As part of the program, TRT organized a comprehensive factory tour, showcasing every stage of manufacturing—from raw material processing and precision machining to assembly, testing, and final inspection. The visit highlighted TRT’s commitment to quality, innovation, and continuous product development."
+        ],
+        images: [turk6, turk7, turk9, turk8, turk10]
+      },
+      {
+        heading: "",
+        texts: [
+          "The program also included technical presentations and interactive discussions with TRT engineers and management representatives. Guests shared their experiences, provided valuable feedback, and learned more about the company's manufacturing capabilities and product standards.",
+          "The visit served as an excellent opportunity to strengthen customer relationships, increase product awareness, and demonstrate TRT’s dedication to transparency, quality, and customer satisfaction.",
+          "TRT – Engineering Excellence. Trusted Worldwide."
+        ],
+        images: [turk1, turk2, turk3, turk4, turk5]
       }
     ]
   },
@@ -851,32 +879,5 @@ export const newsDataEn = [
       }
     ]
   },
-  {
-    id: 6,
-    category: "News",
-    world: [""],
-    title: "Turkish Delegation  Visit TRT Manufacturing Facility",
-    description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» recently welcomed a group of clients and automotive industry representatives from Türkiye to its manufacturing facility in Uzbekistan."],
-    date: "18 June, 2026",
-    img: turk26Main,
-    gallerySections: [
-      {
-        heading: "",
-        texts: [
-          "During the visit, guests were introduced to TRT’s product portfolio, including suspension, steering, and rubber-metal components. They had the opportunity to explore the company’s modern production facilities, observe key manufacturing processes, and gain insight into the technologies and quality control systems implemented throughout production.",
-          "As part of the program, TRT organized a comprehensive factory tour, showcasing every stage of manufacturing—from raw material processing and precision machining to assembly, testing, and final inspection. The visit highlighted TRT’s commitment to quality, innovation, and continuous product development."
-        ],
-        images: [turk6, turk7, turk9, turk8, turk10]
-      },
-      {
-        heading: "",
-        texts: [
-          "The program also included technical presentations and interactive discussions with TRT engineers and management representatives. Guests shared their experiences, provided valuable feedback, and learned more about the company's manufacturing capabilities and product standards.",
-          "The visit served as an excellent opportunity to strengthen customer relationships, increase product awareness, and demonstrate TRT’s dedication to transparency, quality, and customer satisfaction.",
-          "TRT – Engineering Excellence. Trusted Worldwide."
-        ],
-        images: [turk1, turk2, turk3, turk4, turk5]
-      }
-    ]
-  }
+
 ]
