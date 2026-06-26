@@ -107,6 +107,12 @@ import main26 from "../assets/news26/astana/main.webp"
 
 // 2026 Turkia
 
+import turk1 from "../assets/turkish26/t1.webp"
+import turk2 from "../assets/turkish26/t2.webp"
+import turk3 from "../assets/turkish26/t3.webp"
+import turk4 from "../assets/turkish26/t4.webp"
+import turk5 from "../assets/turkish26/t5.webp"
+
 import turk7 from "../assets/turkish26/t7.webp"
 import turk8 from "../assets/turkish26/t8.webp"
 import turk10 from "../assets/turkish26/t10.webp"
@@ -543,7 +549,7 @@ export const Swipper = [
     img: item3,
     title: "Рулевой наконечник 7172",
     subtitle: "Рулевые наконечники",
-  },
+  }
 ];
 
 export const newsData = [
@@ -573,7 +579,7 @@ export const newsData = [
     world: [""],
     title: "TRT на Международной ярмарке в Багдаде 2026",
     description: [
-      "TRT JV LLC “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания(aftermarket) и профессионалов отрасли со всего Узбекистана.",
+      "TRT JV LLC “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания и профессионалов отрасли со всего Узбекистана.",
     ],
     date: "5 мая 2026 г",
     img: main,
@@ -685,13 +691,30 @@ export const newsData = [
     id: 6,
     category: "Новости",
     world: [""],
-    title: "TRT на Международной ярмарке в Багдаде 2026",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
-    date: "1-7 февраль, 2026",
+    title: "Турецкая делегация посетила производственный объект TRT",
+    description: ["ООО «TECHNOLOGIES OF REAL TIME» недавно приняло на своем производственном объекте в Узбекистане группу клиентов и представителей автомобильной промышленности из Турции."],
+    date: "18 Июнь, 2026",
     img: iraq,
-    image: [turk6, turk7, turk9, turk8, turk10],
-    fullContent: ["В рамках выставки TRT демонстрирует свои высококачественные автомобильные компоненты иракским импортерам, дистрибьюторам и представителям местного рынка. Мероприятие предоставляет важную возможность представить продукцию узбекского производства на новых рынках и укрепить международное присутствие ТРТ.", "В ходе выставки представители ТРТ провели ряд продуктивных переговоров с потенциальными партнерами. Обсуждения были сосредоточены на:", "• Анализ рынка автомобилей Ирака", "• Высоко востребованные сегменты автомобильных компонентов", "• Возможности логистики и дистрибуции", "• Стратегии расширения присутствия продуктов ТРТ в Ираке", "В результате этих встреч был успешно заключен ряд экспортных соглашений, что ознаменовало важный шаг к долгосрочному сотрудничеству с иракскими партнерами.", "Участие в Багдадской международной ярмарке 2026 подчеркивает приверженность ТРТ расширению экспортных рынков, укреплению узбекско-иракских торгово-экономических отношений и поставке надежных, высокопроизводительных автомобильных решений клиентам по всему миру."]
-  },
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "В ходе визита гости были ознакомлены с продуктовым портфелем TRT, включающим компоненты подвески, рулевого управления и резинометаллические изделия. У них была возможность ознакомиться с современными производственными мощностями компании, наблюдать за ключевыми производственными процессами и получить представление о технологиях и системах контроля качества, применяемых на всех этапах производства.",
+          "В рамках программы TRT организовала комплексную экскурсию по заводу, продемонстрировав все этапы производства — от обработки сырья и прецизионной механической обработки до сборки, испытаний и финального контроля. Визит подчеркнул приверженность TRT качеству, инновациям и постоянному развитию продукции."
+        ],
+        images: [turk6, turk7, turk9, turk8, turk10]
+      },
+      {
+        heading: "",
+        texts: [
+          "Программа также включала технические презентации и интерактивные обсуждения с инженерами и представителями руководства TRT. Гости поделились своим опытом, предоставили ценные отзывы и узнали больше о производственных возможностях компании и стандартах продукции.",
+          "Визит стал отличной возможностью укрепить отношения с клиентами, повысить узнаваемость продукции и продемонстрировать приверженность TRT прозрачности, качеству и удовлетворенности клиентов.",
+          "TRT – Инженерное совершенство. Доверие по всему миру."
+        ],
+        images: [turk1, turk2, turk3, turk4, turk5]
+      }
+    ]
+  }
 ]
 
 export const newsDataEn = [
@@ -831,11 +854,28 @@ export const newsDataEn = [
     id: 6,
     category: "News",
     world: [""],
-    title: "TRT at Baghdad International Fair 2026",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
-    date: "1-7 February, 2026",
+    title: "Turkish Delegation  Visit TRT Manufacturing Facility",
+    description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» recently welcomed a group of clients and automotive industry representatives from Türkiye to its manufacturing facility in Uzbekistan."],
+    date: "18 June, 2026",
     img: iraq,
-    image: [turk6, turk7, turk9, turk8, turk10],
-    fullContent: ["Within the framework of the exhibition, TRT is showcasing its high-quality automotive components to Iraqi importers, distributors, and local market representatives. The event provides an important opportunity to present Uzbek-made products to new markets and to strengthen TRT’s international presence.", "During the exhibition, TRT representatives held a series of productive negotiations with potential partners. Discussions focused on:", "• Analysis of the Iraqi automotive market", "• High-demand automotive component segments", "• Logistics and distribution opportunities", "• Strategies for expanding the presence of TRT products in Iraq", "As a result of these meetings, a number of export agreements were successfully concluded, marking an important step toward long-term cooperation with Iraqi partners.", "Participation in the Baghdad International Fair 2026 highlights TRT’s commitment to expanding export markets, strengthening Uzbekistan–Iraq trade and economic relations, and delivering reliable, high-performance automotive solutions to customers worldwide."]
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "During the visit, guests were introduced to TRT’s product portfolio, including suspension, steering, and rubber-metal components. They had the opportunity to explore the company’s modern production facilities, observe key manufacturing processes, and gain insight into the technologies and quality control systems implemented throughout production.",
+          "As part of the program, TRT organized a comprehensive factory tour, showcasing every stage of manufacturing—from raw material processing and precision machining to assembly, testing, and final inspection. The visit highlighted TRT’s commitment to quality, innovation, and continuous product development."
+        ],
+        images: [turk6, turk7, turk9, turk8, turk10]
+      },
+      {
+        heading: "",
+        texts: [
+          "The program also included technical presentations and interactive discussions with TRT engineers and management representatives. Guests shared their experiences, provided valuable feedback, and learned more about the company's manufacturing capabilities and product standards.",
+          "The visit served as an excellent opportunity to strengthen customer relationships, increase product awareness, and demonstrate TRT’s dedication to transparency, quality, and customer satisfaction.",
+          "TRT – Engineering Excellence. Trusted Worldwide."
+        ],
+        images: [turk1, turk2, turk3, turk4, turk5]
+      }
+    ]
   }
 ]
