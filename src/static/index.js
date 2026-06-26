@@ -107,6 +107,7 @@ import main26 from "../assets/news26/astana/main.webp"
 
 // 2026 Turkia
 
+import turk26Main from "../assets/turkish26/main.webp"
 import turk1 from "../assets/turkish26/t1.webp"
 import turk2 from "../assets/turkish26/t2.webp"
 import turk3 from "../assets/turkish26/t3.webp"
@@ -694,7 +695,7 @@ export const newsData = [
     title: "Турецкая делегация посетила производственный объект TRT",
     description: ["ООО «TECHNOLOGIES OF REAL TIME» недавно приняло на своем производственном объекте в Узбекистане группу клиентов и представителей автомобильной промышленности из Турции."],
     date: "18 Июнь, 2026",
-    img: iraq,
+    img: turk26Main,
     gallerySections: [
       {
         heading: "",
@@ -857,7 +858,7 @@ export const newsDataEn = [
     title: "Turkish Delegation  Visit TRT Manufacturing Facility",
     description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» recently welcomed a group of clients and automotive industry representatives from Türkiye to its manufacturing facility in Uzbekistan."],
     date: "18 June, 2026",
-    img: iraq,
+    img: turk26Main,
     gallerySections: [
       {
         heading: "",
