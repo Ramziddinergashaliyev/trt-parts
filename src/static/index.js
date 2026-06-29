@@ -104,9 +104,7 @@ import fife26 from "../assets/news26/astana/astana2.webp"
 import six26 from "../assets/news26/astana/astana1.webp"
 import main26 from "../assets/news26/astana/main.webp"
 
-
 // 2026 Turkia
-
 import turk26Main from "../assets/turkish26/main.webp"
 import turk1 from "../assets/turkish26/t1.webp"
 import turk2 from "../assets/turkish26/t2.webp"

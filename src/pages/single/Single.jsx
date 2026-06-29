@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 import fallbackImg from "../../assets/img/psc.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { getIdFromSlug } from "../../utils/slugHelper";
-
 import "./single.scss";
 
 const Lightbox = ({ src, onClose }) => {
