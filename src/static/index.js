@@ -118,6 +118,14 @@ import turk10 from "../assets/turkish26/t10.webp"
 import turk9 from "../assets/turkish26/t9.webp"
 import turk6 from "../assets/turkish26/t6.webp"
 
+// 2026 AVGONISTON
+import avgan1 from "../assets/avgan26/front.webp"
+import avganOne from "../assets/avgan26/one.webp"
+import avganTwo from "../assets/avgan26/two.webp"
+import avganThree from "../assets/avgan26/three.webp"
+import avganFour from "../assets/avgan26/four.webp"
+import avganFife from "../assets/avgan26/fife.webp"
+
 export const PARTNER = [
   {
     id: 1,
@@ -553,6 +561,27 @@ export const Swipper = [
 
 export const newsData = [
   {
+    id: 7,
+    category: "Новости",
+    world: [""],
+    title: "Делегация Афганистана посетила производственный завод TRT в рамках правительственной программы Узбекистана",
+    description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» с честью приняла делегацию представителей автомобильной промышленности и деловых партнеров из Афганистана на своем производственном предприятии в Узбекистане. Визит был организован в рамках официальной промышленной программы при поддержке Правительства Республики Узбекистан, направленной на укрепление регионального сотрудничества и развитие промышленного партнёрства. В ходе визита делегации был представлен широкий портфель продукции TRT, включая компоненты подвески, рулевого управления и резинометаллические изделия.Гости ознакомились с современными производственными мощностями компании, увидели передовые производственные технологии, автоматизированные процессы и строгие системы контроля качества, обеспечивающие соответствие каждой единицы продукции международным стандартам."],
+    date: "30 июля, 2026",
+    img: avgan1,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [],
+        images: [avganOne, avganTwo, avganThree, avganFour, avganFife]
+      },
+      {
+        heading: "",
+        texts: ["Экскурсия по заводу дала полное представление о производственных процессах TRT — от подготовки сырья и точной механической обработки до сборки, тестирования и итогового контроля качества. Визит продемонстрировал приверженность TRT инженерному совершенству, постоянным инновациям и устойчивым производственным практикам.", "В рамках программы инженеры и представители руководства TRT провели технические презентации и содержательные дискуссии, что позволило гостям глубже ознакомиться с производственными возможностями компании, инициативами в области исследований и разработок, а также глобальными стандартами качества. Делегация также обменялась идеями и обсудила возможности будущего сотрудничества в автомобильном секторе.", "Данный официальный визит, организованный по инициативе Правительства Узбекистана, стал ценной площадкой для укрепления деловых связей между Узбекистаном и Афганистаном, развития промышленного сотрудничества и демонстрации растущего производственного потенциала страны.", "TRT — Инженерное совершенство. Доверие по всему миру."],
+        images: []
+      }
+    ]
+  },
+  {
     id: 4,
     category: "Новости",
     world: ["Автомеханика Астана"],
@@ -717,6 +746,32 @@ export const newsData = [
 ]
 
 export const newsDataEn = [
+  {
+    id: 7,
+    category: "News",
+    world: [""],
+    title: "Afghanistan Delegation Visits TRT Manufacturing Facility Under Government of Uzbekistan Program.",
+    description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» was honored to welcome a delegation of automotive industry representatives and business partners from Afghanistan to its manufacturing facility in Uzbekistan. The visit was organized as part of an official industrial program supported by the Government of the Republic of Uzbekistan, aimed at strengthening regional cooperation and promoting industrial partnerships. During the visit, the delegation was introduced to TRT’s comprehensive product portfolio, including suspension, steering, and rubber - metal components.Guests toured the company's state-of-the-art manufacturing facilities, where they observed advanced production technologies, automated processes, and rigorous quality control systems that ensure every product meets international standards."],
+    date: "30 July, 2026",
+    img: avgan1,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [""],
+        images: [avganOne, avganTwo, avganThree, avganFour, avganFife]
+      },
+      {
+        heading: "",
+        texts: [
+          "The factory tour provided a complete overview of TRT’s manufacturing operations, from raw material preparation and precision machining to assembly, testing, and final quality inspection. The visit demonstrated TRT’s commitment to engineering excellence, continuous innovation, and sustainable manufacturing practices.",
+          "As part of the program, TRT engineers and management representatives conducted technical presentations and engaging discussions, allowing guests to gain deeper insight into the company’s production capabilities, research and development initiatives, and global quality standards. The delegation also exchanged ideas and explored opportunities for future cooperation within the automotive sector.",
+          "This official visit, organized under the initiative of the Government of Uzbekistan, served as a valuable platform for strengthening business relationships between Uzbekistan and Afghanistan, promoting industrial collaboration, and showcasing the country's growing manufacturing potential.",
+          "TRT – Engineering Excellence. Trusted Worldwide."
+        ],
+        images: []
+      }
+    ]
+  },
   {
     id: 4,
     category: "News",
