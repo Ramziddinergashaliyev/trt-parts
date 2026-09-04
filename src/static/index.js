@@ -126,6 +126,14 @@ import avganThree from "../assets/avgan26/three.webp"
 import avganFour from "../assets/avgan26/four.webp"
 import avganFife from "../assets/avgan26/fife.webp"
 
+// 2026 Full TRT
+
+import full1 from "../assets/fullTrt/one.webp"
+import full2 from "../assets/fullTrt/two.webp"
+import full3 from "../assets/fullTrt/three.webp"
+import full4 from "../assets/fullTrt/four.webp"
+import full5 from "../assets/fullTrt/fife.webp"
+
 export const PARTNER = [
   {
     id: 1,
@@ -746,6 +754,39 @@ export const newsData = [
 ]
 
 export const newsDataEn = [
+  {
+    id: 8,
+    category: "News",
+    world: [""],
+    title: "TRT Hosts Client Day: Partners from Across Uzbekistan Visit Our Factory and Explore the Full Product Range",
+    description: ["Distributors, automotive professionals, and business partners gathered at TRT's manufacturing facility for an exclusive behind-the-scenes experience — from raw material to finished component.", "TRT JV LLC Tashkent, Uzbekistan 2026"],
+    date: "28 August, 2026",
+    img: full1,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "TRT JV LLC recently hosted its Client Day — a dedicated event bringing together distributors, automotive professionals, and business partners from across Uzbekistan for an exclusive visit to TRT's manufacturing facility. The event offered guests a rare opportunity to go behind the production floor, see TRT's complete product range, and witness firsthand the manufacturing process that goes into every TRT component.",
+          "An Invitation Behind the Factory Floor Clients and partners travelled from cities across Uzbekistan to attend the event at TRT's facility in Tashkent. From the moment guests arrived, the focus was on complete transparency — showing exactly how TRT operates, how components are manufactured, and what standards are maintained at every stage of production.",
+          "The factory tour took guests through the entire production journey — from the arrival of raw materials to the moment a finished, quality-checked component is ready for dispatch. Attendees observed each stage of the manufacturing process, including material preparation, precision machining, assembly, surface treatment, and final quality control inspection.",
+          "We wanted our partners to see exactly what goes into a TRT component — not just the finished product, but every step that makes it reliable. When you see the process, you understand the quality",
+        ],
+        images: [full1, full2, full3, full4, full5]
+      },
+      {
+        heading: "",
+        texts: [
+          "The Full TRT Product Range on Display A dedicated product showcase gave guests the opportunity to explore TRT's complete aftermarket range up close. The display covered the full spectrum of TRT's suspension, steering, and rubber - metal components — including ball joints, tie rod ends, rack ends, control arm bushings, front stabilizer links, steering racks, and hydraulic pumps.",
+          "Technical representatives from TRT were on hand throughout the event to answer questions, explain specifications, and discuss the engineering behind each product category. For many attendees, seeing and handling the components directly — alongside technical detail — gave a new level of confidence in the products they supply to the market.",
+          "From Raw Material to Finished Product One of the highlights of the day was the live demonstration of TRT's manufacturing process — showing guests the complete journey from raw steel stock to a precision-finished automotive component. Attendees saw how raw materials are selected, processed through precision pressing and machining, treated with TRT's electro - deposition coating for corrosion resistance, and then put through strict quality control before being packaged and dispatched. The demonstration made clear why TRT components meet OEM- equivalent standards — and why consistency in every step of production is non - negotiable for a manufacturer supplying the global aftermarket. Event highlights Clients and partners attended from across Uzbekistan",
+          "Full factory tour — from raw material intake to finished component dispatch Complete TRT product range on display — suspension, steering, and rubber - metal components Live demonstration of the full manufacturing and QC process One - to - one meetings between TRT technical team and attending partners Building Stronger Partnerships Beyond the factory tour and product showcase, Client Day served as an important platform for strengthening relationships between TRT and its distribution partners.One - to - one conversations between TRT's team and attending clients allowed for direct discussions on product specifications, supply terms, and future cooperation opportunities.",
+          "TRT JV LLC remains committed to transparency, quality, and long-term partnerships with distributors and automotive professionals across Uzbekistan and the wider global aftermarket. Events like Client Day are part of TRT's ongoing commitment to building trust — not just through the products we manufacture, but through the relationships we invest in. We thank all partners and guests who attended and look forward to welcoming more clients to our facility in the future.",
+          "For partnership and product inquiries, contact TRT JV LLC directly. Full product catalog available on request."
+        ],
+        images: []
+      }
+    ]
+  },
   // {
   //   id: 7,
   //   category: "News",
@@ -932,5 +973,4 @@ export const newsDataEn = [
       }
     ]
   },
-
 ]
