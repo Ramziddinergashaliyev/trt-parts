@@ -14,6 +14,7 @@ const baseQuery = async (args, api, extraOptions) => {
       return headers;
     },
   });
+
   const result = await rawBaseQuery(args, api, extraOptions);
 
   if (result.error) {

@@ -13,6 +13,8 @@ const Product = ({ product, isTrue }) => {
   const [deleteProduct] = useDeleteProductMutation();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
+  console.log(product);
+
 
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Вы хотите удалить продукт?");
@@ -41,7 +43,7 @@ const Product = ({ product, isTrue }) => {
         {product?.images?.length > 0 && product.images[0] ? (
           <img
             src={product.images[0]}
-            alt={product?.translations?.[currentLang]?.name || "Mahsulot rasmi"}
+            alt={product?.translations?.[currentLang]?.name || "Product image"}
             loading="lazy"
           />
         ) : (
