@@ -17,7 +17,6 @@ const NewsSingle = () => {
     const [news, setNews] = useState(null)
     const { t, i18n } = useTranslation()
     const observerRef = useRef(null)
-
     const fullData = i18n?.language === "rus" ? newsData : newsDataEn
 
     useEffect(() => {
@@ -54,6 +53,7 @@ const NewsSingle = () => {
                 observerRef.current.disconnect()
             }
         }
+
     }, [news])
 
     const renderLocationSections = () => {

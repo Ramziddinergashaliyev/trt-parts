@@ -13,8 +13,6 @@ const Product = ({ product, isTrue }) => {
   const [deleteProduct] = useDeleteProductMutation();
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
-  console.log(product);
-
 
   const handleDelete = async () => {
     const confirmDelete = window.confirm("Вы хотите удалить продукт?");
@@ -25,6 +23,7 @@ const Product = ({ product, isTrue }) => {
     } catch (error) {
       toast.error("Произошла ошибка. Повторите попытку позже.");
     }
+
   };
 
   const name =
@@ -41,18 +40,23 @@ const Product = ({ product, isTrue }) => {
     >
       <NavLink to={`/single/${slug}`} className="result__card__img">
         {product?.images?.length > 0 && product.images[0] ? (
+
           <img
             src={product.images[0]}
             alt={product?.translations?.[currentLang]?.name || "Product image"}
             loading="lazy"
           />
+
         ) : (
+
           <img
             src={img}
             alt={product?.translations?.[currentLang]?.name || "Mahsulot rasmi"}
             loading="lazy"
           />
+
         )}
+
       </NavLink>
 
       {isTrue && (
