@@ -358,7 +358,7 @@ export const ACCARDION = [
     country: "Таджикистан",
     distributors: [
       {
-        name: 'ООО "ТОСОЛ-ПЛЮС"',
+        name: '"ТОСОЛ-ПЛЮС"',
         title: "Таджикистан, Согдийская область, Дж. Расуловский район, пгт Мехробод ул. И. Нурматов 45/4",
         number: "+992 92 707 49 86",
       }
@@ -396,7 +396,7 @@ export const ACCARDION = [
     country: "ОАЭ",
     distributors: [
       {
-        name: 'ООО "Dynatrade Auto Service"',
+        name: '"Dynatrade Auto Service"',
         title: "Nad Al Hamar, напротив Belhasa Driving Center, Дубай, Объединённые Арабские Эмираты",
         number: "+971 50 646 7009",
       }
@@ -577,14 +577,14 @@ export const newsData = [
     category: "Новости",
     world: [""],
     title: "TRT Провела День Клиента: Партнёры со всего Узбекистана посетили наш завод и ознакомились с полным ассортиментом продукции",
-    description: ["Дистрибьюторы, специалисты автомобильной отрасли и деловые партнёры собрались на производственном предприятии TRT для эксклюзивного знакомства с процессом изнутри — от сырья до готового компонента.", "TRT OOO Ташкент, Узбекистан 2026"],
+    description: ["Дистрибьюторы, специалисты автомобильной отрасли и деловые партнёры собрались на производственном предприятии TRT для эксклюзивного знакомства с процессом изнутри — от сырья до готового компонента.", "TRT  Ташкент, Узбекистан 2026"],
     date: "28 августа, 2026",
     img: full1,
     gallerySections: [
       {
         heading: "",
         texts: [
-          "TRT OOO недавно провела свой День Клиента — специальное мероприятие, объединившее дистрибьюторов, специалистов автомобильной отрасли и деловых партнёров со всего Узбекистана для эксклюзивного визита на производственное предприятие TRT. Мероприятие предоставило гостям редкую возможность увидеть производственный цех изнутри, ознакомиться с полным ассортиментом продукции TRT и лично убедиться в процессе производства, который стоит за каждым компонентом TRT.",
+          "TRT  недавно провела свой День Клиента — специальное мероприятие, объединившее дистрибьюторов, специалистов автомобильной отрасли и деловых партнёров со всего Узбекистана для эксклюзивного визита на производственное предприятие TRT. Мероприятие предоставило гостям редкую возможность увидеть производственный цех изнутри, ознакомиться с полным ассортиментом продукции TRT и лично убедиться в процессе производства, который стоит за каждым компонентом TRT.",
           "Приглашение за кулисы завода Клиенты и партнёры приехали из разных городов Узбекистана, чтобы посетить мероприятие на предприятии TRT в Ташкенте. С момента прибытия гостей акцент был сделан на полной прозрачности — демонстрации того, как именно работает TRT, как производятся компоненты и какие стандарты соблюдаются на каждом этапе производства.",
           "Экскурсия по заводу провела гостей через весь производственный путь — от поступления сырья до момента, когда готовый, прошедший проверку качества компонент готов к отправке. Участники наблюдали за каждым этапом производственного процесса, включая подготовку материалов, точную механическую обработку, сборку, поверхностную обработку и итоговый контроль качества.",
           "Мы хотели, чтобы наши партнёры увидели, из чего складывается компонент TRT — не только готовое изделие, но и каждый шаг, который делает его надёжным. Когда видишь процесс, начинаешь понимать качество",
@@ -598,8 +598,8 @@ export const newsData = [
           "На протяжении всего мероприятия технические представители TRT были готовы ответить на вопросы, разъяснить технические характеристики и обсудить инженерные решения, лежащие в основе каждой категории продукции. Для многих участников возможность увидеть и подержать компоненты в руках — вместе с получением технических подробностей — придала новый уровень уверенности в продукции, которую они поставляют на рынок.",
           "От сырья до готового изделия Одним из главных моментов дня стала живая демонстрация производственного процесса TRT — показывающая гостям полный путь от исходной стальной заготовки до высокоточного готового автомобильного компонента. Участники увидели, как отбирается сырьё, как оно проходит точную штамповку и механическую обработку, обрабатывается методом электроосаждения покрытия TRT для защиты от коррозии, а затем проходит строгий контроль качества перед упаковкой и отправкой. Демонстрация наглядно показала, почему компоненты TRT соответствуют стандартам, эквивалентным оригинальному оборудованию (OEM), и почему стабильность на каждом этапе производства не подлежит обсуждению для производителя, поставляющего продукцию на мировой послепродажный рынок. Основные моменты мероприятия Клиенты и партнёры прибыли со всего Узбекистана",
           "Полная экскурсия по заводу — от поступления сырья до отправки готового компонента Полный ассортимент продукции TRT на выставке — компоненты подвески, рулевого управления и резинометаллические изделия Живая демонстрация полного процесса производства и контроля качества Индивидуальные встречи между техническим отделом TRT и участвующими партнёрами Укрепление партнёрских отношений Помимо экскурсии по заводу и демонстрации продукции, День Клиента стал важной площадкой для укрепления отношений между TRT и её дистрибьюторскими партнёрами. Личные беседы между командой TRT и присутствующими клиентами позволили напрямую обсудить технические характеристики продукции, условия поставок и возможности будущего сотрудничества.",
-          "TRT OOO по-прежнему привержена принципам прозрачности, качества и долгосрочного партнёрства с дистрибьюторами и специалистами автомобильной отрасли по всему Узбекистану и на мировом послепродажном рынке в целом. Такие мероприятия, как День Клиента, — часть постоянных усилий TRT по укреплению доверия — не только через продукцию, которую мы производим, но и через отношения, в которые мы инвестируем. Мы благодарим всех партнёров и гостей, посетивших мероприятие, и с нетерпением ждём новых клиентов на нашем предприятии в будущем.",
-          "По вопросам партнёрства и продукции обращайтесь напрямую в TRT OOO. Полный каталог продукции предоставляется по запросу."
+          "TRT  по-прежнему привержена принципам прозрачности, качества и долгосрочного партнёрства с дистрибьюторами и специалистами автомобильной отрасли по всему Узбекистану и на мировом послепродажном рынке в целом. Такие мероприятия, как День Клиента, — часть постоянных усилий TRT по укреплению доверия — не только через продукцию, которую мы производим, но и через отношения, в которые мы инвестируем. Мы благодарим всех партнёров и гостей, посетивших мероприятие, и с нетерпением ждём новых клиентов на нашем предприятии в будущем.",
+          "По вопросам партнёрства и продукции обращайтесь напрямую в TRT . Полный каталог продукции предоставляется по запросу."
         ],
         images: []
       }
@@ -610,7 +610,7 @@ export const newsData = [
   //   category: "Новости",
   //   world: [""],
   //   title: "Делегация Афганистана посетила производственный завод TRT в рамках правительственной программы Узбекистана",
-  //   description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» с честью приняла делегацию представителей автомобильной промышленности и деловых партнеров из Афганистана на своем производственном предприятии в Узбекистане. Визит был организован в рамках официальной промышленной программы при поддержке Правительства Республики Узбекистан, направленной на укрепление регионального сотрудничества и развитие промышленного партнёрства. В ходе визита делегации был представлен широкий портфель продукции TRT, включая компоненты подвески, рулевого управления и резинометаллические изделия.Гости ознакомились с современными производственными мощностями компании, увидели передовые производственные технологии, автоматизированные процессы и строгие системы контроля качества, обеспечивающие соответствие каждой единицы продукции международным стандартам."],
+  //   description: ["TRT «TECHNOLOGIES OF REAL TIME» с честью приняла делегацию представителей автомобильной промышленности и деловых партнеров из Афганистана на своем производственном предприятии в Узбекистане. Визит был организован в рамках официальной промышленной программы при поддержке Правительства Республики Узбекистан, направленной на укрепление регионального сотрудничества и развитие промышленного партнёрства. В ходе визита делегации был представлен широкий портфель продукции TRT, включая компоненты подвески, рулевого управления и резинометаллические изделия.Гости ознакомились с современными производственными мощностями компании, увидели передовые производственные технологии, автоматизированные процессы и строгие системы контроля качества, обеспечивающие соответствие каждой единицы продукции международным стандартам."],
   //   date: "30 июля, 2026",
   //   img: avgan1,
   //   gallerySections: [
@@ -631,11 +631,19 @@ export const newsData = [
     category: "Новости",
     world: ["Автомеханика Астана", "MIMS Automobility Petersburg"],
     title: "Автомеханика 2026",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей, а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
+    description: ["«TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей, а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
     date: "2026",
     img: news3,
     image: [main26, mimsOne],
     locationData: [
+      {
+        id: 'peters',
+        title: 'TRT на MIMS Automobility Санкт-Петербург 2026',
+        location: 'Выставочный центр Экспофорум, Санкт-Петербург',
+        description: 'Компания TRT успешно приняла участие в выставке MIMS Automobility Санкт-Петербург 2026, которая прошла в выставочном центре Экспофорум в Санкт-Петербурге. На нашем стенде G035 в павильоне G мы представили полный ассортимент продукции для подвески, рулевого управления и резинометаллических изделий — включая шаровые опоры, наконечники рулевых тяг, тяги рулевые, сайлентблоки рычагов подвески, стойки стабилизатора, рулевые рейки и гидравлические насосы — все они изготовлены по стандартам, эквивалентным оригинальным (OEM). Выставка предоставила нам возможность встретиться с дистрибьюторами, импортёрами и специалистами автомобильной отрасли со всей России и стран СНГ, провести продуктивные деловые переговоры и установить новые долгосрочные партнёрские отношения в сфере дистрибуции. Благодарим всех, кто посетил наш стенд, и надеемся на дальнейшее плодотворное сотрудничество.',
+        images: [mimsTwo, mimsThree, mimsFour, mimsFife],
+        position: 'right'
+      },
       {
         id: 'astana',
         title: 'Автомеханика Астана',
@@ -643,14 +651,6 @@ export const newsData = [
         description: 'Automechanika Astana один из ключевых выставочных проектов в сфере послепродажного обслуживания автомобилей в Центральной Азии, объединяющий профессионалов отрасли со всего региона. В ходе мероприятия компания TRT продемонстрировала свои компоненты подвески, рулевого управления и резинометаллические изделия, одновременно укрепляя партнерские отношения и расширяя свое присутствие на центральноазиатском рынке.',
         images: [one26, fife26, three26, two26],
         position: 'left'
-      },
-      {
-        id: 'peters',
-        title: 'TRT OOO на MIMS Automobility Санкт-Петербург 2026',
-        location: 'Выставочный центр Экспофорум, Санкт-Петербург',
-        description: 'Компания TRT OOO успешно приняла участие в выставке MIMS Automobility Санкт-Петербург 2026, которая прошла в выставочном центре Экспофорум в Санкт-Петербурге. На нашем стенде G035 в павильоне G мы представили полный ассортимент продукции для подвески, рулевого управления и резинометаллических изделий — включая шаровые опоры, наконечники рулевых тяг, тяги рулевые, сайлентблоки рычагов подвески, стойки стабилизатора, рулевые рейки и гидравлические насосы — все они изготовлены по стандартам, эквивалентным оригинальным (OEM). Выставка предоставила нам возможность встретиться с дистрибьюторами, импортёрами и специалистами автомобильной отрасли со всей России и стран СНГ, провести продуктивные деловые переговоры и установить новые долгосрочные партнёрские отношения в сфере дистрибуции. Благодарим всех, кто посетил наш стенд, и надеемся на дальнейшее плодотворное сотрудничество.',
-        images: [mimsTwo, mimsThree, mimsFour, mimsFife],
-        position: 'right'
       }
     ]
   },
@@ -659,7 +659,7 @@ export const newsData = [
     category: "Новости",
     world: [""],
     title: "Турецкая делегация посетила производственный объект TRT",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» недавно приняло на своем производственном объекте в Узбекистане группу клиентов и представителей автомобильной промышленности из Турции."],
+    description: ["«TECHNOLOGIES OF REAL TIME» недавно приняло на своем производственном объекте в Узбекистане группу клиентов и представителей автомобильной промышленности из Турции."],
     date: "18 Июнь, 2026",
     img: turk26Main,
     gallerySections: [
@@ -688,7 +688,7 @@ export const newsData = [
     world: [""],
     title: "TRT на Международной ярмарке в Багдаде 2026",
     description: [
-      "TRT OOO “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания и профессионалов отрасли со всего Узбекистана.",
+      "TRT “\TECHNOLOGIES OF REAL TIME\” успешно организовала технический семинар и тур по заводским мощностям для мастеров автомобильного сервиса, дилеров запасных частей, дистрибьюторов послепродажного обслуживания и профессионалов отрасли со всего Узбекистана.",
     ],
     date: "5 мая 2026 г",
     img: main,
@@ -730,7 +730,7 @@ export const newsData = [
     category: "Новости",
     world: [""],
     title: "TRT на Международной ярмарке в Багдаде 2026",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
+    description: ["«TECHNOLOGIES OF REAL TIME» принимает участие в Международной ярмарке \"Baghdad International Fair 2026\", которая в настоящее время проходит в Багдаде, столице Республики Ирак. Выставка является одной из ключевых международных торговых площадок региона, объединяющей производителей, дистрибьюторов и специалистов отрасли из различных секторов."],
     date: "1-7 февраль, 2026",
     img: iraq,
     image: [iraq, iraq1],
@@ -741,7 +741,7 @@ export const newsData = [
     category: "Новости",
     world: ["Автомеханика Дубай", "Автомеханика Астана", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
     title: "Автомеханика 2025",
-    description: ["ООО «TECHNOLOGIES OF REAL TIME» с гордостью участвует в самых престижных в мире выставках после автомобильного рынка, укрепляя свое присутствие в мире и расширяя международные партнерские отношения.", "В 2025 году TRT продемонстрировала свои высококачественные автомобильные компоненты на следующих крупных отраслевых мероприятиях:"],
+    description: ["«TECHNOLOGIES OF REAL TIME» с гордостью участвует в самых престижных в мире выставках после автомобильного рынка, укрепляя свое присутствие в мире и расширяя международные партнерские отношения.", "В 2025 году TRT продемонстрировала свои высококачественные автомобильные компоненты на следующих крупных отраслевых мероприятиях:"],
     date: "2025",
     img: news3,
     image: [world6, world5, world4, world1, world2, world3],
@@ -804,14 +804,14 @@ export const newsDataEn = [
     category: "News",
     world: [""],
     title: "TRT Hosts Client Day: Partners from Across Uzbekistan Visit Our Factory and Explore the Full Product Range",
-    description: ["Distributors, automotive professionals, and business partners gathered at TRT's manufacturing facility for an exclusive behind-the-scenes experience — from raw material to finished component.", "TRT JV LLC Tashkent, Uzbekistan 2026"],
+    description: ["Distributors, automotive professionals, and business partners gathered at TRT's manufacturing facility for an exclusive behind-the-scenes experience — from raw material to finished component.", "TRT Tashkent, Uzbekistan 2026"],
     date: "28 August, 2026",
     img: full1,
     gallerySections: [
       {
         heading: "",
         texts: [
-          "TRT JV LLC recently hosted its Client Day — a dedicated event bringing together distributors, automotive professionals, and business partners from across Uzbekistan for an exclusive visit to TRT's manufacturing facility. The event offered guests a rare opportunity to go behind the production floor, see TRT's complete product range, and witness firsthand the manufacturing process that goes into every TRT component.",
+          "TRT recently hosted its Client Day — a dedicated event bringing together distributors, automotive professionals, and business partners from across Uzbekistan for an exclusive visit to TRT's manufacturing facility. The event offered guests a rare opportunity to go behind the production floor, see TRT's complete product range, and witness firsthand the manufacturing process that goes into every TRT component.",
           "An Invitation Behind the Factory Floor Clients and partners travelled from cities across Uzbekistan to attend the event at TRT's facility in Tashkent. From the moment guests arrived, the focus was on complete transparency — showing exactly how TRT operates, how components are manufactured, and what standards are maintained at every stage of production.",
           "The factory tour took guests through the entire production journey — from the arrival of raw materials to the moment a finished, quality-checked component is ready for dispatch. Attendees observed each stage of the manufacturing process, including material preparation, precision machining, assembly, surface treatment, and final quality control inspection.",
           "We wanted our partners to see exactly what goes into a TRT component — not just the finished product, but every step that makes it reliable. When you see the process, you understand the quality",
@@ -825,8 +825,8 @@ export const newsDataEn = [
           "Technical representatives from TRT were on hand throughout the event to answer questions, explain specifications, and discuss the engineering behind each product category. For many attendees, seeing and handling the components directly — alongside technical detail — gave a new level of confidence in the products they supply to the market.",
           "From Raw Material to Finished Product One of the highlights of the day was the live demonstration of TRT's manufacturing process — showing guests the complete journey from raw steel stock to a precision-finished automotive component. Attendees saw how raw materials are selected, processed through precision pressing and machining, treated with TRT's electro - deposition coating for corrosion resistance, and then put through strict quality control before being packaged and dispatched. The demonstration made clear why TRT components meet OEM- equivalent standards — and why consistency in every step of production is non - negotiable for a manufacturer supplying the global aftermarket. Event highlights Clients and partners attended from across Uzbekistan",
           "Full factory tour — from raw material intake to finished component dispatch Complete TRT product range on display — suspension, steering, and rubber - metal components Live demonstration of the full manufacturing and QC process One - to - one meetings between TRT technical team and attending partners Building Stronger Partnerships Beyond the factory tour and product showcase, Client Day served as an important platform for strengthening relationships between TRT and its distribution partners.One - to - one conversations between TRT's team and attending clients allowed for direct discussions on product specifications, supply terms, and future cooperation opportunities.",
-          "TRT JV LLC remains committed to transparency, quality, and long-term partnerships with distributors and automotive professionals across Uzbekistan and the wider global aftermarket. Events like Client Day are part of TRT's ongoing commitment to building trust — not just through the products we manufacture, but through the relationships we invest in. We thank all partners and guests who attended and look forward to welcoming more clients to our facility in the future.",
-          "For partnership and product inquiries, contact TRT JV LLC directly. Full product catalog available on request."
+          "TRT remains committed to transparency, quality, and long-term partnerships with distributors and automotive professionals across Uzbekistan and the wider global aftermarket. Events like Client Day are part of TRT's ongoing commitment to building trust — not just through the products we manufacture, but through the relationships we invest in. We thank all partners and guests who attended and look forward to welcoming more clients to our facility in the future.",
+          "For partnership and product inquiries, contact TRT directly. Full product catalog available on request."
         ],
         images: []
       }
@@ -837,7 +837,7 @@ export const newsDataEn = [
   //   category: "News",
   //   world: [""],
   //   title: "Afghanistan Delegation Visits TRT Manufacturing Facility Under Government of Uzbekistan Program.",
-  //   description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» was honored to welcome a delegation of automotive industry representatives and business partners from Afghanistan to its manufacturing facility in Uzbekistan. The visit was organized as part of an official industrial program supported by the Government of the Republic of Uzbekistan, aimed at strengthening regional cooperation and promoting industrial partnerships. During the visit, the delegation was introduced to TRT’s comprehensive product portfolio, including suspension, steering, and rubber - metal components.Guests toured the company's state-of-the-art manufacturing facilities, where they observed advanced production technologies, automated processes, and rigorous quality control systems that ensure every product meets international standards."],
+  //   description: ["TRT «TECHNOLOGIES OF REAL TIME» was honored to welcome a delegation of automotive industry representatives and business partners from Afghanistan to its manufacturing facility in Uzbekistan. The visit was organized as part of an official industrial program supported by the Government of the Republic of Uzbekistan, aimed at strengthening regional cooperation and promoting industrial partnerships. During the visit, the delegation was introduced to TRT’s comprehensive product portfolio, including suspension, steering, and rubber - metal components.Guests toured the company's state-of-the-art manufacturing facilities, where they observed advanced production technologies, automated processes, and rigorous quality control systems that ensure every product meets international standards."],
   //   date: "30 July, 2026",
   //   img: avgan1,
   //   gallerySections: [
@@ -863,11 +863,19 @@ export const newsDataEn = [
     category: "News",
     world: ["Automechanika Astana", "MIMS Automobility Petersburg"],
     title: "Automechanika 2026",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
+    description: ["TRT “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
     date: "2026",
     img: news3,
     image: [main26, mimsOne],
     locationData: [
+      {
+        id: 'peters',
+        title: 'TRT at MIMS Automobility Saint Petersburg 2026',
+        location: 'Expoforum Exhibition Centre Saint Petersburg',
+        description: 'TRT successfully participated in MIMS Automobility Saint Petersburg 2026, held at Expoforum Exhibition Centre in Saint Petersburg. At Pavilion G, Stand G035, we presented our full range of suspension, steering, and rubber-metal components — including ball joints, tie rod ends, rack ends, control arm bushings, stabilizer links, steering racks, and hydraulic pumps — all manufactured to OEM-equivalent standards. The exhibition gave us the opportunity to meet distributors, importers, and automotive professionals from across Russia and the CIS region, hold productive business meetings, and establish new long-term distribution partnerships. We thank everyone who visited our stand and look forward to continued cooperation.',
+        images: [mimsTwo, mimsThree, mimsFour, mimsFife],
+        position: 'right'
+      },
       {
         id: 'astana',
         title: 'Automechanika Astana',
@@ -875,14 +883,6 @@ export const newsDataEn = [
         description: 'Automechanika Astana is one of Central Asia\'s key automotive aftermarket exhibitions, bringing together industry professionals from across the region.During the event, TRT showcased its suspension, steering, and rubber- metal components while strengthening partnerships and expanding its presence in the Central Asian market.',
         images: [one26, fife26, three26, two26],
         position: 'left'
-      },
-      {
-        id: 'peters',
-        title: 'TRT JV LLC at MIMS Automobility Saint Petersburg 2026',
-        location: 'Expoforum Exhibition Centre Saint Petersburg',
-        description: 'TRT JV LLC successfully participated in MIMS Automobility Saint Petersburg 2026, held at Expoforum Exhibition Centre in Saint Petersburg. At Pavilion G, Stand G035, we presented our full range of suspension, steering, and rubber-metal components — including ball joints, tie rod ends, rack ends, control arm bushings, stabilizer links, steering racks, and hydraulic pumps — all manufactured to OEM-equivalent standards. The exhibition gave us the opportunity to meet distributors, importers, and automotive professionals from across Russia and the CIS region, hold productive business meetings, and establish new long-term distribution partnerships. We thank everyone who visited our stand and look forward to continued cooperation.',
-        images: [mimsTwo, mimsThree, mimsFour, mimsFife],
-        position: 'right'
       }
     ]
   },
@@ -891,7 +891,7 @@ export const newsDataEn = [
     category: "News",
     world: [""],
     title: "Turkish Delegation  Visit TRT Manufacturing Facility",
-    description: ["TRT JV LLC «TECHNOLOGIES OF REAL TIME» recently welcomed a group of clients and automotive industry representatives from Türkiye to its manufacturing facility in Uzbekistan."],
+    description: ["TRT «TECHNOLOGIES OF REAL TIME» recently welcomed a group of clients and automotive industry representatives from Türkiye to its manufacturing facility in Uzbekistan."],
     date: "18 June, 2026",
     img: turk26Main,
     gallerySections: [
@@ -919,7 +919,7 @@ export const newsDataEn = [
     category: "News",
     world: [""],
     title: "TRT Hosts Technical Seminar for Automotive Professionals",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” successfully organized a Technical Seminar and Factory Tour for automotive service masters, spare parts dealers, aftermarket distributors, and industry professionals from across Uzbekistan."],
+    description: ["TRT “TECHNOLOGIES OF REAL TIME” successfully organized a Technical Seminar and Factory Tour for automotive service masters, spare parts dealers, aftermarket distributors, and industry professionals from across Uzbekistan."],
     date: "5 May, 2026",
     img: main,
     image: [],
@@ -953,14 +953,14 @@ export const newsDataEn = [
     date: "5–6 February 2026",
     img: isl,
     image: [ione, itwo, ithree],
-    fullContent: ["These events will serve as an important platform for direct dialogue and cooperation between representatives of government institutions and the business communities of both countries.", "The forum will focus on strengthening bilateral trade and economic relations, promoting investment cooperation, and facilitating the exchange of experience between Uzbek and Pakistani companies. Key discussion topics will include Uzbekistan’s investment potential, available support mechanisms for foreign investors, and strategies for creating and further developing a favorable investment climate.", "As part of the program, the TRT Exhibition will showcase a wide range of automotive components manufactured by TRT JV LLC “TECHNOLOGIES OF REAL TIME.” The exhibition is aimed at promoting export-oriented products, expanding business partnerships, and encouraging the development of long-term cooperative ties with Pakistani companies.", "The Uzbekistan–Pakistan Business Forum and the TRT Exhibition highlight the growing interest of both countries in expanding economic collaboration and creating new opportunities for mutual growth."]
+    fullContent: ["These events will serve as an important platform for direct dialogue and cooperation between representatives of government institutions and the business communities of both countries.", "The forum will focus on strengthening bilateral trade and economic relations, promoting investment cooperation, and facilitating the exchange of experience between Uzbek and Pakistani companies. Key discussion topics will include Uzbekistan’s investment potential, available support mechanisms for foreign investors, and strategies for creating and further developing a favorable investment climate.", "As part of the program, the TRT Exhibition will showcase a wide range of automotive components manufactured by TRT “TECHNOLOGIES OF REAL TIME.” The exhibition is aimed at promoting export-oriented products, expanding business partnerships, and encouraging the development of long-term cooperative ties with Pakistani companies.", "The Uzbekistan–Pakistan Business Forum and the TRT Exhibition highlight the growing interest of both countries in expanding economic collaboration and creating new opportunities for mutual growth."]
   },
   {
     id: 2,
     category: "News",
     world: [""],
     title: "TRT at Baghdad International Fair 2026",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
+    description: ["TRT “TECHNOLOGIES OF REAL TIME” is participating in the Baghdad International Fair 2026, which is currently being held in Baghdad, the capital of the Republic of Iraq. The exhibition serves as one of the region’s key international trade platforms, bringing together manufacturers, distributors, and industry professionals from across multiple sectors."],
     date: "1-7 February, 2026",
     img: iraq,
     image: [iraq, iraq1],
@@ -971,7 +971,7 @@ export const newsDataEn = [
     category: "News",
     world: ["Automechanika Dubai", "Automechanika Astana", "MIMS Automobility Moscow", "Automechanika Istanbul", "Automechanika Tashkent", "Automechanika Shanghai"],
     title: "Automechanika 2025",
-    description: ["TRT JV LLC “TECHNOLOGIES OF REAL TIME” proudly participates in the world’s most influential automotive aftermarket exhibitions, strengthening its global presence and expanding international partnerships.", "In 2025, TRT showcased its high-quality automotive components at the following major industry events:"],
+    description: ["TRT “TECHNOLOGIES OF REAL TIME” proudly participates in the world’s most influential automotive aftermarket exhibitions, strengthening its global presence and expanding international partnerships.", "In 2025, TRT showcased its high-quality automotive components at the following major industry events:"],
     date: "2025",
     img: news3,
     image: [world6, world5, world4, world1, world2, world3],
