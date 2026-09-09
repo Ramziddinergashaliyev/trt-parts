@@ -4,8 +4,8 @@ import { logout } from "../slices/authSlice";
 const baseQuery = async (args, api, extraOptions) => {
   const { dispatch } = api;
   const rawBaseQuery = fetchBaseQuery({
-    // baseUrl: "https://backtrt-parts.trtparts.com/",
-    baseUrl: "https://backend.trt-parts.com/",
+    baseUrl: "https://backtrt-parts.trtparts.com/",
+    // baseUrl: "https://backend.trt-parts.com/",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("x-auth-token");
       if (token) {
