@@ -6,6 +6,7 @@ import Menu from "../../components/menu/Menu";
 
 const Admin = () => {
   const [close, setClose] = useState(false);
+
   return (
     <div className={`admin ${close ? "admin__close" : ""}`}>
       <Sidebar />

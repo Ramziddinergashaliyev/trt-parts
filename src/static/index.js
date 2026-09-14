@@ -626,24 +626,25 @@ export const newsData = [
   //     }
   //   ]
   // },
+  // , "MIMS Automobility Petersburg"
   {
     id: 4,
     category: "Новости",
-    world: ["Автомеханика Астана", "MIMS Automobility Petersburg"],
+    world: ["Автомеханика Астана"],
     title: "Автомеханика 2026",
     description: ["«TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей, а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
     date: "2026",
     img: news3,
-    image: [main26, mimsOne],
+    image: [main26],
     locationData: [
-      {
-        id: 'peters',
-        title: 'TRT на MIMS Automobility Санкт-Петербург 2026',
-        location: 'Выставочный центр Экспофорум, Санкт-Петербург',
-        description: 'Компания TRT успешно приняла участие в выставке MIMS Automobility Санкт-Петербург 2026, которая прошла в выставочном центре Экспофорум в Санкт-Петербурге. На нашем стенде G035 в павильоне G мы представили полный ассортимент продукции для подвески, рулевого управления и резинометаллических изделий — включая шаровые опоры, наконечники рулевых тяг, тяги рулевые, сайлентблоки рычагов подвески, стойки стабилизатора, рулевые рейки и гидравлические насосы — все они изготовлены по стандартам, эквивалентным оригинальным (OEM). Выставка предоставила нам возможность встретиться с дистрибьюторами, импортёрами и специалистами автомобильной отрасли со всей России и стран СНГ, провести продуктивные деловые переговоры и установить новые долгосрочные партнёрские отношения в сфере дистрибуции. Благодарим всех, кто посетил наш стенд, и надеемся на дальнейшее плодотворное сотрудничество.',
-        images: [mimsTwo, mimsThree, mimsFour, mimsFife],
-        position: 'right'
-      },
+      // {
+      //   id: 'peters',
+      //   title: 'TRT на MIMS Automobility Санкт-Петербург 2026',
+      //   location: 'Выставочный центр Экспофорум, Санкт-Петербург',
+      //   description: 'Компания TRT успешно приняла участие в выставке MIMS Automobility Санкт-Петербург 2026, которая прошла в выставочном центре Экспофорум в Санкт-Петербурге. На нашем стенде G035 в павильоне G мы представили полный ассортимент продукции для подвески, рулевого управления и резинометаллических изделий — включая шаровые опоры, наконечники рулевых тяг, тяги рулевые, сайлентблоки рычагов подвески, стойки стабилизатора, рулевые рейки и гидравлические насосы — все они изготовлены по стандартам, эквивалентным оригинальным (OEM). Выставка предоставила нам возможность встретиться с дистрибьюторами, импортёрами и специалистами автомобильной отрасли со всей России и стран СНГ, провести продуктивные деловые переговоры и установить новые долгосрочные партнёрские отношения в сфере дистрибуции. Благодарим всех, кто посетил наш стенд, и надеемся на дальнейшее плодотворное сотрудничество.',
+      //   images: [mimsTwo, mimsThree, mimsFour, mimsFife],
+      //   position: 'right'
+      // },
       {
         id: 'astana',
         title: 'Автомеханика Астана',
@@ -861,21 +862,21 @@ export const newsDataEn = [
   {
     id: 4,
     category: "News",
-    world: ["Automechanika Astana", "MIMS Automobility Petersburg"],
+    world: ["Automechanika Astana"],
     title: "Automechanika 2026",
     description: ["TRT “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
     date: "2026",
     img: news3,
-    image: [main26, mimsOne],
+    image: [main26],
     locationData: [
-      {
-        id: 'peters',
-        title: 'TRT at MIMS Automobility Saint Petersburg 2026',
-        location: 'Expoforum Exhibition Centre Saint Petersburg',
-        description: 'TRT successfully participated in MIMS Automobility Saint Petersburg 2026, held at Expoforum Exhibition Centre in Saint Petersburg. At Pavilion G, Stand G035, we presented our full range of suspension, steering, and rubber-metal components — including ball joints, tie rod ends, rack ends, control arm bushings, stabilizer links, steering racks, and hydraulic pumps — all manufactured to OEM-equivalent standards. The exhibition gave us the opportunity to meet distributors, importers, and automotive professionals from across Russia and the CIS region, hold productive business meetings, and establish new long-term distribution partnerships. We thank everyone who visited our stand and look forward to continued cooperation.',
-        images: [mimsTwo, mimsThree, mimsFour, mimsFife],
-        position: 'right'
-      },
+      // {
+      //   id: 'peters',
+      //   title: 'TRT at MIMS Automobility Saint Petersburg 2026',
+      //   location: 'Expoforum Exhibition Centre Saint Petersburg',
+      //   description: 'TRT successfully participated in MIMS Automobility Saint Petersburg 2026, held at Expoforum Exhibition Centre in Saint Petersburg. At Pavilion G, Stand G035, we presented our full range of suspension, steering, and rubber-metal components — including ball joints, tie rod ends, rack ends, control arm bushings, stabilizer links, steering racks, and hydraulic pumps — all manufactured to OEM-equivalent standards. The exhibition gave us the opportunity to meet distributors, importers, and automotive professionals from across Russia and the CIS region, hold productive business meetings, and establish new long-term distribution partnerships. We thank everyone who visited our stand and look forward to continued cooperation.',
+      //   images: [mimsTwo, mimsThree, mimsFour, mimsFife],
+      //   position: 'right'
+      // },
       {
         id: 'astana',
         title: 'Automechanika Astana',

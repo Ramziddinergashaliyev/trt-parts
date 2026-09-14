@@ -1,13 +1,13 @@
 import { useState } from "react"
 
 export const useGetValue = (initialState) => {
-    const [formData, setFormData] = useState(initialState)
+    const [formData, setformData] = useState(initialState)
 
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        setFormData((prev) => ({ ...prev, [name]: value }))
+        setformData((prev) => ({ ...prev, [name]: value }))
     }
 
-    return { formData, setFormData, handleChange }
+    return { formData, setformData, handleChange }
 }
