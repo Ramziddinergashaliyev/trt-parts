@@ -82,7 +82,7 @@ const Accardion = () => {
           ))}
         </ul>
       </div>
-    </div >
+    </div>
   );
 };
 

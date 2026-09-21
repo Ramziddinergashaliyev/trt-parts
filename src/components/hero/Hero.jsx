@@ -248,6 +248,7 @@ const Hero = () => {
         </div>
 
         <div className="hero__bottom">
+
           <div className="hero__bottom__left container">
             <p className="hero__bottom__left-text">{t("Полный")}</p>
           </div>
@@ -258,6 +259,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
           >
+
             <div className="hero__bottom__info-stats">
               <AnimatedStats endValue={12000} text="+" />
               <p className="hero__bottom__info-stats-text">{t("Деталей в день")}</p>
@@ -269,6 +271,7 @@ const Hero = () => {
               <AnimatedStats endValue={65} text="%" />
               <p className="hero__bottom__info-stats-text">{t("Доля экспорта")}</p>
             </div>
+
           </motion.div>
         </div>
       </div>

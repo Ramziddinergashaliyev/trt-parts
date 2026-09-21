@@ -277,6 +277,7 @@ function DeleteModal({ item, onClose, onConfirm }) {
 
                 <div className="modal-footer">
                     <button className="modal-btn modal-btn--cancel" onClick={onClose}>Cancel</button>
+
                     <button
                         className="modal-btn modal-btn--delete"
                         onClick={async () => {
@@ -318,6 +319,7 @@ function RowMenu({ item, onEdit, onDelete }) {
                     <button className="row-menu-item row-menu-item--edit" role="menuitem" onClick={() => { setOpen(false); onEdit(item); }}>
                         <EditIcon /> Edit
                     </button>
+
                     <div className="row-menu-divider" />
                     <button className="row-menu-item row-menu-item--delete" role="menuitem" onClick={() => { setOpen(false); onDelete(item); }}>
                         <DeleteIcon /> Delete
@@ -416,10 +418,12 @@ export default function FilterCatalog({ hide }) {
                         </span>
                     </div>
                 </div>
+
                 <div className="fc-actions">
                     <button className="fc-btn fc-btn--excel" onClick={handleExportExcel} disabled={exporting || !filteredData.length} title="Download Excel">
                         <ExcelIcon /> <span>{exporting ? "Saving..." : "Excel"}</span>
                     </button>
+
                     <button className="fc-btn fc-btn--pdf" onClick={handleExportPdf} disabled={exportingPDF || !filteredData.length} title="Download PDF">
                         <PdfIcon /> <span>{exportingPDF ? "Saving..." : "PDF"}</span>
                     </button>
@@ -440,6 +444,7 @@ export default function FilterCatalog({ hide }) {
                         spellCheck="false"
                     />
                 </label>
+
                 <div
                     style={{
                         display: "flex",
