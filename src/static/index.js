@@ -138,6 +138,14 @@ import full3 from "../assets/fullTrt/three.webp"
 import full4 from "../assets/fullTrt/four.webp"
 import full5 from "../assets/fullTrt/fife.webp"
 
+//11-september
+
+import one11 from "../assets/news26/trt11/one.webp"
+import two11 from "../assets/news26/trt11/two.webp"
+import three11 from "../assets/news26/trt11/three.webp"
+import four11 from "../assets/news26/trt11/four.webp"
+import fife11 from "../assets/news26/trt11/fife.webp"
+
 export const PARTNER = [
   {
     id: 1,
@@ -573,6 +581,36 @@ export const Swipper = [
 
 export const newsData = [
   {
+    id: 9,
+    category: "Новости",
+    world: [""],
+    title: "День клиента TRT: партнёры изнутри знакомятся с производственным процессом",
+    description: ["TRT приняла дистрибьюторов, специалистов автомобильной отрасли и деловых партнёров со всего Узбекистана на своём производственном предприятии в Ташкенте в рамках специального Дня клиента, посвящённого производству, качеству продукции, технической экспертизе и укреплению долгосрочного сотрудничества."],
+    date: "11 сентября 2026",
+    img: one11,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "Гости получили возможность изнутри увидеть весь производственный процесс TRT — от сырья и высокоточной механической обработки до сборки, защитной обработки поверхности, контроля качества, упаковки и финальной отгрузки. Визит позволил партнёрам лучше понять технологии, производственную дисциплину и внимание к деталям, стоящие за каждым компонентом TRT.",
+          "Экскурсия по заводу дала гостям возможность лично увидеть, как производятся компоненты подвески и рулевого управления TRT и как на каждом этапе производства соблюдаются строгие стандарты качества.",
+        ],
+        images: [one11, two11, three11, four11, fife11]
+      },
+      {
+        heading: "",
+        texts: [
+          "На специальной презентации продукции были представлены ключевые категории товаров TRT, включая рычаги подвески, шаровые опоры, рулевые наконечники, наконечники рулевой рейки, стойки стабилизатора, сайлентблоки, рулевые рейки и гидравлические насосы гидроусилителя руля. Посетители смогли внимательно осмотреть продукцию и узнать больше о её конструкции, областях применения и технических преимуществах.",
+          "На протяжении всего мероприятия технические специалисты TRT рассказывали о спецификациях продукции, производственных технологиях, материалах и требованиях к качеству, а также отвечали на вопросы партнёров и представителей отрасли.",
+          "День клиента также стал важной площадкой для открытого общения. Партнёры напрямую обсуждали с командой TRT требования рынка, разработку продукции, возможности поставок и перспективы дальнейшего сотрудничества.",
+          "Мероприятие отразило приверженность TRT принципам прозрачности, стабильного качества и прочных отношений со своими дистрибьюторскими партнёрами. TRT благодарит всех партнёров и гостей, принявших участие в мероприятии, и рассчитывает на дальнейшее укрепление сотрудничества как в Узбекистане, так и на международном рынке автозапчастей.",
+          "TRT — Точность. Производительность. Доверие.",
+        ],
+        images: []
+      }
+    ]
+  },
+  {
     id: 8,
     category: "Новости",
     world: [""],
@@ -800,6 +838,36 @@ export const newsData = [
 ]
 
 export const newsDataEn = [
+  {
+    id: 9,
+    category: "News",
+    world: [""],
+    title: "TRT Client Day Brings Partners Inside the Manufacturing Process",
+    description: ["TRT welcomed distributors, automotive professionals, and business partners from across Uzbekistan to its manufacturing facility in Tashkent for a dedicated Client Day focused on production, product quality, technical expertise, and stronger long-term cooperation."],
+    date: "11 September, 2026",
+    img: one11,
+    gallerySections: [
+      {
+        heading: "",
+        texts: [
+          "Guests received an inside look at the complete TRT manufacturing process — from raw materials and precision machining to assembly, protective surface treatment, quality control, packaging, and final dispatch. The visit allowed partners to better understand the technology, production discipline, and attention to detail behind every TRT component.",
+          "The factory tour gave guests the opportunity to see firsthand how TRT suspension and steering components are produced and how strict quality standards are maintained throughout each stage of manufacturing.",
+        ],
+        images: [one11, two11, three11, four11, fife11]
+      },
+      {
+        heading: "",
+        texts: [
+          "A dedicated product showcase featured key TRT product categories, including control arms, ball joints, tie rod ends, rack ends, stabilizer links, bushings, steering racks, and hydraulic power steering pumps. Visitors were able to examine the products closely and learn more about their construction, applications, and technical advantages.",
+          "TRT technical specialists were available throughout the event to explain product specifications, manufacturing technologies, materials, and quality requirements, while also answering questions directly from partners and industry professionals.",
+          "Client Day also created an important platform for open communication. Partners discussed market requirements, product development, supply opportunities, and future cooperation directly with the TRT team.",
+          "The event reflected TRT’s commitment to transparency, consistent quality, and strong relationships with its distribution partners. TRT thanks all partners and guests who joined the event and looks forward to continuing to strengthen cooperation across Uzbekistan and the international automotive aftermarket.",
+          "TRT — Precision. Performance. Trust.",
+        ],
+        images: []
+      }
+    ]
+  },
   {
     id: 8,
     category: "News",
