@@ -345,6 +345,22 @@ export const Catalog = [
 ];
 
 export const ACCARDION = [
+  // {
+  //   id: 1,
+  //   country: "Украина",
+  //   distributors: [
+  //     {
+  //       name: 'ТОВ "ПЕТОЛАВТО"',
+  //       title: "Пироговский путь, 34; Киев, 03083, Украина",
+  //       number: "+380(50)3146633",
+  //     },
+  //     {
+  //       name: 'ТОВ "ПРОДЕТАЛЬ"',
+  //       title: "ул. Ремонтная, 13, г. Киев, 02099, Украина",
+  //       number: "+38(093)8665418",
+  //     }
+  //   ]
+  // },
   {
     id: 1,
     country: "Украина",
@@ -352,14 +368,19 @@ export const ACCARDION = [
       {
         name: 'ТОВ "ПЕТОЛАВТО"',
         title: "Пироговский путь, 34; Киев, 03083, Украина",
-        number: "+380(50)3146633",
+        number: "+380(50)314 66 33",
       },
       {
         name: 'ТОВ "ПРОДЕТАЛЬ"',
         title: "ул. Ремонтная, 13, г. Киев, 02099, Украина",
-        number: "+38(093)8665418",
-      }
-    ]
+        number: "+38(093)866 54 18",
+      },
+      {
+        name: 'ТОВ "ПАРТЛАЙН ИМПОРТ"',
+        title: "Пироговский путь, 34; Киев, 03083, Украина",
+        number: "+38 (063)753 96 09",
+      },
+    ],
   },
   {
     id: 2,
@@ -413,6 +434,22 @@ export const ACCARDION = [
 ];
 
 export const ACCARDIONEN = [
+  // {
+  //   id: 1,
+  //   country: "Ukraine",
+  //   distributors: [
+  //     {
+  //       name: 'LLC "PETOLAVTO"',
+  //       title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
+  //       number: "+380(50)3146633",
+  //     },
+  //     {
+  //       name: 'LLC "PRODETAL"',
+  //       title: "str. Remontna, 13. Kyiv 02099, Ukraine",
+  //       number: "+38(093)8665418",
+  //     }
+  //   ]
+  // },
   {
     id: 1,
     country: "Ukraine",
@@ -420,14 +457,19 @@ export const ACCARDIONEN = [
       {
         name: 'LLC "PETOLAVTO"',
         title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
-        number: "+380(50)3146633",
+        number: "+380(50)314 66 33",
       },
       {
         name: 'LLC "PRODETAL"',
         title: "str. Remontna, 13. Kyiv 02099, Ukraine",
-        number: "+38(093)8665418",
-      }
-    ]
+        number: "+38(093)866 54 18",
+      },
+      {
+        name: 'LLC "PARTLINE IMPORT"',
+        title: "Pirohovskyi put, 34; Kyiv, 03083, Ukraine",
+        number: "+38 (063)753 96 09",
+      },
+    ],
   },
   {
     id: 2,
