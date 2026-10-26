@@ -96,6 +96,7 @@ import bottom7 from "../assets/news/uzb/bottom/seven.webp"
 import ak from "../assets/news/uzb/bottom/ak.webp"
 
 // 2026 Astana
+
 import one26 from "../assets/news26/astana/one.webp"
 import two26 from "../assets/news26/astana/two.webp"
 import three26 from "../assets/news26/astana/three.webp"
@@ -109,6 +110,7 @@ import frankFour from "../assets/news26/frankfurt/four.webp"
 import frankFife from "../assets/news26/frankfurt/fife.webp"
 
 // 2026 Turkia
+
 import turk26Main from "../assets/turkish26/main.webp"
 import turk1 from "../assets/turkish26/t1.webp"
 import turk2 from "../assets/turkish26/t2.webp"
@@ -123,6 +125,7 @@ import turk9 from "../assets/turkish26/t9.webp"
 import turk6 from "../assets/turkish26/t6.webp"
 
 // 2026 AVGONISTON
+
 import avgan1 from "../assets/avgan26/front.webp"
 import avganOne from "../assets/avgan26/one.webp"
 import avganTwo from "../assets/avgan26/two.webp"
@@ -145,6 +148,14 @@ import two11 from "../assets/news26/trt11/two.webp"
 import three11 from "../assets/news26/trt11/three.webp"
 import four11 from "../assets/news26/trt11/four.webp"
 import fife11 from "../assets/news26/trt11/fife.webp"
+
+// Tashkent 21-23 Oktober
+
+import tashOne from "../assets/news26/toshkent/one.webp"
+import tashTwo from "../assets/news26/toshkent/two.webp"
+import tashThree from "../assets/news26/toshkent/three.webp"
+import tashFour from "../assets/news26/toshkent/four.webp"
+import tashFife from "../assets/news26/toshkent/fife.webp"
 
 export const PARTNER = [
   {
@@ -625,13 +636,21 @@ export const newsData = [
   {
     id: 4,
     category: "Новости",
-    world: ["Автомеханика Астана", "Автомеханика Франкфурт"],
+    world: ["Автомеханика Ташкент", "Автомеханика Астана", "Автомеханика Франкфурт"],
     title: "Автомеханика 2026",
     description: ["«TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей, а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
     date: "2026",
     img: news3,
-    image: [main26, frankOne],
+    image: [tashOne, main26, frankOne],
     locationData: [
+      {
+        id: 'tashkent',
+        title: 'Автомеханика Ташкент',
+        location: 'Central Asian Expo (CAEx), Ташкент, Узбекистан',
+        description: 'На выставке Автомеханика Ташкент на стенде AM 262 мы представили нашу линейку рулевых и подвесочных компонентов и сопутствующих автомобильных деталей, включая рычаги подвески, шаровые опоры, наконечники рулевых тяг, рулевые тяги и стойки стабилизатора. Выставка предоставила возможность представить нашу продукцию дистрибьюторам, дилерам автозапчастей, специалистам автосервисов и потенциальным международным партнёрам. Благодарим всех, кто посетил наш стенд и проявил интерес к TRT. Мы с нетерпением ждём продолжения общения и изучения новых возможностей для сотрудничества. Чтобы запросить каталог продукции или обсудить партнёрство, свяжитесь с нашей командой.',
+        images: [tashTwo, tashThree, tashFour, tashFife],
+        position: 'right'
+      },
       {
         id: 'frankfurt',
         title: 'Автомеханика Франкфурт',
@@ -883,13 +902,21 @@ export const newsDataEn = [
   {
     id: 4,
     category: "News",
-    world: ["Automechanika Astana", "Automechanika Frankfurt"],
+    world: ["Automechanika Tashkent", "Automechanika Astana", "Automechanika Frankfurt"],
     title: "Automechanika 2026",
     description: ["TRT “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
     date: "2026",
     img: news3,
-    image: [main26, frankOne],
+    image: [tashOne, main26, frankOne,],
     locationData: [
+      {
+        id: 'tashkent',
+        title: 'Automechanika Tashkent',
+        location: 'Central Asian Expo (CAEx) in Tashkent, Uzbekistan',
+        description: 'Automechanika Tashkent at Stand AM 262, we presented our range of steering, suspension, and related automotive components, including control arms, ball joints, tie rod ends, rack ends, and stabilizer links. The exhibition provided an opportunity to introduce our products to distributors, spare- parts dealers, automotive service professionals, and potential international partners. Thank you to everyone who visited our stand and expressed interest in TRT.We look forward to continuing our conversations and exploring new opportunities for cooperation. To request our product catalogue or discuss partnership opportunities, contact our team.',
+        images: [tashTwo, tashThree, tashFour, tashFife],
+        position: 'right'
+      },
       {
         id: 'frankfurt',
         title: 'Automechanika Frankfurt',
