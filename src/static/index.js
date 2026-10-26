@@ -649,7 +649,7 @@ export const newsData = [
         location: 'Central Asian Expo (CAEx), Ташкент, Узбекистан',
         description: 'На выставке Автомеханика Ташкент на стенде AM 262 мы представили нашу линейку рулевых и подвесочных компонентов и сопутствующих автомобильных деталей, включая рычаги подвески, шаровые опоры, наконечники рулевых тяг, рулевые тяги и стойки стабилизатора. Выставка предоставила возможность представить нашу продукцию дистрибьюторам, дилерам автозапчастей, специалистам автосервисов и потенциальным международным партнёрам. Благодарим всех, кто посетил наш стенд и проявил интерес к TRT. Мы с нетерпением ждём продолжения общения и изучения новых возможностей для сотрудничества. Чтобы запросить каталог продукции или обсудить партнёрство, свяжитесь с нашей командой.',
         images: [tashTwo, tashThree, tashFour, tashFife],
-        position: 'right'
+        position: 'left'
       },
       {
         id: 'frankfurt',
@@ -915,7 +915,7 @@ export const newsDataEn = [
         location: 'Central Asian Expo (CAEx) in Tashkent, Uzbekistan',
         description: 'Automechanika Tashkent at Stand AM 262, we presented our range of steering, suspension, and related automotive components, including control arms, ball joints, tie rod ends, rack ends, and stabilizer links. The exhibition provided an opportunity to introduce our products to distributors, spare- parts dealers, automotive service professionals, and potential international partners. Thank you to everyone who visited our stand and expressed interest in TRT.We look forward to continuing our conversations and exploring new opportunities for cooperation. To request our product catalogue or discuss partnership opportunities, contact our team.',
         images: [tashTwo, tashThree, tashFour, tashFife],
-        position: 'right'
+        position: 'left'
       },
       {
         id: 'frankfurt',
