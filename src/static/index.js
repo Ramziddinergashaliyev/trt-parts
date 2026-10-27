@@ -636,12 +636,12 @@ export const newsData = [
   {
     id: 4,
     category: "Новости",
-    world: ["Автомеханика Ташкент", "Автомеханика Астана", "Автомеханика Франкфурт"],
+    world: ["Автомеханика Ташкент", "Автомеханика Франкфурт", "Автомеханика Астана"],
     title: "Автомеханика 2026",
     description: ["«TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей, а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
     date: "2026",
     img: news3,
-    image: [tashOne, main26, frankOne],
+    image: [tashOne, frankOne, main26],
     locationData: [
       {
         id: 'tashkent',
@@ -902,12 +902,12 @@ export const newsDataEn = [
   {
     id: 4,
     category: "News",
-    world: ["Automechanika Tashkent", "Automechanika Astana", "Automechanika Frankfurt"],
+    world: ["Automechanika Tashkent", "Automechanika Frankfurt", "Automechanika Astana"],
     title: "Automechanika 2026",
     description: ["TRT “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
     date: "2026",
     img: news3,
-    image: [tashOne, main26, frankOne,],
+    image: [tashOne, frankOne, main26],
     locationData: [
       {
         id: 'tashkent',
