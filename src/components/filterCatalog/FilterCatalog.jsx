@@ -207,10 +207,12 @@ function EditModal({ item, onClose, onSave, onUpdate }) {
 
                 <div className="modal-head">
                     <div className="modal-head-icon modal-head-icon--edit"><EditIcon /></div>
-                    <div>
+
+                    2 <div>
                         <span className="modal-title-main">Edit Part</span>
                         <span className="modal-title-sub">{item.trtNo}</span>
                     </div>
+
                     <button className="modal-close" onClick={onClose} aria-label="Close">×</button>
                 </div>
 
@@ -483,6 +485,7 @@ export default function FilterCatalog({ hide }) {
                     <colgroup>
                         {columns.map(c => <col key={c.key} style={{ width: c.width }} />)}
                     </colgroup>
+
                     <thead>
                         <tr>
                             {columns.map(({ key, label }) => (
@@ -490,6 +493,7 @@ export default function FilterCatalog({ hide }) {
                             ))}
                         </tr>
                     </thead>
+
                     <tbody>
                         {isLoading ? (
                             <tr><td colSpan={columns.length} className="fc-empty"><div className="fc-empty-inner"><p>Loading...</p></div></td></tr>

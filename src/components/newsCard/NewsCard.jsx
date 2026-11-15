@@ -39,6 +39,7 @@ const NewsCard = () => {
             <div className="news-grid">
                 {productData.slice(0, 3).map((item, index) => {
                     const { day, month, year } = formatDate(item.date);
+
                     return (
                         <article
                             key={item.id}
@@ -77,6 +78,7 @@ const NewsCard = () => {
                             </div>
                         </article>
                     );
+
                 })}
             </div>
         </section>

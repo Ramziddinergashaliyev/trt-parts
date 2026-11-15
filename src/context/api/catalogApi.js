@@ -19,15 +19,6 @@ export const catalogApi = api.injectEndpoints({
             invalidatesTags: ["Catalog"],
         }),
 
-        // SearchCatalog: build.query({
-        //     query: (params) => ({
-        //         url: "/products",
-        //         method: "GET",
-        //         params,
-        //     }),
-        //     invalidatesTags: ["Catalog"],
-        // }),
-
         SearchCatalog: build.query({
             query: (params) => ({
                 url: "/catalog/products/filter",
@@ -63,6 +54,7 @@ export const catalogApi = api.injectEndpoints({
             }),
             invalidatesTags: ["Catalog"],
         }),
+
     }),
 });
 

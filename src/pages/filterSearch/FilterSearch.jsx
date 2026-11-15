@@ -23,6 +23,7 @@ const FilterSearch = () => {
       </section>
 
       <section className="container" aria-labelledby="search-result-heading">
+
         <h1
           id="search-result-heading"
           className="filterSearch__cards-info-text"
@@ -37,6 +38,7 @@ const FilterSearch = () => {
         ) : (
           <Loading />
         )}
+
       </section>
     </main>
   );

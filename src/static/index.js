@@ -157,6 +157,14 @@ import tashThree from "../assets/news26/toshkent/three.webp"
 import tashFour from "../assets/news26/toshkent/four.webp"
 import tashFife from "../assets/news26/toshkent/fife.webp"
 
+// dubai 2026
+
+import dubaiOne from "../assets/news26/dubai/one.webp"
+import dubaiTwo from "../assets/news26/dubai/two.webp"
+import dubaiThree from "../assets/news26/dubai/three.webp"
+import dubaiFour from "../assets/news26/dubai/four.webp"
+import dubaiMain from "../assets/news26/dubai/main.webp"
+
 export const PARTNER = [
   {
     id: 1,
@@ -636,13 +644,21 @@ export const newsData = [
   {
     id: 4,
     category: "Новости",
-    world: ["Автомеханика Ташкент", "Автомеханика Франкфурт", "Автомеханика Астана"],
+    world: ["Автомеханика Дубай", "Автомеханика Ташкент", "Автомеханика Франкфурт", "Автомеханика Астана"],
     title: "Автомеханика 2026",
     description: ["«TECHNOLOGIES OF REAL TIME» продолжает свой глобальный путь, принимая участие в ведущих международных автомобильных выставках в 2026 году. Эти мероприятия служат эффективной платформой для демонстрации высококачественных компонентов подвески и рулевого управления TRT, установления контактов с глобальными партнерами и расширения возможностей для международного бизнеса.", "Активно участвуя в крупнейших отраслевых выставках, TRT укрепляет свое присутствие на мировом рынке послепродажного обслуживания автомобилей, а также подтверждает свою приверженность инновациям, качеству и надежности выпускаемой продукции."],
     date: "2026",
     img: news3,
-    image: [tashOne, frankOne, main26],
+    image: [dubaiMain, tashOne, frankOne, main26],
     locationData: [
+      {
+        id: 'dubai',
+        title: 'Автомеханика Дубай',
+        location: 'Выставочный центр Дубая (DEC), Expo City Dubai, ОАЭ',
+        description: 'На выставке Автомеханика Дубай 2026 мы представили нашу линейку компонентов рулевого управления, подвески и сопутствующих автомобильных деталей на стенде S-04020: рычаги подвески, шаровые опоры, рулевые наконечники, рулевые тяги и стойки стабилизатора. Выставка стала отличной возможностью представить продукцию TRT дистрибьюторам, дилерам автозапчастей, специалистам автосервисов и потенциальным международным партнёрам. Благодарим всех, кто посетил наш стенд и проявил интерес к TRT. Мы рады продолжить общение и рассмотреть новые возможности сотрудничества. Чтобы запросить каталог продукции или обсудить партнёрство, свяжитесь с нашей командой.',
+        images: [dubaiOne, dubaiTwo, dubaiThree, dubaiFour],
+        position: 'right'
+      },
       {
         id: 'tashkent',
         title: 'Автомеханика Ташкент',
@@ -902,13 +918,21 @@ export const newsDataEn = [
   {
     id: 4,
     category: "News",
-    world: ["Automechanika Tashkent", "Automechanika Frankfurt", "Automechanika Astana"],
+    world: ["Automechanika Dubai", "Automechanika Tashkent", "Automechanika Frankfurt", "Automechanika Astana"],
     title: "Automechanika 2026",
     description: ["TRT “TECHNOLOGIES OF REAL TIME” continues its global journey by participating in leading international automotive exhibitions in 2026. These events provide a platform to showcase TRT’s high-quality suspension and steering components, connect with global partners, and expand international business opportunities.", "Through active participation in major exhibitions, TRT strengthens its presence in the global automotive aftermarket and reinforces its commitment to innovation, quality, and reliable performance."],
     date: "2026",
     img: news3,
-    image: [tashOne, frankOne, main26],
+    image: [dubaiMain, tashOne, frankOne, main26],
     locationData: [
+      {
+        id: 'dubai',
+        title: 'Automechanika Dubai',
+        location: 'Dubai Exhibition Centre (DEC), Expo City Dubai, UAE',
+        description: 'At Automechanika Dubai 2026, we presented our range of steering, suspension, and related automotive components at Stand S-04020, including control arms, ball joints, tie rod ends, rack ends, and stabilizer links. The exhibition offered an opportunity to introduce TRT products to distributors, spare-parts dealers, automotive service professionals, and potential international partners. Thank you to everyone who visited our stand and expressed interest in TRT. We look forward to continuing our conversations and exploring new opportunities for cooperation. To request our product catalogue or discuss partnership opportunities, contact our team.',
+        images: [dubaiOne, dubaiTwo, dubaiThree, dubaiFour],
+        position: 'right'
+      },
       {
         id: 'tashkent',
         title: 'Automechanika Tashkent',
